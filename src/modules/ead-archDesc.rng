@@ -18,61 +18,65 @@
     
     
     <define name="model.description">
-        <choice>
-            <ref name="element.accessRestrict"/>
-            <ref name="element.accruals"/>
-            <ref name="element.acqInfo"/>
-            <ref name="element.altFormAvail"/>
-            <ref name="element.appraisal"/>
-            <ref name="element.arrangement"/>
-            <ref name="element.bibliography"/>
-            
-            <!-- already defined -->
-            <ref name="element.biogHist"/>
-            
-            <ref name="element.controlAccess"/>
-            <ref name="element.custodHist"/>
-            <ref name="element.filePlan"/>
-            <ref name="element.index"/>
-            <ref name="element.legalStatus"/>
-            <ref name="element.odd"/>
-            <ref name="element.originalsLoc"/>
-            <ref name="element.otherFindAid"/>
-            <ref name="element.physTech"/>
-            <ref name="element.preferCite"/>
-            <ref name="element.processInfo"/>
-            <ref name="element.relatedMaterial"/>
-            <!-- already defined, but might not be needed ?
+        <oneOrMore>
+            <choice>
+                <ref name="element.accessRestrict"/>
+                <ref name="element.accruals"/>
+                <ref name="element.acqInfo"/>
+                <ref name="element.altFormAvail"/>
+                <ref name="element.appraisal"/>
+                <ref name="element.arrangement"/>
+                <ref name="element.bibliography"/>
+                
+                <!-- already defined -->
+                <ref name="element.biogHist"/>
+                
+                <ref name="element.controlAccess"/>
+                <ref name="element.custodHist"/>
+                <ref name="element.filePlan"/>
+                <ref name="element.index"/>
+                <ref name="element.legalStatus"/>
+                <ref name="element.odd"/>
+                <ref name="element.originalsLoc"/>
+                <ref name="element.otherFindAid"/>
+                <ref name="element.physTech"/>
+                <ref name="element.preferCite"/>
+                <ref name="element.processInfo"/>
+                <ref name="element.relatedMaterial"/>
+                <!-- already defined, but might not be needed ?
                 will need to separate how we handle objectXMLWrap
                 for each schema?
             <ref name="element.relations"/>
             -->
-            <ref name="element.scopeContent"/>
-            <ref name="element.separatedMaterial"/>
-            <ref name="element.useRestrict"/>
-        </choice>
+                <ref name="element.scopeContent"/>
+                <ref name="element.separatedMaterial"/>
+                <ref name="element.useRestrict"/>
+            </choice>
+        </oneOrMore>
     </define>
     <define name="element.did">
         <element name="did">
-            <choice>
-                <ref name="element.abstract"/>
-                <ref name="element.container"/>
-                <ref name="element.dao"/>
-                <ref name="element.daoSet"/>
-                <ref name="element.didNote"/>
-                <ref name="element.langMaterial"/>
-                <ref name="element.materialSpec"/>
-                <ref name="element.origination"/>
-                <ref name="element.physDescSet"/>
-                <ref name="element.physDesc"/>
-                <ref name="element.physDescStructured"/>
-                <ref name="element.physLoc"/>
-                <ref name="element.repository"/>
-                <ref name="element.unitDate"/>
-                <ref name="element.unitDateStructured"/>
-                <ref name="element.unitId"/>
-                <ref name="element.unitTitle"/>
-            </choice>
+            <oneOrMore>
+                <choice>
+                    <ref name="element.abstract"/>
+                    <ref name="element.container"/>
+                    <ref name="element.dao"/>
+                    <ref name="element.daoSet"/>
+                    <ref name="element.didNote"/>
+                    <ref name="element.langMaterial"/>
+                    <ref name="element.materialSpec"/>
+                    <ref name="element.origination"/>
+                    <ref name="element.physDescSet"/>
+                    <ref name="element.physDesc"/>
+                    <ref name="element.physDescStructured"/>
+                    <ref name="element.physLoc"/>
+                    <ref name="element.repository"/>
+                    <ref name="element.unitDate"/>
+                    <ref name="element.unitDateStructured"/>
+                    <ref name="element.unitId"/>
+                    <ref name="element.unitTitle"/>
+                </choice> 
+            </oneOrMore>
         </element>
     </define>
     

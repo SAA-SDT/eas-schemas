@@ -458,7 +458,7 @@
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="did">
-      <xs:choice>
+      <xs:choice maxOccurs="unbounded">
          <xs:element type="ead:abstract" name="abstract"/>
          <xs:element type="ead:container" name="container"/>
          <xs:element type="ead:dao" name="dao"/>

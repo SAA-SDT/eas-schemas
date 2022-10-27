@@ -1148,25 +1148,27 @@
    </define>
    <define name="did">
       <element name="did" ns="https://archivists.org/ns/ead/v4">
-         <choice>
-            <ref name="abstract"/>
-            <ref name="container"/>
-            <ref name="dao"/>
-            <ref name="daoSet"/>
-            <ref name="didNote"/>
-            <ref name="langMaterial"/>
-            <ref name="materialSpec"/>
-            <ref name="origination"/>
-            <ref name="physDescSet"/>
-            <ref name="physDesc"/>
-            <ref name="physDescStructured"/>
-            <ref name="physLoc"/>
-            <ref name="repository"/>
-            <ref name="unitDate"/>
-            <ref name="unitDateStructured"/>
-            <ref name="unitId"/>
-            <ref name="unitTitle"/>
-         </choice>
+         <oneOrMore>
+            <choice>
+               <ref name="abstract"/>
+               <ref name="container"/>
+               <ref name="dao"/>
+               <ref name="daoSet"/>
+               <ref name="didNote"/>
+               <ref name="langMaterial"/>
+               <ref name="materialSpec"/>
+               <ref name="origination"/>
+               <ref name="physDescSet"/>
+               <ref name="physDesc"/>
+               <ref name="physDescStructured"/>
+               <ref name="physLoc"/>
+               <ref name="repository"/>
+               <ref name="unitDate"/>
+               <ref name="unitDateStructured"/>
+               <ref name="unitId"/>
+               <ref name="unitTitle"/>
+            </choice>
+         </oneOrMore>
       </element>
    </define>
    <define name="accessRestrict">
