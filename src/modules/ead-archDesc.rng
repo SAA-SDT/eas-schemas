@@ -53,30 +53,27 @@
         </choice>
     </define>
     <define name="element.did">
-        <choice>
-            <!-- already define -->
-            <ref name="element.abstract"/>
-            
-            <ref name="element.container"/>
-            <ref name="element.dao"/>
-            <ref name="element.daoSet"/>
-            
-            <!-- combine controlNote, didNote, etc., into descriptiveNote ??? -->
-            <ref name="element.didNote"/>
-            
-            <ref name="element.langMaterial"/>
-            <ref name="element.materialSpec"/>
-            <ref name="element.origination"/>
-            <ref name="element.physDescSet"/>
-            <ref name="element.physDesc"/>
-            <ref name="element.physDescStructured"/>
-            <ref name="element.physLoc"/>
-            <ref name="element.repository"/>
-            <ref name="element.unitDate"/>
-            <ref name="element.unitDateStructured"/>
-            <ref name="element.unitId"/>
-            <ref name="element.unitTitle"/>
-        </choice>
+        <element name="did">
+            <choice>
+                <ref name="element.abstract"/>
+                <ref name="element.container"/>
+                <ref name="element.dao"/>
+                <ref name="element.daoSet"/>
+                <ref name="element.didNote"/>
+                <ref name="element.langMaterial"/>
+                <ref name="element.materialSpec"/>
+                <ref name="element.origination"/>
+                <ref name="element.physDescSet"/>
+                <ref name="element.physDesc"/>
+                <ref name="element.physDescStructured"/>
+                <ref name="element.physLoc"/>
+                <ref name="element.repository"/>
+                <ref name="element.unitDate"/>
+                <ref name="element.unitDateStructured"/>
+                <ref name="element.unitId"/>
+                <ref name="element.unitTitle"/>
+            </choice>
+        </element>
     </define>
     
     <define name="element.dsc">

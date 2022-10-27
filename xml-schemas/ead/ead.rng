@@ -189,25 +189,7 @@
    <define name="archDesc">
       <element name="archDesc" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <choice>
-               <ref name="abstract"/>
-               <ref name="container"/>
-               <ref name="dao"/>
-               <ref name="daoSet"/>
-               <ref name="didNote"/>
-               <ref name="langMaterial"/>
-               <ref name="materialSpec"/>
-               <ref name="origination"/>
-               <ref name="physDescSet"/>
-               <ref name="physDesc"/>
-               <ref name="physDescStructured"/>
-               <ref name="physLoc"/>
-               <ref name="repository"/>
-               <ref name="unitDate"/>
-               <ref name="unitDateStructured"/>
-               <ref name="unitId"/>
-               <ref name="unitTitle"/>
-            </choice>
+            <ref name="did"/>
             <zeroOrMore>
                <choice>
                   <ref name="accessRestrict"/>
@@ -1164,208 +1146,27 @@
          </oneOrMore>
       </element>
    </define>
-   <define name="abstract">
-      <element name="abstract" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <choice>
-                        <value type="token" datatypeLibrary="" ns="">external</value>
-                        <value type="token" datatypeLibrary="" ns="">internal</value>
-                     </choice>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <oneOrMore>
-               <choice>
-                  <ref name="reference"/>
-                  <ref name="span"/>
-                  <text/>
-               </choice>
-            </oneOrMore>
-         </group>
-      </element>
-   </define>
-   <define name="container">
-      <element name="container" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="dao">
-      <element name="dao" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="daoSet">
-      <element name="daoSet" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <ref name="dao"/>
-            <oneOrMore>
-               <ref name="dao"/>
-            </oneOrMore>
-            <optional>
-               <ref name="descriptiveNote"/>
-            </optional>
-         </group>
-      </element>
-   </define>
-   <define name="didNote">
-      <element name="didNote" ns="https://archivists.org/ns/ead/v4">
-         <oneOrMore>
-            <ref name="p"/>
-         </oneOrMore>
-      </element>
-   </define>
-   <define name="langMaterial">
-      <element name="langMaterial" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="materialSpec">
-      <element name="materialSpec" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="origination">
-      <element name="origination" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="physDescSet">
-      <element name="physDescSet" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <ref name="physDescStructured"/>
-            <oneOrMore>
-               <ref name="physDescStructured"/>
-            </oneOrMore>
-         </group>
-      </element>
-   </define>
-   <define name="physDesc">
-      <element name="physDesc" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="physDescStructured">
-      <element name="physDescStructured" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <ref name="quantity"/>
-            <ref name="unitType"/>
-            <zeroOrMore>
-               <choice>
-                  <ref name="physFacet"/>
-                  <ref name="dimensions"/>
-               </choice>
-            </zeroOrMore>
-            <optional>
-               <ref name="descriptiveNote"/>
-            </optional>
-         </group>
-      </element>
-   </define>
-   <define name="physLoc">
-      <element name="physLoc" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="repository">
-      <element name="repository" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="unitDate">
-      <element name="unitDate" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="unitDateStructured">
-      <element name="unitDateStructured" ns="https://archivists.org/ns/ead/v4">
+   <define name="did">
+      <element name="did" ns="https://archivists.org/ns/ead/v4">
          <choice>
-            <ref name="date"/>
-            <ref name="dateRange"/>
-            <ref name="dateSet"/>
+            <ref name="abstract"/>
+            <ref name="container"/>
+            <ref name="dao"/>
+            <ref name="daoSet"/>
+            <ref name="didNote"/>
+            <ref name="langMaterial"/>
+            <ref name="materialSpec"/>
+            <ref name="origination"/>
+            <ref name="physDescSet"/>
+            <ref name="physDesc"/>
+            <ref name="physDescStructured"/>
+            <ref name="physLoc"/>
+            <ref name="repository"/>
+            <ref name="unitDate"/>
+            <ref name="unitDateStructured"/>
+            <ref name="unitId"/>
+            <ref name="unitTitle"/>
          </choice>
-      </element>
-   </define>
-   <define name="unitId">
-      <element name="unitId" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="unitTitle">
-      <element name="unitTitle" ns="https://archivists.org/ns/ead/v4">
-         <text/>
       </element>
    </define>
    <define name="accessRestrict">
@@ -2746,8 +2547,8 @@
          <text/>
       </element>
    </define>
-   <define name="span">
-      <element name="span" ns="https://archivists.org/ns/ead/v4">
+   <define name="abstract">
+      <element name="abstract" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2829,130 +2630,125 @@
                   </attribute>
                </optional>
             </interleave>
-            <optional>
-               <attribute name="style" ns="">
-                  <data type="normalizedString"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <text/>
-         </group>
-      </element>
-   </define>
-   <define name="quantity">
-      <element name="quantity" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="unitType">
-      <element name="unitType" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="physFacet">
-      <element name="physFacet" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="dimensions">
-      <element name="dimensions" ns="https://archivists.org/ns/ead/v4">
-         <text/>
-      </element>
-   </define>
-   <define name="dateSet">
-      <element name="dateSet" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <choice>
-                        <value type="token" datatypeLibrary="" ns="">external</value>
-                        <value type="token" datatypeLibrary="" ns="">internal</value>
-                     </choice>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <choice>
-               <ref name="date"/>
-               <ref name="dateRange"/>
-            </choice>
             <oneOrMore>
                <choice>
-                  <ref name="date"/>
-                  <ref name="dateRange"/>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
+      </element>
+   </define>
+   <define name="container">
+      <element name="container" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="dao">
+      <element name="dao" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="daoSet">
+      <element name="daoSet" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <ref name="dao"/>
+            <oneOrMore>
+               <ref name="dao"/>
+            </oneOrMore>
+            <optional>
+               <ref name="descriptiveNote"/>
+            </optional>
+         </group>
+      </element>
+   </define>
+   <define name="didNote">
+      <element name="didNote" ns="https://archivists.org/ns/ead/v4">
+         <oneOrMore>
+            <ref name="p"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="langMaterial">
+      <element name="langMaterial" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="materialSpec">
+      <element name="materialSpec" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="origination">
+      <element name="origination" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="physDescSet">
+      <element name="physDescSet" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <ref name="physDescStructured"/>
+            <oneOrMore>
+               <ref name="physDescStructured"/>
+            </oneOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="physDesc">
+      <element name="physDesc" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="physDescStructured">
+      <element name="physDescStructured" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <ref name="quantity"/>
+            <ref name="unitType"/>
+            <zeroOrMore>
+               <choice>
+                  <ref name="physFacet"/>
+                  <ref name="dimensions"/>
+               </choice>
+            </zeroOrMore>
+            <optional>
+               <ref name="descriptiveNote"/>
+            </optional>
+         </group>
+      </element>
+   </define>
+   <define name="physLoc">
+      <element name="physLoc" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="repository">
+      <element name="repository" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="unitDate">
+      <element name="unitDate" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="unitDateStructured">
+      <element name="unitDateStructured" ns="https://archivists.org/ns/ead/v4">
+         <choice>
+            <ref name="date"/>
+            <ref name="dateRange"/>
+            <ref name="dateSet"/>
+         </choice>
+      </element>
+   </define>
+   <define name="unitId">
+      <element name="unitId" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="unitTitle">
+      <element name="unitTitle" ns="https://archivists.org/ns/ead/v4">
+         <text/>
       </element>
    </define>
    <define name="head">
@@ -3266,25 +3062,7 @@
    <define name="component">
       <element name="component" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <choice>
-               <ref name="abstract"/>
-               <ref name="container"/>
-               <ref name="dao"/>
-               <ref name="daoSet"/>
-               <ref name="didNote"/>
-               <ref name="langMaterial"/>
-               <ref name="materialSpec"/>
-               <ref name="origination"/>
-               <ref name="physDescSet"/>
-               <ref name="physDesc"/>
-               <ref name="physDescStructured"/>
-               <ref name="physLoc"/>
-               <ref name="repository"/>
-               <ref name="unitDate"/>
-               <ref name="unitDateStructured"/>
-               <ref name="unitId"/>
-               <ref name="unitTitle"/>
-            </choice>
+            <ref name="did"/>
             <zeroOrMore>
                <choice>
                   <ref name="accessRestrict"/>
@@ -3581,6 +3359,99 @@
             <optional>
                <attribute name="unit" ns="">
                   <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <text/>
+         </group>
+      </element>
+   </define>
+   <define name="span">
+      <element name="span" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <choice>
+                        <value type="token" datatypeLibrary="" ns="">external</value>
+                        <value type="token" datatypeLibrary="" ns="">internal</value>
+                     </choice>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="style" ns="">
+                  <data type="normalizedString"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
@@ -3949,6 +3820,122 @@
                </attribute>
             </optional>
             <text/>
+         </group>
+      </element>
+   </define>
+   <define name="quantity">
+      <element name="quantity" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="unitType">
+      <element name="unitType" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="physFacet">
+      <element name="physFacet" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="dimensions">
+      <element name="dimensions" ns="https://archivists.org/ns/ead/v4">
+         <text/>
+      </element>
+   </define>
+   <define name="dateSet">
+      <element name="dateSet" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <choice>
+                        <value type="token" datatypeLibrary="" ns="">external</value>
+                        <value type="token" datatypeLibrary="" ns="">internal</value>
+                     </choice>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <choice>
+               <ref name="date"/>
+               <ref name="dateRange"/>
+            </choice>
+            <oneOrMore>
+               <choice>
+                  <ref name="date"/>
+                  <ref name="dateRange"/>
+               </choice>
+            </oneOrMore>
          </group>
       </element>
    </define>
