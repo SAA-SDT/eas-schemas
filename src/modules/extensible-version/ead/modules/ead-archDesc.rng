@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+   <define name="element.archDesc">
+      <element name="archDesc">
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.description"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="element.dsc"/>
+         </optional>
+      </element>
+   </define>
+   <define name="model.description">
+      <choice>
+         <ref name="element.accessRestrict"/>
+         <ref name="element.accruals"/>
+         <ref name="element.acqInfo"/>
+         <ref name="element.altFormAvail"/>
+         <ref name="element.appraisal"/>
+         <ref name="element.arrangement"/>
+         <ref name="element.bibliography"/>
+         <!-- already defined -->
+         <ref name="element.biogHist"/>
+         <ref name="element.controlAccess"/>
+         <ref name="element.custodHist"/>
+         <ref name="element.filePlan"/>
+         <ref name="element.index"/>
+         <ref name="element.legalStatus"/>
+         <ref name="element.odd"/>
+         <ref name="element.originalsLoc"/>
+         <ref name="element.otherFindAid"/>
+         <ref name="element.physTech"/>
+         <ref name="element.preferCite"/>
+         <ref name="element.processInfo"/>
+         <ref name="element.relatedMaterial"/>
+         <!-- already defined, but might not be needed ?
+                will need to separate how we handle objectXMLWrap
+                for each schema?
+            <ref name="element.relations"/>
+            -->
+         <ref name="element.scopeContent"/>
+         <ref name="element.separatedMaterial"/>
+         <ref name="element.useRestrict"/>
+      </choice>
+   </define>
+   <define name="element.did">
+      <choice>
+            <!-- already define -->
+         <ref name="element.abstract"/>
+         <ref name="element.container"/>
+         <ref name="element.dao"/>
+         <ref name="element.daoSet"/>
+         <!-- combine controlNote, didNote, etc., into descriptiveNote ??? -->
+         <ref name="element.didNote"/>
+         <ref name="element.langMaterial"/>
+         <ref name="element.materialSpec"/>
+         <ref name="element.origination"/>
+         <ref name="element.physDescSet"/>
+         <ref name="element.physDesc"/>
+         <ref name="element.physDescStructured"/>
+         <ref name="element.physLoc"/>
+         <ref name="element.repository"/>
+         <ref name="element.unitDate"/>
+         <ref name="element.unitDateStructured"/>
+         <ref name="element.unitId"/>
+         <ref name="element.unitTitle"/>
+      </choice>
+   </define>
+   <define name="element.dsc">
+      <oneOrMore>
+         <ref name="element.component"/>
+      </oneOrMore>
+   </define>
+   <define name="element.component">
+      <element name="component">
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.description"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.component"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.container">
+      <text/>
+   </define>
+   <define name="element.dao">
+      <text/>
+   </define>
+   <define name="element.daoSet">
+      <ref name="element.dao"/>
+      <oneOrMore>
+         <ref name="element.dao"/>
+      </oneOrMore>
+      <ref name="element.descriptiveNote.optional"/>
+   </define>
+   <define name="element.didNote">
+      <oneOrMore>
+         <ref name="element.p"/>
+      </oneOrMore>
+   </define>
+   <define name="element.dimensions">
+      <text/>
+   </define>
+   <define name="element.langMaterial">
+      <text/>
+   </define>
+   <define name="element.materialSpec">
+      <text/>
+   </define>
+   <define name="element.origination">
+      <text/>
+   </define>
+   <define name="element.physDesc">
+      <text/>
+   </define>
+   <define name="element.physDescSet">
+      <ref name="element.physDescStructured"/>
+      <oneOrMore>
+         <ref name="element.physDescStructured"/>
+      </oneOrMore>
+   </define>
+   <define name="element.physDescStructured">
+      <element name="quantity">
+         <text/>
+      </element>
+      <element name="unitType">
+         <text/>
+      </element>
+      <zeroOrMore>
+         <choice>
+            <ref name="element.physFacet"/>
+            <ref name="element.dimensions"/>
+         </choice>
+      </zeroOrMore>
+      <ref name="element.descriptiveNote.optional"/>
+   </define>
+   <define name="element.physFacet">
+      <text/>
+   </define>
+   <define name="element.physLoc">
+      <text/>
+   </define>
+   <define name="element.repository">
+      <text/>
+   </define>
+   <define name="element.unitDate">
+      <text/>
+   </define>
+   <define name="element.unitDateStructured">
+      <text/>
+      <!--
+        <ref name="model.all-dates.choice"/>
+        -->
+   </define>
+   <define name="element.unitId">
+      <text/>
+   </define>
+   <define name="element.unitTitle">
+      <text/>
+   </define>
+   <define name="element.arrangement">
+      <text/>
+   </define>
+   <define name="element.index">
+      <text/>
+   </define>
+   <define name="element.controlAccess">
+      <text/>
+   </define>
+   <define name="element.processInfo">
+      <text/>
+   </define>
+   <define name="element.appraisal">
+      <text/>
+   </define>
+   <define name="element.acqInfo">
+      <text/>
+   </define>
+   <define name="element.otherFindAid">
+      <text/>
+   </define>
+   <define name="element.filePlan">
+      <text/>
+   </define>
+   <define name="element.physTech">
+      <text/>
+   </define>
+   <define name="element.odd">
+      <text/>
+   </define>
+   <define name="element.originalsLoc">
+      <text/>
+   </define>
+   <define name="element.useRestrict">
+      <text/>
+   </define>
+   <define name="element.separatedMaterial">
+      <text/>
+   </define>
+   <define name="element.accruals">
+      <text/>
+   </define>
+   <!-- but no -->
+   <define name="element.dateSingle">
+      <text/>
+   </define>
+   <define name="element.scopeContent">
+      <text/>
+   </define>
+   <define name="element.bibliography">
+      <text/>
+   </define>
+   <define name="element.legalStatus">
+      <text/>
+   </define>
+   <define name="element.altFormAvail">
+      <text/>
+   </define>
+   <define name="element.relatedMaterial">
+      <text/>
+   </define>
+   <define name="element.accessRestrict">
+      <text/>
+   </define>
+   <define name="element.preferCite">
+      <text/>
+   </define>
+   <define name="element.custodHist">
+      <text/>
+   </define>
+</grammar>
