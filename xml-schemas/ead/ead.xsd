@@ -120,36 +120,53 @@
          <xs:element type="ead:noteStatement" name="noteStatement" minOccurs="0"/>
       </xs:sequence>
    </xs:complexType>
-   <xs:complexType name="archDesc" mixed="true">
+   <xs:complexType name="archDesc">
       <xs:sequence>
-         <xs:choice minOccurs="0">
+         <xs:choice>
             <xs:element type="ead:abstract" name="abstract"/>
-            <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-            <xs:element type="ead:p" name="p" maxOccurs="unbounded"/>
-            <xs:sequence>
-               <xs:element type="ead:quantity" name="quantity"/>
-               <xs:element type="ead:unitType" name="unitType"/>
-               <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-               <xs:sequence maxOccurs="unbounded">
-                  <xs:element type="ead:quantity" name="quantity"/>
-                  <xs:element type="ead:unitType" name="unitType"/>
-                  <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-               </xs:sequence>
-            </xs:sequence>
-            <xs:sequence>
-               <xs:element type="ead:quantity" name="quantity"/>
-               <xs:element type="ead:unitType" name="unitType"/>
-               <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-            </xs:sequence>
+            <xs:element type="ead:container" name="container"/>
+            <xs:element type="ead:dao" name="dao"/>
+            <xs:element type="ead:daoSet" name="daoSet"/>
+            <xs:element type="ead:didNote" name="didNote"/>
+            <xs:element type="ead:langMaterial" name="langMaterial"/>
+            <xs:element type="ead:materialSpec" name="materialSpec"/>
+            <xs:element type="ead:origination" name="origination"/>
+            <xs:element type="ead:physDescSet" name="physDescSet"/>
+            <xs:element type="ead:physDesc" name="physDesc"/>
+            <xs:element type="ead:physDescStructured" name="physDescStructured"/>
+            <xs:element type="ead:physLoc" name="physLoc"/>
+            <xs:element type="ead:repository" name="repository"/>
+            <xs:element type="ead:unitDate" name="unitDate"/>
+            <xs:element type="ead:unitDateStructured" name="unitDateStructured"/>
+            <xs:element type="ead:unitId" name="unitId"/>
+            <xs:element type="ead:unitTitle" name="unitTitle"/>
          </xs:choice>
-         <xs:element type="ead:biogHist"
-                     name="biogHist"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
-         <xs:element type="ead:component"
-                     name="component"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:accessRestrict" name="accessRestrict"/>
+            <xs:element type="ead:accruals" name="accruals"/>
+            <xs:element type="ead:acqInfo" name="acqInfo"/>
+            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
+            <xs:element type="ead:appraisal" name="appraisal"/>
+            <xs:element type="ead:arrangement" name="arrangement"/>
+            <xs:element type="ead:bibliography" name="bibliography"/>
+            <xs:element type="ead:biogHist" name="biogHist"/>
+            <xs:element type="ead:controlAccess" name="controlAccess"/>
+            <xs:element type="ead:custodHist" name="custodHist"/>
+            <xs:element type="ead:filePlan" name="filePlan"/>
+            <xs:element type="ead:index" name="index"/>
+            <xs:element type="ead:legalStatus" name="legalStatus"/>
+            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
+            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:preferCite" name="preferCite"/>
+            <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
+            <xs:element type="ead:scopeContent" name="scopeContent"/>
+            <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:useRestrict" name="useRestrict"/>
+         </xs:choice>
+         <xs:element type="ead:dsc" name="dsc" minOccurs="0"/>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="recordId">
@@ -482,57 +499,164 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="descriptiveNote">
-      <xs:sequence>
-         <xs:element type="ead:p" name="p" maxOccurs="unbounded"/>
-      </xs:sequence>
-      <xs:attribute name="audience">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="external"/>
-               <xs:enumeration value="internal"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="p" mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-         <xs:element type="ead:reference" name="reference"/>
-         <xs:element type="ead:span" name="span"/>
-      </xs:choice>
-      <xs:attribute name="audience">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="external"/>
-               <xs:enumeration value="internal"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="quantity">
+   <xs:complexType name="container">
       <xs:simpleContent>
          <xs:extension base="xs:string">
             <xs:attribute name="value" type="xs:string"/>
          </xs:extension>
       </xs:simpleContent>
    </xs:complexType>
-   <xs:complexType name="unitType">
+   <xs:complexType name="dao">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="daoSet">
+      <xs:sequence>
+         <xs:element type="ead:dao" name="dao"/>
+         <xs:element type="ead:dao" name="dao" maxOccurs="unbounded"/>
+         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="didNote">
+      <xs:sequence>
+         <xs:element type="ead:p" name="p" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="langMaterial">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="materialSpec">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="origination">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="physDescSet">
+      <xs:sequence>
+         <xs:element type="ead:physDescStructured" name="physDescStructured"/>
+         <xs:element type="ead:physDescStructured"
+                     name="physDescStructured"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="physDesc">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="physDescStructured">
+      <xs:sequence>
+         <xs:element type="ead:quantity" name="quantity"/>
+         <xs:element type="ead:unitType" name="unitType"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:physFacet" name="physFacet"/>
+            <xs:element type="ead:dimensions" name="dimensions"/>
+         </xs:choice>
+         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="physLoc">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="repository">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="unitDate">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="unitDateStructured">
+      <xs:choice>
+         <xs:element type="ead:date" name="date"/>
+         <xs:element type="ead:dateRange" name="dateRange"/>
+         <xs:element type="ead:dateSet" name="dateSet"/>
+      </xs:choice>
+   </xs:complexType>
+   <xs:complexType name="unitId">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="unitTitle">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="accessRestrict">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="accruals">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="acqInfo">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="altFormAvail">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="appraisal">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="arrangement">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="bibliography">
       <xs:simpleContent>
          <xs:extension base="xs:string">
             <xs:attribute name="value" type="xs:string"/>
@@ -567,36 +691,114 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="component" mixed="true">
+   <xs:complexType name="controlAccess">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="custodHist">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="filePlan">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="index">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="legalStatus">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="odd">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="orginalsLoc">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="otherFindAid">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="physTech">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="preferCite">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="processInfo">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="relatedMaterial">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="scopeContent">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="separatedMaterial">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="useRestrict">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="dsc">
       <xs:sequence>
-         <xs:choice minOccurs="0">
-            <xs:element type="ead:abstract" name="abstract"/>
-            <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-            <xs:element type="ead:p" name="p" maxOccurs="unbounded"/>
-            <xs:sequence>
-               <xs:element type="ead:quantity" name="quantity"/>
-               <xs:element type="ead:unitType" name="unitType"/>
-               <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-               <xs:sequence maxOccurs="unbounded">
-                  <xs:element type="ead:quantity" name="quantity"/>
-                  <xs:element type="ead:unitType" name="unitType"/>
-                  <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-               </xs:sequence>
-            </xs:sequence>
-            <xs:sequence>
-               <xs:element type="ead:quantity" name="quantity"/>
-               <xs:element type="ead:unitType" name="unitType"/>
-               <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-            </xs:sequence>
-         </xs:choice>
-         <xs:element type="ead:biogHist"
-                     name="biogHist"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
-         <xs:element type="ead:component"
-                     name="component"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
+         <xs:element type="ead:component" name="component" maxOccurs="unbounded"/>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="agencyCode" mixed="true">
@@ -669,6 +871,27 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="descriptiveNote">
+      <xs:sequence>
+         <xs:element type="ead:p" name="p" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="audience">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="external"/>
+               <xs:enumeration value="internal"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="maintenanceEvent">
@@ -876,6 +1099,28 @@
          </xs:extension>
       </xs:simpleContent>
    </xs:complexType>
+   <xs:complexType name="p" mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
+      </xs:choice>
+      <xs:attribute name="audience">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="external"/>
+               <xs:enumeration value="internal"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="publisher">
       <xs:simpleContent>
          <xs:extension base="xs:string">
@@ -939,6 +1184,64 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="style" type="xs:normalizedString"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="quantity">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="unitType">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="physFacet">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="dimensions">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="dateSet">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element type="ead:date" name="date"/>
+            <xs:element type="ead:dateRange" name="dateRange"/>
+         </xs:choice>
+         <xs:choice maxOccurs="unbounded">
+            <xs:element type="ead:date" name="date"/>
+            <xs:element type="ead:dateRange" name="dateRange"/>
+         </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="audience">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="external"/>
+               <xs:enumeration value="internal"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="head" mixed="true">
@@ -1050,6 +1353,58 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="component">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element type="ead:abstract" name="abstract"/>
+            <xs:element type="ead:container" name="container"/>
+            <xs:element type="ead:dao" name="dao"/>
+            <xs:element type="ead:daoSet" name="daoSet"/>
+            <xs:element type="ead:didNote" name="didNote"/>
+            <xs:element type="ead:langMaterial" name="langMaterial"/>
+            <xs:element type="ead:materialSpec" name="materialSpec"/>
+            <xs:element type="ead:origination" name="origination"/>
+            <xs:element type="ead:physDescSet" name="physDescSet"/>
+            <xs:element type="ead:physDesc" name="physDesc"/>
+            <xs:element type="ead:physDescStructured" name="physDescStructured"/>
+            <xs:element type="ead:physLoc" name="physLoc"/>
+            <xs:element type="ead:repository" name="repository"/>
+            <xs:element type="ead:unitDate" name="unitDate"/>
+            <xs:element type="ead:unitDateStructured" name="unitDateStructured"/>
+            <xs:element type="ead:unitId" name="unitId"/>
+            <xs:element type="ead:unitTitle" name="unitTitle"/>
+         </xs:choice>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:accessRestrict" name="accessRestrict"/>
+            <xs:element type="ead:accruals" name="accruals"/>
+            <xs:element type="ead:acqInfo" name="acqInfo"/>
+            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
+            <xs:element type="ead:appraisal" name="appraisal"/>
+            <xs:element type="ead:arrangement" name="arrangement"/>
+            <xs:element type="ead:bibliography" name="bibliography"/>
+            <xs:element type="ead:biogHist" name="biogHist"/>
+            <xs:element type="ead:controlAccess" name="controlAccess"/>
+            <xs:element type="ead:custodHist" name="custodHist"/>
+            <xs:element type="ead:filePlan" name="filePlan"/>
+            <xs:element type="ead:index" name="index"/>
+            <xs:element type="ead:legalStatus" name="legalStatus"/>
+            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
+            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:preferCite" name="preferCite"/>
+            <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
+            <xs:element type="ead:scopeContent" name="scopeContent"/>
+            <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:useRestrict" name="useRestrict"/>
+         </xs:choice>
+         <xs:element type="ead:component"
+                     name="component"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
    </xs:complexType>
    <xs:complexType name="agent" mixed="true">
       <xs:attribute name="audience">
@@ -1268,36 +1623,6 @@
                      name="reference"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
-      </xs:sequence>
-      <xs:attribute name="audience">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="external"/>
-               <xs:enumeration value="internal"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="dateSet">
-      <xs:sequence>
-         <xs:choice>
-            <xs:element type="ead:date" name="date"/>
-            <xs:element type="ead:dateRange" name="dateRange"/>
-         </xs:choice>
-         <xs:choice maxOccurs="unbounded">
-            <xs:element type="ead:date" name="date"/>
-            <xs:element type="ead:dateRange" name="dateRange"/>
-         </xs:choice>
       </xs:sequence>
       <xs:attribute name="audience">
          <xs:simpleType>

@@ -80,9 +80,11 @@
     </define>
     
     <define name="element.dsc">
-        <oneOrMore>
-            <ref name="element.component"/>
-        </oneOrMore>
+        <element name="dsc">
+            <oneOrMore>
+                <ref name="element.component"/>
+            </oneOrMore>
+        </element>
     </define>
     
     <define name="element.component">
@@ -99,194 +101,267 @@
     
     
     <define name="element.container">
-        <text/>
+        <element name="container">
+            <text/> 
+        </element>
     </define>
     
     <define name="element.dao">
-        <text/>
+        <element name="dao">
+            <text/>
+        </element>
     </define>
     
     <define name="element.daoSet">
-        <ref name="element.dao"/>
-        <oneOrMore>
+        <element name="daoSet">
             <ref name="element.dao"/>
-        </oneOrMore>
-        <ref name="element.descriptiveNote.optional"/>
+            <oneOrMore>
+                <ref name="element.dao"/>
+            </oneOrMore>
+            <ref name="element.descriptiveNote.optional"/>
+        </element>
     </define>
     
    
     <define name="element.didNote">
-        <oneOrMore>
-            <ref name="element.p"/>
-        </oneOrMore>
+        <element name="didNote">
+            <oneOrMore>
+                <ref name="element.p"/>
+            </oneOrMore>
+        </element>
     </define>
     
     <define name="element.dimensions">
-        <text/>
+        <element name="dimensions">
+            <text/>  
+        </element>
     </define>
     
     <define name="element.langMaterial">
-        <text/>
+        <element name="langMaterial">
+            <text/>
+        </element>
     </define>
     
     <define name="element.materialSpec">
-        <text/>
+        <element name="materialSpec">
+            <text/>
+        </element>
     </define>
     
     <define name="element.origination">
-        <text/>
+        <element name="origination">
+            <text/>
+        </element>
     </define>
     
     <define name="element.physDesc">
-        <text/>
+        <element name="physDesc">
+            <text/> 
+        </element>
     </define>
 
     <define name="element.physDescSet">
-        <ref name="element.physDescStructured"/>
-        <oneOrMore>
+        <element name="physDescSet">
             <ref name="element.physDescStructured"/>
-        </oneOrMore>
+            <oneOrMore>
+                <ref name="element.physDescStructured"/>
+            </oneOrMore>
+        </element>
     </define>
 
     <define name="element.physDescStructured">
-        <element name="quantity">
-            <text/>
+        <element name="physDescStructured">
+            <element name="quantity">
+                <text/>
+            </element>
+            <element name="unitType">
+                <text/>
+            </element>
+            <zeroOrMore>
+                <choice>
+                    <ref name="element.physFacet"/>
+                    <ref name="element.dimensions"/>
+                </choice>
+            </zeroOrMore>
+            <ref name="element.descriptiveNote.optional"/>
         </element>
-        <element name="unitType">
-            <text/>
-        </element>
-        <zeroOrMore>
-            <choice>
-                <ref name="element.physFacet"/>
-                <ref name="element.dimensions"/>
-            </choice>
-        </zeroOrMore>
-        <ref name="element.descriptiveNote.optional"/>
     </define>
     
     <define name="element.physFacet">
-        <text/>
+        <element name="physFacet">
+            <text/>
+        </element>
     </define>
     
     <define name="element.physLoc">
-        <text/>
+        <element name="physLoc">
+            <text/>  
+        </element>
     </define>
     
     <define name="element.repository">
-        <text/>
+        <element name="repository">
+            <text/> 
+        </element>
     </define>
     
     <define name="element.unitDate">
-        <text/>
+        <element name="unitDate">
+            <text/>
+        </element>
     </define>
     
     <define name="element.unitDateStructured">
-        <text/>
-        <!--
-        <ref name="model.all-dates.choice"/>
-        -->
+        <element name="unitDateStructured">
+            <ref name="model.all-dates.choice"/>
+        </element>
     </define>
     
     
     <define name="element.unitId">
-        <text/>
+        <element name="unitId">
+            <text/>
+        </element>
     </define>
     
     <define name="element.unitTitle">
-        <text/>
+        <element name="unitTitle">
+            <text/>
+        </element>
     </define>
     
     <define name="element.arrangement">
-        <text/>
+       <element name="arrangement">
+           <text/>
+       </element>
     </define>
     
     <define name="element.index">
-        <text/>
+        <element name="index">
+            <text/>
+        </element>
     </define>
     
     <define name="element.controlAccess">
-        <text/>
+        <element name="controlAccess">
+            <text/> 
+        </element>
     </define>
     
     <define name="element.processInfo">
-        <text/>
+        <element name="processInfo">
+            <text/>  
+        </element>
     </define>
     
     <define name="element.appraisal">
-        <text/>
+        <element name="appraisal">
+            <text/>
+        </element>
     </define>
     
     <define name="element.acqInfo">
-        <text/>
+        <element name="acqInfo">
+            <text/> 
+        </element>
     </define>
     
     <define name="element.otherFindAid">
-        <text/>
+        <element name="otherFindAid">
+            <text/> 
+        </element>
     </define>
     
     <define name="element.filePlan">
-        <text/>
+        <element name="filePlan">
+            <text/> 
+        </element>
     </define>
     
     <define name="element.physTech">
-        <text/>
+        <element name="physTech">
+            <text/>  
+        </element>
     </define>
     
     <define name="element.odd">
-        <text/>
+        <element name="odd">
+            <text/>
+        </element>
     </define>
     
     <define name="element.originalsLoc">
-        <text/>
+        <element name="orginalsLoc">
+            <text/>  
+        </element>
     </define>
     
     <define name="element.useRestrict">
-        <text/>
+        <element name="useRestrict">
+            <text/> 
+        </element>
     </define>
     
     <define name="element.separatedMaterial">
-        <text/>
+        <element name="separatedMaterial">
+            <text/>
+        </element>
     </define>
     
     <define name="element.accruals">
-        <text/>
+        <element name="accruals">
+            <text/>
+        </element>
     </define>
-    
-    <!-- but no -->
-    <define name="element.dateSingle">
-        <text/>
-    </define>
+   
     
     <define name="element.scopeContent">
-        <text/>
+        <element name="scopeContent">
+            <text/>
+        </element>
     </define>
     
     <define name="element.bibliography">
-        <text/>
+        <element name="bibliography">
+            <text/> 
+        </element>
     </define>
     
     <define name="element.legalStatus">
-        <text/>
+        <element name="legalStatus">
+            <text/>
+        </element>
     </define>
     
     <define name="element.altFormAvail">
-        <text/>
+        <element name="altFormAvail">
+            <text/>
+        </element>
     </define>
     
     <define name="element.relatedMaterial">
-        <text/>
+        <element name="relatedMaterial">
+            <text/>
+        </element>
     </define>
     
     <define name="element.accessRestrict">
-        <text/>
+        <element name="accessRestrict">
+            <text/>
+        </element>
     </define>
     
     <define name="element.preferCite">
-        <text/>
+        <element name="preferCite">
+            <text/>
+        </element>
     </define>
     
     <define name="element.custodHist">
-        <text/>
+        <element name="custodHist">
+            <text/>
+        </element>
     </define>
 
 </grammar>
