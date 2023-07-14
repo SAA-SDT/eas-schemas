@@ -14,6 +14,7 @@
                     <ref name="element.date"/>
                     <ref name="element.div"/>
                     <ref name="element.place"/>
+                    <ref name="element.title"/>
                 </choice>                     
             </oneOrMore>
         </element>       
@@ -27,6 +28,16 @@
             <optional>
                 <ref name="element.div"/>
             </optional>
+        </element>
+    </define>
+    
+    <!-- TO DO: confirm entire model, availability, etc. alos, move definition based on availiabity, if necessary. -->
+    <define name="element.title">
+        <element name="title">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <oneOrMore>
+                <ref name="element.part"/>
+            </oneOrMore>
         </element>
     </define>
 

@@ -250,6 +250,14 @@
             </attribute>
         </optional>
         <optional>
+            <attribute name="agentTypeEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherAgentTypeEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
             <attribute name="audienceEncoding">
                 <choice>
                     <value>EASList</value>
@@ -357,10 +365,10 @@
             </attribute>
         </optional>
         <optional a:exclude-from="eac">
-            <attribute name="physDescStructuredEncoding">
+            <attribute name="physDescStructuredTypeEncoding">
                 <choice>
                     <value>EASList</value>
-                    <value>otherPhysDescStructuredEncoding</value>
+                    <value>otherPhysDescStructuredTypeEncoding</value>
                 </choice>
             </attribute>
         </optional>
