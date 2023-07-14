@@ -94,10 +94,8 @@
     <define name="attribute.identityType.optional">
         <optional>
             <attribute name="identityType">
-                <choice>
-                    <value>given</value>
-                    <value>acquired</value>
-                </choice>
+                <!-- TO DO: need to move the EADList values of 'given' or 'acquired' to the schematron -->
+                <data type="token"/>
             </attribute>
         </optional>
     </define>
@@ -244,6 +242,86 @@
     
     <define name="attribute-group.control-encodings.optional">
         <optional>
+            <attribute name="addressTypeLineEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherAddressTypeLineEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="audienceEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherAudienceEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="contactTypeLineEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherContactTypeLineEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="countryEncoding">
+                <choice>
+                    <value>iso3166-1</value>
+                    <value>otherCountryEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional a:exclude-from="eac">
+            <attribute name="coverageEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherCoverageEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional a:exclude-from="eac">
+            <attribute name="daoTypeEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherDaoTypeEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="detailLevelEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherDetailLevelEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional a:exclude-from="eac">
+            <attribute name="dscTypeEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherDscTypeEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="dateEncoding">
+                <choice>
+                    <value>iso8601</value>
+                    <value>otherDateEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional a:exclude-from="ead">
+            <attribute name="identityTypeEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherIdentityTypeEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
             <attribute name="languageEncoding">
                 <choice>
                     <value>iso639-1</value>
@@ -251,6 +329,54 @@
                     <value>iso639-3</value>
                     <value>ietf-bcp-47</value>
                     <value>otherLanguageEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional a:exclude-from="eac">
+            <attribute name="levelEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>levelEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="maintenanceEventTypeEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherMaintenanceEventTypeEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="maintenanceStatusEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherMaintenanceStatusEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional a:exclude-from="eac">
+            <attribute name="physDescStructuredEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherPhysDescStructuredEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="publicationStatusEncoding">
+                <choice>
+                    <value>EASList</value>
+                    <value>otherPublicationStatusEncoding</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="repositoryEncoding">
+                <choice>
+                    <value>iso15511</value>
+                    <value>otherRepositoryEncoding</value>
                 </choice>
             </attribute>
         </optional>
@@ -263,26 +389,26 @@
             </attribute>
         </optional>
         <optional>
-            <attribute name="dateEncoding">
+            <attribute name="statusEncoding">
                 <choice>
-                    <value>iso8601</value>
-                    <value>otherDateEncoding</value>
+                    <value>EASList</value>
+                    <value>otherStatusEncoding</value>
                 </choice>
             </attribute>
         </optional>
         <optional>
-            <attribute name="countryEncoding">
+            <attribute name="targetTypeEncoding">
                 <choice>
-                    <value>iso3166-1</value>
-                    <value>otherCountryEncoding</value>
+                    <value>EASList</value>
+                    <value>otherTargetTypeEncoding</value>
                 </choice>
             </attribute>
         </optional>
-        <optional>
-            <attribute name="repositoryEncoding">
+        <optional a:exclude-from="eac">
+            <attribute name="unitDateTypeEncoding">
                 <choice>
-                    <value>iso15511</value>
-                    <value>otherRepositoryEncoding</value>
+                    <value>EASList</value>
+                    <value>otherUnitDateTypeEncoding</value>
                 </choice>
             </attribute>
         </optional>

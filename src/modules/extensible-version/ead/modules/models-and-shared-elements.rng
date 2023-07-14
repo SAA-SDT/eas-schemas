@@ -28,11 +28,24 @@
          <text/>
       </element>
    </define>
+   <define name="element.agent">
+      <element name="agent">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <attribute name="agentType">
+            <data type="token"/>
+         </attribute>
+         <text/>
+      </element>
+   </define>
    <define name="element.biogHist">
       <element name="biogHist">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="element.head.optional"/>
+         <optional>
+            <ref name="element.abstract"/>
+         </optional>
          <ref name="model.narrative-group-plus-chronList.optional"/>
       </element>
    </define>
@@ -79,6 +92,13 @@
          <oneOrMore>
             <ref name="element.chronItem"/>
          </oneOrMore>
+      </element>
+   </define>
+   <define name="element.citedRange">
+      <element name="citedRange">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute.unit.optional"/>
+         <text/>
       </element>
    </define>
    <define name="element.contact">

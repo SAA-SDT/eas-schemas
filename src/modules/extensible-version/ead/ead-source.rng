@@ -6,7 +6,7 @@
    <include href="modules/attributes.rng"/>
    <include href="modules/datatypes.rng"/>
    <include href="modules/control.rng"/>
-   <include href="modules/ead-fileDesc.rng"/>
+   <include href="modules/ead-findAidDesc.rng"/>
    <include href="modules/ead-archDesc.rng"/>
    <!--
     <include href="modules/relations.rng/"/>
@@ -19,7 +19,7 @@
       <element name="ead">
          <ref name="element.control"/>
          <optional>
-            <ref name="element.fileDesc"/>
+            <ref name="element.findAidDesc"/>
          </optional>
          <ref name="element.archDesc"/>
       </element>

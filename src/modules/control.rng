@@ -19,25 +19,6 @@
             <text/>
         </element>
     </define>
-
-    <define name="element.agent">
-        <element name="agent">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
-            <attribute name="agentType">
-                <data type="token"/>
-            </attribute>
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.citedRange">
-        <element name="citedRange">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute.unit.optional"/>
-            <text/>
-        </element>
-    </define>
     
     <define name="element.control">
         <element name="control">
@@ -50,7 +31,7 @@
             <ref name="element.maintenanceAgency"/>
             <ref name="element.maintenanceHistory"/>
             <optional a:exclude-from="eac">
-                <ref name="element.fileDesc"/>
+                <ref name="element.findAidDesc"/>
             </optional>
             <optional>
                 <ref name="element.sources"/>
@@ -59,10 +40,8 @@
                 <choice>
                     <ref name="element.conventionDeclaration"/>
                     <ref name="element.languageDeclaration"/>
-                    <ref name="element.localControl"/>
                     <ref name="element.localTypeDeclaration"/>
                     <ref name="element.otherRecordId"/>
-                    <ref name="element.representation"/>
                     <ref name="element.rightsDeclaration"/>
                 </choice>
             </zeroOrMore>     
@@ -95,19 +74,6 @@
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.language-and-script-code"/>
             <ref name="element.descriptiveNote.optional"/>
-        </element>
-    </define>
-    
-    <define name="element.localControl">
-        <element name="localControl">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
-            <oneOrMore>
-                <ref name="element.term"/>
-            </oneOrMore>
-            <optional>
-                <ref name="model.date-dateRange.choice"/> 
-            </optional>
         </element>
     </define>
     
@@ -188,14 +154,6 @@
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="dt.non-empty-element-with-newlines-available"/>
         </element>    
-    </define>
-    
-    <define name="element.representation">
-        <element name="representation">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.links.optional"/>
-            <text/>
-        </element>
     </define>
         
     <define name="element.rightsDeclaration">

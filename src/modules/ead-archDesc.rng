@@ -20,7 +20,7 @@
     <define name="model.description">
         <oneOrMore>
             <choice>
-                <ref name="element.accessRestrict"/>
+                <ref name="element.accessConditions"/>
                 <ref name="element.accruals"/>
                 <ref name="element.acqInfo"/>
                 <ref name="element.altFormAvail"/>
@@ -50,7 +50,7 @@
             -->
                 <ref name="element.scopeContent"/>
                 <ref name="element.separatedMaterial"/>
-                <ref name="element.useRestrict"/>
+                <ref name="element.useConditions"/>
             </choice>
         </oneOrMore>
     </define>
@@ -298,8 +298,8 @@
         </element>
     </define>
     
-    <define name="element.useRestrict">
-        <element name="useRestrict">
+    <define name="element.useConditions">
+        <element name="useConditions">
             <text/> 
         </element>
     </define>
@@ -347,8 +347,8 @@
         </element>
     </define>
     
-    <define name="element.accessRestrict">
-        <element name="accessRestrict">
+    <define name="element.accessConditions">
+        <element name="accessConditions">
             <text/>
         </element>
     </define>
