@@ -219,6 +219,14 @@
          </zeroOrMore>
       </element>
    </define>
+   <define name="element.objectXMLWrap.optional">
+      <optional>
+         <element name="objectXMLWrap">
+            <ref name="attribute-group.global.optional"/>
+            <ref name="model.any-element"/>
+         </element>
+      </optional>
+   </define>
    <define name="element.p">
       <element name="p">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -314,6 +322,26 @@
          <ref name="element.dateRange"/>
          <ref name="element.dateSet"/>
       </choice>
+   </define>
+   <define name="model.any-element">
+      <element>
+         <anyName>
+            <except>
+               <nsName ns="https://archivists.org/ns/ead/v4" a:exclude-from="eac"/>
+            </except>
+         </anyName>
+         <zeroOrMore>
+            <attribute>
+               <anyName/>
+            </attribute>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.any-element"/>
+            </choice>
+         </zeroOrMore>
+      </element>
    </define>
    <define name="model.date-dateRange.choice">
       <choice>

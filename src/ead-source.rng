@@ -10,9 +10,8 @@
     
     <include href="modules/ead-findAidDesc.rng"/>
     <include href="modules/ead-archDesc.rng"/>
-    <!--
+
     <include href="modules/relations.rng/"/>
-    -->
   
     <include href="modules/models-and-shared-elements.rng/"/>
     

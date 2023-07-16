@@ -164,6 +164,7 @@
             <ref name="element.citedRange"/>
          </zeroOrMore>
          <ref name="element.descriptiveNote.optional"/>
+         <ref name="element.objectXMLWrap.optional"/>
       </element>
    </define>
    <define name="element.sources">

@@ -240,7 +240,7 @@
         </element>
     </define>
 
-    <define name="element.objectXMLWrap.optional" a:exclude-from="ead">
+    <define name="element.objectXMLWrap.optional">
         <optional>
             <element name="objectXMLWrap">
                 <ref name="attribute-group.global.optional"/>
@@ -356,11 +356,12 @@
         </choice>
     </define>
     
-    <define name="model.any-element" a:exclude-from="ead">
+    <define name="model.any-element">
         <element>
             <anyName>
                 <except>
-                    <nsName ns="https://archivists.org/ns/eac/v2"/>
+                    <nsName ns="https://archivists.org/ns/eac/v2" a:exclude-from="ead"/>
+                    <nsName ns="https://archivists.org/ns/ead/v4" a:exclude-from="eac"/>
                 </except>
             </anyName>
             <zeroOrMore>

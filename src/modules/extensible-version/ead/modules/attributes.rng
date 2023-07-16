@@ -214,13 +214,6 @@
          </attribute>
       </optional>
    </define>
-   <define a:exclude-from="eac" name="attribute.xpointer.optional">
-      <optional>
-         <attribute name="xpointer">
-            <data type="normalizedString"/>
-         </attribute>
-      </optional>
-   </define>
    <!-- ATTRIBUTE GROUPS -->
    <define name="attribute-group.any.zeroOrMore">
       <zeroOrMore>

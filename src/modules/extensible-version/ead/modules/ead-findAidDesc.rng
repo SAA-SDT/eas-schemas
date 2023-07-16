@@ -22,6 +22,7 @@
    <define name="element.div">
       <element name="div">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="model.narrative-group-plus-chronList.optional"/>
          <optional>
             <ref name="element.div"/>
@@ -32,6 +33,7 @@
    <define name="element.title">
       <element name="title">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
          <oneOrMore>
             <ref name="element.part"/>
          </oneOrMore>

@@ -43,17 +43,14 @@
                 <ref name="element.preferCite"/>
                 <ref name="element.processInfo"/>
                 <ref name="element.relatedMaterial"/>
-                <!-- already defined, but might not be needed ?
-                will need to separate how we handle objectXMLWrap
-                for each schema?
-            <ref name="element.relations"/>
-            -->
+                <ref name="element.relations"/>
                 <ref name="element.scopeContent"/>
                 <ref name="element.separatedMaterial"/>
                 <ref name="element.useConditions"/>
             </choice>
         </oneOrMore>
     </define>
+    
     <define name="element.did">
         <element name="did">
             <oneOrMore>
