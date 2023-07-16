@@ -222,14 +222,13 @@
             </choice>
          </attribute>
       </optional>
-      <optional>
-         <attribute name="agentTypeEncoding">
-            <choice>
-               <value>EASList</value>
-               <value>otherAgentTypeEncoding</value>
-            </choice>
-         </attribute>
-      </optional>
+      <!-- currently not optional -->
+      <attribute name="agentTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherAgentTypeEncoding</value>
+         </choice>
+      </attribute>
       <optional>
          <attribute name="audienceEncoding">
             <choice>
@@ -254,22 +253,24 @@
             </choice>
          </attribute>
       </optional>
-      <optional a:exclude-from="eac">
-         <attribute name="coverageEncoding">
-            <choice>
-               <value>EASList</value>
-               <value>otherCoverageEncoding</value>
-            </choice>
-         </attribute>
-      </optional>
-      <optional a:exclude-from="eac">
-         <attribute name="daoTypeEncoding">
-            <choice>
-               <value>EASList</value>
-               <value>otherDaoTypeEncoding</value>
-            </choice>
-         </attribute>
-      </optional>
+      <!-- currently not optional -->
+      <attribute name="coverageEncoding"
+                 a:exclude-from="eac"
+                 a:default-value="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherCoverageEncoding</value>
+         </choice>
+      </attribute>
+      <!-- currently not optional -->
+      <attribute name="daoTypeEncoding"
+                 a:exclude-from="eac"
+                 a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherDaoTypeEncoding</value>
+         </choice>
+      </attribute>
       <optional>
          <attribute name="detailLevelEncoding">
             <choice>
@@ -305,38 +306,36 @@
             </choice>
          </attribute>
       </optional>
-      <optional a:exclude-from="eac">
-         <attribute name="levelEncoding">
-            <choice>
-               <value>EASList</value>
-               <value>levelEncoding</value>
-            </choice>
-         </attribute>
-      </optional>
-      <optional>
-         <attribute name="maintenanceEventTypeEncoding">
-            <choice>
-               <value>EASList</value>
-               <value>otherMaintenanceEventTypeEncoding</value>
-            </choice>
-         </attribute>
-      </optional>
-      <optional>
-         <attribute name="maintenanceStatusEncoding">
-            <choice>
-               <value>EASList</value>
-               <value>otherMaintenanceStatusEncoding</value>
-            </choice>
-         </attribute>
-      </optional>
-      <optional a:exclude-from="eac">
-         <attribute name="physDescStructuredTypeEncoding">
-            <choice>
-               <value>EASList</value>
-               <value>otherPhysDescStructuredTypeEncoding</value>
-            </choice>
-         </attribute>
-      </optional>
+      <!-- currently not optional -->
+      <attribute name="levelEncoding" a:exclude-from="eac" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherLevelEncoding</value>
+         </choice>
+      </attribute>
+      <!-- currently not optional -->
+      <attribute name="maintenanceEventTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherMaintenanceEventTypeEncoding</value>
+         </choice>
+      </attribute>
+      <!-- currently not optional -->
+      <attribute name="maintenanceStatusEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherMaintenanceStatusEncoding</value>
+         </choice>
+      </attribute>
+      <!-- currently not optional -->
+      <attribute name="physDescStructuredTypeEncoding"
+                 a:exclude-from="eac"
+                 a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherPhysDescStructuredTypeEncoding</value>
+         </choice>
+      </attribute>
       <optional>
          <attribute name="publicationStatusEncoding">
             <choice>
@@ -369,14 +368,13 @@
             </choice>
          </attribute>
       </optional>
-      <optional>
-         <attribute name="targetTypeEncoding">
-            <choice>
-               <value>EASList</value>
-               <value>otherTargetTypeEncoding</value>
-            </choice>
-         </attribute>
-      </optional>
+      <!-- currently not optional -->
+      <attribute name="targetTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherTargetTypeEncoding</value>
+         </choice>
+      </attribute>
       <optional a:exclude-from="eac">
          <attribute name="unitDateTypeEncoding">
             <choice>

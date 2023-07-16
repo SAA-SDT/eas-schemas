@@ -59,7 +59,7 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="agentTypeEncoding">
+      <xs:attribute name="agentTypeEncoding" use="required">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
@@ -91,7 +91,7 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="coverageEncoding">
+      <xs:attribute name="coverageEncoding" use="required">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
@@ -99,7 +99,7 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="daoTypeEncoding">
+      <xs:attribute name="daoTypeEncoding" use="required">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
@@ -142,15 +142,15 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="levelEncoding">
+      <xs:attribute name="levelEncoding" use="required">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
-               <xs:enumeration value="levelEncoding"/>
+               <xs:enumeration value="otherLevelEncoding"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="maintenanceEventTypeEncoding">
+      <xs:attribute name="maintenanceEventTypeEncoding" use="required">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
@@ -158,7 +158,7 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="maintenanceStatusEncoding">
+      <xs:attribute name="maintenanceStatusEncoding" use="required">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
@@ -166,7 +166,7 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="physDescStructuredTypeEncoding">
+      <xs:attribute name="physDescStructuredTypeEncoding" use="required">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
@@ -206,7 +206,7 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="targetTypeEncoding">
+      <xs:attribute name="targetTypeEncoding" use="required">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>

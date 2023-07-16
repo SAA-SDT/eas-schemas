@@ -90,14 +90,12 @@
                   </choice>
                </attribute>
             </optional>
-            <optional>
-               <attribute name="agentTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherAgentTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
+            <attribute name="agentTypeEncoding" ns="">
+               <choice>
+                  <value type="token" datatypeLibrary="" ns="">EASList</value>
+                  <value type="token" datatypeLibrary="" ns="">otherAgentTypeEncoding</value>
+               </choice>
+            </attribute>
             <optional>
                <attribute name="audienceEncoding" ns="">
                   <choice>
@@ -122,22 +120,18 @@
                   </choice>
                </attribute>
             </optional>
-            <optional>
-               <attribute name="coverageEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherCoverageEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="daoTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherDaoTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
+            <attribute name="coverageEncoding" ns="">
+               <choice>
+                  <value type="token" datatypeLibrary="" ns="">EASList</value>
+                  <value type="token" datatypeLibrary="" ns="">otherCoverageEncoding</value>
+               </choice>
+            </attribute>
+            <attribute name="daoTypeEncoding" ns="">
+               <choice>
+                  <value type="token" datatypeLibrary="" ns="">EASList</value>
+                  <value type="token" datatypeLibrary="" ns="">otherDaoTypeEncoding</value>
+               </choice>
+            </attribute>
             <optional>
                <attribute name="detailLevelEncoding" ns="">
                   <choice>
@@ -173,38 +167,30 @@
                   </choice>
                </attribute>
             </optional>
-            <optional>
-               <attribute name="levelEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">levelEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="maintenanceEventTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherMaintenanceEventTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="maintenanceStatusEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherMaintenanceStatusEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="physDescStructuredTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherPhysDescStructuredTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
+            <attribute name="levelEncoding" ns="">
+               <choice>
+                  <value type="token" datatypeLibrary="" ns="">EASList</value>
+                  <value type="token" datatypeLibrary="" ns="">otherLevelEncoding</value>
+               </choice>
+            </attribute>
+            <attribute name="maintenanceEventTypeEncoding" ns="">
+               <choice>
+                  <value type="token" datatypeLibrary="" ns="">EASList</value>
+                  <value type="token" datatypeLibrary="" ns="">otherMaintenanceEventTypeEncoding</value>
+               </choice>
+            </attribute>
+            <attribute name="maintenanceStatusEncoding" ns="">
+               <choice>
+                  <value type="token" datatypeLibrary="" ns="">EASList</value>
+                  <value type="token" datatypeLibrary="" ns="">otherMaintenanceStatusEncoding</value>
+               </choice>
+            </attribute>
+            <attribute name="physDescStructuredTypeEncoding" ns="">
+               <choice>
+                  <value type="token" datatypeLibrary="" ns="">EASList</value>
+                  <value type="token" datatypeLibrary="" ns="">otherPhysDescStructuredTypeEncoding</value>
+               </choice>
+            </attribute>
             <optional>
                <attribute name="publicationStatusEncoding" ns="">
                   <choice>
@@ -237,14 +223,12 @@
                   </choice>
                </attribute>
             </optional>
-            <optional>
-               <attribute name="targetTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherTargetTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
+            <attribute name="targetTypeEncoding" ns="">
+               <choice>
+                  <value type="token" datatypeLibrary="" ns="">EASList</value>
+                  <value type="token" datatypeLibrary="" ns="">otherTargetTypeEncoding</value>
+               </choice>
+            </attribute>
             <optional>
                <attribute name="unitDateTypeEncoding" ns="">
                   <choice>
