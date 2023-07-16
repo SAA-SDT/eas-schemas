@@ -22,7 +22,7 @@
    </define>
    <define name="element.addressLine">
       <element name="addressLine">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.addressLineType.optional"/>
          <text/>
@@ -32,9 +32,7 @@
       <element name="agent">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
-         <attribute name="agentType">
-            <data type="token"/>
-         </attribute>
+         <ref name="attribute.agentType"/>
          <text/>
       </element>
    </define>
@@ -112,7 +110,7 @@
    </define>
    <define name="element.contactLine">
       <element name="contactLine">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.links.optional"/>
          <ref name="attribute.contactLineType.optional"/>

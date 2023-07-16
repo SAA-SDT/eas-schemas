@@ -8,26 +8,23 @@
    <define name="attribute.addressLineType.optional">
       <optional>
          <attribute name="addressLineType">
-            <choice>
-               <value>county</value>
-               <value>country</value>
-               <value>district</value>
-               <value>municipality</value>
-               <value>postBox</value>
-               <value>postalCode</value>
-               <value>region</value>
-               <value>street</value>
-            </choice>
+            <data type="NMTOKEN"/>
          </attribute>
       </optional>
+   </define>
+   <define name="attribute.agentType">
+      <attribute name="agentType">
+            <!-- NOTE:  
+                was token for EAC 2.0.
+                if we change to NMTOKEN, as requested, just remember to make a note in the EAC 2.1 release.
+            -->
+         <data type="token"/>
+      </attribute>
    </define>
    <define name="attribute.audience.optional">
       <optional>
          <attribute name="audience">
-            <choice>
-               <value>external</value>
-               <value>internal</value>
-            </choice>
+            <data type="NMTOKEN"/>
          </attribute>
       </optional>
    </define>
@@ -41,14 +38,7 @@
    <define name="attribute.contactLineType.optional">
       <optional>
          <attribute name="contactLineType">
-            <choice>
-               <value>directions</value>
-               <value>email</value>
-               <value>fax</value>
-               <value>homepage</value>
-               <value>mobileNumber</value>
-               <value>phoneNumber</value>
-            </choice>
+            <data type="NMTOKEN"/>
          </attribute>
       </optional>
    </define>
@@ -64,14 +54,27 @@
          </attribute>
       </optional>
    </define>
+   <define name="attribute.coverage">
+      <attribute name="coverage">
+         <data type="NMTOKEN"/>
+      </attribute>
+   </define>
+   <define name="attribute.daoType">
+      <attribute name="daoType">
+         <data type="NMTOKEN"/>
+      </attribute>
+   </define>
    <define name="attribute.detailLevel.optional">
       <optional>
          <attribute name="detailLevel">
-            <choice>
-               <value>minimal</value>
-               <value>basic</value>
-               <value>extended</value>
-            </choice>
+            <data type="NMTOKEN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.dscType.optional">
+      <optional>
+         <attribute name="dscType">
+            <data type="NMTOKEN"/>
          </attribute>
       </optional>
    </define>
@@ -85,10 +88,15 @@
    <define name="attribute.identityType.optional">
       <optional>
          <attribute name="identityType">
-                <!-- TO DO: need to move the EADList values of 'given' or 'acquired' to the schematron -->
+                <!-- another one:  IF we change token to NMTOKEN, then we will need to make sure to call out that update for EAC 2.1 -->
             <data type="token"/>
          </attribute>
       </optional>
+   </define>
+   <define name="attribute.level">
+      <attribute name="level">
+         <data type="NMTOKEN"/>
+      </attribute>
    </define>
    <define name="attribute.localType">
       <attribute name="localType">
@@ -100,14 +108,19 @@
          <data type="IDREFS"/>
       </attribute>
    </define>
+   <define name="attribute.maintenanceEventType">
+      <attribute name="maintenanceEventType">
+         <data type="token"/>
+      </attribute>
+   </define>
    <define name="attribute.maintenanceStatus">
       <attribute name="maintenanceStatus">
          <data type="token"/>
       </attribute>
    </define>
-   <define name="attribute.maintenanceEventType">
-      <attribute name="maintenanceEventType">
-         <data type="token"/>
+   <define name="attribute.physDescStructuredType">
+      <attribute name="physDescStructuredType">
+         <data type="NMTOKEN"/>
       </attribute>
    </define>
    <define name="attribute.publicationStatus.optional">
@@ -128,6 +141,14 @@
       <optional>
          <attribute name="standardDateTime">
             <ref name="dt.any-standard-dateTime"/>
+         </attribute>
+      </optional>
+   </define>
+   <!-- new, for EAD4.  See other options in use for EAC 2.0.  If we change the approach, we will need handle the EAC status variations separately, in a new way -->
+   <define name="attribute.status.optional">
+      <optional>
+         <attribute name="status">
+            <data type="NMTOKEN"/>
          </attribute>
       </optional>
    </define>
@@ -176,20 +197,20 @@
    </define>
    <define name="attribute.targetType">
       <attribute name="targetType">
-         <choice>
-            <value>agent</value>
-            <value>corporateBody</value>
-            <value>person</value>
-            <value>family</value>
-            <value>function</value>
-            <value>resource</value>
-         </choice>
+         <data type="NMTOKEN"/>
       </attribute>
    </define>
    <define name="attribute.unit.optional">
       <optional>
          <attribute name="unit">
             <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.unitDateType.optional">
+      <optional>
+         <attribute name="unitDateType">
+            <data type="NMTOKEN"/>
          </attribute>
       </optional>
    </define>
