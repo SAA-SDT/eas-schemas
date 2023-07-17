@@ -4,8 +4,50 @@
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
+    <!-- ELEMENTS -->
+    <define name="element.accessConditions">
+        <element name="accessConditions">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="element.accruals">
+        <element name="accruals">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="element.acqInfo">
+        <element name="acqInfo">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/> 
+        </element>
+    </define>
+    
+    <define name="element.altFormAvail">
+        <element name="altFormAvail">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="element.appraisal">
+        <element name="appraisal">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
+    
     <define name="element.archDesc">
         <element name="archDesc">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="element.did"/>
             <zeroOrMore>
                 <ref name="model.description"/>
@@ -16,43 +58,61 @@
         </element>
     </define>
     
+    <define name="element.arrangement">
+        <element name="arrangement">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
     
-    <define name="model.description">
-        <oneOrMore>
-            <choice>
-                <ref name="element.accessConditions"/>
-                <ref name="element.accruals"/>
-                <ref name="element.acqInfo"/>
-                <ref name="element.altFormAvail"/>
-                <ref name="element.appraisal"/>
-                <ref name="element.arrangement"/>
-                <ref name="element.bibliography"/>
-                
-                <!-- already defined -->
-                <ref name="element.biogHist"/>
-                
-                <ref name="element.controlAccess"/>
-                <ref name="element.custodHist"/>
-                <ref name="element.filePlan"/>
-                <ref name="element.index"/>
-                <ref name="element.legalStatus"/>
-                <ref name="element.odd"/>
-                <ref name="element.originalsLoc"/>
-                <ref name="element.otherFindAid"/>
-                <ref name="element.physTech"/>
-                <ref name="element.preferCite"/>
-                <ref name="element.processInfo"/>
-                <ref name="element.relatedMaterial"/>
-                <ref name="element.relations"/>
-                <ref name="element.scopeContent"/>
-                <ref name="element.separatedMaterial"/>
-                <ref name="element.useConditions"/>
-            </choice>
-        </oneOrMore>
+    <define name="element.bibliography">
+        <element name="bibliography">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/> 
+        </element>
+    </define>
+     
+    <define name="element.component">
+        <element name="component">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="element.did"/>
+            <zeroOrMore>
+                <ref name="model.description"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="element.component"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.container">
+        <element name="container">
+            <ref name="attribute-group.global.optional"/>
+            <text/> 
+        </element>
+    </define>
+    
+    <define name="element.controlAccess">
+        <element name="controlAccess">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <text/> 
+        </element>
+    </define>
+    
+    <define name="element.custodHist">
+        <element name="custodHist">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
     </define>
     
     <define name="element.did">
         <element name="did">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <oneOrMore>
                 <choice>
                     <ref name="element.abstract"/>
@@ -77,41 +137,16 @@
         </element>
     </define>
     
-    <define name="element.dsc">
-        <element name="dsc">
-            <oneOrMore>
-                <ref name="element.component"/>
-            </oneOrMore>
-        </element>
-    </define>
-    
-    <define name="element.component">
-        <element name="component">
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.description"/>
-            </zeroOrMore>
-            <zeroOrMore>
-                <ref name="element.component"/>
-            </zeroOrMore>
-        </element>
-    </define>
-    
-    
-    <define name="element.container">
-        <element name="container">
-            <text/> 
-        </element>
-    </define>
-    
     <define name="element.dao">
         <element name="dao">
+            <ref name="attribute-group.global.optional"/>
             <text/>
         </element>
     </define>
     
     <define name="element.daoSet">
         <element name="daoSet">
+            <ref name="attribute-group.global.optional"/>
             <ref name="element.dao"/>
             <oneOrMore>
                 <ref name="element.dao"/>
@@ -120,9 +155,19 @@
         </element>
     </define>
     
-   
+    <define name="element.dsc">
+        <element name="dsc">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <oneOrMore>
+                <ref name="element.component"/>
+            </oneOrMore>
+        </element>
+    </define>
+
     <define name="element.didNote">
         <element name="didNote">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <oneOrMore>
                 <ref name="element.p"/>
             </oneOrMore>
@@ -131,49 +176,115 @@
     
     <define name="element.dimensions">
         <element name="dimensions">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/>  
+        </element>
+    </define>
+    
+    <define name="element.filePlan">
+        <element name="filePlan">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/> 
+        </element>
+    </define>
+    
+    <define name="element.index">
+        <element name="index">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
         </element>
     </define>
     
     <define name="element.langMaterial">
         <element name="langMaterial">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="element.legalStatus">
+        <element name="legalStatus">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/>
         </element>
     </define>
     
     <define name="element.materialSpec">
         <element name="materialSpec">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/>
+        </element>
+    </define>
+    
+    <define name="element.odd">
+        <element name="odd">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="element.originalsLoc">
+        <element name="orginalsLoc">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>  
         </element>
     </define>
     
     <define name="element.origination">
         <element name="origination">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/>
+        </element>
+    </define>
+    
+    <define name="element.otherFindAid">
+        <element name="otherFindAid">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/> 
         </element>
     </define>
     
     <define name="element.physDesc">
         <element name="physDesc">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/> 
         </element>
     </define>
-
+    
     <define name="element.physDescSet">
         <element name="physDescSet">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="element.physDescStructured"/>
             <oneOrMore>
                 <ref name="element.physDescStructured"/>
             </oneOrMore>
         </element>
     </define>
-
+    
     <define name="element.physDescStructured">
         <element name="physDescStructured">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <element name="quantity">
+                <ref name="attribute-group.global-plus-base.optional"/>
+                <ref name="attribute-group.assertion-reference.optional"/>
                 <text/>
             </element>
             <element name="unitType">
+                <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+                <ref name="attribute-group.assertion-reference.optional"/>
                 <text/>
             </element>
             <zeroOrMore>
@@ -188,178 +299,146 @@
     
     <define name="element.physFacet">
         <element name="physFacet">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/>
         </element>
     </define>
     
     <define name="element.physLoc">
         <element name="physLoc">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/>  
+        </element>
+    </define>
+    
+    <define name="element.physTech">
+        <element name="physTech">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>  
+        </element>
+    </define>
+    
+    <define name="element.preferCite">
+        <element name="preferCite">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="element.processInfo">
+        <element name="processInfo">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>  
+        </element>
+    </define>
+    
+    <define name="element.relatedMaterial">
+        <element name="relatedMaterial">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
         </element>
     </define>
     
     <define name="element.repository">
         <element name="repository">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/> 
+        </element>
+    </define>
+    
+    <define name="element.scopeContent">
+        <element name="scopeContent">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="element.separatedMaterial">
+        <element name="separatedMaterial">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
         </element>
     </define>
     
     <define name="element.unitDate">
         <element name="unitDate">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/>
         </element>
     </define>
     
     <define name="element.unitDateStructured">
         <element name="unitDateStructured">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="model.all-dates.choice"/>
         </element>
     </define>
-    
-    
+     
     <define name="element.unitId">
         <element name="unitId">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/>
         </element>
     </define>
     
     <define name="element.unitTitle">
         <element name="unitTitle">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/>
-        </element>
-    </define>
-    
-    <define name="element.arrangement">
-       <element name="arrangement">
-           <text/>
-       </element>
-    </define>
-    
-    <define name="element.index">
-        <element name="index">
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.controlAccess">
-        <element name="controlAccess">
-            <text/> 
-        </element>
-    </define>
-    
-    <define name="element.processInfo">
-        <element name="processInfo">
-            <text/>  
-        </element>
-    </define>
-    
-    <define name="element.appraisal">
-        <element name="appraisal">
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.acqInfo">
-        <element name="acqInfo">
-            <text/> 
-        </element>
-    </define>
-    
-    <define name="element.otherFindAid">
-        <element name="otherFindAid">
-            <text/> 
-        </element>
-    </define>
-    
-    <define name="element.filePlan">
-        <element name="filePlan">
-            <text/> 
-        </element>
-    </define>
-    
-    <define name="element.physTech">
-        <element name="physTech">
-            <text/>  
-        </element>
-    </define>
-    
-    <define name="element.odd">
-        <element name="odd">
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.originalsLoc">
-        <element name="orginalsLoc">
-            <text/>  
         </element>
     </define>
     
     <define name="element.useConditions">
         <element name="useConditions">
+            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <text/> 
         </element>
     </define>
     
-    <define name="element.separatedMaterial">
-        <element name="separatedMaterial">
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.accruals">
-        <element name="accruals">
-            <text/>
-        </element>
-    </define>
-   
-    
-    <define name="element.scopeContent">
-        <element name="scopeContent">
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.bibliography">
-        <element name="bibliography">
-            <text/> 
-        </element>
-    </define>
-    
-    <define name="element.legalStatus">
-        <element name="legalStatus">
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.altFormAvail">
-        <element name="altFormAvail">
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.relatedMaterial">
-        <element name="relatedMaterial">
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.accessConditions">
-        <element name="accessConditions">
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.preferCite">
-        <element name="preferCite">
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.custodHist">
-        <element name="custodHist">
-            <text/>
-        </element>
+    <!-- MODELS -->
+    <define name="model.description">
+        <oneOrMore>
+            <choice>
+                <ref name="element.accessConditions"/>
+                <ref name="element.accruals"/>
+                <ref name="element.acqInfo"/>
+                <ref name="element.altFormAvail"/>
+                <ref name="element.appraisal"/>
+                <ref name="element.arrangement"/>
+                <ref name="element.bibliography"/>
+                <ref name="element.biogHist"/>
+                <ref name="element.controlAccess"/>
+                <ref name="element.custodHist"/>
+                <ref name="element.filePlan"/>
+                <ref name="element.index"/>
+                <ref name="element.legalStatus"/>
+                <ref name="element.odd"/>
+                <ref name="element.originalsLoc"/>
+                <ref name="element.otherFindAid"/>
+                <ref name="element.physTech"/>
+                <ref name="element.preferCite"/>
+                <ref name="element.processInfo"/>
+                <ref name="element.relatedMaterial"/>
+                <ref name="element.relations"/>
+                <ref name="element.scopeContent"/>
+                <ref name="element.separatedMaterial"/>
+                <ref name="element.useConditions"/>
+            </choice>
+        </oneOrMore>
     </define>
 
 </grammar>
