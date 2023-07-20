@@ -243,6 +243,7 @@
     <define name="element.container">
         <element name="container">
             <!-- do we need lang and script for containers??? -->
+            
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.container.optional"/>
             <!-- agree that mixed content is no longer needed here, right? -->
