@@ -6,37 +6,27 @@
     <!-- ELEMENTS -->
    <define name="element.accessConditions">
       <element name="accessConditions">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.accruals">
       <element name="accruals">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.acqInfo">
       <element name="acqInfo">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.altFormAvail">
       <element name="altFormAvail">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.appraisal">
       <element name="appraisal">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.archDesc">
@@ -44,8 +34,9 @@
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
-            <ref name="model.description"/>
+            <ref name="model.narrative-element-name-list"/>
          </zeroOrMore>
+         <!-- EAD3 already signalled the move to a single DSC, right? -->
          <optional>
             <ref name="element.dsc"/>
          </optional>
@@ -53,48 +44,202 @@
    </define>
    <define name="element.arrangement">
       <element name="arrangement">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.bibliography">
       <element name="bibliography">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- more to do -->
          <text/>
       </element>
    </define>
-   <define name="element.component">
-      <element name="component">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+   <define name="element.blockQuote">
+      <element name="blockQuote">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="model.narrative-group-plus-chronList-plus-table.optional"/>
+      </element>
+   </define>
+   <!-- add c - c12 -->
+   <!-- i've removed thead from now...  is that okay???  i hope so -->
+   <define name="element.c">
+      <element name="c">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
-            <ref name="model.description"/>
+            <ref name="model.narrative-element-name-list"/>
          </zeroOrMore>
          <zeroOrMore>
-            <ref name="element.component"/>
+            <ref name="element.c"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c01">
+      <element name="c01">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c02"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c02">
+      <element name="c02">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c03"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c03">
+      <element name="c03">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c04"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c04">
+      <element name="c04">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c05"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c05">
+      <element name="c05">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c06"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c06">
+      <element name="c06">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c07"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c07">
+      <element name="c07">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c08"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c08">
+      <element name="c08">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c09"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c09">
+      <element name="c09">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c10"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c10">
+      <element name="c10">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c11"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c11">
+      <element name="c11">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.c12"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.c12">
+      <element name="c12">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="element.did"/>
+         <zeroOrMore>
+            <ref name="model.narrative-element-name-list"/>
          </zeroOrMore>
       </element>
    </define>
    <define name="element.container">
       <element name="container">
-         <ref name="attribute-group.global.optional"/>
+            <!-- do we need lang and script for containers??? -->
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.container.optional"/>
+         <!-- agree that mixed content is no longer needed here, right? -->
          <text/>
       </element>
    </define>
    <define name="element.controlAccess">
       <element name="controlAccess">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <text/>
+         <ref name="model.controlAccess-element-name-list"/>
+      </element>
+   </define>
+   <define name="element.corpName">
+      <element name="corpName">
+         <ref name="model.controlAccess-element-group"/>
       </element>
    </define>
    <define name="element.custodHist">
       <element name="custodHist">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.did">
@@ -139,11 +284,15 @@
          <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
+   <!-- removed head, just as i removed thead from the c elements... okay??? -->
    <define name="element.dsc">
       <element name="dsc">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <oneOrMore>
-            <ref name="element.component"/>
+            <choice>
+               <ref name="element.c"/>
+               <ref name="element.c01"/>
+            </choice>
          </oneOrMore>
       </element>
    </define>
@@ -160,20 +309,40 @@
       <element name="dimensions">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <!-- what else follows this model? -->
+         <ref name="model.ead.mixed-content"/>
+      </element>
+   </define>
+   <define name="element.famName">
+      <element name="famName">
+         <ref name="model.controlAccess-element-group"/>
       </element>
    </define>
    <define name="element.filePlan">
       <element name="filePlan">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
+      </element>
+   </define>
+   <define name="element.function">
+      <element name="function">
+         <ref name="model.controlAccess-element-group"/>
+      </element>
+   </define>
+   <define name="element.genreForm">
+      <element name="genreForm">
+         <ref name="model.controlAccess-element-group"/>
+      </element>
+   </define>
+   <define name="element.geogName">
+      <element name="geogName">
+         <ref name="model.controlAccess-element-group"/>
       </element>
    </define>
    <define name="element.index">
       <element name="index">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- more to do -->
          <text/>
       </element>
    </define>
@@ -181,56 +350,79 @@
       <element name="langMaterial">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- more to do -->
+         <!-- needs languageSet, language, and descriptiveNote -->
          <text/>
+      </element>
+   </define>
+   <define name="element.lb">
+      <element name="langMaterial">
+         <ref name="attribute-group.global.optional"/>
+         <empty/>
       </element>
    </define>
    <define name="element.legalStatus">
       <element name="legalStatus">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.materialSpec">
       <element name="materialSpec">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead.mixed-content"/>
+      </element>
+   </define>
+   <define name="element.name">
+      <element name="name">
+         <ref name="model.controlAccess-element-group"/>
+      </element>
+   </define>
+   <define name="element.num">
+      <element name="num">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="model.ead.mixed-content"/>
+      </element>
+   </define>
+   <define name="element.occupation">
+      <element name="occupation">
+         <ref name="model.controlAccess-element-group"/>
       </element>
    </define>
    <define name="element.odd">
       <element name="odd">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.originalsLoc">
       <element name="orginalsLoc">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.origination">
       <element name="origination">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- mroe to do -->
          <text/>
       </element>
    </define>
    <define name="element.otherFindAid">
       <element name="otherFindAid">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
+      </element>
+   </define>
+   <define name="element.persName">
+      <element name="persName">
+         <ref name="model.controlAccess-element-group"/>
       </element>
    </define>
    <define name="element.physDesc">
       <element name="physDesc">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead.mixed-content"/>
       </element>
    </define>
    <define name="element.physDescSet">
@@ -270,63 +462,77 @@
       <element name="physFacet">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <!-- more to do? 
+                EAD3 allows the following:
+                [text], abbr, corpname, date, expan, emph, famname, footnote, foreign, function, genreform, geogname, lb, name,
+                num, occupation, persname, quote, ptr, ref, subject, title
+                -->
+         <ref name="model.ead.mixed-content"/>
       </element>
    </define>
    <define name="element.physLoc">
       <element name="physLoc">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead.mixed-content"/>
       </element>
    </define>
    <define name="element.physTech">
       <element name="physTech">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+            <!-- why does this have the same model as biogHist, etc? -->
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.preferCite">
       <element name="preferCite">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.processInfo">
       <element name="processInfo">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.relatedMaterial">
       <element name="relatedMaterial">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.repository">
       <element name="repository">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <oneOrMore>
+            <choice>
+               <ref name="element.corpName"/>
+               <ref name="element.famName"/>
+               <ref name="element.name"/>
+               <ref name="element.persName"/>
+            </choice>
+         </oneOrMore>
+         <optional>
+            <ref name="element.address"/>
+         </optional>
       </element>
    </define>
    <define name="element.scopeContent">
       <element name="scopeContent">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.separatedMaterial">
       <element name="separatedMaterial">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
+      </element>
+   </define>
+   <define name="element.subject">
+      <element name="subject">
+         <ref name="model.controlAccess-element-group"/>
+      </element>
+   </define>
+   <define name="element.title">
+      <element name="title">
+         <ref name="model.controlAccess-element-group"/>
       </element>
    </define>
    <define name="element.unitDate">
@@ -354,18 +560,73 @@
       <element name="unitTitle">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- more to do
+                EAD3
+                [text], abbr, corpname, date, emph, expan, famname, footnote, foreign, function, genreform, geogname, lb, name, 
+                num, occupation, persname, ptr, quote, ref, subject, title
+               -->
          <text/>
       </element>
    </define>
    <define name="element.useConditions">
       <element name="useConditions">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <!-- MODELS -->
-   <define name="model.description">
+   <!-- add term, and model after EAD3 -->
+   <!-- also add to mixed content -->
+   <!-- and add to whereever EAD allows this...  abstract, p, item, entry, and event -->
+   <!-- still need to add the following to some of models
+            num
+            date
+            footnote
+            quote
+       -->
+   <define name="model.controlAccess-element-name-list">
+      <interleave>
+         <ref name="element.corpName"/>
+         <ref name="element.famName"/>
+         <ref name="element.function"/>
+         <ref name="element.genreForm"/>
+         <ref name="element.geogName"/>
+         <ref name="element.name"/>
+         <ref name="element.occupation"/>
+         <ref name="element.persName"/>
+         <ref name="element.subject"/>
+         <ref name="element.title"/>
+      </interleave>
+   </define>
+   <define name="model.controlAccess-element-group">
+      <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+      <ref name="attribute-group.linked-data.optional"/>
+      <oneOrMore>
+         <ref name="element.part"/>
+      </oneOrMore>
+   </define>
+   <define name="model.ead.mixed-content">
+        <!-- assuming that we're replacing emph with span, and expanding the names of the rest of elements -->
+      <interleave>
+         <ref name="element.abbreviation"/>
+         <ref name="element.expansion"/>
+         <ref name="element.foreign"/>
+         <ref name="element.lb"/>
+         <ref name="element.ptr"/>
+         <ref name="model.mixed-content.optional"/>
+      </interleave>
+   </define>
+   <define name="model.ead.mixed-content-plus-controlAccess">
+      <interleave>
+         <ref name="element.abbreviation"/>
+         <ref name="element.expansion"/>
+         <ref name="element.foreign"/>
+         <ref name="element.lb"/>
+         <ref name="element.ptr"/>
+         <ref name="model.mixed-content.optional"/>
+         <ref name="model.controlAccess-element-name-list"/>
+      </interleave>
+   </define>
+   <define name="model.narrative-element-name-list">
       <oneOrMore>
          <choice>
             <ref name="element.accessConditions"/>

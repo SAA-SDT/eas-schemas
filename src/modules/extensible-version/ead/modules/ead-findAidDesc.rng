@@ -31,14 +31,4 @@
          </zeroOrMore>
       </element>
    </define>
-   <!-- TO DO: confirm entire model, availability, etc. alos, move definition based on availiabity, if necessary. -->
-   <define name="element.title">
-      <element name="title">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <oneOrMore>
-            <ref name="element.part"/>
-         </oneOrMore>
-      </element>
-   </define>
 </grammar>

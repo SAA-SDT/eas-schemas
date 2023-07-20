@@ -48,6 +48,12 @@
         </optional>
     </define>
     
+    <define name="attribute.containerId">
+        <attribute name="containerId">
+            <data type="token"/>
+        </attribute>   
+    </define>
+    
     <define name="attribute.coordinateSystem">
         <attribute name="coordinateSystem">
             <data type="token"/>
@@ -89,6 +95,12 @@
             </attribute>
         </optional>
     </define>
+    
+    <define name="attribute.encodingAnalog">
+        <attribute name="encodingAnalog">
+            <data type="token"/>
+        </attribute>    
+    </define>
   
     <define name="attribute.id.optional">
         <optional>
@@ -105,6 +117,12 @@
                 <data type="token"/>
             </attribute>
         </optional>
+    </define>
+    
+    <define name="attribute.label">
+        <attribute name="label">
+            <data type="token"/>
+        </attribute>
     </define>
     
     <define name="attribute.level">
@@ -135,6 +153,13 @@
         <attribute name="maintenanceStatus">
             <data type="token"/>
         </attribute>  
+    </define>
+    
+    <!-- do really want IDFREFS, as defined in EAD3, or would IDREF suffice? e.g. a container cannot be in multiple containers at once, right? -->
+    <define name="attribute.parent">
+        <attribute name="parent">
+            <data type="IDREFS"/>
+        </attribute>    
     </define>
     
     <define name="attribute.physDescStructuredType">
@@ -242,6 +267,14 @@
         <optional>
             <attribute name="unitDateType">
                 <data type="NMTOKEN"/>
+            </attribute>
+        </optional>
+    </define>
+    
+    <define a:exclude-from="eac" name="attribute.xpointer.optional">
+        <optional>
+            <attribute name="xpointer">
+                <data type="normalizedString"/>
             </attribute>
         </optional>
     </define>
@@ -451,6 +484,30 @@
     </define>
     <define name="attribute-group.assertion-reference.optional" combine="interleave">
         <ref name="attribute.conventionDeclarationReference.optional"/>
+    </define>
+    
+    <define name="attribute-group.container.optional" combine="interleave">
+        <optional>
+            <ref name="attribute.containerId"/>
+        </optional>
+    </define>
+    
+    <define name="attribute-group.container.optional" combine="interleave">
+        <optional>
+            <ref name="attribute.encodingAnalog"/>
+        </optional>
+    </define>
+    
+    <define name="attribute-group.container.optional" combine="interleave">
+        <optional>
+            <ref name="attribute.label"/>
+        </optional>
+    </define>
+    
+    <define name="attribute-group.container.optional" combine="interleave">
+        <optional>
+            <ref name="attribute.parent"/>
+        </optional>
     </define>
     
     <define name="attribute-group.eac-document-node">

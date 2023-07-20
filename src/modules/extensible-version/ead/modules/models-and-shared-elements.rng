@@ -4,11 +4,25 @@
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
     <!-- ELEMENTS -->
+   <define name="element.abbreviation">
+      <element name="abbreviation">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <optional>
+                <!-- this way, we don't have attributes and elements with the same name... but still, we should discuss -->
+            <attribute name="expan">
+               <data type="token"/>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
    <define name="element.abstract">
       <element name="abstract">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.mixed-content.optional"/>
+         <ref name="model.ead.mixed-content" a:exclude-from="eac"/>
+         <ref name="model.ead.mixed-content-plus-controlAccess" a:exclude-from="eac"/>
       </element>
    </define>
    <define name="element.address">
@@ -36,15 +50,9 @@
          <text/>
       </element>
    </define>
-   <define name="element.biogHist">
+   <define name="element.biogHist" a:exclude-from="eac">
       <element name="biogHist">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="element.head.optional"/>
-         <optional>
-            <ref name="element.abstract"/>
-         </optional>
-         <ref name="model.narrative-group-plus-chronList.optional"/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.chronItem">
@@ -172,6 +180,26 @@
          <ref name="model.mixed-content.optional"/>
       </element>
    </define>
+   <define name="element.expansion">
+      <element name="expansion">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <optional>
+                <!-- this way, we don't have attributes and elements with the same name... but still, we should discuss -->
+            <attribute name="abbr">
+               <data type="token"/>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="element.foreign">
+      <element name="foreign">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <text/>
+      </element>
+   </define>
    <define name="element.fromDate">
       <element name="fromDate">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -203,6 +231,12 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="model.mixed-content.optional"/>
+      </element>
+   </define>
+   <define name="element.lineBreak">
+      <element name="lineBreak">
+         <ref name="attribute-group.global.optional"/>
+         <empty/>
       </element>
    </define>
    <define name="element.list">
@@ -238,7 +272,7 @@
       <element name="part">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="dt.non-empty-element-with-newlines-available"/>
+         <ref name="model.ead.mixed-content" a:exclude-from="eac"/>
       </element>
    </define>
    <define name="element.place">
@@ -278,6 +312,20 @@
          <text/>
       </element>
    </define>
+   <!-- not needed for long, right? -->
+   <!-- that said, it would be good to keep the XPointer standard around separately -->
+   <define name="element.ptr">
+      <element name="ptr">
+         <ref name="attribute-group.global.optional"/>
+         <ref name="attribute.xpointer.optional"/>
+         <optional>
+            <attribute name="entityReference">
+               <data type="token"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="element.reference">
       <element name="reference">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -296,6 +344,14 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.style.optional"/>
+         <text/>
+      </element>
+   </define>
+   <define name="element.table">
+      <element name="table">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- more to do -->
          <text/>
       </element>
    </define>
@@ -358,6 +414,16 @@
       </optional>
       <ref name="element.descriptiveNote.optional"/>
    </define>
+   <define name="model.ead-narrative-elements">
+      <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+      <ref name="attribute-group.assertion-reference.optional"/>
+      <ref name="element.head.optional"/>
+      <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
+   </define>
+   <define name="model.html.mixed-content.optional">
+        <!-- yet to be defined, but likely to be a branch -->
+      <empty/>
+   </define>
    <define name="model.mixed-content.optional">
       <zeroOrMore>
          <choice>
@@ -385,11 +451,39 @@
          <ref name="element.p"/>
       </zeroOrMore>
    </define>
+   <!-- list, p, chronlist -->
    <define name="model.narrative-group-plus-chronList.optional">
       <interleave>
          <ref name="model.narrative-group.optional"/>
          <zeroOrMore>
             <ref name="element.chronList"/>
+         </zeroOrMore>
+      </interleave>
+   </define>
+   <!-- list, p, chronlist, table -->
+   <define name="model.narrative-group-plus-chronList-plus-table.optional">
+      <interleave>
+         <ref name="model.narrative-group-plus-chronList.optional"/>
+         <zeroOrMore>
+            <ref name="element.table"/>
+         </zeroOrMore>
+      </interleave>
+   </define>
+   <!-- list, p, chronlist, blockquote -->
+   <define name="model.narrative-group-plus-chronList-plus-blockQuote.optional">
+      <interleave>
+         <ref name="model.narrative-group-plus-chronList.optional"/>
+         <zeroOrMore>
+            <ref name="element.blockQuote"/>
+         </zeroOrMore>
+      </interleave>
+   </define>
+   <!-- list, p, chronlist, blockquote, table -->
+   <define name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional">
+      <interleave>
+         <ref name="model.narrative-group-plus-chronList-plus-blockQuote.optional"/>
+         <zeroOrMore>
+            <ref name="element.table"/>
          </zeroOrMore>
       </interleave>
    </define>
