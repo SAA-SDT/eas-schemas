@@ -257,7 +257,14 @@
    <define name="element.controlAccess">
       <element name="controlAccess">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="model.controlAccess-element-name-list"/>
+         <ref name="element.head.optional"/>
+         <oneOrMore>
+            <choice>
+                    <!-- if we keep all this, right?  if not, then we'd just have oneOrMore controlaccess elements? -->
+               <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
+               <ref name="model.controlAccess-element-name-list"/>
+            </choice>
+         </oneOrMore>
       </element>
    </define>
    <define name="element.corpName">

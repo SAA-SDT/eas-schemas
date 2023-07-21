@@ -2628,18 +2628,40 @@
                   </attribute>
                </optional>
             </interleave>
-            <choice>
-               <ref name="corpName"/>
-               <ref name="famName"/>
-               <ref name="function"/>
-               <ref name="genreForm"/>
-               <ref name="geogName"/>
-               <ref name="name"/>
-               <ref name="occupation"/>
-               <ref name="persName"/>
-               <ref name="subject"/>
-               <ref name="title"/>
-            </choice>
+            <optional>
+               <ref name="head"/>
+            </optional>
+            <oneOrMore>
+               <choice>
+                  <interleave>
+                     <zeroOrMore>
+                        <ref name="list"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="p"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="chronList"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="blockQuote"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="table"/>
+                     </zeroOrMore>
+                  </interleave>
+                  <ref name="corpName"/>
+                  <ref name="famName"/>
+                  <ref name="function"/>
+                  <ref name="genreForm"/>
+                  <ref name="geogName"/>
+                  <ref name="name"/>
+                  <ref name="occupation"/>
+                  <ref name="persName"/>
+                  <ref name="subject"/>
+                  <ref name="title"/>
+               </choice>
+            </oneOrMore>
          </group>
       </element>
    </define>
