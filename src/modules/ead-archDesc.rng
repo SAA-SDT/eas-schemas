@@ -11,11 +11,13 @@
        
         origination element
         
-        add num, footnote, and quote to ref ???
-        
         footnote, num, 
         create some updated matrices and use those to refine the existing models... but perhaps wait until more decisions are made? 
                 etc.
+                
+        update attribute-group.control-encodings.optional
+            we need a list of required and optional, not all optional!
+            
     -->
     
     <!-- ELEMENTS -->    
@@ -56,7 +58,7 @@
             <zeroOrMore>
                 <ref name="model.narrative-element-name-list"/>
             </zeroOrMore>
-            <!-- EAD3 already signalled the move to a single DSC, right? -->
+            <!-- EAD3 already signaled the move to a single DSC, right? -->
             <optional>
                 <ref name="element.dsc"/>
             </optional>
@@ -90,7 +92,6 @@
             <ref name="model.ead.mixed-content-plus-controlAccess-plusFNQ"/>
         </element>
     </define>
-
     
     <define name="element.blockQuote">
         <element name="blockQuote">
@@ -100,7 +101,6 @@
         </element>
     </define>
      
-     <!-- add c - c12 -->
      <!-- i've removed thead from now...  is that okay???  i hope so -->
     <define name="element.c">
         <element name="c">
@@ -271,11 +271,12 @@
     <define name="element.container">
         <element name="container">
             <!-- do we need lang and script for containers??? -->
-            
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.container.optional"/>
-            <!-- agree that mixed content is no longer needed here, right? -->
+            <ref name="model.ead.mixed-content"/>
+            <!-- agree that mixed content is no longer needed here, right? 
             <text/> 
+            -->
         </element>
     </define>
     
@@ -716,10 +717,8 @@
     <!-- also add to mixed content -->
     <!-- and add to whereever EAD allows this...  abstract, p, item, entry, and event -->
     <!-- still need to add the following to some of models
-            num
             date
-            footnote
-            quote
+
        -->
     <define name="model.controlAccess-element-name-list">
         <interleave>
@@ -746,36 +745,37 @@
     
     <define name="model.ead.mixed-content">
         <!-- assuming that we're replacing emph with span, and expanding the names of the rest of elements -->
-        <interleave>
-            <ref name="element.abbreviation"/>
-            <ref name="element.expansion"/>
-            <ref name="element.foreign"/>
-            <ref name="element.lb"/>
-            <ref name="element.ptr"/>
-            <ref name="model.mixed-content.optional"/>
-        </interleave>
+        <zeroOrMore>
+            <choice>
+                <ref name="element.abbreviation"/>
+                <ref name="element.expansion"/>
+                <ref name="element.foreign"/>
+                <ref name="element.lb"/>
+                <ref name="element.ptr"/>
+                <ref name="model.mixed-content.optional"/>
+            </choice>
+        </zeroOrMore>
     </define>
     
     <define name="model.ead.mixed-content-plus-controlAccess">
-        <interleave>
-            <ref name="element.abbreviation"/>
-            <ref name="element.expansion"/>
-            <ref name="element.foreign"/>
-            <ref name="element.lb"/>
-            <ref name="element.ptr"/>
-            <ref name="model.mixed-content.optional"/>
-            <ref name="model.controlAccess-element-name-list"/>
-        </interleave>
+        <zeroOrMore>
+            <choice>
+                <ref name="model.ead.mixed-content"/>
+                <ref name="model.controlAccess-element-name-list"/>
+            </choice>
+        </zeroOrMore>
     </define>
     
     <!-- hopefully we don't keep this long... if so, replace the name with something that makes sense -->
     <define name="model.ead.mixed-content-plus-controlAccess-plusFNQ">
-        <interleave>
-            <ref name="model.ead.mixed-content-plus-controlAccess"/>
-            <ref name="element.footnote"/>
-            <ref name="element.num"/>
-            <ref name="element.quote"/>
-        </interleave>
+        <zeroOrMore>
+            <choice>
+                <ref name="model.ead.mixed-content-plus-controlAccess"/>
+                <ref name="element.footnote"/>
+                <ref name="element.num"/>
+                <ref name="element.quote"/>
+            </choice>
+        </zeroOrMore>
     </define>
 
     

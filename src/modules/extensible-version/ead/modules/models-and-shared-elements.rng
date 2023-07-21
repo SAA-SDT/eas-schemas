@@ -21,8 +21,8 @@
       <element name="abstract">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content" a:exclude-from="eac"/>
-         <ref name="model.ead.mixed-content-plus-controlAccess" a:exclude-from="eac"/>
+         <ref name="model.ead.mixed-content-plus-controlAccess-plusFNQ"
+              a:exclude-from="eac"/>
       </element>
    </define>
    <define name="element.address">
