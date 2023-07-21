@@ -643,7 +643,7 @@
 
        -->
    <define name="model.controlAccess-element-name-list">
-      <interleave>
+      <choice>
          <ref name="element.corpName"/>
          <ref name="element.famName"/>
          <ref name="element.function"/>
@@ -654,7 +654,7 @@
          <ref name="element.persName"/>
          <ref name="element.subject"/>
          <ref name="element.title"/>
-      </interleave>
+      </choice>
    </define>
    <define name="model.controlAccess-element-group">
       <ref name="attribute-group.global-plus-lang-and-script.optional"/>

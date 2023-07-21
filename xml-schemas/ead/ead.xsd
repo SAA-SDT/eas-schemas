@@ -764,7 +764,7 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="controlAccess">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
          <xs:element type="ead:corpName" name="corpName"/>
          <xs:element type="ead:famName" name="famName"/>
          <xs:element type="ead:function" name="function"/>
@@ -1533,18 +1533,16 @@
                   <xs:element type="ead:span" name="span"/>
                </xs:choice>
             </xs:choice>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:corpName" name="corpName"/>
-               <xs:element type="ead:famName" name="famName"/>
-               <xs:element type="ead:function" name="function"/>
-               <xs:element type="ead:genreForm" name="genreForm"/>
-               <xs:element type="ead:geogName" name="geogName"/>
-               <xs:element type="ead:name" name="name"/>
-               <xs:element type="ead:occupation" name="occupation"/>
-               <xs:element type="ead:persName" name="persName"/>
-               <xs:element type="ead:subject" name="subject"/>
-               <xs:element type="ead:title" name="title"/>
-            </xs:choice>
+            <xs:element type="ead:corpName" name="corpName"/>
+            <xs:element type="ead:famName" name="famName"/>
+            <xs:element type="ead:function" name="function"/>
+            <xs:element type="ead:genreForm" name="genreForm"/>
+            <xs:element type="ead:geogName" name="geogName"/>
+            <xs:element type="ead:name" name="name"/>
+            <xs:element type="ead:occupation" name="occupation"/>
+            <xs:element type="ead:persName" name="persName"/>
+            <xs:element type="ead:subject" name="subject"/>
+            <xs:element type="ead:title" name="title"/>
          </xs:choice>
          <xs:element type="ead:footnote" name="footnote"/>
          <xs:element type="ead:num" name="num"/>
@@ -1835,18 +1833,16 @@
                   <xs:element type="ead:span" name="span"/>
                </xs:choice>
             </xs:choice>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:corpName" name="corpName"/>
-               <xs:element type="ead:famName" name="famName"/>
-               <xs:element type="ead:function" name="function"/>
-               <xs:element type="ead:genreForm" name="genreForm"/>
-               <xs:element type="ead:geogName" name="geogName"/>
-               <xs:element type="ead:name" name="name"/>
-               <xs:element type="ead:occupation" name="occupation"/>
-               <xs:element type="ead:persName" name="persName"/>
-               <xs:element type="ead:subject" name="subject"/>
-               <xs:element type="ead:title" name="title"/>
-            </xs:choice>
+            <xs:element type="ead:corpName" name="corpName"/>
+            <xs:element type="ead:famName" name="famName"/>
+            <xs:element type="ead:function" name="function"/>
+            <xs:element type="ead:genreForm" name="genreForm"/>
+            <xs:element type="ead:geogName" name="geogName"/>
+            <xs:element type="ead:name" name="name"/>
+            <xs:element type="ead:occupation" name="occupation"/>
+            <xs:element type="ead:persName" name="persName"/>
+            <xs:element type="ead:subject" name="subject"/>
+            <xs:element type="ead:title" name="title"/>
          </xs:choice>
          <xs:element type="ead:footnote" name="footnote"/>
          <xs:element type="ead:num" name="num"/>
@@ -1907,18 +1903,16 @@
                   <xs:element type="ead:span" name="span"/>
                </xs:choice>
             </xs:choice>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:corpName" name="corpName"/>
-               <xs:element type="ead:famName" name="famName"/>
-               <xs:element type="ead:function" name="function"/>
-               <xs:element type="ead:genreForm" name="genreForm"/>
-               <xs:element type="ead:geogName" name="geogName"/>
-               <xs:element type="ead:name" name="name"/>
-               <xs:element type="ead:occupation" name="occupation"/>
-               <xs:element type="ead:persName" name="persName"/>
-               <xs:element type="ead:subject" name="subject"/>
-               <xs:element type="ead:title" name="title"/>
-            </xs:choice>
+            <xs:element type="ead:corpName" name="corpName"/>
+            <xs:element type="ead:famName" name="famName"/>
+            <xs:element type="ead:function" name="function"/>
+            <xs:element type="ead:genreForm" name="genreForm"/>
+            <xs:element type="ead:geogName" name="geogName"/>
+            <xs:element type="ead:name" name="name"/>
+            <xs:element type="ead:occupation" name="occupation"/>
+            <xs:element type="ead:persName" name="persName"/>
+            <xs:element type="ead:subject" name="subject"/>
+            <xs:element type="ead:title" name="title"/>
          </xs:choice>
          <xs:element type="ead:footnote" name="footnote"/>
          <xs:element type="ead:num" name="num"/>
@@ -1949,18 +1943,16 @@
                   <xs:element type="ead:span" name="span"/>
                </xs:choice>
             </xs:choice>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:corpName" name="corpName"/>
-               <xs:element type="ead:famName" name="famName"/>
-               <xs:element type="ead:function" name="function"/>
-               <xs:element type="ead:genreForm" name="genreForm"/>
-               <xs:element type="ead:geogName" name="geogName"/>
-               <xs:element type="ead:name" name="name"/>
-               <xs:element type="ead:occupation" name="occupation"/>
-               <xs:element type="ead:persName" name="persName"/>
-               <xs:element type="ead:subject" name="subject"/>
-               <xs:element type="ead:title" name="title"/>
-            </xs:choice>
+            <xs:element type="ead:corpName" name="corpName"/>
+            <xs:element type="ead:famName" name="famName"/>
+            <xs:element type="ead:function" name="function"/>
+            <xs:element type="ead:genreForm" name="genreForm"/>
+            <xs:element type="ead:geogName" name="geogName"/>
+            <xs:element type="ead:name" name="name"/>
+            <xs:element type="ead:occupation" name="occupation"/>
+            <xs:element type="ead:persName" name="persName"/>
+            <xs:element type="ead:subject" name="subject"/>
+            <xs:element type="ead:title" name="title"/>
          </xs:choice>
          <xs:element type="ead:footnote" name="footnote"/>
          <xs:element type="ead:num" name="num"/>

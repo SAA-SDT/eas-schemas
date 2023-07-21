@@ -2628,7 +2628,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <interleave>
+            <choice>
                <ref name="corpName"/>
                <ref name="famName"/>
                <ref name="function"/>
@@ -2639,7 +2639,7 @@
                <ref name="persName"/>
                <ref name="subject"/>
                <ref name="title"/>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -6121,18 +6121,16 @@
                               </oneOrMore>
                            </choice>
                         </oneOrMore>
-                        <interleave>
-                           <ref name="corpName"/>
-                           <ref name="famName"/>
-                           <ref name="function"/>
-                           <ref name="genreForm"/>
-                           <ref name="geogName"/>
-                           <ref name="name"/>
-                           <ref name="occupation"/>
-                           <ref name="persName"/>
-                           <ref name="subject"/>
-                           <ref name="title"/>
-                        </interleave>
+                        <ref name="corpName"/>
+                        <ref name="famName"/>
+                        <ref name="function"/>
+                        <ref name="genreForm"/>
+                        <ref name="geogName"/>
+                        <ref name="name"/>
+                        <ref name="occupation"/>
+                        <ref name="persName"/>
+                        <ref name="subject"/>
+                        <ref name="title"/>
                      </choice>
                   </oneOrMore>
                   <ref name="footnote"/>
@@ -7465,18 +7463,16 @@
                               </oneOrMore>
                            </choice>
                         </oneOrMore>
-                        <interleave>
-                           <ref name="corpName"/>
-                           <ref name="famName"/>
-                           <ref name="function"/>
-                           <ref name="genreForm"/>
-                           <ref name="geogName"/>
-                           <ref name="name"/>
-                           <ref name="occupation"/>
-                           <ref name="persName"/>
-                           <ref name="subject"/>
-                           <ref name="title"/>
-                        </interleave>
+                        <ref name="corpName"/>
+                        <ref name="famName"/>
+                        <ref name="function"/>
+                        <ref name="genreForm"/>
+                        <ref name="geogName"/>
+                        <ref name="name"/>
+                        <ref name="occupation"/>
+                        <ref name="persName"/>
+                        <ref name="subject"/>
+                        <ref name="title"/>
                      </choice>
                   </oneOrMore>
                   <ref name="footnote"/>
@@ -7753,18 +7749,16 @@
                               </oneOrMore>
                            </choice>
                         </oneOrMore>
-                        <interleave>
-                           <ref name="corpName"/>
-                           <ref name="famName"/>
-                           <ref name="function"/>
-                           <ref name="genreForm"/>
-                           <ref name="geogName"/>
-                           <ref name="name"/>
-                           <ref name="occupation"/>
-                           <ref name="persName"/>
-                           <ref name="subject"/>
-                           <ref name="title"/>
-                        </interleave>
+                        <ref name="corpName"/>
+                        <ref name="famName"/>
+                        <ref name="function"/>
+                        <ref name="genreForm"/>
+                        <ref name="geogName"/>
+                        <ref name="name"/>
+                        <ref name="occupation"/>
+                        <ref name="persName"/>
+                        <ref name="subject"/>
+                        <ref name="title"/>
                      </choice>
                   </oneOrMore>
                   <ref name="footnote"/>
@@ -7870,18 +7864,16 @@
                               </oneOrMore>
                            </choice>
                         </oneOrMore>
-                        <interleave>
-                           <ref name="corpName"/>
-                           <ref name="famName"/>
-                           <ref name="function"/>
-                           <ref name="genreForm"/>
-                           <ref name="geogName"/>
-                           <ref name="name"/>
-                           <ref name="occupation"/>
-                           <ref name="persName"/>
-                           <ref name="subject"/>
-                           <ref name="title"/>
-                        </interleave>
+                        <ref name="corpName"/>
+                        <ref name="famName"/>
+                        <ref name="function"/>
+                        <ref name="genreForm"/>
+                        <ref name="geogName"/>
+                        <ref name="name"/>
+                        <ref name="occupation"/>
+                        <ref name="persName"/>
+                        <ref name="subject"/>
+                        <ref name="title"/>
                      </choice>
                   </oneOrMore>
                   <ref name="footnote"/>
