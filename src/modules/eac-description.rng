@@ -94,17 +94,6 @@
         </element>
     </define>
     
-    <define name="element.language">
-        <element name="language">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <optional>
-                <ref name="attribute.languageCode"/>
-            </optional>
-            <text/>
-        </element>
-    </define>
-    
     <define name="element.languageUsed">
         <element name="languageUsed">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -215,17 +204,6 @@
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="element.head.optional"/>
             <ref name="model.narrative-group.optional"/>
-        </element>
-    </define>
-    
-    <define name="element.writingSystem">
-        <element name="writingSystem">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <optional>
-                <ref name="attribute.scriptCode"/>
-            </optional>
-            <text/>
         </element>
     </define>
 

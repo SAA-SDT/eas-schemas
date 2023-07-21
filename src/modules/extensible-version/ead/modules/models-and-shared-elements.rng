@@ -233,6 +233,16 @@
          <ref name="model.mixed-content.optional"/>
       </element>
    </define>
+   <define name="element.language">
+      <element name="language">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <optional>
+            <ref name="attribute.languageCode"/>
+         </optional>
+         <text/>
+      </element>
+   </define>
    <define name="element.lineBreak">
       <element name="lineBreak">
          <ref name="attribute-group.global.optional"/>
@@ -371,6 +381,16 @@
          <text/>
       </element>
    </define>
+   <define name="element.writingSystem">
+      <element name="writingSystem">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <optional>
+            <ref name="attribute.scriptCode"/>
+         </optional>
+         <text/>
+      </element>
+   </define>
    <!-- MODELS -->
    <define name="model.all-dates.choice">
       <choice>
@@ -419,6 +439,20 @@
       <ref name="attribute-group.assertion-reference.optional"/>
       <ref name="element.head.optional"/>
       <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
+   </define>
+   <!-- if we keep this... for bibliography, otherfindaid, separatedmaterial, and relatedmaterial.... rename it to something that makes sense, and remodel it -->
+   <define name="model.ead-narrative-elements-PLUS">
+      <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+      <ref name="attribute-group.assertion-reference.optional"/>
+      <ref name="attribute.encodingAnalog.optional"/>
+      <ref name="element.head.optional"/>
+      <oneOrMore>
+         <choice>
+            <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
+            <ref name="element.archRef"/>
+            <ref name="element.bibRef"/>
+         </choice>
+      </oneOrMore>
    </define>
    <define name="model.html.mixed-content.optional">
         <!-- yet to be defined, but likely to be a branch -->
@@ -487,6 +521,7 @@
          </zeroOrMore>
       </interleave>
    </define>
+   <!-- where to add num, footnote, and ??? -->
    <define name="model.single-element-group">
       <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
       <ref name="attribute-group.linked-data.optional"/>

@@ -3,6 +3,20 @@
          xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
+    <!-- to do:
+        review label attribute
+                encodingAnalog
+                localType / Dec
+       
+        origination element
+        
+        add num, footnote, and quote to ref ???
+        
+        footnote, num, 
+        create some updated matrices and use those to refine the existing models... but perhaps wait until more decisions are made? 
+                etc.
+    -->
+    
     <!-- ELEMENTS -->
    <define name="element.accessConditions">
       <element name="accessConditions">
@@ -42,6 +56,13 @@
          </optional>
       </element>
    </define>
+   <define name="element.archRef">
+      <element name="archRef">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="model.ead.mixed-content-plus-controlAccess-plusFNQ"/>
+      </element>
+   </define>
    <define name="element.arrangement">
       <element name="arrangement">
          <ref name="model.ead-narrative-elements"/>
@@ -49,10 +70,14 @@
    </define>
    <define name="element.bibliography">
       <element name="bibliography">
+         <ref name="model.ead-narrative-elements-PLUS"/>
+      </element>
+   </define>
+   <define name="element.bibRef">
+      <element name="bibRef">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- more to do -->
-         <text/>
+         <ref name="model.ead.mixed-content-plus-controlAccess-plusFNQ"/>
       </element>
    </define>
    <define name="element.blockQuote">
@@ -323,6 +348,13 @@
          <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
+   <define name="element.footnote">
+      <element name="footnote">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <!-- note:  currently missing @show and @actuate, since those weren't part of EAC style links. -->
+         <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
+      </element>
+   </define>
    <define name="element.function">
       <element name="function">
          <ref name="model.controlAccess-element-group"/>
@@ -350,13 +382,34 @@
       <element name="langMaterial">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- more to do -->
-         <!-- needs languageSet, language, and descriptiveNote -->
+         <ref name="attribute.label.optional"/>
+         <ref name="attribute.encodingAnalog.optional"/>
+         <oneOrMore>
+            <choice>
+               <ref name="element.language"/>
+               <ref name="element.languageSet"/>
+            </choice>
+         </oneOrMore>
+         <ref name="element.descriptiveNote.optional"/>
          <text/>
       </element>
    </define>
+   <define name="element.languageSet">
+      <element name="languageSet">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute.encodingAnalog.optional"/>
+         <oneOrMore>
+            <ref name="element.language"/>
+         </oneOrMore>
+         <oneOrMore>
+            <ref name="element.writingSystem"/>
+         </oneOrMore>
+         <ref name="element.descriptiveNote.optional"/>
+      </element>
+   </define>
    <define name="element.lb">
-      <element name="langMaterial">
+      <element name="lb">
          <ref name="attribute-group.global.optional"/>
          <empty/>
       </element>
@@ -410,7 +463,7 @@
    </define>
    <define name="element.otherFindAid">
       <element name="otherFindAid">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-PLUS"/>
       </element>
    </define>
    <define name="element.persName">
@@ -493,9 +546,19 @@
          <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
+   <define name="element.quote">
+      <element name="quote">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- on span... quote... and what else?  -->
+         <!-- also, uggh... if we just go with html, then quote will be q, and less transformations required -->
+         <ref name="attribute.style.optional"/>
+         <ref name="model.ead.mixed-content"/>
+      </element>
+   </define>
    <define name="element.relatedMaterial">
       <element name="relatedMaterial">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-PLUS"/>
       </element>
    </define>
    <define name="element.repository">
@@ -522,7 +585,7 @@
    </define>
    <define name="element.separatedMaterial">
       <element name="separatedMaterial">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-PLUS"/>
       </element>
    </define>
    <define name="element.subject">
@@ -560,12 +623,7 @@
       <element name="unitTitle">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- more to do
-                EAD3
-                [text], abbr, corpname, date, emph, expan, famname, footnote, foreign, function, genreform, geogname, lb, name, 
-                num, occupation, persname, ptr, quote, ref, subject, title
-               -->
-         <text/>
+         <ref name="model.ead.mixed-content-plus-controlAccess-plusFNQ"/>
       </element>
    </define>
    <define name="element.useConditions">
@@ -624,6 +682,15 @@
          <ref name="element.ptr"/>
          <ref name="model.mixed-content.optional"/>
          <ref name="model.controlAccess-element-name-list"/>
+      </interleave>
+   </define>
+   <!-- hopefully we don't keep this long... if so, replace the name with something that makes sense -->
+   <define name="model.ead.mixed-content-plus-controlAccess-plusFNQ">
+      <interleave>
+         <ref name="model.ead.mixed-content-plus-controlAccess"/>
+         <ref name="element.footnote"/>
+         <ref name="element.num"/>
+         <ref name="element.quote"/>
       </interleave>
    </define>
    <define name="model.narrative-element-name-list">
