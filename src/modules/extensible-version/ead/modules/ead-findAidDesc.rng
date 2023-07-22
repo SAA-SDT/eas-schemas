@@ -24,11 +24,12 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="element.head.optional"/>
-         <ref name="model.narrative-group-plus-chronList.optional"/>
-         <zeroOrMore>
-            <ref name="model.narrative-group-plus-chronList.optional"/>
-            <ref name="element.div"/>
-         </zeroOrMore>
+         <oneOrMore>
+            <choice>
+               <ref name="model.narrative-group-plus-chronList.optional"/>
+               <ref name="element.div"/>
+            </choice>
+         </oneOrMore>
       </element>
    </define>
 </grammar>

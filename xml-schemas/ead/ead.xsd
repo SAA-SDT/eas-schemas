@@ -475,19 +475,14 @@
    <xs:complexType name="div">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:list" name="list"/>
-            <xs:element type="ead:p" name="p"/>
-            <xs:element type="ead:chronList" name="chronList"/>
-         </xs:choice>
-         <xs:sequence minOccurs="0" maxOccurs="unbounded">
+         <xs:choice maxOccurs="unbounded">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:list" name="list"/>
                <xs:element type="ead:p" name="p"/>
                <xs:element type="ead:chronList" name="chronList"/>
             </xs:choice>
             <xs:element type="ead:div" name="div"/>
-         </xs:sequence>
+         </xs:choice>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
