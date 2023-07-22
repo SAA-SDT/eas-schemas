@@ -278,7 +278,8 @@
       <element name="p">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.mixed-content.optional"/>
+         <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"
+              a:exclude-from="eac"/>
       </element>
    </define>
    <define name="element.part">

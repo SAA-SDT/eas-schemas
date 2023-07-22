@@ -1133,8 +1133,8 @@
             </choice>
         </zeroOrMore>
     </define>
-
     
+
     <define name="model.narrative-element-name-list">
         <oneOrMore>
             <choice>
