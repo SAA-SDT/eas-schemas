@@ -1014,7 +1014,9 @@
             <ref name="element.foreign"/>
             <ref name="element.lb"/>
             <ref name="element.ptr"/>
-            <ref name="model.mixed-content.optional"/>
+            <ref name="element.reference"/>
+            <ref name="element.span"/>
+            <text/>
          </choice>
       </zeroOrMore>
    </define>

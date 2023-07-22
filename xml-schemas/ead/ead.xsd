@@ -1525,16 +1525,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="part" mixed="true">
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
          <xs:element type="ead:expansion" name="expansion"/>
          <xs:element type="ead:foreign" name="foreign"/>
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1567,16 +1565,14 @@
    <xs:complexType name="abstract" mixed="true">
       <xs:choice maxOccurs="unbounded">
          <xs:choice maxOccurs="unbounded">
-            <xs:choice maxOccurs="unbounded">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:abbreviation" name="abbreviation"/>
                <xs:element type="ead:expansion" name="expansion"/>
                <xs:element type="ead:foreign" name="foreign"/>
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
-               <xs:choice minOccurs="0" maxOccurs="unbounded">
-                  <xs:element type="ead:reference" name="reference"/>
-                  <xs:element type="ead:span" name="span"/>
-               </xs:choice>
+               <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
             <xs:element type="ead:famName" name="famName"/>
@@ -1607,16 +1603,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="container" mixed="true">
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
          <xs:element type="ead:expansion" name="expansion"/>
          <xs:element type="ead:foreign" name="foreign"/>
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1701,16 +1695,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="materialSpec" mixed="true">
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
          <xs:element type="ead:expansion" name="expansion"/>
          <xs:element type="ead:foreign" name="foreign"/>
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1763,16 +1755,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="physDesc" mixed="true">
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
          <xs:element type="ead:expansion" name="expansion"/>
          <xs:element type="ead:foreign" name="foreign"/>
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1807,16 +1797,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="physLoc" mixed="true">
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
          <xs:element type="ead:expansion" name="expansion"/>
          <xs:element type="ead:foreign" name="foreign"/>
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1851,16 +1839,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitDate" mixed="true">
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
          <xs:element type="ead:expansion" name="expansion"/>
          <xs:element type="ead:foreign" name="foreign"/>
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1905,16 +1891,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitId" mixed="true">
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
          <xs:element type="ead:expansion" name="expansion"/>
          <xs:element type="ead:foreign" name="foreign"/>
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1935,16 +1919,14 @@
    <xs:complexType name="unitTitle" mixed="true">
       <xs:choice maxOccurs="unbounded">
          <xs:choice maxOccurs="unbounded">
-            <xs:choice maxOccurs="unbounded">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:abbreviation" name="abbreviation"/>
                <xs:element type="ead:expansion" name="expansion"/>
                <xs:element type="ead:foreign" name="foreign"/>
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
-               <xs:choice minOccurs="0" maxOccurs="unbounded">
-                  <xs:element type="ead:reference" name="reference"/>
-                  <xs:element type="ead:span" name="span"/>
-               </xs:choice>
+               <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
             <xs:element type="ead:famName" name="famName"/>
@@ -2031,16 +2013,14 @@
    <xs:complexType name="archRef" mixed="true">
       <xs:choice maxOccurs="unbounded">
          <xs:choice maxOccurs="unbounded">
-            <xs:choice maxOccurs="unbounded">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:abbreviation" name="abbreviation"/>
                <xs:element type="ead:expansion" name="expansion"/>
                <xs:element type="ead:foreign" name="foreign"/>
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
-               <xs:choice minOccurs="0" maxOccurs="unbounded">
-                  <xs:element type="ead:reference" name="reference"/>
-                  <xs:element type="ead:span" name="span"/>
-               </xs:choice>
+               <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
             <xs:element type="ead:famName" name="famName"/>
@@ -2072,16 +2052,14 @@
    <xs:complexType name="bibRef" mixed="true">
       <xs:choice maxOccurs="unbounded">
          <xs:choice maxOccurs="unbounded">
-            <xs:choice maxOccurs="unbounded">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:abbreviation" name="abbreviation"/>
                <xs:element type="ead:expansion" name="expansion"/>
                <xs:element type="ead:foreign" name="foreign"/>
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
-               <xs:choice minOccurs="0" maxOccurs="unbounded">
-                  <xs:element type="ead:reference" name="reference"/>
-                  <xs:element type="ead:span" name="span"/>
-               </xs:choice>
+               <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
             <xs:element type="ead:famName" name="famName"/>
@@ -2651,16 +2629,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="num" mixed="true">
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
          <xs:element type="ead:expansion" name="expansion"/>
          <xs:element type="ead:foreign" name="foreign"/>
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2674,16 +2650,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="quote" mixed="true">
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
          <xs:element type="ead:expansion" name="expansion"/>
          <xs:element type="ead:foreign" name="foreign"/>
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2753,16 +2727,14 @@
    <xs:complexType name="physFacet" mixed="true">
       <xs:choice maxOccurs="unbounded">
          <xs:choice maxOccurs="unbounded">
-            <xs:choice maxOccurs="unbounded">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:abbreviation" name="abbreviation"/>
                <xs:element type="ead:expansion" name="expansion"/>
                <xs:element type="ead:foreign" name="foreign"/>
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
-               <xs:choice minOccurs="0" maxOccurs="unbounded">
-                  <xs:element type="ead:reference" name="reference"/>
-                  <xs:element type="ead:span" name="span"/>
-               </xs:choice>
+               <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
             <xs:element type="ead:famName" name="famName"/>
@@ -2792,16 +2764,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="dimensions" mixed="true">
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
          <xs:element type="ead:expansion" name="expansion"/>
          <xs:element type="ead:foreign" name="foreign"/>
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -3145,16 +3115,14 @@
    <xs:complexType name="entry" mixed="true">
       <xs:choice maxOccurs="unbounded">
          <xs:choice maxOccurs="unbounded">
-            <xs:choice maxOccurs="unbounded">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:abbreviation" name="abbreviation"/>
                <xs:element type="ead:expansion" name="expansion"/>
                <xs:element type="ead:foreign" name="foreign"/>
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
-               <xs:choice minOccurs="0" maxOccurs="unbounded">
-                  <xs:element type="ead:reference" name="reference"/>
-                  <xs:element type="ead:span" name="span"/>
-               </xs:choice>
+               <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
             <xs:element type="ead:famName" name="famName"/>

@@ -6069,13 +6069,9 @@
                   <ref name="foreign"/>
                   <ref name="lb"/>
                   <ref name="ptr"/>
-                  <oneOrMore>
-                     <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
-                     </choice>
-                  </oneOrMore>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
@@ -6278,13 +6274,9 @@
                               <ref name="foreign"/>
                               <ref name="lb"/>
                               <ref name="ptr"/>
-                              <oneOrMore>
-                                 <choice>
-                                    <ref name="reference"/>
-                                    <ref name="span"/>
-                                    <text/>
-                                 </choice>
-                              </oneOrMore>
+                              <ref name="reference"/>
+                              <ref name="span"/>
+                              <text/>
                            </choice>
                         </oneOrMore>
                         <ref name="corpName"/>
@@ -6396,13 +6388,9 @@
                   <ref name="foreign"/>
                   <ref name="lb"/>
                   <ref name="ptr"/>
-                  <oneOrMore>
-                     <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
-                     </choice>
-                  </oneOrMore>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
@@ -6843,13 +6831,9 @@
                   <ref name="foreign"/>
                   <ref name="lb"/>
                   <ref name="ptr"/>
-                  <oneOrMore>
-                     <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
-                     </choice>
-                  </oneOrMore>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
@@ -7123,13 +7107,9 @@
                   <ref name="foreign"/>
                   <ref name="lb"/>
                   <ref name="ptr"/>
-                  <oneOrMore>
-                     <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
-                     </choice>
-                  </oneOrMore>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
@@ -7306,13 +7286,9 @@
                   <ref name="foreign"/>
                   <ref name="lb"/>
                   <ref name="ptr"/>
-                  <oneOrMore>
-                     <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
-                     </choice>
-                  </oneOrMore>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
@@ -7531,13 +7507,9 @@
                   <ref name="foreign"/>
                   <ref name="lb"/>
                   <ref name="ptr"/>
-                  <oneOrMore>
-                     <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
-                     </choice>
-                  </oneOrMore>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
@@ -7780,13 +7752,9 @@
                   <ref name="foreign"/>
                   <ref name="lb"/>
                   <ref name="ptr"/>
-                  <oneOrMore>
-                     <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
-                     </choice>
-                  </oneOrMore>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
@@ -7916,13 +7884,9 @@
                               <ref name="foreign"/>
                               <ref name="lb"/>
                               <ref name="ptr"/>
-                              <oneOrMore>
-                                 <choice>
-                                    <ref name="reference"/>
-                                    <ref name="span"/>
-                                    <text/>
-                                 </choice>
-                              </oneOrMore>
+                              <ref name="reference"/>
+                              <ref name="span"/>
+                              <text/>
                            </choice>
                         </oneOrMore>
                         <ref name="corpName"/>
@@ -8238,13 +8202,9 @@
                               <ref name="foreign"/>
                               <ref name="lb"/>
                               <ref name="ptr"/>
-                              <oneOrMore>
-                                 <choice>
-                                    <ref name="reference"/>
-                                    <ref name="span"/>
-                                    <text/>
-                                 </choice>
-                              </oneOrMore>
+                              <ref name="reference"/>
+                              <ref name="span"/>
+                              <text/>
                            </choice>
                         </oneOrMore>
                         <ref name="corpName"/>
@@ -8354,13 +8314,9 @@
                               <ref name="foreign"/>
                               <ref name="lb"/>
                               <ref name="ptr"/>
-                              <oneOrMore>
-                                 <choice>
-                                    <ref name="reference"/>
-                                    <ref name="span"/>
-                                    <text/>
-                                 </choice>
-                              </oneOrMore>
+                              <ref name="reference"/>
+                              <ref name="span"/>
+                              <text/>
                            </choice>
                         </oneOrMore>
                         <ref name="corpName"/>
@@ -10838,13 +10794,9 @@
                   <ref name="foreign"/>
                   <ref name="lb"/>
                   <ref name="ptr"/>
-                  <oneOrMore>
-                     <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
-                     </choice>
-                  </oneOrMore>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
@@ -10944,13 +10896,9 @@
                   <ref name="foreign"/>
                   <ref name="lb"/>
                   <ref name="ptr"/>
-                  <oneOrMore>
-                     <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
-                     </choice>
-                  </oneOrMore>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
@@ -11358,13 +11306,9 @@
                               <ref name="foreign"/>
                               <ref name="lb"/>
                               <ref name="ptr"/>
-                              <oneOrMore>
-                                 <choice>
-                                    <ref name="reference"/>
-                                    <ref name="span"/>
-                                    <text/>
-                                 </choice>
-                              </oneOrMore>
+                              <ref name="reference"/>
+                              <ref name="span"/>
+                              <text/>
                            </choice>
                         </oneOrMore>
                         <ref name="corpName"/>
@@ -11470,13 +11414,9 @@
                   <ref name="foreign"/>
                   <ref name="lb"/>
                   <ref name="ptr"/>
-                  <oneOrMore>
-                     <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
-                     </choice>
-                  </oneOrMore>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>
@@ -12752,13 +12692,9 @@
                               <ref name="foreign"/>
                               <ref name="lb"/>
                               <ref name="ptr"/>
-                              <oneOrMore>
-                                 <choice>
-                                    <ref name="reference"/>
-                                    <ref name="span"/>
-                                    <text/>
-                                 </choice>
-                              </oneOrMore>
+                              <ref name="reference"/>
+                              <ref name="span"/>
+                              <text/>
                            </choice>
                         </oneOrMore>
                         <ref name="corpName"/>
