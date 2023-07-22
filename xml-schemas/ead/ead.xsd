@@ -1269,6 +1269,7 @@
       <xs:attribute name="href" type="xs:anyURI"/>
       <xs:attribute name="linkRole" type="xs:anyURI"/>
       <xs:attribute name="linkTitle" type="xs:token"/>
+      <xs:attribute name="entityref" type="xs:ENTITY"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="shortCode" mixed="true">
@@ -1595,10 +1596,27 @@
       <xs:attribute name="parent" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="dao" mixed="true">
+   <xs:complexType name="dao">
+      <xs:sequence>
+         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
+      </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="encodingAnalog" type="xs:token"/>
+      <xs:attribute name="label" type="xs:token"/>
+      <xs:attribute name="href" type="xs:anyURI"/>
+      <xs:attribute name="linkRole" type="xs:anyURI"/>
+      <xs:attribute name="linkTitle" type="xs:token"/>
+      <xs:attribute name="xpointer" type="xs:normalizedString"/>
+      <xs:attribute name="entityref" type="xs:ENTITY"/>
+      <xs:attribute name="daoType" use="required" type="xs:token"/>
+      <xs:attribute name="otherDaoType" type="xs:token"/>
+      <xs:attribute name="coverage" type="xs:NMTOKEN"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="daoSet">
@@ -2461,7 +2479,7 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="xpointer" type="xs:normalizedString"/>
-      <xs:attribute name="entityReference" type="xs:token"/>
+      <xs:attribute name="entityref" type="xs:ENTITY"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="footnote">

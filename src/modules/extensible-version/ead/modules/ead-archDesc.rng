@@ -4,7 +4,7 @@
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
     <!-- to do:
-        table
+        dao
         index
         
         review label attribute
@@ -13,13 +13,10 @@
        
         origination element
         
-        footnote, num, 
         create some updated matrices and use those to refine the existing models... but perhaps wait until more decisions are made? 
                 etc.
-                
-        update attribute-group.control-encodings.optional
-            we need a list of required and optional, not all optional!
-            
+        
+        add some sanity checks and clean this up.
     -->
     
     <!-- ELEMENTS -->
@@ -92,7 +89,6 @@
          <ref name="model.narrative-group-plus-chronList-plus-table.optional"/>
       </element>
    </define>
-   <!-- i've removed thead from now...  is that okay???  i hope so -->
    <define name="element.c">
       <element name="c">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
@@ -308,8 +304,24 @@
    </define>
    <define name="element.dao">
       <element name="dao">
-         <ref name="attribute-group.global.optional"/>
-         <text/>
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute.encodingAnalog.optional"/>
+         <ref name="attribute.label.optional"/>
+         <ref name="attribute-group.links.optional"/>
+         <ref name="attribute.xpointer.optional"/>
+         <ref name="attribute.entityref.optional"/>
+         <attribute name="daoType">
+            <data type="token"/>
+         </attribute>
+         <optional>
+            <attribute name="otherDaoType">
+               <data type="token"/>
+            </attribute>
+         </optional>
+         <optional>
+            <ref name="attribute.coverage"/>
+         </optional>
+         <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
    <define name="element.daoSet">

@@ -4856,6 +4856,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="entityref" ns="">
+                  <data type="ENTITY"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <oneOrMore>
                <choice>
                   <ref name="span"/>
@@ -6299,7 +6305,95 @@
                   </attribute>
                </zeroOrMore>
             </interleave>
-            <text/>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="encodingAnalog" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="label" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="href" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="linkRole" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="linkTitle" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="xpointer" ns="">
+                  <data type="normalizedString"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="entityref" ns="">
+                  <data type="ENTITY"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <attribute name="daoType" ns="">
+               <data type="token"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </attribute>
+            <optional>
+               <attribute name="otherDaoType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="coverage" ns="">
+                  <data type="NMTOKEN"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <ref name="descriptiveNote"/>
+            </optional>
          </group>
       </element>
    </define>
@@ -10125,8 +10219,8 @@
                </attribute>
             </optional>
             <optional>
-               <attribute name="entityReference" ns="">
-                  <data type="token"
+               <attribute name="entityref" ns="">
+                  <data type="ENTITY"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>

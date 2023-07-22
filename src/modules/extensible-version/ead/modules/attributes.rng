@@ -92,6 +92,13 @@
          </attribute>
       </optional>
    </define>
+   <define name="attribute.entityref.optional">
+      <optional>
+         <attribute name="entityref">
+            <data type="ENTITY"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="attribute.id.optional">
       <optional>
          <attribute name="id">
