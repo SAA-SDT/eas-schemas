@@ -4,7 +4,6 @@
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
     <!-- to do:
-        index
         
         review label attribute
                 encodingAnalog
@@ -508,10 +507,18 @@
    </define>
    <define name="element.origination">
       <element name="origination">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- TO DO:  more -->
-         <text/>
+         <ref name="attribute.label.optional"/>
+         <ref name="attribute.encodingAnalog.optional"/>
+         <oneOrMore>
+            <choice>
+               <ref name="element.corpName"/>
+               <ref name="element.famName"/>
+               <ref name="element.name"/>
+               <ref name="element.persName"/>
+            </choice>
+         </oneOrMore>
       </element>
    </define>
    <define name="element.otherFindAid">
@@ -895,13 +902,32 @@
       <element name="unitDate">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <text/>
+         <ref name="attribute.label.optional"/>
+         <ref name="attribute.encodingAnalog.optional"/>
+         <!-- 
+TO DO:  add more
+      <ref name="a.unitdatetype"/>
+      <optional>
+        <ref name="a.datechar"/>
+      </optional>
+      <optional>
+        <ref name="a.certainty"/>
+      </optional>
+      <ref name="am.dates.era"/>
+      <ref name="am.dates.calendar"/>
+      <ref name="am.date.normal"/>
+      <optional>
+        <ref name="a.encodinganalog"/>
+      </optional>
+            -->
+         <ref name="model.ead.mixed-content"/>
       </element>
    </define>
    <define name="element.unitDateStructured">
       <element name="unitDateStructured">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- TO DO:  add attributes -->
          <ref name="model.all-dates.choice"/>
       </element>
    </define>
@@ -909,6 +935,7 @@
       <element name="unitId">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- TO DO:  add attributes, etc. -->
          <text/>
       </element>
    </define>
@@ -916,6 +943,7 @@
       <element name="unitTitle">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- TO DO:  add attributes -->
          <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
       </element>
    </define>

@@ -6782,12 +6782,6 @@
                   </attribute>
                </zeroOrMore>
             </interleave>
-            <optional>
-               <attribute name="base" ns="">
-                  <data type="anyURI"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <interleave>
                <optional>
                   <attribute name="languageOfElement" ns="">
@@ -6802,6 +6796,18 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="maintenanceEventReference" ns="">
@@ -6822,7 +6828,26 @@
                   </attribute>
                </optional>
             </interleave>
-            <text/>
+            <optional>
+               <attribute name="label" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="encodingAnalog" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <oneOrMore>
+               <choice>
+                  <ref name="corpName"/>
+                  <ref name="famName"/>
+                  <ref name="name"/>
+                  <ref name="persName"/>
+               </choice>
+            </oneOrMore>
          </group>
       </element>
    </define>
@@ -7349,7 +7374,34 @@
                   </attribute>
                </optional>
             </interleave>
-            <text/>
+            <optional>
+               <attribute name="label" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="encodingAnalog" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <oneOrMore>
+               <choice>
+                  <ref name="abbreviation"/>
+                  <ref name="expansion"/>
+                  <ref name="foreign"/>
+                  <ref name="lb"/>
+                  <ref name="ptr"/>
+                  <oneOrMore>
+                     <choice>
+                        <ref name="reference"/>
+                        <ref name="span"/>
+                        <text/>
+                     </choice>
+                  </oneOrMore>
+               </choice>
+            </oneOrMore>
          </group>
       </element>
    </define>
