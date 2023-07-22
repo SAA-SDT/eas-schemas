@@ -6155,6 +6155,7 @@
                         <ref name="title"/>
                      </choice>
                   </oneOrMore>
+                  <ref name="date"/>
                   <ref name="footnote"/>
                   <ref name="num"/>
                   <ref name="quote"/>
@@ -7497,6 +7498,7 @@
                         <ref name="title"/>
                      </choice>
                   </oneOrMore>
+                  <ref name="date"/>
                   <ref name="footnote"/>
                   <ref name="num"/>
                   <ref name="quote"/>
@@ -7672,7 +7674,42 @@
                   </attribute>
                </optional>
             </interleave>
-            <text/>
+            <optional>
+               <attribute name="frame" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">top</value>
+                     <value type="token" datatypeLibrary="" ns="">bottom</value>
+                     <value type="token" datatypeLibrary="" ns="">topbot</value>
+                     <value type="token" datatypeLibrary="" ns="">all</value>
+                     <value type="token" datatypeLibrary="" ns="">sides</value>
+                     <value type="token" datatypeLibrary="" ns="">none</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="pgwide" ns="">
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="colsep" ns="">
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="rowsep" ns="">
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <ref name="thead"/>
+            </optional>
+            <oneOrMore>
+               <ref name="tgroup"/>
+            </oneOrMore>
          </group>
       </element>
    </define>
@@ -7783,6 +7820,7 @@
                         <ref name="title"/>
                      </choice>
                   </oneOrMore>
+                  <ref name="date"/>
                   <ref name="footnote"/>
                   <ref name="num"/>
                   <ref name="quote"/>
@@ -7898,6 +7936,7 @@
                         <ref name="title"/>
                      </choice>
                   </oneOrMore>
+                  <ref name="date"/>
                   <ref name="footnote"/>
                   <ref name="num"/>
                   <ref name="quote"/>
@@ -10768,18 +10807,40 @@
             </interleave>
             <oneOrMore>
                <choice>
-                  <ref name="abbreviation"/>
-                  <ref name="expansion"/>
-                  <ref name="foreign"/>
-                  <ref name="lb"/>
-                  <ref name="ptr"/>
                   <oneOrMore>
                      <choice>
-                        <ref name="reference"/>
-                        <ref name="span"/>
-                        <text/>
+                        <oneOrMore>
+                           <choice>
+                              <ref name="abbreviation"/>
+                              <ref name="expansion"/>
+                              <ref name="foreign"/>
+                              <ref name="lb"/>
+                              <ref name="ptr"/>
+                              <oneOrMore>
+                                 <choice>
+                                    <ref name="reference"/>
+                                    <ref name="span"/>
+                                    <text/>
+                                 </choice>
+                              </oneOrMore>
+                           </choice>
+                        </oneOrMore>
+                        <ref name="corpName"/>
+                        <ref name="famName"/>
+                        <ref name="function"/>
+                        <ref name="genreForm"/>
+                        <ref name="geogName"/>
+                        <ref name="name"/>
+                        <ref name="occupation"/>
+                        <ref name="persName"/>
+                        <ref name="subject"/>
+                        <ref name="title"/>
                      </choice>
                   </oneOrMore>
+                  <ref name="date"/>
+                  <ref name="footnote"/>
+                  <ref name="num"/>
+                  <ref name="quote"/>
                </choice>
             </oneOrMore>
          </group>
@@ -10876,6 +10937,156 @@
                   </oneOrMore>
                </choice>
             </oneOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="thead">
+      <element name="thead" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="valign" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">top</value>
+                     <value type="token" datatypeLibrary="" ns="">middle</value>
+                     <value type="token" datatypeLibrary="" ns="">bottom</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <oneOrMore>
+               <ref name="row"/>
+            </oneOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="tgroup">
+      <element name="tgroup" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <attribute name="cols" ns="">
+               <data type="NMTOKEN"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </attribute>
+            <optional>
+               <attribute name="colsep" ns="">
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="rowsep" ns="">
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="align" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">left</value>
+                     <value type="token" datatypeLibrary="" ns="">right</value>
+                     <value type="token" datatypeLibrary="" ns="">center</value>
+                     <value type="token" datatypeLibrary="" ns="">justify</value>
+                     <value type="token" datatypeLibrary="" ns="">char</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <zeroOrMore>
+               <ref name="colspec"/>
+            </zeroOrMore>
+            <optional>
+               <ref name="thead"/>
+            </optional>
+            <ref name="element.tbody"/>
          </group>
       </element>
    </define>
@@ -11572,6 +11783,203 @@
          </group>
       </element>
    </define>
+   <define name="row">
+      <element name="row" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <optional>
+               <attribute name="base" ns="">
+                  <data type="anyURI"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="rowsep" ns="">
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="valign" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">top</value>
+                     <value type="token" datatypeLibrary="" ns="">middle</value>
+                     <value type="token" datatypeLibrary="" ns="">bottom</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <oneOrMore>
+               <ref name="entry"/>
+            </oneOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="colspec">
+      <element name="colspec" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <optional>
+               <attribute name="colnum" ns="">
+                  <data type="NMTOKEN"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="colname" ns="">
+                  <data type="NMTOKEN"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="colwidth" ns="">
+                  <text/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="colsep" ns="">
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="rowsep" ns="">
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="align" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">left</value>
+                     <value type="token" datatypeLibrary="" ns="">right</value>
+                     <value type="token" datatypeLibrary="" ns="">center</value>
+                     <value type="token" datatypeLibrary="" ns="">justify</value>
+                     <value type="token" datatypeLibrary="" ns="">char</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="char" ns="">
+                  <text/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="charoff" ns="">
+                  <data type="NMTOKEN"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+         </group>
+      </element>
+   </define>
+   <define name="element.tbody">
+      <element name="element.tbody" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="valign" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">top</value>
+                     <value type="token" datatypeLibrary="" ns="">middle</value>
+                     <value type="token" datatypeLibrary="" ns="">bottom</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <oneOrMore>
+               <ref name="row"/>
+            </oneOrMore>
+         </group>
+      </element>
+   </define>
    <define name="c03">
       <element name="c03" ns="https://archivists.org/ns/ead/v4">
          <group>
@@ -11659,6 +12067,169 @@
             <zeroOrMore>
                <ref name="c04"/>
             </zeroOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="entry">
+      <element name="entry" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <optional>
+               <attribute name="base" ns="">
+                  <data type="anyURI"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="colname" ns="">
+                  <data type="NMTOKEN"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="namest" ns="">
+                  <data type="NMTOKEN"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="nameend" ns="">
+                  <data type="NMTOKEN"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="morerows" ns="">
+                  <data type="NMTOKEN"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="colsep" ns="">
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="rowsep" ns="">
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="align" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">left</value>
+                     <value type="token" datatypeLibrary="" ns="">right</value>
+                     <value type="token" datatypeLibrary="" ns="">center</value>
+                     <value type="token" datatypeLibrary="" ns="">justify</value>
+                     <value type="token" datatypeLibrary="" ns="">char</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="char" ns="">
+                  <text/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="charoff" ns="">
+                  <data type="NMTOKEN"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="valign" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">top</value>
+                     <value type="token" datatypeLibrary="" ns="">middle</value>
+                     <value type="token" datatypeLibrary="" ns="">bottom</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <oneOrMore>
+               <choice>
+                  <oneOrMore>
+                     <choice>
+                        <oneOrMore>
+                           <choice>
+                              <ref name="abbreviation"/>
+                              <ref name="expansion"/>
+                              <ref name="foreign"/>
+                              <ref name="lb"/>
+                              <ref name="ptr"/>
+                              <oneOrMore>
+                                 <choice>
+                                    <ref name="reference"/>
+                                    <ref name="span"/>
+                                    <text/>
+                                 </choice>
+                              </oneOrMore>
+                           </choice>
+                        </oneOrMore>
+                        <ref name="corpName"/>
+                        <ref name="famName"/>
+                        <ref name="function"/>
+                        <ref name="genreForm"/>
+                        <ref name="geogName"/>
+                        <ref name="name"/>
+                        <ref name="occupation"/>
+                        <ref name="persName"/>
+                        <ref name="subject"/>
+                        <ref name="title"/>
+                     </choice>
+                  </oneOrMore>
+                  <ref name="date"/>
+                  <ref name="footnote"/>
+                  <ref name="num"/>
+                  <ref name="quote"/>
+               </choice>
+            </oneOrMore>
          </group>
       </element>
    </define>

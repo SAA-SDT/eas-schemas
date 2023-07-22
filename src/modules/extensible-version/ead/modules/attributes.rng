@@ -253,7 +253,7 @@
    <!-- TO DO -->
    <!-- re-alphabeticize once we get everything settled.  for now, the @:*Encoding attributes, each defined separately, in case folks want to override any of these definitions -->
    <define name="attribute.addressTypeLineEncoding">
-      <attribute name="addressTypeLineEncoding">
+      <attribute name="addressTypeLineEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
             <value>otherAddressTypeLineEncoding</value>
@@ -269,7 +269,7 @@
       </attribute>
    </define>
    <define name="attribute.audienceEncoding">
-      <attribute name="audienceEncoding">
+      <attribute name="audienceEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
             <value>otherAudienceEncoding</value>
@@ -277,7 +277,7 @@
       </attribute>
    </define>
    <define name="attribute.contactTypeEncoding">
-      <attribute name="contactTypeLineEncoding">
+      <attribute name="contactTypeLineEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
             <value>otherContactTypeLineEncoding</value>
@@ -285,7 +285,7 @@
       </attribute>
    </define>
    <define name="attribute.countryEncoding">
-      <attribute name="countryEncoding">
+      <attribute name="countryEncoding" a:defaultValue="iso3166-1">
          <choice>
             <value>iso3166-1</value>
             <value>otherCountryEncoding</value>
@@ -293,7 +293,7 @@
       </attribute>
    </define>
    <define name="attribute.coverageEncoding" a:exclude-from="eac">
-      <attribute name="coverageEncoding" a:default-value="EASList">
+      <attribute name="coverageEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
             <value>otherCoverageEncoding</value>
@@ -309,7 +309,7 @@
       </attribute>
    </define>
    <define name="attribute.detailLevelEncoding">
-      <attribute name="detailLevelEncoding">
+      <attribute name="detailLevelEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
             <value>otherDetailLevelEncoding</value>
@@ -317,7 +317,7 @@
       </attribute>
    </define>
    <define name="attribute.dscTypeEncoding" a:exclude-from="eac">
-      <attribute name="dscTypeEncoding">
+      <attribute name="dscTypeEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
             <value>otherDscTypeEncoding</value>
@@ -325,7 +325,7 @@
       </attribute>
    </define>
    <define name="attribute.dateEncoding">
-      <attribute name="dateEncoding">
+      <attribute name="dateEncoding" a:defaultValue="iso8601">
          <choice>
             <value>iso8601</value>
             <value>otherDateEncoding</value>
@@ -333,7 +333,7 @@
       </attribute>
    </define>
    <define name="attribute.identityTypeEncoding">
-      <attribute name="identityTypeEncoding">
+      <attribute name="identityTypeEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
             <value>otherIdentityTypeEncoding</value>
@@ -341,7 +341,7 @@
       </attribute>
    </define>
    <define name="attribute.languageEncoding">
-      <attribute name="languageEncoding">
+      <attribute name="languageEncoding" a:defaultValue="iso639-2">
          <choice>
             <value>iso639-1</value>
             <value>iso639-2</value>
@@ -384,7 +384,7 @@
       </attribute>
    </define>
    <define name="attribute.publicationStatusEncoding">
-      <attribute name="publicationStatusEncoding">
+      <attribute name="publicationStatusEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
             <value>otherPublicationStatusEncoding</value>
@@ -392,7 +392,7 @@
       </attribute>
    </define>
    <define name="attribute.repositoryEncoding">
-      <attribute name="repositoryEncoding">
+      <attribute name="repositoryEncoding" a:defaultValue="iso15511">
          <choice>
             <value>iso15511</value>
             <value>otherRepositoryEncoding</value>
@@ -400,7 +400,7 @@
       </attribute>
    </define>
    <define name="attribute.scriptEncoding">
-      <attribute name="scriptEncoding">
+      <attribute name="scriptEncoding" a:defaultValue="iso15924">
          <choice>
             <value>iso15924</value>
             <value>otherScriptEncoding</value>
@@ -408,7 +408,7 @@
       </attribute>
    </define>
    <define name="attribute.statusEncoding">
-      <attribute name="statusEncoding">
+      <attribute name="statusEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
             <value>otherStatusEncoding</value>
@@ -741,6 +741,18 @@
       <optional>
          <attribute name="standardDate">
             <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.group.table-separators.optional">
+      <optional>
+         <attribute name="colsep">
+            <data type="boolean"/>
+         </attribute>
+      </optional>
+      <optional>
+         <attribute name="rowsep">
+            <data type="boolean"/>
          </attribute>
       </optional>
    </define>

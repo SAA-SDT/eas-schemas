@@ -4,6 +4,9 @@
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
     <!-- to do:
+        table
+        index
+        
         review label attribute
                 encodingAnalog
                 localType / Dec
@@ -62,7 +65,7 @@
       <element name="archRef">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content-plus-controlAccess-plusFNQ"/>
+         <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
       </element>
    </define>
    <define name="element.arrangement">
@@ -79,7 +82,7 @@
       <element name="bibRef">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content-plus-controlAccess-plusFNQ"/>
+         <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
       </element>
    </define>
    <define name="element.blockQuote">
@@ -467,7 +470,7 @@
       <element name="origination">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- mroe to do -->
+         <!-- TO DO:  more -->
          <text/>
       </element>
    </define>
@@ -525,12 +528,7 @@
       <element name="physFacet">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- more to do? 
-                EAD3 allows the following:
-                [text], abbr, corpname, date, expan, emph, famname, footnote, foreign, function, genreform, geogname, lb, name,
-                num, occupation, persname, quote, ptr, ref, subject, title
-                -->
-         <ref name="model.ead.mixed-content"/>
+         <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
       </element>
    </define>
    <define name="element.physLoc">
@@ -588,6 +586,92 @@
          </optional>
       </element>
    </define>
+   <define name="element.row">
+      <element name="row">
+         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <optional>
+            <attribute name="rowsep">
+               <data type="boolean"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="valign">
+               <choice>
+                  <value>top</value>
+                  <value>middle</value>
+                  <value>bottom</value>
+               </choice>
+            </attribute>
+         </optional>
+         <oneOrMore>
+            <element name="entry">
+               <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+               <optional>
+                  <attribute name="colname">
+                     <data type="NMTOKEN"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="namest">
+                     <data type="NMTOKEN"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="nameend">
+                     <data type="NMTOKEN"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="morerows">
+                     <data type="NMTOKEN"/>
+                  </attribute>
+               </optional>
+               <ref name="attribute.group.table-separators.optional"/>
+               <optional>
+                  <attribute name="align">
+                     <choice>
+                        <value>left</value>
+                        <value>right</value>
+                        <value>center</value>
+                        <value>justify</value>
+                        <value>char</value>
+                     </choice>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="char"/>
+               </optional>
+               <optional>
+                  <attribute name="charoff">
+                     <data type="NMTOKEN"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="valign">
+                     <choice>
+                        <value>top</value>
+                        <value>middle</value>
+                        <value>bottom</value>
+                     </choice>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                        <!-- 
+                        EAD2002
+                        [text], abbr, address, archref, bibref, corpname, date, emph, expan, extptr, extref, 
+                        famname, function, genreform, geogname, lb, linkgrp, list, name, note, num, occupation, 
+                        origination, persname, ptr, ref, repository, subject, title, unitdate, unittitle
+                        
+                        EAD3 (same as unittitle, in other words).
+                        [text], abbr, corpname, date, emph, expan, famname, footnote, foreign, function, genreform, 
+                        geogname, lb, list, name, num, occupation, persname, ptr, quote, ref, subject, title
+                        -->
+                  <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
+               </zeroOrMore>
+            </element>
+         </oneOrMore>
+      </element>
+   </define>
    <define name="element.scopeContent">
       <element name="scopeContent">
          <ref name="model.ead-narrative-elements"/>
@@ -601,6 +685,139 @@
    <define name="element.subject">
       <element name="subject">
          <ref name="model.controlAccess-element-group"/>
+      </element>
+   </define>
+   <define name="element.table">
+        <!-- 
+        The application of <table> is based on the XML Exchange Table Model, 
+        an XML expression of the Exchange subset of the full CALS table model DTD.
+        
+        (because of that, i'm keeping the elements and attributes the same for now.
+        
+        See, for example, https://jats.nlm.nih.gov/options/OASIS/tag-library/19990315/index.html)
+        
+        Further, check out https://docbook.org/xml/5.2b09/rng/docbook.rng, which has defined both cals and html table models
+        -->
+      <element name="table">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- define, separately, if we decide to keep table -->
+         <optional>
+            <attribute name="frame">
+               <choice>
+                  <value>top</value>
+                  <value>bottom</value>
+                  <value>topbot</value>
+                  <value>all</value>
+                  <value>sides</value>
+                  <value>none</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pgwide">
+               <data type="boolean"/>
+            </attribute>
+         </optional>
+         <ref name="attribute.group.table-separators.optional"/>
+         <!-- ead3 switched to head, but why, if it was using the standard table model???-->
+         <optional>
+            <ref name="element.thead"/>
+         </optional>
+         <!-- borrowing from EAD2002 for now... update if we keep this -->
+         <oneOrMore>
+            <element name="tgroup">
+               <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+               <attribute name="cols">
+                  <data type="NMTOKEN"/>
+               </attribute>
+               <ref name="attribute.group.table-separators.optional"/>
+               <optional>
+                  <attribute name="align">
+                     <choice>
+                        <value>left</value>
+                        <value>right</value>
+                        <value>center</value>
+                        <value>justify</value>
+                        <value>char</value>
+                     </choice>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <element name="colspec">
+                     <optional>
+                        <attribute name="colnum">
+                           <data type="NMTOKEN"/>
+                        </attribute>
+                     </optional>
+                     <optional>
+                        <attribute name="colname">
+                           <data type="NMTOKEN"/>
+                        </attribute>
+                     </optional>
+                     <optional>
+                        <attribute name="colwidth"/>
+                     </optional>
+                     <ref name="attribute.group.table-separators.optional"/>
+                     <optional>
+                        <attribute name="align">
+                           <choice>
+                              <value>left</value>
+                              <value>right</value>
+                              <value>center</value>
+                              <value>justify</value>
+                              <value>char</value>
+                           </choice>
+                        </attribute>
+                     </optional>
+                     <optional>
+                        <attribute name="char"/>
+                     </optional>
+                     <optional>
+                        <attribute name="charoff">
+                           <data type="NMTOKEN"/>
+                        </attribute>
+                     </optional>
+                     <empty/>
+                  </element>
+               </zeroOrMore>
+               <optional>
+                  <ref name="element.thead"/>
+               </optional>
+               <element name="element.tbody">
+                  <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                  <optional>
+                     <attribute name="valign">
+                        <choice>
+                           <value>top</value>
+                           <value>middle</value>
+                           <value>bottom</value>
+                        </choice>
+                     </attribute>
+                  </optional>
+                  <oneOrMore>
+                     <ref name="element.row"/>
+                  </oneOrMore>
+               </element>
+            </element>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="element.thead">
+      <element name="thead">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <optional>
+            <attribute name="valign">
+               <choice>
+                  <value>top</value>
+                  <value>middle</value>
+                  <value>bottom</value>
+               </choice>
+            </attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="element.row"/>
+         </oneOrMore>
       </element>
    </define>
    <define name="element.title">
@@ -633,7 +850,7 @@
       <element name="unitTitle">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content-plus-controlAccess-plusFNQ"/>
+         <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
       </element>
    </define>
    <define name="element.useConditions">
@@ -692,10 +909,11 @@
       </zeroOrMore>
    </define>
    <!-- hopefully we don't keep this long... if so, replace the name with something that makes sense -->
-   <define name="model.ead.mixed-content-plus-controlAccess-plusFNQ">
+   <define name="model.ead.mixed-content-plus-controlAccess-plusDFNQ">
       <zeroOrMore>
          <choice>
             <ref name="model.ead.mixed-content-plus-controlAccess"/>
+            <ref name="element.date"/>
             <ref name="element.footnote"/>
             <ref name="element.num"/>
             <ref name="element.quote"/>

@@ -1554,6 +1554,7 @@
             <xs:element type="ead:subject" name="subject"/>
             <xs:element type="ead:title" name="title"/>
          </xs:choice>
+         <xs:element type="ead:date" name="date"/>
          <xs:element type="ead:footnote" name="footnote"/>
          <xs:element type="ead:num" name="num"/>
          <xs:element type="ead:quote" name="quote"/>
@@ -1854,6 +1855,7 @@
             <xs:element type="ead:subject" name="subject"/>
             <xs:element type="ead:title" name="title"/>
          </xs:choice>
+         <xs:element type="ead:date" name="date"/>
          <xs:element type="ead:footnote" name="footnote"/>
          <xs:element type="ead:num" name="num"/>
          <xs:element type="ead:quote" name="quote"/>
@@ -1888,7 +1890,11 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="table" mixed="true">
+   <xs:complexType name="table">
+      <xs:sequence>
+         <xs:element type="ead:thead" name="thead" minOccurs="0"/>
+         <xs:element type="ead:tgroup" name="tgroup" maxOccurs="unbounded"/>
+      </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -1897,6 +1903,21 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="frame">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="top"/>
+               <xs:enumeration value="bottom"/>
+               <xs:enumeration value="topbot"/>
+               <xs:enumeration value="all"/>
+               <xs:enumeration value="sides"/>
+               <xs:enumeration value="none"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="pgwide" type="xs:boolean"/>
+      <xs:attribute name="colsep" type="xs:boolean"/>
+      <xs:attribute name="rowsep" type="xs:boolean"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="archRef" mixed="true">
@@ -1924,6 +1945,7 @@
             <xs:element type="ead:subject" name="subject"/>
             <xs:element type="ead:title" name="title"/>
          </xs:choice>
+         <xs:element type="ead:date" name="date"/>
          <xs:element type="ead:footnote" name="footnote"/>
          <xs:element type="ead:num" name="num"/>
          <xs:element type="ead:quote" name="quote"/>
@@ -1964,6 +1986,7 @@
             <xs:element type="ead:subject" name="subject"/>
             <xs:element type="ead:title" name="title"/>
          </xs:choice>
+         <xs:element type="ead:date" name="date"/>
          <xs:element type="ead:footnote" name="footnote"/>
          <xs:element type="ead:num" name="num"/>
          <xs:element type="ead:quote" name="quote"/>
@@ -2560,15 +2583,33 @@
    </xs:complexType>
    <xs:complexType name="physFacet" mixed="true">
       <xs:choice maxOccurs="unbounded">
-         <xs:element type="ead:abbreviation" name="abbreviation"/>
-         <xs:element type="ead:expansion" name="expansion"/>
-         <xs:element type="ead:foreign" name="foreign"/>
-         <xs:element type="ead:lb" name="lb"/>
-         <xs:element type="ead:ptr" name="ptr"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:span" name="span"/>
+         <xs:choice maxOccurs="unbounded">
+            <xs:choice maxOccurs="unbounded">
+               <xs:element type="ead:abbreviation" name="abbreviation"/>
+               <xs:element type="ead:expansion" name="expansion"/>
+               <xs:element type="ead:foreign" name="foreign"/>
+               <xs:element type="ead:lb" name="lb"/>
+               <xs:element type="ead:ptr" name="ptr"/>
+               <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element type="ead:reference" name="reference"/>
+                  <xs:element type="ead:span" name="span"/>
+               </xs:choice>
+            </xs:choice>
+            <xs:element type="ead:corpName" name="corpName"/>
+            <xs:element type="ead:famName" name="famName"/>
+            <xs:element type="ead:function" name="function"/>
+            <xs:element type="ead:genreForm" name="genreForm"/>
+            <xs:element type="ead:geogName" name="geogName"/>
+            <xs:element type="ead:name" name="name"/>
+            <xs:element type="ead:occupation" name="occupation"/>
+            <xs:element type="ead:persName" name="persName"/>
+            <xs:element type="ead:subject" name="subject"/>
+            <xs:element type="ead:title" name="title"/>
          </xs:choice>
+         <xs:element type="ead:date" name="date"/>
+         <xs:element type="ead:footnote" name="footnote"/>
+         <xs:element type="ead:num" name="num"/>
+         <xs:element type="ead:quote" name="quote"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2602,6 +2643,56 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="thead">
+      <xs:sequence>
+         <xs:element type="ead:row" name="row" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="valign">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="top"/>
+               <xs:enumeration value="middle"/>
+               <xs:enumeration value="bottom"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="tgroup">
+      <xs:sequence>
+         <xs:element type="ead:colspec"
+                     name="colspec"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element type="ead:thead" name="thead" minOccurs="0"/>
+         <xs:element type="ead:element.tbody" name="element.tbody"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="cols" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="colsep" type="xs:boolean"/>
+      <xs:attribute name="rowsep" type="xs:boolean"/>
+      <xs:attribute name="align">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="left"/>
+               <xs:enumeration value="right"/>
+               <xs:enumeration value="center"/>
+               <xs:enumeration value="justify"/>
+               <xs:enumeration value="char"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="targetEntity">
@@ -2749,6 +2840,68 @@
       <xs:attribute name="scriptCode" type="xs:NMTOKEN"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="row">
+      <xs:sequence>
+         <xs:element type="ead:entry" name="entry" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="base" type="xs:anyURI"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="rowsep" type="xs:boolean"/>
+      <xs:attribute name="valign">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="top"/>
+               <xs:enumeration value="middle"/>
+               <xs:enumeration value="bottom"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="colspec">
+      <xs:attribute name="colnum" type="xs:NMTOKEN"/>
+      <xs:attribute name="colname" type="xs:NMTOKEN"/>
+      <xs:attribute name="colwidth"/>
+      <xs:attribute name="colsep" type="xs:boolean"/>
+      <xs:attribute name="rowsep" type="xs:boolean"/>
+      <xs:attribute name="align">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="left"/>
+               <xs:enumeration value="right"/>
+               <xs:enumeration value="center"/>
+               <xs:enumeration value="justify"/>
+               <xs:enumeration value="char"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="char"/>
+      <xs:attribute name="charoff" type="xs:NMTOKEN"/>
+   </xs:complexType>
+   <xs:complexType name="element.tbody">
+      <xs:sequence>
+         <xs:element type="ead:row" name="row" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="valign">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="top"/>
+               <xs:enumeration value="middle"/>
+               <xs:enumeration value="bottom"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="c03">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
@@ -2786,6 +2939,72 @@
       <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="entry" mixed="true">
+      <xs:choice maxOccurs="unbounded">
+         <xs:choice maxOccurs="unbounded">
+            <xs:choice maxOccurs="unbounded">
+               <xs:element type="ead:abbreviation" name="abbreviation"/>
+               <xs:element type="ead:expansion" name="expansion"/>
+               <xs:element type="ead:foreign" name="foreign"/>
+               <xs:element type="ead:lb" name="lb"/>
+               <xs:element type="ead:ptr" name="ptr"/>
+               <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element type="ead:reference" name="reference"/>
+                  <xs:element type="ead:span" name="span"/>
+               </xs:choice>
+            </xs:choice>
+            <xs:element type="ead:corpName" name="corpName"/>
+            <xs:element type="ead:famName" name="famName"/>
+            <xs:element type="ead:function" name="function"/>
+            <xs:element type="ead:genreForm" name="genreForm"/>
+            <xs:element type="ead:geogName" name="geogName"/>
+            <xs:element type="ead:name" name="name"/>
+            <xs:element type="ead:occupation" name="occupation"/>
+            <xs:element type="ead:persName" name="persName"/>
+            <xs:element type="ead:subject" name="subject"/>
+            <xs:element type="ead:title" name="title"/>
+         </xs:choice>
+         <xs:element type="ead:date" name="date"/>
+         <xs:element type="ead:footnote" name="footnote"/>
+         <xs:element type="ead:num" name="num"/>
+         <xs:element type="ead:quote" name="quote"/>
+      </xs:choice>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="base" type="xs:anyURI"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="colname" type="xs:NMTOKEN"/>
+      <xs:attribute name="namest" type="xs:NMTOKEN"/>
+      <xs:attribute name="nameend" type="xs:NMTOKEN"/>
+      <xs:attribute name="morerows" type="xs:NMTOKEN"/>
+      <xs:attribute name="colsep" type="xs:boolean"/>
+      <xs:attribute name="rowsep" type="xs:boolean"/>
+      <xs:attribute name="align">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="left"/>
+               <xs:enumeration value="right"/>
+               <xs:enumeration value="center"/>
+               <xs:enumeration value="justify"/>
+               <xs:enumeration value="char"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="char"/>
+      <xs:attribute name="charoff" type="xs:NMTOKEN"/>
+      <xs:attribute name="valign">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="top"/>
+               <xs:enumeration value="middle"/>
+               <xs:enumeration value="bottom"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c04">
