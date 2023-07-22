@@ -3,18 +3,17 @@
          xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
-    <!-- to do:
-        
+    <!-- to do:     
         review label attribute
                 encodingAnalog
-                localType / Dec
-       
-        origination element
+                localType
+                etc.
         
         create some updated matrices and use those to refine the existing models... but perhaps wait until more decisions are made? 
                 etc.
         
-        add some sanity checks and clean this up.
+        create separate files for different modesl (e.g. CALS Table, etc.)
+        
     -->
     
     <!-- ELEMENTS -->
@@ -904,22 +903,16 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.label.optional"/>
          <ref name="attribute.encodingAnalog.optional"/>
-         <!-- 
-TO DO:  add more
-      <ref name="a.unitdatetype"/>
-      <optional>
-        <ref name="a.datechar"/>
-      </optional>
-      <optional>
-        <ref name="a.certainty"/>
-      </optional>
-      <ref name="am.dates.era"/>
-      <ref name="am.dates.calendar"/>
-      <ref name="am.date.normal"/>
-      <optional>
-        <ref name="a.encodinganalog"/>
-      </optional>
-            -->
+         <ref name="attribute.unitDateType.optional"/>
+         <ref name="attribute.dateChar.optional"/>
+         <!-- also bundled together with more attributes for EAC / unidatestructured.
+                for ead4, we should get rid of the structured elements altogether and have a single element that 
+                can be more or less structured depending on sub-elements / attributes.  for now, we've got a mix
+                hence we cannot re-use some of our pre-defined attribute lists just yet.
+            but if we keep the EAD/C separation + UD/UDS separation, then we can combine these 3 attribues with the 4 above for another attribute group model-->
+         <ref name="attribute.calendar.optional"/>
+         <ref name="attribute.certainty.optional"/>
+         <ref name="attribute.era.optional"/>
          <ref name="model.ead.mixed-content"/>
       </element>
    </define>
@@ -927,23 +920,39 @@ TO DO:  add more
       <element name="unitDateStructured">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- TO DO:  add attributes -->
+         <ref name="attribute.label.optional"/>
+         <ref name="attribute.encodingAnalog.optional"/>
+         <ref name="attribute.unitDateType.optional"/>
+         <ref name="attribute.dateChar.optional"/>
+         <!-- also bundled together with more attributes for EAC / unidatestructured.
+                for ead4, we should get rid of the structured elements altogether and have a single element that 
+                can be more or less structured depending on sub-elements / attributes.  for now, we've got a mix
+                hence we cannot re-use some of our pre-defined attribute lists just yet.
+            but if we keep the EAD/C separation + UD/UDS separation, then we can combine these 3 attribues with the 4 above for another attribute group model-->
+         <ref name="attribute.calendar.optional"/>
+         <ref name="attribute.certainty.optional"/>
+         <ref name="attribute.era.optional"/>
          <ref name="model.all-dates.choice"/>
       </element>
    </define>
    <define name="element.unitId">
       <element name="unitId">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- TO DO:  add attributes, etc. -->
-         <text/>
+         <ref name="attribute.label.optional"/>
+         <ref name="attribute.countryCode.optional"/>
+         <ref name="attribute.repositoryCode.optional"/>
+         <ref name="attribute.encodingAnalog.optional"/>
+         <ref name="model.ead.mixed-content"/>
       </element>
    </define>
    <define name="element.unitTitle">
       <element name="unitTitle">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- TO DO:  add attributes -->
+         <ref name="attribute-group.linked-data.optional"/>
+         <ref name="attribute.label.optional"/>
+         <ref name="attribute.encodingAnalog.optional"/>
          <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
       </element>
    </define>
@@ -980,6 +989,10 @@ TO DO:  add more
       <oneOrMore>
          <ref name="element.part"/>
       </oneOrMore>
+      <!-- now, available outside of the "relation" element. -->
+      <zeroOrMore>
+         <ref name="element.targetRole"/>
+      </zeroOrMore>
    </define>
    <define name="model.ead.grp-elements-plus-controlAccess">
       <zeroOrMore>

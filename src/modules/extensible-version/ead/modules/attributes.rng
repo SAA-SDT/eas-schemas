@@ -35,6 +35,20 @@
          </attribute>
       </optional>
    </define>
+   <define name="attribute.calendar.optional">
+      <optional>
+         <attribute name="calendar">
+            <data type="NMTOKEN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.certainty.optional">
+      <optional>
+         <attribute name="certainty">
+            <data type="NMTOKEN"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="attribute.contactLineType.optional">
       <optional>
          <attribute name="contactLineType">
@@ -46,6 +60,13 @@
       <optional>
          <attribute name="containerId">
             <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.conventionDeclarationReference.optional">
+      <optional>
+         <attribute name="conventionDeclarationReference">
+            <data type="IDREFS"/>
          </attribute>
       </optional>
    </define>
@@ -70,6 +91,13 @@
       <attribute name="daoType">
          <data type="NMTOKEN"/>
       </attribute>
+   </define>
+   <define name="attribute.dateChar.optional">
+      <optional>
+         <attribute name="dateChar">
+            <data type="NMTOKEN"/>
+         </attribute>
+      </optional>
    </define>
    <define name="attribute.detailLevel.optional">
       <optional>
@@ -96,6 +124,13 @@
       <optional>
          <attribute name="entityref">
             <data type="ENTITY"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.era.optional">
+      <optional>
+         <attribute name="era">
+            <data type="NMTOKEN"/>
          </attribute>
       </optional>
    </define>
@@ -170,6 +205,13 @@
       <optional>
          <attribute name="preferredForm">
             <data type="boolean"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.repositoryCode.optional">
+      <optional>
+         <attribute name="repositoryCode">
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -347,6 +389,11 @@
          </choice>
       </attribute>
    </define>
+   <define name="attribute.languageCode">
+      <attribute name="languageCode">
+         <data type="NMTOKEN"/>
+      </attribute>
+   </define>
    <define name="attribute.languageEncoding">
       <attribute name="languageEncoding" a:defaultValue="iso639-2">
          <choice>
@@ -404,6 +451,11 @@
             <value>iso15511</value>
             <value>otherRepositoryEncoding</value>
          </choice>
+      </attribute>
+   </define>
+   <define name="attribute.scriptCode">
+      <attribute name="scriptCode">
+         <data type="NMTOKEN"/>
       </attribute>
    </define>
    <define name="attribute.scriptEncoding">
@@ -594,23 +646,6 @@
          <ref name="attribute.localTypeDeclarationReference"/>
       </optional>
    </define>
-   <define name="attribute.conventionDeclarationReference.optional">
-      <optional>
-         <attribute name="conventionDeclarationReference">
-            <data type="IDREFS"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="attribute.languageCode">
-      <attribute name="languageCode">
-         <data type="NMTOKEN"/>
-      </attribute>
-   </define>
-   <define name="attribute.scriptCode">
-      <attribute name="scriptCode">
-         <data type="NMTOKEN"/>
-      </attribute>
-   </define>
    <define name="attribute-group.language-and-script-code" combine="interleave">
       <ref name="attribute.languageCode"/>
    </define>
@@ -705,27 +740,15 @@
    </define>
    <define name="attribute-group.standard-date-attributes.optional"
            combine="interleave">
-      <optional>
-         <attribute name="calendar">
-            <data type="NMTOKEN"/>
-         </attribute>
-      </optional>
+      <ref name="attribute.calendar.optional"/>
    </define>
    <define name="attribute-group.standard-date-attributes.optional"
            combine="interleave">
-      <optional>
-         <attribute name="certainty">
-            <data type="NMTOKEN"/>
-         </attribute>
-      </optional>
+      <ref name="attribute.certainty.optional"/>
    </define>
    <define name="attribute-group.standard-date-attributes.optional"
            combine="interleave">
-      <optional>
-         <attribute name="era">
-            <data type="NMTOKEN"/>
-         </attribute>
-      </optional>
+      <ref name="attribute.era.optional"/>
    </define>
    <define name="attribute-group.standard-date-attributes.optional"
            combine="interleave">

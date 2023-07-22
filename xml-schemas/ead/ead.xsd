@@ -535,6 +535,10 @@
    <xs:complexType name="title">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1544,6 +1548,22 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="targetRole" mixed="true">
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="abstract" mixed="true">
       <xs:choice maxOccurs="unbounded">
          <xs:choice maxOccurs="unbounded">
@@ -1853,6 +1873,11 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="encodingAnalog" type="xs:token"/>
+      <xs:attribute name="unitDateType" type="xs:NMTOKEN"/>
+      <xs:attribute name="dateChar" type="xs:NMTOKEN"/>
+      <xs:attribute name="calendar" type="xs:NMTOKEN"/>
+      <xs:attribute name="certainty" type="xs:NMTOKEN"/>
+      <xs:attribute name="era" type="xs:NMTOKEN"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitDateStructured">
@@ -1870,18 +1895,41 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="label" type="xs:token"/>
+      <xs:attribute name="encodingAnalog" type="xs:token"/>
+      <xs:attribute name="unitDateType" type="xs:NMTOKEN"/>
+      <xs:attribute name="dateChar" type="xs:NMTOKEN"/>
+      <xs:attribute name="calendar" type="xs:NMTOKEN"/>
+      <xs:attribute name="certainty" type="xs:NMTOKEN"/>
+      <xs:attribute name="era" type="xs:NMTOKEN"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitId" mixed="true">
+      <xs:choice maxOccurs="unbounded">
+         <xs:element type="ead:abbreviation" name="abbreviation"/>
+         <xs:element type="ead:expansion" name="expansion"/>
+         <xs:element type="ead:foreign" name="foreign"/>
+         <xs:element type="ead:lb" name="lb"/>
+         <xs:element type="ead:ptr" name="ptr"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:reference" name="reference"/>
+            <xs:element type="ead:span" name="span"/>
+         </xs:choice>
+      </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="label" type="xs:token"/>
+      <xs:attribute name="countryCode" type="xs:NMTOKEN"/>
+      <xs:attribute name="repositoryCode" type="xs:token"/>
+      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitTitle" mixed="true">
@@ -1917,12 +1965,18 @@
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="label" type="xs:token"/>
+      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="blockQuote">
@@ -2059,6 +2113,10 @@
    <xs:complexType name="corpName">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2073,6 +2131,10 @@
    <xs:complexType name="famName">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2087,6 +2149,10 @@
    <xs:complexType name="function">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2101,6 +2167,10 @@
    <xs:complexType name="genreForm">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2115,6 +2185,10 @@
    <xs:complexType name="geogName">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2129,6 +2203,10 @@
    <xs:complexType name="name">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2143,6 +2221,10 @@
    <xs:complexType name="occupation">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2157,6 +2239,10 @@
    <xs:complexType name="persName">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2171,6 +2257,10 @@
    <xs:complexType name="subject">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2841,22 +2931,6 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="relationType" mixed="true">
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="vocabularySource" type="xs:token"/>
-      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
-      <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="targetRole" mixed="true">
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
