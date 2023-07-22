@@ -11568,7 +11568,7 @@
             <optional>
                <ref name="thead"/>
             </optional>
-            <ref name="element.tbody"/>
+            <ref name="tbody"/>
          </group>
       </element>
    </define>
@@ -12405,8 +12405,8 @@
          </group>
       </element>
    </define>
-   <define name="element.tbody">
-      <element name="element.tbody" ns="https://archivists.org/ns/ead/v4">
+   <define name="tbody">
+      <element name="tbody" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>

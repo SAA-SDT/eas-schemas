@@ -931,7 +931,7 @@
                     <optional>
                         <ref name="element.thead"/>
                     </optional>
-                    <element name="element.tbody">
+                    <element name="tbody">
                         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
                         <optional>
                             <attribute name="valign">

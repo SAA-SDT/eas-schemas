@@ -2811,7 +2811,7 @@
                      minOccurs="0"
                      maxOccurs="unbounded"/>
          <xs:element type="ead:thead" name="thead" minOccurs="0"/>
-         <xs:element type="ead:element.tbody" name="element.tbody"/>
+         <xs:element type="ead:tbody" name="tbody"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -3053,7 +3053,7 @@
       <xs:attribute name="char"/>
       <xs:attribute name="charoff" type="xs:NMTOKEN"/>
    </xs:complexType>
-   <xs:complexType name="element.tbody">
+   <xs:complexType name="tbody">
       <xs:sequence>
          <xs:element type="ead:row" name="row" maxOccurs="unbounded"/>
       </xs:sequence>
