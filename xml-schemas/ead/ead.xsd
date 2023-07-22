@@ -840,13 +840,27 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="index" mixed="true">
+   <xs:complexType name="index">
+      <xs:sequence>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:choice maxOccurs="unbounded">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+               <xs:element type="ead:list" name="list"/>
+               <xs:element type="ead:p" name="p"/>
+               <xs:element type="ead:chronList" name="chronList"/>
+               <xs:element type="ead:blockQuote" name="blockQuote"/>
+               <xs:element type="ead:table" name="table"/>
+            </xs:choice>
+            <xs:element type="ead:indexEntry" name="indexEntry"/>
+         </xs:choice>
+      </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2146,6 +2160,31 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="indexEntry">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element type="ead:nameGrp" name="nameGrp"/>
+         <xs:element type="ead:ptrGrp" name="ptrGrp"/>
+         <xs:element type="ead:ptr" name="ptr"/>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:corpName" name="corpName"/>
+         <xs:element type="ead:famName" name="famName"/>
+         <xs:element type="ead:function" name="function"/>
+         <xs:element type="ead:genreForm" name="genreForm"/>
+         <xs:element type="ead:geogName" name="geogName"/>
+         <xs:element type="ead:name" name="name"/>
+         <xs:element type="ead:occupation" name="occupation"/>
+         <xs:element type="ead:persName" name="persName"/>
+         <xs:element type="ead:subject" name="subject"/>
+         <xs:element type="ead:title" name="title"/>
+      </xs:choice>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="base" type="xs:anyURI"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="relation">
       <xs:sequence>
          <xs:element type="ead:targetEntity" name="targetEntity"/>
@@ -2711,6 +2750,54 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="nameGrp">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element type="ead:corpName" name="corpName"/>
+            <xs:element type="ead:famName" name="famName"/>
+            <xs:element type="ead:function" name="function"/>
+            <xs:element type="ead:genreForm" name="genreForm"/>
+            <xs:element type="ead:geogName" name="geogName"/>
+            <xs:element type="ead:name" name="name"/>
+            <xs:element type="ead:occupation" name="occupation"/>
+            <xs:element type="ead:persName" name="persName"/>
+            <xs:element type="ead:subject" name="subject"/>
+            <xs:element type="ead:title" name="title"/>
+         </xs:choice>
+         <xs:choice maxOccurs="unbounded">
+            <xs:element type="ead:corpName" name="corpName"/>
+            <xs:element type="ead:famName" name="famName"/>
+            <xs:element type="ead:function" name="function"/>
+            <xs:element type="ead:genreForm" name="genreForm"/>
+            <xs:element type="ead:geogName" name="geogName"/>
+            <xs:element type="ead:name" name="name"/>
+            <xs:element type="ead:occupation" name="occupation"/>
+            <xs:element type="ead:persName" name="persName"/>
+            <xs:element type="ead:subject" name="subject"/>
+            <xs:element type="ead:title" name="title"/>
+         </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="ptrGrp">
+      <xs:sequence>
+         <xs:choice>
+            <xs:element type="ead:ptr" name="ptr"/>
+            <xs:element type="ead:reference" name="reference"/>
+         </xs:choice>
+         <xs:choice maxOccurs="unbounded">
+            <xs:element type="ead:ptr" name="ptr"/>
+            <xs:element type="ead:reference" name="reference"/>
+         </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="targetEntity">

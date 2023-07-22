@@ -2908,12 +2908,6 @@
                   </attribute>
                </zeroOrMore>
             </interleave>
-            <optional>
-               <attribute name="base" ns="">
-                  <data type="anyURI"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <interleave>
                <optional>
                   <attribute name="languageOfElement" ns="">
@@ -2928,6 +2922,18 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="maintenanceEventReference" ns="">
@@ -2948,7 +2954,31 @@
                   </attribute>
                </optional>
             </interleave>
-            <text/>
+            <optional>
+               <ref name="head"/>
+            </optional>
+            <oneOrMore>
+               <choice>
+                  <interleave>
+                     <zeroOrMore>
+                        <ref name="list"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="p"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="chronList"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="blockQuote"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="table"/>
+                     </zeroOrMore>
+                  </interleave>
+                  <ref name="indexEntry"/>
+               </choice>
+            </oneOrMore>
          </group>
       </element>
    </define>
@@ -8714,6 +8744,82 @@
          </group>
       </element>
    </define>
+   <define name="indexEntry">
+      <element name="indexEntry" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <optional>
+               <attribute name="base" ns="">
+                  <data type="anyURI"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <zeroOrMore>
+               <choice>
+                  <ref name="nameGrp"/>
+                  <ref name="ptrGrp"/>
+                  <ref name="ptr"/>
+                  <ref name="reference"/>
+                  <ref name="corpName"/>
+                  <ref name="famName"/>
+                  <ref name="function"/>
+                  <ref name="genreForm"/>
+                  <ref name="geogName"/>
+                  <ref name="name"/>
+                  <ref name="occupation"/>
+                  <ref name="persName"/>
+                  <ref name="subject"/>
+                  <ref name="title"/>
+               </choice>
+            </zeroOrMore>
+         </group>
+      </element>
+   </define>
    <define name="relation">
       <element name="relation" ns="https://archivists.org/ns/ead/v4">
          <group>
@@ -11181,6 +11287,118 @@
                <ref name="thead"/>
             </optional>
             <ref name="element.tbody"/>
+         </group>
+      </element>
+   </define>
+   <define name="nameGrp">
+      <element name="nameGrp" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <choice>
+               <ref name="corpName"/>
+               <ref name="famName"/>
+               <ref name="function"/>
+               <ref name="genreForm"/>
+               <ref name="geogName"/>
+               <ref name="name"/>
+               <ref name="occupation"/>
+               <ref name="persName"/>
+               <ref name="subject"/>
+               <ref name="title"/>
+            </choice>
+            <oneOrMore>
+               <choice>
+                  <ref name="corpName"/>
+                  <ref name="famName"/>
+                  <ref name="function"/>
+                  <ref name="genreForm"/>
+                  <ref name="geogName"/>
+                  <ref name="name"/>
+                  <ref name="occupation"/>
+                  <ref name="persName"/>
+                  <ref name="subject"/>
+                  <ref name="title"/>
+               </choice>
+            </oneOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="ptrGrp">
+      <element name="ptrGrp" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <choice>
+               <ref name="ptr"/>
+               <ref name="reference"/>
+            </choice>
+            <oneOrMore>
+               <choice>
+                  <ref name="ptr"/>
+                  <ref name="reference"/>
+               </choice>
+            </oneOrMore>
          </group>
       </element>
    </define>
