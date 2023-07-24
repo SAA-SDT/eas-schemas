@@ -61,14 +61,7 @@
             </optional>
         </element>
     </define>
-    
-    <define name="element.archRef">
-        <element name="archRef">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
-        </element>
-    </define>
+   
     
     <define name="element.arrangement">
         <element name="arrangement">
@@ -78,17 +71,10 @@
     
     <define name="element.bibliography">
         <element name="bibliography">
-            <ref name="model.ead-narrative-elements-PLUS"/>
+            <ref name="model.ead-narrative-elements"/>
         </element>
     </define>
     
-    <define name="element.bibRef">
-        <element name="bibRef">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
-        </element>
-    </define>
     
     <define name="element.blockQuote">
         <element name="blockQuote">
@@ -269,10 +255,8 @@
             <!-- do we need lang and script for containers??? -->
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.container.optional"/>
-            <ref name="model.ead.mixed-content"/>
-            <!-- agree that mixed content is no longer needed here, right? 
+            <!-- could use just span, perhaps, like the head element, but why? -->
             <text/> 
-            -->
         </element>
     </define>
     
@@ -390,7 +374,7 @@
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <!-- what else follows this model? -->
-            <ref name="model.ead.mixed-content"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
@@ -511,7 +495,7 @@
         <element name="materialSpec">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.ead.mixed-content"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
@@ -535,7 +519,7 @@
         <element name="num">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.ead.mixed-content"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
@@ -576,7 +560,7 @@
     
     <define name="element.otherFindAid">
         <element name="otherFindAid">
-            <ref name="model.ead-narrative-elements-PLUS"/>
+            <ref name="model.ead-narrative-elements"/>
         </element>
     </define>
     
@@ -590,7 +574,7 @@
         <element name="physDesc">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.ead.mixed-content"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
@@ -633,7 +617,7 @@
         <element name="physFacet">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
@@ -641,7 +625,7 @@
         <element name="physLoc">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.ead.mixed-content"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
@@ -699,13 +683,13 @@
             <!-- on span... quote... and what else?  -->
             <!-- also, uggh... if we just go with html, then quote will be q, and less transformations required -->
             <ref name="attribute.style.optional"/>
-            <ref name="model.ead.mixed-content"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
     <define name="element.relatedMaterial">
         <element name="relatedMaterial">
-            <ref name="model.ead-narrative-elements-PLUS"/>
+            <ref name="model.ead-narrative-elements"/>
         </element>
     </define>
     
@@ -807,7 +791,7 @@
                         [text], abbr, corpname, date, emph, expan, famname, footnote, foreign, function, genreform, 
                         geogname, lb, list, name, num, occupation, persname, ptr, quote, ref, subject, title
                         -->
-                        <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
+                        <ref name="model.mixed-content.optional"/>
                     </zeroOrMore>
                 </element>
             </oneOrMore>
@@ -822,7 +806,7 @@
     
     <define name="element.separatedMaterial">
         <element name="separatedMaterial">
-            <ref name="model.ead-narrative-elements-PLUS"/>
+            <ref name="model.ead-narrative-elements"/>
         </element>
     </define>
     
@@ -991,7 +975,7 @@
             <ref name="attribute.certainty.optional"/>
             <ref name="attribute.era.optional"/>
 
-            <ref name="model.ead.mixed-content"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
@@ -1024,7 +1008,7 @@
             <ref name="attribute.countryCode.optional"/>
             <ref name="attribute.repositoryCode.optional"/>
             <ref name="attribute.encodingAnalog.optional"/>
-            <ref name="model.ead.mixed-content"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
@@ -1035,7 +1019,7 @@
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute.label.optional"/>
             <ref name="attribute.encodingAnalog.optional"/>
-            <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
@@ -1094,44 +1078,9 @@
         </zeroOrMore>
     </define>
     
-    <define name="model.ead.mixed-content">
-        <!-- assuming that we're replacing emph with span, and expanding the names of the rest of elements -->
-        <zeroOrMore>
-            <choice>
-                <ref name="element.abbreviation"/>
-                <ref name="element.expansion"/>
-                <ref name="element.foreign"/>
-                <ref name="element.lb"/>
-                <ref name="element.ptr"/>
-                
-                <ref name="element.reference"/>
-                <ref name="element.span"/>
-                <text/>
-            </choice>
-        </zeroOrMore>
-    </define>
+
     
-    <define name="model.ead.mixed-content-plus-controlAccess">
-        <zeroOrMore>
-            <choice>
-                <ref name="model.ead.mixed-content"/>
-                <ref name="model.controlAccess-element-name-list"/>
-            </choice>
-        </zeroOrMore>
-    </define>
-    
-    <!-- hopefully we don't keep this long... if so, replace the name with something that makes sense -->
-    <define name="model.ead.mixed-content-plus-controlAccess-plusDFNQ">
-        <zeroOrMore>
-            <choice>
-                <ref name="model.ead.mixed-content-plus-controlAccess"/>
-                <ref name="element.date"/>
-                <ref name="element.footnote"/>
-                <ref name="element.num"/>
-                <ref name="element.quote"/>
-            </choice>
-        </zeroOrMore>
-    </define>
+
     
 
     <define name="model.narrative-element-name-list">

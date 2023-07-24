@@ -507,7 +507,9 @@
       <optional>
          <ref name="attribute.addressTypeLineEncoding"/>
       </optional>
-      <ref name="attribute.agentTypeEncoding"/>
+      <optional>
+         <ref name="attribute.agentTypeEncoding"/>
+      </optional>
       <optional>
          <ref name="attribute.audienceEncoding"/>
       </optional>
@@ -517,8 +519,12 @@
       <optional>
          <ref name="attribute.countryEncoding"/>
       </optional>
-      <ref name="attribute.coverageEncoding" a:exclude-from="eac"/>
-      <ref name="attribute.daoTypeEncoding" a:exclude-from="eac"/>
+      <optional>
+         <ref name="attribute.coverageEncoding" a:exclude-from="eac"/>
+      </optional>
+      <optional>
+         <ref name="attribute.daoTypeEncoding" a:exclude-from="eac"/>
+      </optional>
       <optional>
          <ref name="attribute.detailLevelEncoding"/>
       </optional>
@@ -531,10 +537,18 @@
       <optional>
          <ref name="attribute.languageEncoding"/>
       </optional>
-      <ref name="attribute.levelEncoding" a:exclude-from="eac"/>
-      <ref name="attribute.maintenanceEventTypeEncoding"/>
-      <ref name="attribute.maintenanceStatusEncoding"/>
-      <ref name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac"/>
+      <optional>
+         <ref name="attribute.levelEncoding" a:exclude-from="eac"/>
+      </optional>
+      <optional>
+         <ref name="attribute.maintenanceEventTypeEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.maintenanceStatusEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac"/>
+      </optional>
       <optional>
          <ref name="attribute.publicationStatusEncoding"/>
       </optional>
@@ -547,7 +561,9 @@
       <optional>
          <ref name="attribute.statusEncoding"/>
       </optional>
-      <ref name="attribute.targetTypeEncoding"/>
+      <optional>
+         <ref name="attribute.targetTypeEncoding"/>
+      </optional>
       <optional a:exclude-from="eac">
          <ref name="attribute.unitDateTypeEncoding"/>
       </optional>

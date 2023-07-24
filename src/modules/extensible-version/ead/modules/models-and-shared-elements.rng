@@ -21,11 +21,10 @@
       <element name="abstract">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- or just allow P elements here, as users often expect?
+            granted, that would allow multi-paragraph abstract elements, in theory 
+            but we could restrict to one P element.  likely better than having to abstract defined akin to ASpace's single-note model-->
          <ref name="model.mixed-content.optional"/>
-         <!-- update:  since we're moving this to the narrative set, outside of did
-            <ref name="model.mixed-content.optional" a:exclude-from="ead"/>
-            <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ" a:exclude-from="eac"/>
-            -->
       </element>
    </define>
    <define name="element.address">
@@ -281,15 +280,14 @@
       <element name="p">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"
-              a:exclude-from="eac"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.part">
       <element name="part">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content" a:exclude-from="eac"/>
+         <ref name="dt.non-empty-element-with-newlines-available"/>
       </element>
    </define>
    <define name="element.place">
@@ -427,24 +425,8 @@
       <optional>
          <ref name="element.abstract"/>
       </optional>
-      <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
-   </define>
-   <!-- if we keep this... for bibliography, otherfindaid, separatedmaterial, and relatedmaterial.... rename it to something that makes sense (BORS?... i kid), and remodel it -->
-   <define name="model.ead-narrative-elements-PLUS">
-      <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-      <ref name="attribute-group.assertion-reference.optional"/>
-      <ref name="attribute.encodingAnalog.optional"/>
-      <ref name="element.head.optional"/>
-      <optional>
-         <ref name="element.abstract"/>
-      </optional>
-      <oneOrMore>
-         <choice>
-            <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
-            <ref name="element.archRef"/>
-            <ref name="element.bibRef"/>
-         </choice>
-      </oneOrMore>
+      <!-- same as before, but now now table.... should it be simpler? -->
+      <ref name="model.narrative-group-plus-chronList-plus-blockQuote.optional"/>
    </define>
    <define name="model.html.mixed-content.optional">
         <!-- yet to be defined, but likely to be a branch -->

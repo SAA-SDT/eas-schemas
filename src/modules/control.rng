@@ -25,11 +25,18 @@
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.control-encodings"/>
             <ref name="attribute.detailLevel.optional"/>
-            <ref name="attribute.maintenanceStatus"/>
+            <!-- why not make this optional?  why should (we require that) anything in control be required, for that matter, outside of recordId, perhaps -->
+            <optional>
+                <ref name="attribute.maintenanceStatus"/>
+            </optional>
             <ref name="attribute.publicationStatus.optional"/>
             <ref name="element.recordId"/>
-            <ref name="element.maintenanceAgency"/>
-            <ref name="element.maintenanceHistory"/>
+            <optional>
+                <ref name="element.maintenanceAgency"/>
+            </optional>
+            <optional>
+                <ref name="element.maintenanceHistory"/>
+            </optional>
             <optional a:exclude-from="eac">
                 <ref name="element.findAidDesc"/>
             </optional>
