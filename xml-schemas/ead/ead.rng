@@ -1699,7 +1699,6 @@
             </interleave>
             <oneOrMore>
                <choice>
-                  <ref name="abstract"/>
                   <ref name="container"/>
                   <ref name="dao"/>
                   <ref name="daoSet"/>
@@ -1805,6 +1804,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <interleave>
                <zeroOrMore>
                   <ref name="list"/>
@@ -1908,6 +1910,9 @@
             </interleave>
             <optional>
                <ref name="head"/>
+            </optional>
+            <optional>
+               <ref name="abstract"/>
             </optional>
             <interleave>
                <zeroOrMore>
@@ -2013,6 +2018,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <interleave>
                <zeroOrMore>
                   <ref name="list"/>
@@ -2116,6 +2124,9 @@
             </interleave>
             <optional>
                <ref name="head"/>
+            </optional>
+            <optional>
+               <ref name="abstract"/>
             </optional>
             <interleave>
                <zeroOrMore>
@@ -2221,6 +2232,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <interleave>
                <zeroOrMore>
                   <ref name="list"/>
@@ -2324,6 +2338,9 @@
             </interleave>
             <optional>
                <ref name="head"/>
+            </optional>
+            <optional>
+               <ref name="abstract"/>
             </optional>
             <interleave>
                <zeroOrMore>
@@ -2435,6 +2452,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <oneOrMore>
                <choice>
                   <interleave>
@@ -2544,6 +2564,9 @@
             </interleave>
             <optional>
                <ref name="head"/>
+            </optional>
+            <optional>
+               <ref name="abstract"/>
             </optional>
             <interleave>
                <zeroOrMore>
@@ -2741,6 +2764,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <interleave>
                <zeroOrMore>
                   <ref name="list"/>
@@ -2844,6 +2870,9 @@
             </interleave>
             <optional>
                <ref name="head"/>
+            </optional>
+            <optional>
+               <ref name="abstract"/>
             </optional>
             <interleave>
                <zeroOrMore>
@@ -3058,6 +3087,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <interleave>
                <zeroOrMore>
                   <ref name="list"/>
@@ -3162,6 +3194,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <interleave>
                <zeroOrMore>
                   <ref name="list"/>
@@ -3265,6 +3300,9 @@
             </interleave>
             <optional>
                <ref name="head"/>
+            </optional>
+            <optional>
+               <ref name="abstract"/>
             </optional>
             <interleave>
                <zeroOrMore>
@@ -3376,6 +3414,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <oneOrMore>
                <choice>
                   <interleave>
@@ -3486,6 +3527,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <interleave>
                <zeroOrMore>
                   <ref name="list"/>
@@ -3590,6 +3634,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <interleave>
                <zeroOrMore>
                   <ref name="list"/>
@@ -3693,6 +3740,9 @@
             </interleave>
             <optional>
                <ref name="head"/>
+            </optional>
+            <optional>
+               <ref name="abstract"/>
             </optional>
             <interleave>
                <zeroOrMore>
@@ -3803,6 +3853,9 @@
             </optional>
             <optional>
                <ref name="head"/>
+            </optional>
+            <optional>
+               <ref name="abstract"/>
             </optional>
             <oneOrMore>
                <choice>
@@ -3998,6 +4051,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <interleave>
                <zeroOrMore>
                   <ref name="list"/>
@@ -4108,6 +4164,9 @@
             <optional>
                <ref name="head"/>
             </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
             <oneOrMore>
                <choice>
                   <interleave>
@@ -4217,6 +4276,9 @@
             </interleave>
             <optional>
                <ref name="head"/>
+            </optional>
+            <optional>
+               <ref name="abstract"/>
             </optional>
             <interleave>
                <zeroOrMore>
@@ -6198,124 +6260,6 @@
          </group>
       </element>
    </define>
-   <define name="abstract">
-      <element name="abstract" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <oneOrMore>
-               <choice>
-                  <oneOrMore>
-                     <choice>
-                        <oneOrMore>
-                           <choice>
-                              <ref name="abbreviation"/>
-                              <ref name="expansion"/>
-                              <ref name="foreign"/>
-                              <ref name="lb"/>
-                              <ref name="ptr"/>
-                              <ref name="reference"/>
-                              <ref name="span"/>
-                              <text/>
-                           </choice>
-                        </oneOrMore>
-                        <ref name="corpName"/>
-                        <ref name="famName"/>
-                        <ref name="function"/>
-                        <ref name="genreForm"/>
-                        <ref name="geogName"/>
-                        <ref name="name"/>
-                        <ref name="occupation"/>
-                        <ref name="persName"/>
-                        <ref name="subject"/>
-                        <ref name="title"/>
-                     </choice>
-                  </oneOrMore>
-                  <ref name="date"/>
-                  <ref name="footnote"/>
-                  <ref name="num"/>
-                  <ref name="quote"/>
-               </choice>
-            </oneOrMore>
-         </group>
-      </element>
-   </define>
    <define name="container">
       <element name="container" ns="https://archivists.org/ns/ead/v4">
          <group>
@@ -7921,6 +7865,97 @@
                   <ref name="footnote"/>
                   <ref name="num"/>
                   <ref name="quote"/>
+               </choice>
+            </oneOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="abstract">
+      <element name="abstract" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <oneOrMore>
+               <choice>
+                  <ref name="reference"/>
+                  <ref name="span"/>
+                  <text/>
                </choice>
             </oneOrMore>
          </group>

@@ -22,11 +22,11 @@
         <element name="abstract">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            
+            <ref name="model.mixed-content.optional"/>
+            <!-- update:  since we're moving this to the narrative set, outside of did
             <ref name="model.mixed-content.optional" a:exclude-from="ead"/>
-            
             <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ" a:exclude-from="eac"/>
-
+            -->
         </element>
     </define>
     
@@ -480,6 +480,9 @@
         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
         <ref name="element.head.optional"/>
+        <optional>
+            <ref name="element.abstract"/>
+        </optional>
         <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
     </define>
     
@@ -489,6 +492,9 @@
         <ref name="attribute-group.assertion-reference.optional"/>
         <ref name="attribute.encodingAnalog.optional"/>
         <ref name="element.head.optional"/>
+        <optional>
+            <ref name="element.abstract"/>
+        </optional>
         <oneOrMore>
             <choice>
                 <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>

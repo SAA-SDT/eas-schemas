@@ -547,7 +547,6 @@
    </xs:complexType>
    <xs:complexType name="did">
       <xs:choice maxOccurs="unbounded">
-         <xs:element type="ead:abstract" name="abstract"/>
          <xs:element type="ead:container" name="container"/>
          <xs:element type="ead:dao" name="dao"/>
          <xs:element type="ead:daoSet" name="daoSet"/>
@@ -576,6 +575,7 @@
    <xs:complexType name="accessConditions">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -599,6 +599,7 @@
    <xs:complexType name="accruals">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -622,6 +623,7 @@
    <xs:complexType name="acqInfo">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -645,6 +647,7 @@
    <xs:complexType name="altFormAvail">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -668,6 +671,7 @@
    <xs:complexType name="appraisal">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -691,6 +695,7 @@
    <xs:complexType name="arrangement">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -714,6 +719,7 @@
    <xs:complexType name="bibliography">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice maxOccurs="unbounded">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:list" name="list"/>
@@ -742,6 +748,7 @@
    <xs:complexType name="biogHist">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -796,6 +803,7 @@
    <xs:complexType name="custodHist">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -819,6 +827,7 @@
    <xs:complexType name="filePlan">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -868,6 +877,7 @@
    <xs:complexType name="legalStatus">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -891,6 +901,7 @@
    <xs:complexType name="odd">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -914,6 +925,7 @@
    <xs:complexType name="orginalsLoc">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -937,6 +949,7 @@
    <xs:complexType name="otherFindAid">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice maxOccurs="unbounded">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:list" name="list"/>
@@ -965,6 +978,7 @@
    <xs:complexType name="physTech">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -988,6 +1002,7 @@
    <xs:complexType name="preferCite">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -1011,6 +1026,7 @@
    <xs:complexType name="processInfo">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -1034,6 +1050,7 @@
    <xs:complexType name="relatedMaterial">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice maxOccurs="unbounded">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:list" name="list"/>
@@ -1078,6 +1095,7 @@
    <xs:complexType name="scopeContent">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -1101,6 +1119,7 @@
    <xs:complexType name="separatedMaterial">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice maxOccurs="unbounded">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:element type="ead:list" name="list"/>
@@ -1129,6 +1148,7 @@
    <xs:complexType name="useConditions">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:list" name="list"/>
             <xs:element type="ead:p" name="p"/>
@@ -1580,46 +1600,6 @@
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="abstract" mixed="true">
-      <xs:choice maxOccurs="unbounded">
-         <xs:choice maxOccurs="unbounded">
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:abbreviation" name="abbreviation"/>
-               <xs:element type="ead:expansion" name="expansion"/>
-               <xs:element type="ead:foreign" name="foreign"/>
-               <xs:element type="ead:lb" name="lb"/>
-               <xs:element type="ead:ptr" name="ptr"/>
-               <xs:element type="ead:reference" name="reference"/>
-               <xs:element type="ead:span" name="span"/>
-            </xs:choice>
-            <xs:element type="ead:corpName" name="corpName"/>
-            <xs:element type="ead:famName" name="famName"/>
-            <xs:element type="ead:function" name="function"/>
-            <xs:element type="ead:genreForm" name="genreForm"/>
-            <xs:element type="ead:geogName" name="geogName"/>
-            <xs:element type="ead:name" name="name"/>
-            <xs:element type="ead:occupation" name="occupation"/>
-            <xs:element type="ead:persName" name="persName"/>
-            <xs:element type="ead:subject" name="subject"/>
-            <xs:element type="ead:title" name="title"/>
-         </xs:choice>
-         <xs:element type="ead:date" name="date"/>
-         <xs:element type="ead:footnote" name="footnote"/>
-         <xs:element type="ead:num" name="num"/>
-         <xs:element type="ead:quote" name="quote"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
    <xs:complexType name="container" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:abbreviation" name="abbreviation"/>
@@ -1977,6 +1957,23 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="encodingAnalog" type="xs:token"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="abstract" mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:span" name="span"/>
+      </xs:choice>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="blockQuote">

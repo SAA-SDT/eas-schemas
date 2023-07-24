@@ -278,7 +278,6 @@
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <oneOrMore>
             <choice>
-               <ref name="element.abstract"/>
                <ref name="element.container"/>
                <ref name="element.dao"/>
                <ref name="element.daoSet"/>
