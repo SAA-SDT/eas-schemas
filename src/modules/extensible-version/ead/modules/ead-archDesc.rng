@@ -636,6 +636,14 @@
          <ref name="model.ead.mixed-content"/>
       </element>
    </define>
+   <define name="element.referringString">
+      <element name="referringString">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <text/>
+      </element>
+   </define>
    <define name="element.relatedMaterial">
       <element name="relatedMaterial">
          <ref name="model.ead-narrative-elements-PLUS"/>
@@ -1016,6 +1024,7 @@
             <ref name="element.lb"/>
             <ref name="element.ptr"/>
             <ref name="element.reference"/>
+            <ref name="element.referringString"/>
             <ref name="element.span"/>
             <text/>
          </choice>

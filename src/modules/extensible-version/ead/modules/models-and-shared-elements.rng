@@ -336,6 +336,7 @@
          <ref name="attribute.entityref.optional" a:exclude-from="eac"/>
          <zeroOrMore>
             <choice>
+               <ref name="element.referringString"/>
                <ref name="element.span"/>
                <text/>
             </choice>
@@ -345,6 +346,7 @@
    <define name="element.span">
       <element name="span">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <!-- now different from EAC, since references have been removed.  make sure to update based on testing -->
          <ref name="attribute.style.optional"/>
          <text/>
       </element>
@@ -453,6 +455,7 @@
       <zeroOrMore>
          <choice>
             <ref name="element.reference"/>
+            <ref name="element.referringString"/>
             <ref name="element.span"/>
             <text/>
          </choice>
@@ -461,6 +464,7 @@
    <define name="model.mixed-content-no-references.optional">
       <zeroOrMore>
          <choice>
+            <ref name="element.referringString"/>
             <ref name="element.span"/>
             <text/>
          </choice>
