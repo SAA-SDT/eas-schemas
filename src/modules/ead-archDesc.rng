@@ -1074,6 +1074,7 @@
     <define name="model.controlAccess-element-group">
         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
         <ref name="attribute-group.linked-data.optional"/>
+        <ref name="attribute-group.assertion-reference.optional"/>
         <oneOrMore>
             <ref name="element.part"/>
         </oneOrMore>
