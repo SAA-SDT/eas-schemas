@@ -45,6 +45,7 @@
    <define name="element.archDesc">
       <element name="archDesc">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
