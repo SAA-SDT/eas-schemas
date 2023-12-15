@@ -1294,9 +1294,10 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="reference" mixed="true">
-      <xs:sequence>
-         <xs:element type="ead:span" name="span" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element type="ead:referringString" name="referringString"/>
+         <xs:element type="ead:span" name="span"/>
+      </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -1320,9 +1321,10 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="head" mixed="true">
-      <xs:sequence>
-         <xs:element type="ead:span" name="span" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element type="ead:referringString" name="referringString"/>
+         <xs:element type="ead:span" name="span"/>
+      </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -1402,6 +1404,7 @@
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
                <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:referringString" name="referringString"/>
                <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
@@ -1576,6 +1579,7 @@
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -1614,6 +1618,7 @@
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -1706,6 +1711,7 @@
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -1766,6 +1772,7 @@
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -1808,6 +1815,7 @@
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -1850,6 +1858,7 @@
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -1902,6 +1911,7 @@
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -1930,6 +1940,7 @@
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
                <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:referringString" name="referringString"/>
                <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
@@ -1968,6 +1979,7 @@
    <xs:complexType name="abstract" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -2041,6 +2053,7 @@
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
                <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:referringString" name="referringString"/>
                <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
@@ -2080,6 +2093,7 @@
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
                <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:referringString" name="referringString"/>
                <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
@@ -2443,6 +2457,7 @@
    <xs:complexType name="eventDescription" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -2462,6 +2477,22 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
+   <xs:complexType name="referringString" mixed="true">
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="span" mixed="true">
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2476,6 +2507,7 @@
    <xs:complexType name="item" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -2567,6 +2599,7 @@
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -2588,6 +2621,7 @@
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -2776,6 +2810,7 @@
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
                <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:referringString" name="referringString"/>
                <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
@@ -2813,6 +2848,7 @@
          <xs:element type="ead:lb" name="lb"/>
          <xs:element type="ead:ptr" name="ptr"/>
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -3006,6 +3042,7 @@
    <xs:complexType name="event" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
          <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -3164,6 +3201,7 @@
                <xs:element type="ead:lb" name="lb"/>
                <xs:element type="ead:ptr" name="ptr"/>
                <xs:element type="ead:reference" name="reference"/>
+               <xs:element type="ead:referringString" name="referringString"/>
                <xs:element type="ead:span" name="span"/>
             </xs:choice>
             <xs:element type="ead:corpName" name="corpName"/>
