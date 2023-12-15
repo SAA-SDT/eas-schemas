@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  
-  *****************************************************************
-  *                                                               *                
-  *                            EAD 4.0                            *
-  *                                                               *       
-  *****************************************************************
-  
-  Hosted by the Library of Congress at http://www.loc.gov/ead/
-  
--->
 <xs:schema xmlns:ead="https://archivists.org/ns/ead/v4"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
