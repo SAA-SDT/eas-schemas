@@ -44,9 +44,6 @@
     
     <define name="element.archDesc">
         <element name="archDesc">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <!-- EAD3 already signaled the move to a single DSC, right? -->
             <optional>
@@ -63,8 +60,6 @@
      
     <define name="element.c">
         <element name="c">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c"/>
@@ -74,8 +69,6 @@
     
     <define name="element.c01">
         <element name="c01">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c02"/>
@@ -85,8 +78,6 @@
     
     <define name="element.c02">
         <element name="c02">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c03"/>
@@ -96,8 +87,6 @@
     
     <define name="element.c03">
         <element name="c03">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c04"/>
@@ -107,8 +96,6 @@
     
     <define name="element.c04">
         <element name="c04">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c05"/>
@@ -118,8 +105,6 @@
     
     <define name="element.c05">
         <element name="c05">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c06"/>
@@ -129,8 +114,6 @@
     
     <define name="element.c06">
         <element name="c06">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c07"/>
@@ -140,8 +123,6 @@
     
     <define name="element.c07">
         <element name="c07">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c08"/>
@@ -151,8 +132,6 @@
     
     <define name="element.c08">
         <element name="c08">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c09"/>
@@ -162,8 +141,6 @@
     
     <define name="element.c09">
         <element name="c09">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c10"/>
@@ -173,8 +150,6 @@
     
     <define name="element.c10">
         <element name="c10">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c11"/>
@@ -184,8 +159,6 @@
     
     <define name="element.c11">
         <element name="c11">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c12"/>
@@ -195,8 +168,6 @@
     
     <define name="element.c12">
         <element name="c12">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.archDesc.levels-of-description"/>
         </element>
     </define>
@@ -205,6 +176,7 @@
         <element name="container">
             <!-- do we need lang and script for containers??? -->
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.container.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="model.ead.mixed-content"/>
@@ -228,12 +200,6 @@
         </element>
     </define>
     
-    <define name="element.corpName">
-        <element name="corpName">
-            <ref name="model.controlAccess-element-group"/>
-        </element>
-    </define>
-    
     <define name="element.custodHist">
         <element name="custodHist">
             <ref name="model.ead-narrative-elements"/>
@@ -243,18 +209,17 @@
     <define name="element.did">
         <element name="did">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <oneOrMore>
                 <choice>
                     <ref name="element.container"/>
                     <ref name="element.didNote"/>
                     <ref name="element.langMaterial"/>
                     <ref name="element.materialSpec"/>
-                    <ref name="element.origination"/>
                     <ref name="element.physDescSet"/>
                     <ref name="element.physDesc"/>
                     <ref name="element.physDescStructured"/>
                     <ref name="element.physLoc"/>
-                    <ref name="element.repository"/>
                     <ref name="element.unitDate"/>
                     <ref name="element.unitDateStructured"/>
                     <ref name="element.unitId"/>
@@ -293,12 +258,6 @@
             <ref name="attribute-group.assertion-reference.optional"/>
             <!-- what else follows this model? -->
             <ref name="model.ead.mixed-content"/>
-        </element>
-    </define>
-    
-    <define name="element.famName">
-        <element name="famName">
-            <ref name="model.controlAccess-element-group"/>
         </element>
     </define>
     
@@ -419,12 +378,6 @@
         </element>
     </define>
     
-    <define name="element.name">
-        <element name="name">
-            <ref name="model.controlAccess-element-group"/>
-        </element>
-    </define>
-    
     <define name="element.nameGrp">
         <element name="nameGrp">
             <ref name="attribute-group.global.optional"/>
@@ -455,31 +408,9 @@
         </element>
     </define>
     
-    <define name="element.origination">
-        <element name="origination">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute.label.optional"/>
-            <oneOrMore>
-                <choice>
-                    <ref name="element.corpName"/>
-                    <ref name="element.famName"/>
-                    <ref name="element.name"/>
-                    <ref name="element.persName"/>
-                </choice>
-            </oneOrMore>
-        </element>
-    </define>
-    
     <define name="element.otherFindAid">
         <element name="otherFindAid">
             <ref name="model.ead-narrative-elements-PLUS"/>
-        </element>
-    </define>
-    
-    <define name="element.persName">
-        <element name="persName">
-            <ref name="model.controlAccess-element-group"/>
         </element>
     </define>
     
@@ -618,24 +549,6 @@
     <define name="element.relatedMaterial">
         <element name="relatedMaterial">
             <ref name="model.ead-narrative-elements-PLUS"/>
-        </element>
-    </define>
-    
-    <define name="element.repository">
-        <element name="repository">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <oneOrMore>
-                <choice>
-                    <ref name="element.corpName"/>
-                    <ref name="element.famName"/>
-                    <ref name="element.name"/>
-                    <ref name="element.persName"/>
-                </choice>
-            </oneOrMore>
-            <optional>
-                <ref name="element.address"/>
-            </optional>
         </element>
     </define>
     
@@ -830,14 +743,10 @@
        -->
     <define name="model.controlAccess-element-name-list">
         <choice>
-            <ref name="element.corpName"/>
-            <ref name="element.famName"/>
             <ref name="element.function"/>
             <ref name="element.genreForm"/>
             <ref name="element.geogName"/>
-            <ref name="element.name"/>
             <ref name="element.occupation"/>
-            <ref name="element.persName"/>
             <ref name="element.subject"/>
             <ref name="element.title"/>
         </choice>
