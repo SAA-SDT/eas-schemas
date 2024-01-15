@@ -19,7 +19,7 @@
          <group>
             <optional>
                <attribute name="audience" ns="">
-                  <data type="NMTOKEN"
+                  <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
@@ -75,7 +75,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -125,19 +125,13 @@
                </optional>
             </interleave>
             <optional>
-               <attribute name="addressTypeLineEncoding" ns="">
+               <attribute name="addressLineTypeEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherAddressTypeLineEncoding</value>
+                     <value type="token" datatypeLibrary="" ns="">otherAddressLineTypeEncoding</value>
                   </choice>
                </attribute>
             </optional>
-            <attribute name="agentTypeEncoding" ns="">
-               <choice>
-                  <value type="token" datatypeLibrary="" ns="">EASList</value>
-                  <value type="token" datatypeLibrary="" ns="">otherAgentTypeEncoding</value>
-               </choice>
-            </attribute>
             <optional>
                <attribute name="audienceEncoding" ns="">
                   <choice>
@@ -147,10 +141,10 @@
                </attribute>
             </optional>
             <optional>
-               <attribute name="contactTypeLineEncoding" ns="">
+               <attribute name="contactLineTypeEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherContactTypeLineEncoding</value>
+                     <value type="token" datatypeLibrary="" ns="">otherContactLineTypeEncoding</value>
                   </choice>
                </attribute>
             </optional>
@@ -166,12 +160,6 @@
                <choice>
                   <value type="token" datatypeLibrary="" ns="">EASList</value>
                   <value type="token" datatypeLibrary="" ns="">otherCoverageEncoding</value>
-               </choice>
-            </attribute>
-            <attribute name="daoTypeEncoding" ns="">
-               <choice>
-                  <value type="token" datatypeLibrary="" ns="">EASList</value>
-                  <value type="token" datatypeLibrary="" ns="">otherDaoTypeEncoding</value>
                </choice>
             </attribute>
             <optional>
@@ -265,12 +253,6 @@
                   </choice>
                </attribute>
             </optional>
-            <attribute name="targetTypeEncoding" ns="">
-               <choice>
-                  <value type="token" datatypeLibrary="" ns="">EASList</value>
-                  <value type="token" datatypeLibrary="" ns="">otherTargetTypeEncoding</value>
-               </choice>
-            </attribute>
             <optional>
                <attribute name="unitDateTypeEncoding" ns="">
                   <choice>
@@ -281,7 +263,7 @@
             </optional>
             <optional>
                <attribute name="detailLevel" ns="">
-                  <data type="NMTOKEN"
+                  <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
@@ -322,7 +304,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -370,7 +352,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -500,7 +482,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -556,7 +538,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -656,7 +638,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -711,7 +693,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -775,7 +757,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -854,7 +836,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -921,7 +903,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1000,7 +982,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1085,7 +1067,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1164,7 +1146,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1227,10 +1209,6 @@
                   </attribute>
                </optional>
             </interleave>
-            <attribute name="agentType" ns="">
-               <data type="token"
-                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-            </attribute>
             <text/>
          </group>
       </element>
@@ -1241,7 +1219,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1300,7 +1278,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1428,7 +1406,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1531,7 +1509,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1654,7 +1632,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1752,7 +1730,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1830,7 +1808,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -1957,7 +1935,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -2064,7 +2042,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -2171,7 +2149,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -2278,7 +2256,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -2385,7 +2363,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -2492,7 +2470,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -2599,7 +2577,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -2691,7 +2669,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -2798,7 +2776,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -2905,7 +2883,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -3014,7 +2992,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -3121,7 +3099,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -3228,7 +3206,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -3335,7 +3313,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -3462,7 +3440,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -3569,7 +3547,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -3676,7 +3654,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -3783,7 +3761,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -3910,7 +3888,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4037,7 +4015,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4121,7 +4099,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4228,7 +4206,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4355,7 +4333,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4482,7 +4460,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4546,7 +4524,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4627,7 +4605,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4700,7 +4678,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4793,7 +4771,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4868,7 +4846,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -4929,7 +4907,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5033,7 +5011,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5132,7 +5110,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5185,7 +5163,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5264,7 +5242,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5401,7 +5379,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5481,7 +5459,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5568,7 +5546,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5679,7 +5657,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5772,7 +5750,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5850,7 +5828,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -5937,7 +5915,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6024,7 +6002,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6117,7 +6095,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6211,7 +6189,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6299,7 +6277,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6404,7 +6382,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6515,7 +6493,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6608,7 +6586,7 @@
             </optional>
             <optional>
                <attribute name="coverage" ns="">
-                  <data type="NMTOKEN"
+                  <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
@@ -6624,7 +6602,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6669,7 +6647,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6750,7 +6728,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6844,7 +6822,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -6955,7 +6933,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -7053,7 +7031,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -7135,7 +7113,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -7226,7 +7204,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -7315,7 +7293,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -7406,7 +7384,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -7495,7 +7473,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -7572,7 +7550,7 @@
             </optional>
             <optional>
                <attribute name="unitDateType" ns="">
-                  <data type="NMTOKEN"
+                  <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
@@ -7622,7 +7600,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -7699,7 +7677,7 @@
             </optional>
             <optional>
                <attribute name="unitDateType" ns="">
-                  <data type="NMTOKEN"
+                  <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
@@ -7741,7 +7719,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -7856,7 +7834,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8001,7 +7979,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8093,7 +8071,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8191,7 +8169,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8299,7 +8277,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8397,7 +8375,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8495,7 +8473,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8593,7 +8571,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8691,7 +8669,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8789,7 +8767,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8887,7 +8865,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -8985,7 +8963,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9083,7 +9061,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9181,7 +9159,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9257,7 +9235,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9350,7 +9328,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9460,7 +9438,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9570,7 +9548,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9637,7 +9615,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9697,7 +9675,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9736,7 +9714,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9841,7 +9819,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -9932,7 +9910,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -10024,7 +10002,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -10127,7 +10105,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -10192,7 +10170,7 @@
             </interleave>
             <optional>
                <attribute name="addressLineType" ns="">
-                  <data type="NMTOKEN"
+                  <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
@@ -10206,7 +10184,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -10291,7 +10269,7 @@
             </interleave>
             <optional>
                <attribute name="contactLineType" ns="">
-                  <data type="NMTOKEN"
+                  <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
@@ -10305,7 +10283,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -10433,7 +10411,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -10564,7 +10542,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -10655,7 +10633,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -10746,7 +10724,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -10810,7 +10788,7 @@
          <interleave>
             <optional>
                <attribute name="audience" ns="">
-                  <data type="NMTOKEN"
+                  <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
@@ -10846,7 +10824,7 @@
          <interleave>
             <optional>
                <attribute name="audience" ns="">
-                  <data type="NMTOKEN"
+                  <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
@@ -10883,7 +10861,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -10962,7 +10940,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11049,7 +11027,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11114,7 +11092,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11213,7 +11191,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11346,7 +11324,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11437,7 +11415,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11518,7 +11496,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11609,7 +11587,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11712,7 +11690,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11776,7 +11754,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11862,7 +11840,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11926,7 +11904,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -11971,14 +11949,10 @@
    <define name="targetEntity">
       <element name="targetEntity" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <attribute name="targetType" ns="">
-               <data type="NMTOKEN"
-                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-            </attribute>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -12073,7 +12047,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -12178,7 +12152,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -12311,7 +12285,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -12423,7 +12397,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -12504,7 +12478,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -12583,7 +12557,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -12716,7 +12690,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -12780,7 +12754,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -12890,7 +12864,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -13050,7 +13024,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -13160,7 +13134,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -13270,7 +13244,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -13380,7 +13354,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -13490,7 +13464,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -13600,7 +13574,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -13710,7 +13684,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -13820,7 +13794,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>
@@ -13930,7 +13904,7 @@
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
+                     <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                   </attribute>
                </optional>

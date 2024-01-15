@@ -49,7 +49,6 @@
         <element name="agent">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="attribute.agentType"/>
             <text/>
         </element>
     </define>

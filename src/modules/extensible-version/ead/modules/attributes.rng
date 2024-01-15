@@ -8,23 +8,14 @@
    <define name="attribute.addressLineType.optional">
       <optional>
          <attribute name="addressLineType">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
          </attribute>
       </optional>
-   </define>
-   <define name="attribute.agentType">
-      <attribute name="agentType">
-            <!-- NOTE:  
-                was token for EAC 2.0.
-                if we change to NMTOKEN, as requested, just remember to make a note in the EAC 2.1 release.
-            -->
-         <data type="token"/>
-      </attribute>
    </define>
    <define name="attribute.audience.optional">
       <optional>
          <attribute name="audience">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -52,7 +43,7 @@
    <define name="attribute.contactLineType.optional">
       <optional>
          <attribute name="contactLineType">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -84,12 +75,7 @@
    </define>
    <define name="attribute.coverage">
       <attribute name="coverage">
-         <data type="NMTOKEN"/>
-      </attribute>
-   </define>
-   <define name="attribute.daoType">
-      <attribute name="daoType">
-         <data type="NMTOKEN"/>
+         <data type="token"/>
       </attribute>
    </define>
    <define name="attribute.dateChar.optional">
@@ -102,14 +88,14 @@
    <define name="attribute.detailLevel.optional">
       <optional>
          <attribute name="detailLevel">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
    <define name="attribute.dscType.optional">
       <optional>
          <attribute name="dscType">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -130,7 +116,6 @@
    <define name="attribute.identityType.optional">
       <optional>
          <attribute name="identityType">
-                <!-- another one:  IF we change token to NMTOKEN, then we will need to make sure to call out that update for EAC 2.1 -->
             <data type="token"/>
          </attribute>
       </optional>
@@ -144,7 +129,7 @@
    </define>
    <define name="attribute.level">
       <attribute name="level">
-         <data type="NMTOKEN"/>
+         <data type="token"/>
       </attribute>
    </define>
    <define name="attribute.localType">
@@ -177,7 +162,7 @@
    </define>
    <define name="attribute.physDescStructuredType">
       <attribute name="physDescStructuredType">
-         <data type="NMTOKEN"/>
+         <data type="token"/>
       </attribute>
    </define>
    <define name="attribute.publicationStatus.optional">
@@ -212,7 +197,7 @@
    <define name="attribute.status.optional">
       <optional>
          <attribute name="status">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -259,11 +244,6 @@
          </attribute>
       </optional>
    </define>
-   <define name="attribute.targetType">
-      <attribute name="targetType">
-         <data type="NMTOKEN"/>
-      </attribute>
-   </define>
    <define name="attribute.unit.optional">
       <optional>
          <attribute name="unit">
@@ -274,25 +254,17 @@
    <define name="attribute.unitDateType.optional">
       <optional>
          <attribute name="unitDateType">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
    <!-- TO DO -->
    <!-- re-alphabeticize once we get everything settled.  for now, the @:*Encoding attributes, each defined separately, in case folks want to override any of these definitions -->
-   <define name="attribute.addressTypeLineEncoding">
-      <attribute name="addressTypeLineEncoding" a:defaultValue="EASList">
+   <define name="attribute.addressLineTypeEncoding">
+      <attribute name="addressLineTypeEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
-            <value>otherAddressTypeLineEncoding</value>
-         </choice>
-      </attribute>
-   </define>
-   <define name="attribute.agentTypeEncoding">
-      <attribute name="agentTypeEncoding" a:defaultValue="EASList">
-         <choice>
-            <value>EASList</value>
-            <value>otherAgentTypeEncoding</value>
+            <value>otherAddressLineTypeEncoding</value>
          </choice>
       </attribute>
    </define>
@@ -304,11 +276,11 @@
          </choice>
       </attribute>
    </define>
-   <define name="attribute.contactTypeEncoding">
-      <attribute name="contactTypeLineEncoding" a:defaultValue="EASList">
+   <define name="attribute.contactLineTypeEncoding">
+      <attribute name="contactLineTypeEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
-            <value>otherContactTypeLineEncoding</value>
+            <value>otherContactLineTypeEncoding</value>
          </choice>
       </attribute>
    </define>
@@ -325,14 +297,6 @@
          <choice>
             <value>EASList</value>
             <value>otherCoverageEncoding</value>
-         </choice>
-      </attribute>
-   </define>
-   <define name="attribute.daoTypeEncoding" a:exclude-from="eac">
-      <attribute name="daoTypeEncoding" a:defaultValue="EASList">
-         <choice>
-            <value>EASList</value>
-            <value>otherDaoTypeEncoding</value>
          </choice>
       </attribute>
    </define>
@@ -453,14 +417,6 @@
          </choice>
       </attribute>
    </define>
-   <define name="attribute.targetTypeEncoding">
-      <attribute name="targetTypeEncoding" a:defaultValue="EASList">
-         <choice>
-            <value>EASList</value>
-            <value>otherTargetTypeEncoding</value>
-         </choice>
-      </attribute>
-   </define>
    <define name="attribute.unitDateTypeEncoding" a:exclude-from="eac">
       <attribute name="unitDateTypeEncoding" a:defaultValue="EASList">
          <choice>
@@ -484,20 +440,18 @@
    </define>
    <define name="attribute-group.control-encodings">
       <optional>
-         <ref name="attribute.addressTypeLineEncoding"/>
+         <ref name="attribute.addressLineTypeEncoding"/>
       </optional>
-      <ref name="attribute.agentTypeEncoding"/>
       <optional>
          <ref name="attribute.audienceEncoding"/>
       </optional>
       <optional>
-         <ref name="attribute.contactTypeEncoding"/>
+         <ref name="attribute.contactLineTypeEncoding"/>
       </optional>
       <optional>
          <ref name="attribute.countryEncoding"/>
       </optional>
       <ref name="attribute.coverageEncoding" a:exclude-from="eac"/>
-      <ref name="attribute.daoTypeEncoding" a:exclude-from="eac"/>
       <optional>
          <ref name="attribute.detailLevelEncoding"/>
       </optional>
@@ -526,7 +480,6 @@
       <optional>
          <ref name="attribute.statusEncoding"/>
       </optional>
-      <ref name="attribute.targetTypeEncoding"/>
       <optional a:exclude-from="eac">
          <ref name="attribute.unitDateTypeEncoding"/>
       </optional>
