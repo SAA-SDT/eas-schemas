@@ -207,7 +207,9 @@
          <xs:element type="ead:agent" name="agent"/>
          <xs:element type="ead:citedRange" name="citedRange"/>
          <xs:element type="ead:date" name="date"/>
-         <xs:element type="ead:formattingExtension" name="formattingExtension"/>
+         <xs:element type="ead:formattingExtension"
+                     name="formattingExtension"
+                     minOccurs="0"/>
          <xs:element type="ead:place" name="place"/>
          <xs:element type="ead:title" name="title"/>
       </xs:choice>
@@ -460,7 +462,7 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="formattingExtension">
-      <xs:group maxOccurs="unbounded" ref="v4:_1"/>
+      <xs:group maxOccurs="unbounded" ref="ead:_1"/>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>

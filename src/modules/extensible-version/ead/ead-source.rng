@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
          xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:html="http://www.w3.org/1999/xhtml"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="https://archivists.org/ns/ead/v4">
    <include href="modules/attributes.rng"/>

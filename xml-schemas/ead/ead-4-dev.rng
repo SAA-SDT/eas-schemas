@@ -338,7 +338,9 @@
                   <ref name="agent"/>
                   <ref name="citedRange"/>
                   <ref name="date"/>
-                  <ref name="formattingExtension"/>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
                   <ref name="place"/>
                   <ref name="title"/>
                </choice>
@@ -1828,9 +1830,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -1946,9 +1950,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -2044,9 +2050,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -2142,9 +2150,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -2240,9 +2250,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -2338,9 +2350,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -2436,9 +2450,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -2507,9 +2523,11 @@
             <oneOrMore>
                <choice>
                   <interleave>
-                     <zeroOrMore>
-                        <ref name="formattingExtension"/>
-                     </zeroOrMore>
+                     <oneOrMore>
+                        <optional>
+                           <ref name="formattingExtension"/>
+                        </optional>
+                     </oneOrMore>
                      <zeroOrMore>
                         <ref name="p"/>
                      </zeroOrMore>
@@ -2617,9 +2635,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -2715,9 +2735,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -2812,9 +2834,11 @@
             <oneOrMore>
                <choice>
                   <interleave>
-                     <zeroOrMore>
-                        <ref name="formattingExtension"/>
-                     </zeroOrMore>
+                     <oneOrMore>
+                        <optional>
+                           <ref name="formattingExtension"/>
+                        </optional>
+                     </oneOrMore>
                      <zeroOrMore>
                         <ref name="p"/>
                      </zeroOrMore>
@@ -2913,9 +2937,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -3011,9 +3037,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -3109,9 +3137,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -3227,9 +3257,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -3325,9 +3357,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -3423,9 +3457,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -3521,9 +3557,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -3639,9 +3677,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -3757,9 +3797,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -3939,9 +3981,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -4057,9 +4101,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -4155,9 +4201,11 @@
                <ref name="abstract"/>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
@@ -4891,7 +4939,27 @@
    <define name="_1">
       <element>
          <anyName/>
-         <ref name="_1"/>
+         <group>
+            <zeroOrMore>
+               <attribute>
+                  <anyName>
+                     <except>
+                        <choice>
+                           <nsName ns="https://archivists.org/ns/ead/v4"/>
+                           <nsName ns=""/>
+                        </choice>
+                     </except>
+                  </anyName>
+                  <text/>
+               </attribute>
+            </zeroOrMore>
+            <oneOrMore>
+               <choice>
+                  <text/>
+                  <ref name="_1"/>
+               </choice>
+            </oneOrMore>
+         </group>
       </element>
    </define>
    <define name="placeName">
@@ -10583,9 +10651,11 @@
                </attribute>
             </optional>
             <interleave>
-               <zeroOrMore>
-                  <ref name="formattingExtension"/>
-               </zeroOrMore>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>

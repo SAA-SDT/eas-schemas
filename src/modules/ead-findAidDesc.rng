@@ -12,7 +12,7 @@
                     <ref name="element.agent"/>
                     <ref name="element.citedRange"/>
                     <ref name="element.date"/>
-                    <ref name="element.formattingExtension"/>
+                    <ref name="element.formattingExtension.optional"/>
                     <ref name="element.place"/>
                     <ref name="element.title"/>
                 </choice>                     

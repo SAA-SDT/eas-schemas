@@ -53,7 +53,7 @@
         </element>
     </define>
     
-    <define name="element.biogHist" a:exclude-from="ead">
+    <define name="element.biogHist">
         <element name="biogHist">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
@@ -62,12 +62,6 @@
                 <ref name="element.abstract"/>
             </optional>
             <ref name="model.narrative-group.optional"/>
-        </element>
-    </define>
-    
-    <define name="element.biogHist" a:exclude-from="eac">
-        <element name="biogHist">
-            <ref name="model.ead-narrative-elements"/>
         </element>
     </define>
     
@@ -180,19 +174,27 @@
         </element>
     </define>
     
-    <define name="element.formattingExtension">
-        <element name="formattingExtension">
-            <ref name="attribute-group.global.optional"/>
-            <oneOrMore>
-                <ref name="element.anyHTML"/>
-            </oneOrMore>
-        </element>
+    <define name="element.formattingExtension.optional">
+        <optional>
+            <element name="formattingExtension">
+                <ref name="attribute-group.global.optional"/>
+                <oneOrMore>
+                    <ref name="element.anyHTML"/>
+                </oneOrMore>
+            </element>
+        </optional>
     </define>
     
     <define name="element.anyHTML">
-        <element>
-            <anyName ns="http://www.w3.org/1999/xhtml"/>
-            <ref name="element.anyHTML"/> 
+        <element ns="http://www.w3.org/1999/xhtml">
+            <anyName/>
+            <ref name="attribute-group.any.zeroOrMore"/>
+            <zeroOrMore>
+                <choice>
+                    <text/>
+                    <ref name="element.anyHTML" ns="http://www.w3.org/1999/xhtml"/>
+                </choice>
+            </zeroOrMore>
         </element>
     </define>
        
@@ -456,7 +458,7 @@
     <!-- removing list, with more elements to follow-->
     <define name="model.narrative-group.optional" combine="interleave">
         <zeroOrMore>
-            <ref name="element.formattingExtension"/>
+            <ref name="element.formattingExtension.optional"/>
         </zeroOrMore>
     </define>
     <define name="model.narrative-group.optional" combine="interleave">

@@ -25,7 +25,7 @@
         </xsl:element>
     </xsl:template>
 
-    <xsl:template match="@type[starts-with(., $trang-ns-prefix)] | @base[starts-with(., $trang-ns-prefix)]">
+    <xsl:template match="@base[starts-with(., $trang-ns-prefix)] | @ref[starts-with(., $trang-ns-prefix)] | @type[starts-with(., $trang-ns-prefix)]">
         <xsl:attribute name="{local-name()}">
             <xsl:value-of select="$schema || ':' || substring-after(., ':')"/>
         </xsl:attribute>
