@@ -17,6 +17,50 @@
    <define name="ead">
       <element name="ead" ns="https://archivists.org/ns/ead/v4">
          <group>
+            <optional>
+               <attribute name="audience" ns="">
+                  <data type="NMTOKEN"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="base" ns="">
+                  <data type="anyURI"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="id" ns="">
+                  <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <zeroOrMore>
+               <attribute>
+                  <anyName>
+                     <except>
+                        <choice>
+                           <nsName ns="https://archivists.org/ns/ead/v4"/>
+                           <nsName ns=""/>
+                        </choice>
+                     </except>
+                  </anyName>
+                  <text/>
+               </attribute>
+            </zeroOrMore>
             <ref name="control"/>
             <optional>
                <ref name="findAidDesc"/>

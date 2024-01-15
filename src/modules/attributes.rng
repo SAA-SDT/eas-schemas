@@ -631,7 +631,7 @@
         <ref name="attribute.parent.optional"/>
     </define>
     
-    <define name="attribute-group.eac-document-node">
+    <define name="attribute-group.document-node">
         <ref name="attribute.audience.optional"/>
         <ref name="attribute.base.optional"/>
         <ref name="attribute.id.optional"/>

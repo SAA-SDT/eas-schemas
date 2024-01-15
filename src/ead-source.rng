@@ -20,6 +20,7 @@
     </start>
     <define name="element.ead">
         <element name="ead">
+            <ref name="attribute-group.document-node"/>
             <ref name="element.control"/>
             <optional>
                 <ref name="element.findAidDesc"/>

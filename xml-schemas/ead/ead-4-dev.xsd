@@ -21,6 +21,12 @@
             <xs:element type="ead:findAidDesc" name="findAidDesc" minOccurs="0"/>
             <xs:element type="ead:archDesc" name="archDesc"/>
          </xs:sequence>
+         <xs:attribute name="audience" type="xs:NMTOKEN"/>
+         <xs:attribute name="base" type="xs:anyURI"/>
+         <xs:attribute name="id" type="xs:ID"/>
+         <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+         <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+         <xs:anyAttribute namespace="##other" processContents="lax"/>
       </xs:complexType>
    </xs:element>
    <xs:complexType name="control">
