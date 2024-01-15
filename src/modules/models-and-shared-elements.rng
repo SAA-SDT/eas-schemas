@@ -382,7 +382,7 @@
     <define name="element.span">
         <element name="span">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <!-- now different from EAC, since references have been removed.  make sure to update based on testing -->
+            <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.style.optional"/>
             <text/>
         </element>
