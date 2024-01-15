@@ -41,13 +41,111 @@
          <text/>
       </element>
    </define>
+   <!-- check the ordering, due to the XSD 1.0 limitations -->
+   <define name="model.archDesc.levels-of-description">
+      <ref name="element.did"/>
+      <choice>
+         <ref name="element.agents"/>
+         <ref name="element.formsAvailable"/>
+         <ref name="element.functions"/>
+      </choice>
+      <zeroOrMore>
+         <ref name="model.narrative-element-name-list"/>
+      </zeroOrMore>
+   </define>
    <define name="element.agent">
       <element name="agent">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
+         <oneOrMore>
+            <ref name="element.agentName"/>
+         </oneOrMore>
+         <optional>
+            <ref name="model.all-dates.choice"/>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <ref name="element.agentType"/>
+               <ref name="element.agentRole"/>
+               <ref name="element.relationType"/>
+               <ref name="element.placeName"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="element.descriptiveNote.optional"/>
+      </element>
+   </define>
+   <define name="element.agentName">
+      <element name="agentName">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
          <text/>
       </element>
    </define>
+   <define name="element.agentType">
+      <element name="agentType">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <text/>
+      </element>
+   </define>
+   <define name="element.agentRole">
+      <element name="agentRole">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <text/>
+      </element>
+   </define>
+   <!-- re-order once we're done with the first review...  grouping these for now since the definitions should be the same -->
+   <define name="element.agents">
+      <element name="agents">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <oneOrMore>
+            <ref name="element.agent"/>
+         </oneOrMore>
+         <ref name="element.descriptiveNote.optional"/>
+      </element>
+   </define>
+   <!-- formats / format ?? or something more direct / plural-ending (rather than plural-starting) -->
+   <define name="element.formsAvailable">
+      <element name="formAvailable">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <oneOrMore>
+            <ref name="element.formAvailable"/>
+         </oneOrMore>
+         <ref name="element.descriptiveNote.optional"/>
+      </element>
+   </define>
+   <define name="element.functions">
+      <element name="functions">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <oneOrMore>
+            <ref name="element.function"/>
+         </oneOrMore>
+         <ref name="element.descriptiveNote.optional"/>
+      </element>
+   </define>
+   <define name="element.formAvailable">
+      <element name="formAvailable">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <optional>
+            <ref name="element.abstract"/>
+         </optional>
+         <ref name="model.narrative-group.optional"/>
+         <zeroOrMore>
+            <ref name="element.relation"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <!-- regroup what's above later on -->
    <define name="element.biogHist">
       <element name="biogHist">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
