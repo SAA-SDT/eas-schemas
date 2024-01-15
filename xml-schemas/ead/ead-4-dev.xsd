@@ -227,11 +227,13 @@
    <xs:complexType name="archDesc">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -241,7 +243,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -547,8 +548,6 @@
    <xs:complexType name="did">
       <xs:choice maxOccurs="unbounded">
          <xs:element type="ead:container" name="container"/>
-         <xs:element type="ead:dao" name="dao"/>
-         <xs:element type="ead:daoSet" name="daoSet"/>
          <xs:element type="ead:didNote" name="didNote"/>
          <xs:element type="ead:langMaterial" name="langMaterial"/>
          <xs:element type="ead:materialSpec" name="materialSpec"/>
@@ -569,6 +568,57 @@
       <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="agents">
+      <xs:sequence>
+         <xs:element type="ead:agent" name="agent" maxOccurs="unbounded"/>
+         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="formsAvailable">
+      <xs:sequence>
+         <xs:element type="ead:formAvailable" name="formAvailable" maxOccurs="unbounded"/>
+         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="functions">
+      <xs:sequence>
+         <xs:element type="ead:function" name="function" maxOccurs="unbounded"/>
+         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="accessConditions">
@@ -617,27 +667,6 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="acqInfo">
-      <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
-         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:formattingExtension" name="formattingExtension"/>
-            <xs:element type="ead:p" name="p"/>
-         </xs:choice>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="altFormAvail">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
@@ -836,27 +865,6 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="odd">
-      <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
-         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:formattingExtension" name="formattingExtension"/>
-            <xs:element type="ead:p" name="p"/>
-         </xs:choice>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="orginalsLoc">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
@@ -1495,37 +1503,6 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="dao">
-      <xs:sequence>
-         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="label" type="xs:token"/>
-      <xs:attribute name="href" type="xs:anyURI"/>
-      <xs:attribute name="linkRole" type="xs:anyURI"/>
-      <xs:attribute name="linkTitle" type="xs:token"/>
-      <xs:attribute name="daoType" use="required" type="xs:token"/>
-      <xs:attribute name="otherDaoType" type="xs:token"/>
-      <xs:attribute name="coverage" type="xs:token"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="daoSet">
-      <xs:sequence>
-         <xs:element type="ead:dao" name="dao"/>
-         <xs:element type="ead:dao" name="dao" maxOccurs="unbounded"/>
-         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
    <xs:complexType name="didNote">
       <xs:sequence>
          <xs:element type="ead:p" name="p" maxOccurs="unbounded"/>
@@ -1832,6 +1809,54 @@
       <xs:attribute name="label" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="formAvailable">
+      <xs:sequence>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:formattingExtension" name="formattingExtension"/>
+            <xs:element type="ead:p" name="p"/>
+         </xs:choice>
+         <xs:element type="ead:relation"
+                     name="relation"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="function">
+      <xs:sequence>
+         <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetRole"
+                     name="targetRole"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="head" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:referringString" name="referringString"/>
@@ -1903,27 +1928,6 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="famName">
-      <xs:sequence>
-         <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
-         <xs:element type="ead:targetRole"
-                     name="targetRole"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="vocabularySource" type="xs:token"/>
-      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
-      <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="function">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
          <xs:element type="ead:targetRole"
@@ -2124,11 +2128,13 @@
    <xs:complexType name="c">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -2138,7 +2144,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2166,11 +2171,13 @@
    <xs:complexType name="c01">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -2180,7 +2187,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2648,11 +2654,13 @@
    <xs:complexType name="c02">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -2662,7 +2670,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2708,11 +2715,13 @@
    <xs:complexType name="c03">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -2722,7 +2731,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2750,11 +2758,13 @@
    <xs:complexType name="c04">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -2764,7 +2774,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2792,11 +2801,13 @@
    <xs:complexType name="c05">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -2806,7 +2817,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2834,11 +2844,13 @@
    <xs:complexType name="c06">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -2848,7 +2860,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2876,11 +2887,13 @@
    <xs:complexType name="c07">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -2890,7 +2903,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2918,11 +2930,13 @@
    <xs:complexType name="c08">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -2932,7 +2946,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2960,11 +2973,13 @@
    <xs:complexType name="c09">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -2974,7 +2989,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -3002,11 +3016,13 @@
    <xs:complexType name="c10">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -3016,7 +3032,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -3044,11 +3059,13 @@
    <xs:complexType name="c11">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -3058,7 +3075,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -3086,11 +3102,13 @@
    <xs:complexType name="c12">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:agents" name="agents" minOccurs="0"/>
+         <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
+         <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:acqInfo" name="acqInfo"/>
-            <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
@@ -3100,7 +3118,6 @@
             <xs:element type="ead:index" name="index"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:odd" name="odd"/>
-            <xs:element type="ead:orginalsLoc" name="orginalsLoc"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>

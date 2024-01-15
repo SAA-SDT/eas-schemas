@@ -36,12 +36,6 @@
         </element>
     </define>
     
-    <define name="element.altFormAvail">
-        <element name="altFormAvail">
-            <ref name="model.ead-narrative-elements"/>
-        </element>
-    </define>
-    
     <define name="element.appraisal">
         <element name="appraisal">
             <ref name="model.ead-narrative-elements"/>
@@ -53,10 +47,7 @@
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <!-- EAD3 already signaled the move to a single DSC, right? -->
             <optional>
                 <ref name="element.dsc"/>
@@ -74,10 +65,7 @@
         <element name="c">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c"/>
             </zeroOrMore>
@@ -88,10 +76,7 @@
         <element name="c01">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c02"/>
             </zeroOrMore>
@@ -102,10 +87,7 @@
         <element name="c02">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c03"/>
             </zeroOrMore>
@@ -116,10 +98,7 @@
         <element name="c03">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c04"/>
             </zeroOrMore>
@@ -130,10 +109,7 @@
         <element name="c04">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c05"/>
             </zeroOrMore>
@@ -144,10 +120,7 @@
         <element name="c05">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c06"/>
             </zeroOrMore>
@@ -158,10 +131,7 @@
         <element name="c06">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c07"/>
             </zeroOrMore>
@@ -172,10 +142,7 @@
         <element name="c07">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c08"/>
             </zeroOrMore>
@@ -186,10 +153,7 @@
         <element name="c08">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c09"/>
             </zeroOrMore>
@@ -200,10 +164,7 @@
         <element name="c09">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c10"/>
             </zeroOrMore>
@@ -214,10 +175,7 @@
         <element name="c10">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c11"/>
             </zeroOrMore>
@@ -228,10 +186,7 @@
         <element name="c11">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
             <zeroOrMore>
                 <ref name="element.c12"/>
             </zeroOrMore>
@@ -242,10 +197,7 @@
         <element name="c12">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <ref name="element.did"/>
-            <zeroOrMore>
-                <ref name="model.narrative-element-name-list"/>
-            </zeroOrMore>
+            <ref name="model.archDesc.levels-of-description"/>
         </element>
     </define>
     
@@ -294,8 +246,6 @@
             <oneOrMore>
                 <choice>
                     <ref name="element.container"/>
-                    <ref name="element.dao"/>
-                    <ref name="element.daoSet"/>
                     <ref name="element.didNote"/>
                     <ref name="element.langMaterial"/>
                     <ref name="element.materialSpec"/>
@@ -311,37 +261,6 @@
                     <ref name="element.unitTitle"/>
                 </choice> 
             </oneOrMore>
-        </element>
-    </define>
-    
-    <define name="element.dao">
-        <element name="dao">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>  
-            <ref name="attribute.label.optional"/>
-            <ref name="attribute-group.links.optional"/>
-            <attribute name="daoType">
-                <data type="token"/>
-            </attribute>
-            <optional>
-                <attribute name="otherDaoType">
-                    <data type="token"/>
-                </attribute>
-            </optional>
-            <optional>
-                <ref name="attribute.coverage"/>
-            </optional>
-            <ref name="element.descriptiveNote.optional"/>
-        </element>
-    </define>
-    
-    <define name="element.daoSet">
-        <element name="daoSet">
-            <ref name="attribute-group.global.optional"/>
-            <ref name="element.dao"/>
-            <oneOrMore>
-                <ref name="element.dao"/>
-            </oneOrMore>
-            <ref name="element.descriptiveNote.optional"/>
         </element>
     </define>
     
@@ -532,12 +451,6 @@
     
     <define name="element.odd">
         <element name="odd">
-            <ref name="model.ead-narrative-elements"/>
-        </element>
-    </define>
-    
-    <define name="element.originalsLoc">
-        <element name="orginalsLoc">
             <ref name="model.ead-narrative-elements"/>
         </element>
     </define>
@@ -1002,7 +915,6 @@
                 <ref name="element.accessConditions"/>
                 <ref name="element.accruals"/>
                 <ref name="element.acqInfo"/>
-                <ref name="element.altFormAvail"/>
                 <ref name="element.appraisal"/>
                 <ref name="element.arrangement"/>
                 <ref name="element.biogHist"/>
@@ -1012,7 +924,6 @@
                 <ref name="element.index"/>
                 <ref name="element.legalStatus"/>
                 <ref name="element.odd"/>
-                <ref name="element.originalsLoc"/>
                 <ref name="element.otherFindAid"/>
                 <ref name="element.physTech"/>
                 <ref name="element.preferCite"/>
