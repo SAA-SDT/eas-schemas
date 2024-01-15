@@ -6293,19 +6293,10 @@
                   </attribute>
                </optional>
             </interleave>
-            <oneOrMore>
-               <choice>
-                  <ref name="abbreviation"/>
-                  <ref name="expansion"/>
-                  <ref name="foreign"/>
-                  <ref name="lb"/>
-                  <ref name="ptr"/>
-                  <ref name="reference"/>
-                  <ref name="referringString"/>
-                  <ref name="span"/>
-                  <text/>
-               </choice>
-            </oneOrMore>
+            <data type="string"
+                  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+               <param name="pattern">(.|\n|\r)*\S(.|\n|\r)*</param>
+            </data>
          </group>
       </element>
    </define>

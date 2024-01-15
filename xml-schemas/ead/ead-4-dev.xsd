@@ -1575,28 +1575,27 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="part" mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-         <xs:element type="ead:abbreviation" name="abbreviation"/>
-         <xs:element type="ead:expansion" name="expansion"/>
-         <xs:element type="ead:foreign" name="foreign"/>
-         <xs:element type="ead:lb" name="lb"/>
-         <xs:element type="ead:ptr" name="ptr"/>
-         <xs:element type="ead:reference" name="reference"/>
-         <xs:element type="ead:referringString" name="referringString"/>
-         <xs:element type="ead:span" name="span"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   <xs:complexType name="part">
+      <xs:simpleContent>
+         <xs:restriction base="xs:anyType">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="(.|\n|\r)*\S(.|\n|\r)*"/>
+               </xs:restriction>
+            </xs:simpleType>
+            <xs:attribute name="audience" type="xs:NMTOKEN"/>
+            <xs:attribute name="id" type="xs:ID"/>
+            <xs:attribute name="target" type="xs:IDREFS"/>
+            <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+            <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+            <xs:attribute name="localType" type="xs:token"/>
+            <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+            <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+            <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+            <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+         </xs:restriction>
+      </xs:simpleContent>
    </xs:complexType>
    <xs:complexType name="targetRole" mixed="true">
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
