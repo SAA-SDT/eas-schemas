@@ -172,12 +172,11 @@
       <element ns="http://www.w3.org/1999/xhtml">
          <anyName/>
          <ref name="attribute-group.any.zeroOrMore"/>
-         <zeroOrMore>
-            <choice>
-               <text/>
+         <mixed>
+            <zeroOrMore>
                <ref name="element.anyHTML" ns="http://www.w3.org/1999/xhtml"/>
-            </choice>
-         </zeroOrMore>
+            </zeroOrMore>
+         </mixed>
       </element>
    </define>
    <define name="element.fromDate">

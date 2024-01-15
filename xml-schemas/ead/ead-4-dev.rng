@@ -4953,12 +4953,12 @@
                   <text/>
                </attribute>
             </zeroOrMore>
-            <oneOrMore>
-               <choice>
-                  <text/>
+            <interleave>
+               <text/>
+               <zeroOrMore>
                   <ref name="_1"/>
-               </choice>
-            </oneOrMore>
+               </zeroOrMore>
+            </interleave>
          </group>
       </element>
    </define>
