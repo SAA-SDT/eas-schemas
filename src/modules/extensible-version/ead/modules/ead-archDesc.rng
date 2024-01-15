@@ -20,6 +20,7 @@
    <define name="element.accessConditions">
       <element name="accessConditions">
          <ref name="model.ead-narrative-elements"/>
+         <ref name="attribute-group.linked-data.optional"/>
       </element>
    </define>
    <define name="element.accruals">
@@ -46,6 +47,7 @@
       <element name="archDesc">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -90,6 +92,7 @@
    <define name="element.c">
       <element name="c">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -102,6 +105,7 @@
    <define name="element.c01">
       <element name="c01">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -114,6 +118,7 @@
    <define name="element.c02">
       <element name="c02">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -126,6 +131,7 @@
    <define name="element.c03">
       <element name="c03">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -138,6 +144,7 @@
    <define name="element.c04">
       <element name="c04">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -150,6 +157,7 @@
    <define name="element.c05">
       <element name="c05">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -162,6 +170,7 @@
    <define name="element.c06">
       <element name="c06">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -174,6 +183,7 @@
    <define name="element.c07">
       <element name="c07">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -186,6 +196,7 @@
    <define name="element.c08">
       <element name="c08">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -198,6 +209,7 @@
    <define name="element.c09">
       <element name="c09">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -210,6 +222,7 @@
    <define name="element.c10">
       <element name="c10">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -222,6 +235,7 @@
    <define name="element.c11">
       <element name="c11">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -234,6 +248,7 @@
    <define name="element.c12">
       <element name="c12">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="element.did"/>
          <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
@@ -245,6 +260,7 @@
             <!-- do we need lang and script for containers??? -->
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.container.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="model.ead.mixed-content"/>
          <!-- agree that mixed content is no longer needed here, right? 
             <text/> 
@@ -375,6 +391,8 @@
          <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
       </element>
    </define>
+   <!-- placeholder for element.formsAvailable , which will also get
+        <ref name="attribute-group.linked-data.optional"/> -->
    <define name="element.function">
       <element name="function">
          <ref name="model.controlAccess-element-group"/>
@@ -463,6 +481,7 @@
       <element name="materialSpec">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="model.ead.mixed-content"/>
       </element>
    </define>
@@ -557,6 +576,7 @@
          <element name="unitType">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
             <text/>
          </element>
          <zeroOrMore>
@@ -572,6 +592,7 @@
       <element name="physFacet">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
       </element>
    </define>
@@ -963,6 +984,7 @@
    <define name="element.useConditions">
       <element name="useConditions">
          <ref name="model.ead-narrative-elements"/>
+         <ref name="attribute-group.linked-data.optional"/>
       </element>
    </define>
    <!-- MODELS -->
