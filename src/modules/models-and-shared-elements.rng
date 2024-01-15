@@ -61,61 +61,13 @@
             <optional>
                 <ref name="element.abstract"/>
             </optional>
-            <ref name="model.narrative-group-plus-chronList.optional"/>
+            <ref name="model.narrative-group.optional"/>
         </element>
     </define>
     
     <define name="element.biogHist" a:exclude-from="eac">
         <element name="biogHist">
             <ref name="model.ead-narrative-elements"/>
-        </element>
-    </define>
-     
-    <define name="element.chronItem">
-        <element name="chronItem">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.all-dates.choice"/>
-            <choice>
-                <group>
-                    <ref name="element.event"/>
-                    <optional>
-                        <ref name="element.place"/>
-                    </optional>
-                </group>
-                <oneOrMore>
-                    <ref name="element.chronItemSet"/>
-                </oneOrMore>
-            </choice>
-            <zeroOrMore>
-                <ref name="element.reference"/>
-            </zeroOrMore>
-        </element>
-    </define>
-    
-    <define name="element.chronItemSet">
-        <element name="chronItemSet">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <oneOrMore>
-                <ref name="element.event"/>
-            </oneOrMore>
-            <zeroOrMore>
-                <choice>
-                    <ref name="element.place"/>
-                    <ref name="element.reference"/>
-                </choice>
-            </zeroOrMore>
-        </element>
-    </define>
-    
-    <define name="element.chronList">
-        <element name="chronList">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <oneOrMore>
-                <ref name="element.chronItem"/>
-            </oneOrMore>
         </element>
     </define>
     
@@ -227,6 +179,22 @@
             <text/>
         </element>
     </define>
+    
+    <define name="element.formattingExtension">
+        <element name="formattingExtension">
+            <ref name="attribute-group.global.optional"/>
+            <oneOrMore>
+                <ref name="element.anyHTML"/>
+            </oneOrMore>
+        </element>
+    </define>
+    
+    <define name="element.anyHTML">
+        <element>
+            <anyName ns="http://www.w3.org/1999/xhtml"/>
+            <ref name="element.anyHTML"/> 
+        </element>
+    </define>
        
     <define name="element.fromDate">
         <element name="fromDate">
@@ -257,14 +225,6 @@
         </optional>
     </define>
     
-    <define name="element.item">
-        <element name="item">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.mixed-content.optional"/>
-        </element>
-    </define>
-    
     <define name="element.language">
         <element name="language">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -280,21 +240,6 @@
         <element name="lineBreak">
             <ref name="attribute-group.global.optional"/>
             <empty/>
-        </element>
-    </define>
-    
-    <define name="element.list">
-        <element name="list">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute-group.lists.optional"/>      
-            <ref name="element.head.optional"/>
-            <zeroOrMore>
-                <choice>
-                    <ref name="element.list"/>
-                    <ref name="element.item"/>
-                </choice>
-            </zeroOrMore>
         </element>
     </define>
 
@@ -472,7 +417,7 @@
         <optional>
             <ref name="element.abstract"/>
         </optional>
-        <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
+        <ref name="model.narrative-group.optional"/>
     </define>
     
     <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
@@ -484,13 +429,7 @@
         <optional>
             <ref name="element.abstract"/>
         </optional>
-        <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
-    </define>
-    
-    <define name="model.html.mixed-content.optional">
-        <!-- yet to be defined, but likely to be a branch -->
-        <!-- would also be XHTML, but still -->
-        <empty/>
+        <ref name="model.narrative-group.optional"/>
     </define>
     
     <define name="model.mixed-content.optional">
@@ -514,9 +453,10 @@
         </zeroOrMore>
     </define>
     
+    <!-- removing list, with more elements to follow-->
     <define name="model.narrative-group.optional" combine="interleave">
         <zeroOrMore>
-            <ref name="element.list"/>
+            <ref name="element.formattingExtension"/>
         </zeroOrMore>
     </define>
     <define name="model.narrative-group.optional" combine="interleave">
@@ -524,46 +464,7 @@
             <ref name="element.p"/>   
         </zeroOrMore>
     </define>
-    
-    <!-- list, p, chronlist -->
-    <define name="model.narrative-group-plus-chronList.optional">
-        <interleave>
-            <ref name="model.narrative-group.optional"/>
-            <zeroOrMore>
-                <ref name="element.chronList"/>
-            </zeroOrMore>
-        </interleave>
-    </define>
-    
-    <!-- list, p, chronlist, table -->
-    <define name="model.narrative-group-plus-chronList-plus-table.optional">
-        <interleave>
-            <ref name="model.narrative-group-plus-chronList.optional"/>
-            <zeroOrMore>
-                <ref name="element.table"/>
-            </zeroOrMore>
-        </interleave>
-    </define>
 
-    <!-- list, p, chronlist, blockquote -->
-    <define name="model.narrative-group-plus-chronList-plus-blockQuote.optional">
-        <interleave>
-            <ref name="model.narrative-group-plus-chronList.optional"/>
-            <zeroOrMore>
-                <ref name="element.blockQuote"/>
-            </zeroOrMore>
-        </interleave>
-    </define>
-    
-    <!-- list, p, chronlist, blockquote, table -->
-    <define name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional">
-        <interleave>
-            <ref name="model.narrative-group-plus-chronList-plus-blockQuote.optional"/>
-            <zeroOrMore>
-                <ref name="element.table"/>
-            </zeroOrMore>
-        </interleave>
-    </define>
     
     <!-- where to add num, footnote, and ??? -->
 

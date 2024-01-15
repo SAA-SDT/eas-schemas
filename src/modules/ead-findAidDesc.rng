@@ -12,28 +12,12 @@
                     <ref name="element.agent"/>
                     <ref name="element.citedRange"/>
                     <ref name="element.date"/>
-                    <ref name="element.div"/>
+                    <ref name="element.formattingExtension"/>
                     <ref name="element.place"/>
                     <ref name="element.title"/>
                 </choice>                     
             </oneOrMore>
         </element>       
-    </define>
-    
-    <!-- TO DO: confirm entire model, availability, etc. also, move definition based on availiabity, if necessary. -->
-    <define name="element.div">
-        <element name="div">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="element.head.optional"/>
-            <oneOrMore>
-                <choice>
-                    <ref name="model.narrative-group-plus-chronList.optional"/>
-                    <ref name="element.div"/>
-                </choice>
-            </oneOrMore>
-        </element>
-    </define>
-    
+    </define>    
 
 </grammar>
