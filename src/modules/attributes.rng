@@ -327,14 +327,6 @@
         </optional>
     </define>
     
-    <define a:exclude-from="eac" name="attribute.xpointer.optional">
-        <optional>
-            <attribute name="xpointer">
-                <data type="normalizedString"/>
-            </attribute>
-        </optional>
-    </define>
-    
     <!-- TO DO -->
     <!-- re-alphabeticize once we get everything settled.  for now, the @:*Encoding attributes, each defined separately, in case folks want to override any of these definitions -->
     <define name="attribute.addressTypeLineEncoding">

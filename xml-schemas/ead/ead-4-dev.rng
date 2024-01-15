@@ -4980,12 +4980,6 @@
                   </attribute>
                </optional>
             </interleave>
-            <optional>
-               <attribute name="entityref" ns="">
-                  <data type="ENTITY"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <oneOrMore>
                <choice>
                   <ref name="referringString"/>
@@ -6494,18 +6488,6 @@
                   </attribute>
                </optional>
             </interleave>
-            <optional>
-               <attribute name="xpointer" ns="">
-                  <data type="normalizedString"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="entityref" ns="">
-                  <data type="ENTITY"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <attribute name="daoType" ns="">
                <data type="token"
                      datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
@@ -10395,52 +10377,38 @@
    </define>
    <define name="ptr">
       <element name="ptr" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
+         <interleave>
             <optional>
-               <attribute name="xpointer" ns="">
-                  <data type="normalizedString"
+               <attribute name="audience" ns="">
+                  <data type="NMTOKEN"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <optional>
-               <attribute name="entityref" ns="">
-                  <data type="ENTITY"
+               <attribute name="id" ns="">
+                  <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="target" ns="">
+                  <data type="IDREFS"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
-         </group>
+            <zeroOrMore>
+               <attribute>
+                  <anyName>
+                     <except>
+                        <choice>
+                           <nsName ns="https://archivists.org/ns/ead/v4"/>
+                           <nsName ns=""/>
+                        </choice>
+                     </except>
+                  </anyName>
+                  <text/>
+               </attribute>
+            </zeroOrMore>
+         </interleave>
       </element>
    </define>
    <define name="footnote">

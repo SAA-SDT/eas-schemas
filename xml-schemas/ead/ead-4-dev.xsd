@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  
+  *****************************************************************
+  *                                                               *                
+  *                            EAD 4.0                            *
+  *                                                               *       
+  *****************************************************************
+  
+  Hosted by the Library of Congress at http://www.loc.gov/ead/
+  
+-->
 <xs:schema xmlns:ead="https://archivists.org/ns/ead/v4"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
@@ -1298,7 +1309,6 @@
       <xs:attribute name="href" type="xs:anyURI"/>
       <xs:attribute name="linkRole" type="xs:anyURI"/>
       <xs:attribute name="linkTitle" type="xs:token"/>
-      <xs:attribute name="entityref" type="xs:ENTITY"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="shortCode" mixed="true">
@@ -1638,8 +1648,6 @@
       <xs:attribute name="href" type="xs:anyURI"/>
       <xs:attribute name="linkRole" type="xs:anyURI"/>
       <xs:attribute name="linkTitle" type="xs:token"/>
-      <xs:attribute name="xpointer" type="xs:normalizedString"/>
-      <xs:attribute name="entityref" type="xs:ENTITY"/>
       <xs:attribute name="daoType" use="required" type="xs:token"/>
       <xs:attribute name="otherDaoType" type="xs:token"/>
       <xs:attribute name="coverage" type="xs:NMTOKEN"/>
@@ -2559,8 +2567,6 @@
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="xpointer" type="xs:normalizedString"/>
-      <xs:attribute name="entityref" type="xs:ENTITY"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="footnote">

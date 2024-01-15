@@ -335,7 +335,6 @@
             <ref name="attribute.encodingAnalog.optional"/>   
             <ref name="attribute.label.optional"/>
             <ref name="attribute-group.links.optional"/>
-            <ref name="attribute.xpointer.optional"/>
             <attribute name="daoType">
                 <data type="token"/>
             </attribute>
@@ -665,11 +664,10 @@
     </define>
     
     <!-- not needed for long, right? -->
-    <!-- that said, it would be good to keep the XPointer standard around separately -->
+    <!-- that said, it would be good to keep the XPointer standard around separately? -->
     <define name="element.ptr">
         <element name="ptr">
             <ref name="attribute-group.global.optional"/>
-            <ref name="attribute.xpointer.optional"/>
             <empty/>
         </element>
     </define>
