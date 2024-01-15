@@ -244,7 +244,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -257,6 +256,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -728,38 +728,6 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="bibliography">
-      <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
-         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:choice maxOccurs="unbounded">
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:list" name="list"/>
-               <xs:element type="ead:p" name="p"/>
-               <xs:element type="ead:chronList" name="chronList"/>
-               <xs:element type="ead:blockQuote" name="blockQuote"/>
-               <xs:element type="ead:table" name="table"/>
-            </xs:choice>
-            <xs:element type="ead:archRef" name="archRef"/>
-            <xs:element type="ead:bibRef" name="bibRef"/>
-         </xs:choice>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="vocabularySource" type="xs:token"/>
-      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
-      <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
    <xs:complexType name="biogHist">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
@@ -965,16 +933,12 @@
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:choice maxOccurs="unbounded">
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:list" name="list"/>
-               <xs:element type="ead:p" name="p"/>
-               <xs:element type="ead:chronList" name="chronList"/>
-               <xs:element type="ead:blockQuote" name="blockQuote"/>
-               <xs:element type="ead:table" name="table"/>
-            </xs:choice>
-            <xs:element type="ead:archRef" name="archRef"/>
-            <xs:element type="ead:bibRef" name="bibRef"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:list" name="list"/>
+            <xs:element type="ead:p" name="p"/>
+            <xs:element type="ead:chronList" name="chronList"/>
+            <xs:element type="ead:blockQuote" name="blockQuote"/>
+            <xs:element type="ead:table" name="table"/>
          </xs:choice>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -1065,20 +1029,44 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="publicationNote">
+      <xs:sequence>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:list" name="list"/>
+            <xs:element type="ead:p" name="p"/>
+            <xs:element type="ead:chronList" name="chronList"/>
+            <xs:element type="ead:blockQuote" name="blockQuote"/>
+            <xs:element type="ead:table" name="table"/>
+         </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="encodingAnalog" type="xs:token"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="relatedMaterial">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:choice maxOccurs="unbounded">
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:list" name="list"/>
-               <xs:element type="ead:p" name="p"/>
-               <xs:element type="ead:chronList" name="chronList"/>
-               <xs:element type="ead:blockQuote" name="blockQuote"/>
-               <xs:element type="ead:table" name="table"/>
-            </xs:choice>
-            <xs:element type="ead:archRef" name="archRef"/>
-            <xs:element type="ead:bibRef" name="bibRef"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:list" name="list"/>
+            <xs:element type="ead:p" name="p"/>
+            <xs:element type="ead:chronList" name="chronList"/>
+            <xs:element type="ead:blockQuote" name="blockQuote"/>
+            <xs:element type="ead:table" name="table"/>
          </xs:choice>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -1141,16 +1129,12 @@
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:choice maxOccurs="unbounded">
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:list" name="list"/>
-               <xs:element type="ead:p" name="p"/>
-               <xs:element type="ead:chronList" name="chronList"/>
-               <xs:element type="ead:blockQuote" name="blockQuote"/>
-               <xs:element type="ead:table" name="table"/>
-            </xs:choice>
-            <xs:element type="ead:archRef" name="archRef"/>
-            <xs:element type="ead:bibRef" name="bibRef"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:list" name="list"/>
+            <xs:element type="ead:p" name="p"/>
+            <xs:element type="ead:chronList" name="chronList"/>
+            <xs:element type="ead:blockQuote" name="blockQuote"/>
+            <xs:element type="ead:table" name="table"/>
          </xs:choice>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
@@ -2067,86 +2051,6 @@
       <xs:attribute name="rowsep" type="xs:boolean"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="archRef" mixed="true">
-      <xs:choice maxOccurs="unbounded">
-         <xs:choice maxOccurs="unbounded">
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:abbreviation" name="abbreviation"/>
-               <xs:element type="ead:expansion" name="expansion"/>
-               <xs:element type="ead:foreign" name="foreign"/>
-               <xs:element type="ead:lb" name="lb"/>
-               <xs:element type="ead:ptr" name="ptr"/>
-               <xs:element type="ead:reference" name="reference"/>
-               <xs:element type="ead:referringString" name="referringString"/>
-               <xs:element type="ead:span" name="span"/>
-            </xs:choice>
-            <xs:element type="ead:corpName" name="corpName"/>
-            <xs:element type="ead:famName" name="famName"/>
-            <xs:element type="ead:function" name="function"/>
-            <xs:element type="ead:genreForm" name="genreForm"/>
-            <xs:element type="ead:geogName" name="geogName"/>
-            <xs:element type="ead:name" name="name"/>
-            <xs:element type="ead:occupation" name="occupation"/>
-            <xs:element type="ead:persName" name="persName"/>
-            <xs:element type="ead:subject" name="subject"/>
-            <xs:element type="ead:title" name="title"/>
-         </xs:choice>
-         <xs:element type="ead:date" name="date"/>
-         <xs:element type="ead:footnote" name="footnote"/>
-         <xs:element type="ead:num" name="num"/>
-         <xs:element type="ead:quote" name="quote"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="bibRef" mixed="true">
-      <xs:choice maxOccurs="unbounded">
-         <xs:choice maxOccurs="unbounded">
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:abbreviation" name="abbreviation"/>
-               <xs:element type="ead:expansion" name="expansion"/>
-               <xs:element type="ead:foreign" name="foreign"/>
-               <xs:element type="ead:lb" name="lb"/>
-               <xs:element type="ead:ptr" name="ptr"/>
-               <xs:element type="ead:reference" name="reference"/>
-               <xs:element type="ead:referringString" name="referringString"/>
-               <xs:element type="ead:span" name="span"/>
-            </xs:choice>
-            <xs:element type="ead:corpName" name="corpName"/>
-            <xs:element type="ead:famName" name="famName"/>
-            <xs:element type="ead:function" name="function"/>
-            <xs:element type="ead:genreForm" name="genreForm"/>
-            <xs:element type="ead:geogName" name="geogName"/>
-            <xs:element type="ead:name" name="name"/>
-            <xs:element type="ead:occupation" name="occupation"/>
-            <xs:element type="ead:persName" name="persName"/>
-            <xs:element type="ead:subject" name="subject"/>
-            <xs:element type="ead:title" name="title"/>
-         </xs:choice>
-         <xs:element type="ead:date" name="date"/>
-         <xs:element type="ead:footnote" name="footnote"/>
-         <xs:element type="ead:num" name="num"/>
-         <xs:element type="ead:quote" name="quote"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
    <xs:complexType name="corpName">
       <xs:sequence>
          <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
@@ -2397,7 +2301,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -2410,6 +2313,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -2439,7 +2343,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -2452,6 +2355,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3038,7 +2942,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3051,6 +2954,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3199,7 +3103,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3212,6 +3115,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3306,7 +3210,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3319,6 +3222,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3348,7 +3252,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3361,6 +3264,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3390,7 +3294,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3403,6 +3306,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3432,7 +3336,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3445,6 +3348,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3474,7 +3378,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3487,6 +3390,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3516,7 +3420,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3529,6 +3432,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3558,7 +3462,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3571,6 +3474,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3600,7 +3504,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3613,6 +3516,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
@@ -3642,7 +3546,6 @@
             <xs:element type="ead:altFormAvail" name="altFormAvail"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
-            <xs:element type="ead:bibliography" name="bibliography"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:controlAccess" name="controlAccess"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
@@ -3655,6 +3558,7 @@
             <xs:element type="ead:physTech" name="physTech"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
+            <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>

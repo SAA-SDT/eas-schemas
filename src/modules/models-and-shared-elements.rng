@@ -485,7 +485,7 @@
         <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
     </define>
     
-    <!-- if we keep this... for bibliography, otherfindaid, separatedmaterial, and relatedmaterial.... rename it to something that makes sense (BORS?... i kid), and remodel it -->
+    <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
     <define name="model.ead-narrative-elements-PLUS">
         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
@@ -495,13 +495,7 @@
         <optional>
             <ref name="element.abstract"/>
         </optional>
-        <oneOrMore>
-            <choice>
-                <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
-                <ref name="element.archRef"/>
-                <ref name="element.bibRef"/>
-            </choice>
-        </oneOrMore>
+        <ref name="model.narrative-group-plus-chronList-plus-blockQuote-plus-table.optional"/>
     </define>
     
     <define name="model.html.mixed-content.optional">

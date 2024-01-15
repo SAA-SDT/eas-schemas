@@ -58,28 +58,9 @@
          </optional>
       </element>
    </define>
-   <define name="element.archRef">
-      <element name="archRef">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
-      </element>
-   </define>
    <define name="element.arrangement">
       <element name="arrangement">
          <ref name="model.ead-narrative-elements"/>
-      </element>
-   </define>
-   <define name="element.bibliography">
-      <element name="bibliography">
-         <ref name="model.ead-narrative-elements-PLUS"/>
-      </element>
-   </define>
-   <define name="element.bibRef">
-      <element name="bibRef">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
       </element>
    </define>
    <define name="element.blockQuote">
@@ -643,6 +624,11 @@
          </oneOrMore>
       </element>
    </define>
+   <define name="element.publicationNote">
+      <element name="publicationNote">
+         <ref name="model.ead-narrative-elements-PLUS"/>
+      </element>
+   </define>
    <define name="element.quote">
       <element name="quote">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -1077,7 +1063,6 @@
             <ref name="element.altFormAvail"/>
             <ref name="element.appraisal"/>
             <ref name="element.arrangement"/>
-            <ref name="element.bibliography"/>
             <ref name="element.biogHist"/>
             <ref name="element.controlAccess"/>
             <ref name="element.custodHist"/>
@@ -1090,6 +1075,7 @@
             <ref name="element.physTech"/>
             <ref name="element.preferCite"/>
             <ref name="element.processInfo"/>
+            <ref name="element.publicationNote"/>
             <ref name="element.relatedMaterial"/>
             <ref name="element.relations"/>
             <ref name="element.scopeContent"/>

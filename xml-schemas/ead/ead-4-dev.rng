@@ -424,7 +424,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -437,6 +436,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -2442,145 +2442,6 @@
          </group>
       </element>
    </define>
-   <define name="bibliography">
-      <element name="bibliography" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="vocabularySource" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="vocabularySourceURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="valueURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="encodingAnalog" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <ref name="head"/>
-            </optional>
-            <optional>
-               <ref name="abstract"/>
-            </optional>
-            <oneOrMore>
-               <choice>
-                  <interleave>
-                     <zeroOrMore>
-                        <ref name="list"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="p"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="chronList"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="blockQuote"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="table"/>
-                     </zeroOrMore>
-                  </interleave>
-                  <ref name="archRef"/>
-                  <ref name="bibRef"/>
-               </choice>
-            </oneOrMore>
-         </group>
-      </element>
-   </define>
    <define name="biogHist">
       <element name="biogHist" ns="https://archivists.org/ns/ead/v4">
          <group>
@@ -3537,29 +3398,23 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <oneOrMore>
-               <choice>
-                  <interleave>
-                     <zeroOrMore>
-                        <ref name="list"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="p"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="chronList"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="blockQuote"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="table"/>
-                     </zeroOrMore>
-                  </interleave>
-                  <ref name="archRef"/>
-                  <ref name="bibRef"/>
-               </choice>
-            </oneOrMore>
+            <interleave>
+               <zeroOrMore>
+                  <ref name="list"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="p"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="chronList"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="blockQuote"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="table"/>
+               </zeroOrMore>
+            </interleave>
          </group>
       </element>
    </define>
@@ -3884,6 +3739,139 @@
          </group>
       </element>
    </define>
+   <define name="publicationNote">
+      <element name="publicationNote" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="NMTOKEN"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="vocabularySource" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="vocabularySourceURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="valueURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="encodingAnalog" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <ref name="head"/>
+            </optional>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
+            <interleave>
+               <zeroOrMore>
+                  <ref name="list"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="p"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="chronList"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="blockQuote"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="table"/>
+               </zeroOrMore>
+            </interleave>
+         </group>
+      </element>
+   </define>
    <define name="relatedMaterial">
       <element name="relatedMaterial" ns="https://archivists.org/ns/ead/v4">
          <group>
@@ -3997,29 +3985,23 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <oneOrMore>
-               <choice>
-                  <interleave>
-                     <zeroOrMore>
-                        <ref name="list"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="p"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="chronList"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="blockQuote"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="table"/>
-                     </zeroOrMore>
-                  </interleave>
-                  <ref name="archRef"/>
-                  <ref name="bibRef"/>
-               </choice>
-            </oneOrMore>
+            <interleave>
+               <zeroOrMore>
+                  <ref name="list"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="p"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="chronList"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="blockQuote"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="table"/>
+               </zeroOrMore>
+            </interleave>
          </group>
       </element>
    </define>
@@ -4327,29 +4309,23 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <oneOrMore>
-               <choice>
-                  <interleave>
-                     <zeroOrMore>
-                        <ref name="list"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="p"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="chronList"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="blockQuote"/>
-                     </zeroOrMore>
-                     <zeroOrMore>
-                        <ref name="table"/>
-                     </zeroOrMore>
-                  </interleave>
-                  <ref name="archRef"/>
-                  <ref name="bibRef"/>
-               </choice>
-            </oneOrMore>
+            <interleave>
+               <zeroOrMore>
+                  <ref name="list"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="p"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="chronList"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="blockQuote"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="table"/>
+               </zeroOrMore>
+            </interleave>
          </group>
       </element>
    </define>
@@ -8381,232 +8357,6 @@
          </group>
       </element>
    </define>
-   <define name="archRef">
-      <element name="archRef" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <optional>
-               <attribute name="base" ns="">
-                  <data type="anyURI"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <oneOrMore>
-               <choice>
-                  <oneOrMore>
-                     <choice>
-                        <oneOrMore>
-                           <choice>
-                              <ref name="abbreviation"/>
-                              <ref name="expansion"/>
-                              <ref name="foreign"/>
-                              <ref name="lb"/>
-                              <ref name="ptr"/>
-                              <ref name="reference"/>
-                              <ref name="referringString"/>
-                              <ref name="span"/>
-                              <text/>
-                           </choice>
-                        </oneOrMore>
-                        <ref name="corpName"/>
-                        <ref name="famName"/>
-                        <ref name="function"/>
-                        <ref name="genreForm"/>
-                        <ref name="geogName"/>
-                        <ref name="name"/>
-                        <ref name="occupation"/>
-                        <ref name="persName"/>
-                        <ref name="subject"/>
-                        <ref name="title"/>
-                     </choice>
-                  </oneOrMore>
-                  <ref name="date"/>
-                  <ref name="footnote"/>
-                  <ref name="num"/>
-                  <ref name="quote"/>
-               </choice>
-            </oneOrMore>
-         </group>
-      </element>
-   </define>
-   <define name="bibRef">
-      <element name="bibRef" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <optional>
-               <attribute name="base" ns="">
-                  <data type="anyURI"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="NMTOKEN"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <oneOrMore>
-               <choice>
-                  <oneOrMore>
-                     <choice>
-                        <oneOrMore>
-                           <choice>
-                              <ref name="abbreviation"/>
-                              <ref name="expansion"/>
-                              <ref name="foreign"/>
-                              <ref name="lb"/>
-                              <ref name="ptr"/>
-                              <ref name="reference"/>
-                              <ref name="referringString"/>
-                              <ref name="span"/>
-                              <text/>
-                           </choice>
-                        </oneOrMore>
-                        <ref name="corpName"/>
-                        <ref name="famName"/>
-                        <ref name="function"/>
-                        <ref name="genreForm"/>
-                        <ref name="geogName"/>
-                        <ref name="name"/>
-                        <ref name="occupation"/>
-                        <ref name="persName"/>
-                        <ref name="subject"/>
-                        <ref name="title"/>
-                     </choice>
-                  </oneOrMore>
-                  <ref name="date"/>
-                  <ref name="footnote"/>
-                  <ref name="num"/>
-                  <ref name="quote"/>
-               </choice>
-            </oneOrMore>
-         </group>
-      </element>
-   </define>
    <define name="corpName">
       <element name="corpName" ns="https://archivists.org/ns/ead/v4">
          <group>
@@ -9742,7 +9492,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -9755,6 +9504,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -9852,7 +9602,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -9865,6 +9614,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -12556,7 +12306,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -12569,6 +12318,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -13158,7 +12908,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -13171,6 +12920,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -13428,7 +13178,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -13441,6 +13190,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -13538,7 +13288,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -13551,6 +13300,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -13648,7 +13398,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -13661,6 +13410,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -13758,7 +13508,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -13771,6 +13520,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -13868,7 +13618,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -13881,6 +13630,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -13978,7 +13728,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -13991,6 +13740,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -14088,7 +13838,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -14101,6 +13850,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -14198,7 +13948,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -14211,6 +13960,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
@@ -14308,7 +14058,6 @@
                   <ref name="altFormAvail"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
-                  <ref name="bibliography"/>
                   <ref name="biogHist"/>
                   <ref name="controlAccess"/>
                   <ref name="custodHist"/>
@@ -14321,6 +14070,7 @@
                   <ref name="physTech"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
+                  <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="relations"/>
                   <ref name="scopeContent"/>
