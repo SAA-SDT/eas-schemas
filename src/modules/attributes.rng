@@ -130,14 +130,6 @@
         </optional>
     </define>
     
-    <define name="attribute.encodingAnalog.optional">
-        <optional>
-            <attribute name="encodingAnalog">
-                <data type="token"/>
-            </attribute>  
-        </optional>  
-    </define>
-    
     <define name="attribute.era.optional">
         <optional>
             <attribute name="era">
@@ -629,10 +621,6 @@
     
     <define name="attribute-group.container.optional" combine="interleave">
         <ref name="attribute.containerId.optional"/>
-    </define>
-    
-    <define name="attribute-group.container.optional" combine="interleave">
-        <ref name="attribute.encodingAnalog.optional"/>
     </define>
     
     <define name="attribute-group.container.optional" combine="interleave">

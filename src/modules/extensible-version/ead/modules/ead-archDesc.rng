@@ -5,7 +5,6 @@
     
     <!-- to do:     
         review label attribute
-                encodingAnalog
                 localType
                 etc.
         
@@ -299,7 +298,6 @@
    <define name="element.dao">
       <element name="dao">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute.encodingAnalog.optional"/>
          <ref name="attribute.label.optional"/>
          <ref name="attribute-group.links.optional"/>
          <attribute name="daoType">
@@ -422,7 +420,6 @@
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.label.optional"/>
-         <ref name="attribute.encodingAnalog.optional"/>
          <oneOrMore>
             <choice>
                <ref name="element.language"/>
@@ -437,7 +434,6 @@
       <element name="languageSet">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.encodingAnalog.optional"/>
          <oneOrMore>
             <ref name="element.language"/>
          </oneOrMore>
@@ -507,7 +503,6 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.label.optional"/>
-         <ref name="attribute.encodingAnalog.optional"/>
          <oneOrMore>
             <choice>
                <ref name="element.corpName"/>
@@ -913,7 +908,6 @@
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.label.optional"/>
-         <ref name="attribute.encodingAnalog.optional"/>
          <ref name="attribute.unitDateType.optional"/>
          <ref name="attribute.dateChar.optional"/>
          <!-- also bundled together with more attributes for EAC / unidatestructured.
@@ -932,7 +926,6 @@
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.label.optional"/>
-         <ref name="attribute.encodingAnalog.optional"/>
          <ref name="attribute.unitDateType.optional"/>
          <ref name="attribute.dateChar.optional"/>
          <!-- also bundled together with more attributes for EAC / unidatestructured.
@@ -953,7 +946,6 @@
          <ref name="attribute.label.optional"/>
          <ref name="attribute.countryCode.optional"/>
          <ref name="attribute.repositoryCode.optional"/>
-         <ref name="attribute.encodingAnalog.optional"/>
          <ref name="model.ead.mixed-content"/>
       </element>
    </define>
@@ -963,7 +955,6 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
          <ref name="attribute.label.optional"/>
-         <ref name="attribute.encodingAnalog.optional"/>
          <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
       </element>
    </define>

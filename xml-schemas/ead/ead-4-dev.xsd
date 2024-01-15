@@ -954,7 +954,6 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="physTech">
@@ -1054,7 +1053,6 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="relatedMaterial">
@@ -1082,7 +1080,6 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="relations">
@@ -1150,7 +1147,6 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="useConditions">
@@ -1399,33 +1395,10 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="p" mixed="true">
-      <xs:choice maxOccurs="unbounded">
-         <xs:choice maxOccurs="unbounded">
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:abbreviation" name="abbreviation"/>
-               <xs:element type="ead:expansion" name="expansion"/>
-               <xs:element type="ead:foreign" name="foreign"/>
-               <xs:element type="ead:lb" name="lb"/>
-               <xs:element type="ead:ptr" name="ptr"/>
-               <xs:element type="ead:reference" name="reference"/>
-               <xs:element type="ead:referringString" name="referringString"/>
-               <xs:element type="ead:span" name="span"/>
-            </xs:choice>
-            <xs:element type="ead:corpName" name="corpName"/>
-            <xs:element type="ead:famName" name="famName"/>
-            <xs:element type="ead:function" name="function"/>
-            <xs:element type="ead:genreForm" name="genreForm"/>
-            <xs:element type="ead:geogName" name="geogName"/>
-            <xs:element type="ead:name" name="name"/>
-            <xs:element type="ead:occupation" name="occupation"/>
-            <xs:element type="ead:persName" name="persName"/>
-            <xs:element type="ead:subject" name="subject"/>
-            <xs:element type="ead:title" name="title"/>
-         </xs:choice>
-         <xs:element type="ead:date" name="date"/>
-         <xs:element type="ead:footnote" name="footnote"/>
-         <xs:element type="ead:num" name="num"/>
-         <xs:element type="ead:quote" name="quote"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
+         <xs:element type="ead:span" name="span"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1631,7 +1604,6 @@
       <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="containerId" type="xs:token"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="parent" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
@@ -1650,7 +1622,6 @@
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="href" type="xs:anyURI"/>
       <xs:attribute name="linkRole" type="xs:anyURI"/>
@@ -1704,7 +1675,6 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="label" type="xs:token"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="materialSpec" mixed="true">
@@ -1750,7 +1720,6 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="label" type="xs:token"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="physDescSet">
@@ -1878,7 +1847,6 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="label" type="xs:token"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:attribute name="unitDateType" type="xs:NMTOKEN"/>
       <xs:attribute name="dateChar" type="xs:NMTOKEN"/>
       <xs:attribute name="calendar" type="xs:NMTOKEN"/>
@@ -1902,7 +1870,6 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="label" type="xs:token"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:attribute name="unitDateType" type="xs:NMTOKEN"/>
       <xs:attribute name="dateChar" type="xs:NMTOKEN"/>
       <xs:attribute name="calendar" type="xs:NMTOKEN"/>
@@ -1934,7 +1901,6 @@
       <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="countryCode" type="xs:NMTOKEN"/>
       <xs:attribute name="repositoryCode" type="xs:token"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitTitle" mixed="true">
@@ -1980,7 +1946,6 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="label" type="xs:token"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="abstract" mixed="true">
@@ -2455,119 +2420,6 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="abbreviation" mixed="true">
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="expan" type="xs:token"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="expansion" mixed="true">
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="abbr" type="xs:token"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="foreign" mixed="true">
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="lb">
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="ptr">
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="footnote">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-         <xs:element type="ead:list" name="list"/>
-         <xs:element type="ead:p" name="p"/>
-         <xs:element type="ead:chronList" name="chronList"/>
-         <xs:element type="ead:blockQuote" name="blockQuote"/>
-         <xs:element type="ead:table" name="table"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="num" mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-         <xs:element type="ead:abbreviation" name="abbreviation"/>
-         <xs:element type="ead:expansion" name="expansion"/>
-         <xs:element type="ead:foreign" name="foreign"/>
-         <xs:element type="ead:lb" name="lb"/>
-         <xs:element type="ead:ptr" name="ptr"/>
-         <xs:element type="ead:reference" name="reference"/>
-         <xs:element type="ead:referringString" name="referringString"/>
-         <xs:element type="ead:span" name="span"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="quote" mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-         <xs:element type="ead:abbreviation" name="abbreviation"/>
-         <xs:element type="ead:expansion" name="expansion"/>
-         <xs:element type="ead:foreign" name="foreign"/>
-         <xs:element type="ead:lb" name="lb"/>
-         <xs:element type="ead:ptr" name="ptr"/>
-         <xs:element type="ead:reference" name="reference"/>
-         <xs:element type="ead:referringString" name="referringString"/>
-         <xs:element type="ead:span" name="span"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:NMTOKEN"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="style" type="xs:normalizedString"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
    <xs:complexType name="chronItem">
       <xs:sequence>
          <xs:choice>
@@ -2679,6 +2531,56 @@
       </xs:attribute>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="abbreviation" mixed="true">
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="expan" type="xs:token"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="expansion" mixed="true">
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="abbr" type="xs:token"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="foreign" mixed="true">
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="lb">
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="ptr">
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="language" mixed="true">
       <xs:attribute name="audience" type="xs:NMTOKEN"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2706,7 +2608,6 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="encodingAnalog" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="quantity" mixed="true">
@@ -2797,6 +2698,69 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="footnote">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element type="ead:list" name="list"/>
+         <xs:element type="ead:p" name="p"/>
+         <xs:element type="ead:chronList" name="chronList"/>
+         <xs:element type="ead:blockQuote" name="blockQuote"/>
+         <xs:element type="ead:table" name="table"/>
+      </xs:choice>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="num" mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element type="ead:abbreviation" name="abbreviation"/>
+         <xs:element type="ead:expansion" name="expansion"/>
+         <xs:element type="ead:foreign" name="foreign"/>
+         <xs:element type="ead:lb" name="lb"/>
+         <xs:element type="ead:ptr" name="ptr"/>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
+         <xs:element type="ead:span" name="span"/>
+      </xs:choice>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="base" type="xs:anyURI"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="quote" mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element type="ead:abbreviation" name="abbreviation"/>
+         <xs:element type="ead:expansion" name="expansion"/>
+         <xs:element type="ead:foreign" name="foreign"/>
+         <xs:element type="ead:lb" name="lb"/>
+         <xs:element type="ead:ptr" name="ptr"/>
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
+         <xs:element type="ead:span" name="span"/>
+      </xs:choice>
+      <xs:attribute name="audience" type="xs:NMTOKEN"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="style" type="xs:normalizedString"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="thead">
