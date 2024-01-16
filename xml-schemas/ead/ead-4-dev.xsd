@@ -248,7 +248,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -626,7 +625,6 @@
    </xs:complexType>
    <xs:complexType name="accessConditions">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -650,7 +648,6 @@
    </xs:complexType>
    <xs:complexType name="accruals">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -671,7 +668,6 @@
    </xs:complexType>
    <xs:complexType name="acqInfo">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -692,7 +688,6 @@
    </xs:complexType>
    <xs:complexType name="appraisal">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -713,7 +708,6 @@
    </xs:complexType>
    <xs:complexType name="arrangement">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -734,7 +728,6 @@
    </xs:complexType>
    <xs:complexType name="biogHist">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -754,21 +747,18 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="controlAccess">
-      <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
-         <xs:choice maxOccurs="unbounded">
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:formattingExtension" name="formattingExtension"/>
-               <xs:element type="ead:p" name="p"/>
-            </xs:choice>
-            <xs:element type="ead:function" name="function"/>
-            <xs:element type="ead:genreForm" name="genreForm"/>
-            <xs:element type="ead:geogName" name="geogName"/>
-            <xs:element type="ead:occupation" name="occupation"/>
-            <xs:element type="ead:subject" name="subject"/>
-            <xs:element type="ead:title" name="title"/>
+      <xs:choice maxOccurs="unbounded">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:formattingExtension" name="formattingExtension"/>
+            <xs:element type="ead:p" name="p"/>
          </xs:choice>
-      </xs:sequence>
+         <xs:element type="ead:function" name="function"/>
+         <xs:element type="ead:genreForm" name="genreForm"/>
+         <xs:element type="ead:geogName" name="geogName"/>
+         <xs:element type="ead:occupation" name="occupation"/>
+         <xs:element type="ead:subject" name="subject"/>
+         <xs:element type="ead:title" name="title"/>
+      </xs:choice>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -779,7 +769,6 @@
    </xs:complexType>
    <xs:complexType name="custodHist">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -800,7 +789,6 @@
    </xs:complexType>
    <xs:complexType name="filePlan">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -820,16 +808,13 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="index">
-      <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
-         <xs:choice maxOccurs="unbounded">
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:element type="ead:formattingExtension" name="formattingExtension"/>
-               <xs:element type="ead:p" name="p"/>
-            </xs:choice>
-            <xs:element type="ead:indexEntry" name="indexEntry"/>
+      <xs:choice maxOccurs="unbounded">
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:formattingExtension" name="formattingExtension"/>
+            <xs:element type="ead:p" name="p"/>
          </xs:choice>
-      </xs:sequence>
+         <xs:element type="ead:indexEntry" name="indexEntry"/>
+      </xs:choice>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -844,7 +829,6 @@
    </xs:complexType>
    <xs:complexType name="legalStatus">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -865,7 +849,6 @@
    </xs:complexType>
    <xs:complexType name="odd">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -886,12 +869,12 @@
    </xs:complexType>
    <xs:complexType name="otherFindAid">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
             <xs:element type="ead:p" name="p"/>
          </xs:choice>
+         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -910,7 +893,6 @@
    </xs:complexType>
    <xs:complexType name="physTech">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -931,7 +913,6 @@
    </xs:complexType>
    <xs:complexType name="preferCite">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -952,7 +933,6 @@
    </xs:complexType>
    <xs:complexType name="processInfo">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -973,12 +953,12 @@
    </xs:complexType>
    <xs:complexType name="publicationNote">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
             <xs:element type="ead:p" name="p"/>
          </xs:choice>
+         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -997,12 +977,12 @@
    </xs:complexType>
    <xs:complexType name="relatedMaterial">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
             <xs:element type="ead:p" name="p"/>
          </xs:choice>
+         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1019,25 +999,8 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="relations">
-      <xs:sequence>
-         <xs:element type="ead:relation" name="relation" maxOccurs="unbounded"/>
-         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
    <xs:complexType name="scopeContent">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -1058,12 +1021,12 @@
    </xs:complexType>
    <xs:complexType name="separatedMaterial">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
             <xs:element type="ead:p" name="p"/>
          </xs:choice>
+         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1082,7 +1045,6 @@
    </xs:complexType>
    <xs:complexType name="useConditions">
       <xs:sequence>
-         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
@@ -1776,10 +1738,7 @@
             <xs:element type="ead:formattingExtension" name="formattingExtension"/>
             <xs:element type="ead:p" name="p"/>
          </xs:choice>
-         <xs:element type="ead:relation"
-                     name="relation"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
+         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1788,12 +1747,12 @@
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="vocabularySource" type="xs:token"/>
-      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
-      <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="function">
@@ -1832,21 +1791,6 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="head" mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-         <xs:element type="ead:referringString" name="referringString"/>
-         <xs:element type="ead:span" name="span"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1991,26 +1935,15 @@
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="relation">
+   <xs:complexType name="relations">
       <xs:sequence>
-         <xs:element type="ead:targetEntity" name="targetEntity"/>
-         <xs:choice minOccurs="0">
-            <xs:element type="ead:date" name="date"/>
-            <xs:element type="ead:dateRange" name="dateRange"/>
-            <xs:element type="ead:dateSet" name="dateSet"/>
-         </xs:choice>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:place" name="place"/>
-            <xs:element type="ead:relationType" name="relationType"/>
-            <xs:element type="ead:targetRole" name="targetRole"/>
-            <xs:element type="ead:targetType" name="targetType"/>
-         </xs:choice>
+         <xs:element type="ead:relation" name="relation" maxOccurs="unbounded"/>
          <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
-         <xs:element type="ead:objectXMLWrap" name="objectXMLWrap" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -2043,7 +1976,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -2089,7 +2021,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -2548,18 +2479,28 @@
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="targetEntity">
+   <xs:complexType name="relation">
       <xs:sequence>
-         <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+         <xs:element type="ead:targetEntity" name="targetEntity"/>
+         <xs:choice minOccurs="0">
+            <xs:element type="ead:date" name="date"/>
+            <xs:element type="ead:dateRange" name="dateRange"/>
+            <xs:element type="ead:dateSet" name="dateSet"/>
+         </xs:choice>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:place" name="place"/>
+            <xs:element type="ead:relationType" name="relationType"/>
+            <xs:element type="ead:targetRole" name="targetRole"/>
+            <xs:element type="ead:targetType" name="targetType"/>
+         </xs:choice>
+         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
+         <xs:element type="ead:objectXMLWrap" name="objectXMLWrap" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
       <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="vocabularySource" type="xs:token"/>
-      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
-      <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2590,7 +2531,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -2629,6 +2569,23 @@
       <xs:attribute name="scriptCode" type="xs:NMTOKEN"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="targetEntity">
+      <xs:sequence>
+         <xs:element type="ead:part" name="part" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="c03">
       <xs:sequence>
          <xs:element type="ead:did" name="did"/>
@@ -2654,7 +2611,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -2700,7 +2656,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -2746,7 +2701,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -2792,7 +2746,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -2838,7 +2791,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -2884,7 +2836,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -2930,7 +2881,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -2976,7 +2926,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -3022,7 +2971,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
@@ -3068,7 +3016,6 @@
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
-            <xs:element type="ead:relations" name="relations"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
             <xs:element type="ead:useConditions" name="useConditions"/>

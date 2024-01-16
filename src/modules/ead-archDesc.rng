@@ -17,6 +17,28 @@
     -->
     
     <!-- ELEMENTS -->    
+    
+    <!-- move the next two, once we're done -->
+    <!-- formats / format ?? or something more direct / plural-ending (rather than plural-starting) -->
+    <define name="element.formsAvailable">
+        <element name="formsAvailable">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <oneOrMore>
+                <ref name="element.formAvailable"/>
+            </oneOrMore>
+            <ref name="element.descriptiveNote.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.formAvailable">
+        <element name="formAvailable">
+            <ref name="model.ead-narrative-elements-plus-relations"/>
+        </element>
+    </define>
+    
+    
+    
     <define name="element.accessConditions">
         <element name="accessConditions">
             <ref name="model.ead-narrative-elements"/>
@@ -189,7 +211,6 @@
     <define name="element.controlAccess">
         <element name="controlAccess">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <ref name="element.head.optional"/>
             <oneOrMore>
                 <choice>
                     <!-- if we keep all this, right?  if not, then we'd just have oneOrMore controlaccess elements? -->
@@ -300,7 +321,6 @@
             
             let's use the same, minux index and listhead.
             -->
-            <ref name="element.head.optional"/>
             <oneOrMore>
                 <choice>
                     <ref name="model.narrative-group.optional"/>
@@ -405,7 +425,7 @@
     
     <define name="element.otherFindAid">
         <element name="otherFindAid">
-            <ref name="model.ead-narrative-elements-PLUS"/>
+            <ref name="model.ead-narrative-elements-plus-relations"/>
         </element>
     </define>
     
@@ -517,7 +537,7 @@
     
     <define name="element.publicationNote">
         <element name="publicationNote">
-            <ref name="model.ead-narrative-elements-PLUS"/>
+            <ref name="model.ead-narrative-elements-plus-relations"/>
         </element>
     </define>
     
@@ -543,94 +563,7 @@
     
     <define name="element.relatedMaterial">
         <element name="relatedMaterial">
-            <ref name="model.ead-narrative-elements-PLUS"/>
-        </element>
-    </define>
-    
-    <define name="element.row">
-        <element name="row">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-            <optional>
-                <attribute name="rowsep">
-                    <data type="boolean"/>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="valign">
-                    <choice>
-                        <value>top</value>
-                        <value>middle</value>
-                        <value>bottom</value>
-                    </choice>
-                </attribute>
-            </optional>
-            <oneOrMore>
-                <element name="entry">
-                    <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-                    <optional>
-                        <attribute name="colname">
-                            <data type="NMTOKEN"/>
-                        </attribute>
-                    </optional>
-                    <optional>
-                        <attribute name="namest">
-                            <data type="NMTOKEN"/>
-                        </attribute>
-                    </optional>
-                    <optional>
-                        <attribute name="nameend">
-                            <data type="NMTOKEN"/>
-                        </attribute>
-                    </optional>
-                    <optional>
-                        <attribute name="morerows">
-                            <data type="NMTOKEN"/>
-                        </attribute>
-                    </optional>
-                    <ref name="attribute.group.table-separators.optional"/>
-                    <optional>
-                        <attribute name="align">
-                            <choice>
-                                <value>left</value>
-                                <value>right</value>
-                                <value>center</value>
-                                <value>justify</value>
-                                <value>char</value>
-                            </choice>
-                        </attribute>
-                    </optional>
-                    <optional>
-                        <attribute name="char"/>
-                    </optional>
-                    <optional>
-                        <attribute name="charoff">
-                            <data type="NMTOKEN"/>
-                        </attribute>
-                    </optional>
-                    <optional>
-                        <attribute name="valign">
-                            <choice>
-                                <value>top</value>
-                                <value>middle</value>
-                                <value>bottom</value>
-                            </choice>
-                        </attribute>
-                    </optional>
-                    <zeroOrMore>
-                        <!-- 
-                        EAD2002
-                        [text], abbr, address, archref, bibref, corpname, date, emph, expan, extptr, extref, 
-                        famname, function, genreform, geogname, lb, linkgrp, list, name, note, num, occupation, 
-                        origination, persname, ptr, ref, repository, subject, title, unitdate, unittitle
-                        
-                        EAD3 (same as unittitle, in other words).
-                        [text], abbr, corpname, date, emph, expan, famname, footnote, foreign, function, genreform, 
-                        geogname, lb, list, name, num, occupation, persname, ptr, quote, ref, subject, title
-                        -->
-                        <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
-                    </zeroOrMore>
-                </element>
-            </oneOrMore>
+            <ref name="model.ead-narrative-elements-plus-relations"/>
         </element>
     </define>
     
@@ -642,7 +575,7 @@
     
     <define name="element.separatedMaterial">
         <element name="separatedMaterial">
-            <ref name="model.ead-narrative-elements-PLUS"/>
+            <ref name="model.ead-narrative-elements-plus-relations"/>
         </element>
     </define>
     
@@ -812,35 +745,6 @@
             </choice>
         </zeroOrMore>
     </define>
-    
-
-    <define name="model.narrative-element-name-list">
-        <oneOrMore>
-            <choice>
-                <ref name="element.accessConditions"/>
-                <ref name="element.accruals"/>
-                <ref name="element.acqInfo"/>
-                <ref name="element.appraisal"/>
-                <ref name="element.arrangement"/>
-                <ref name="element.biogHist"/>
-                <ref name="element.controlAccess"/>
-                <ref name="element.custodHist"/>
-                <ref name="element.filePlan"/>
-                <ref name="element.index"/>
-                <ref name="element.legalStatus"/>
-                <ref name="element.odd"/>
-                <ref name="element.otherFindAid"/>
-                <ref name="element.physTech"/>
-                <ref name="element.preferCite"/>
-                <ref name="element.processInfo"/>
-                <ref name="element.publicationNote"/>
-                <ref name="element.relatedMaterial"/>
-                <ref name="element.relations"/>
-                <ref name="element.scopeContent"/>
-                <ref name="element.separatedMaterial"/>
-                <ref name="element.useConditions"/>
-            </choice>
-        </oneOrMore>
-    </define>
+  
 
 </grammar>

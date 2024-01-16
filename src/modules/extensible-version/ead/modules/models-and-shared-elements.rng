@@ -60,6 +60,33 @@
          <ref name="model.narrative-element-name-list"/>
       </zeroOrMore>
    </define>
+   <define name="model.narrative-element-name-list">
+      <oneOrMore>
+         <choice>
+            <ref name="element.accessConditions"/>
+            <ref name="element.accruals"/>
+            <ref name="element.acqInfo"/>
+            <ref name="element.appraisal"/>
+            <ref name="element.arrangement"/>
+            <ref name="element.biogHist"/>
+            <ref name="element.controlAccess"/>
+            <ref name="element.custodHist"/>
+            <ref name="element.filePlan"/>
+            <ref name="element.index"/>
+            <ref name="element.legalStatus"/>
+            <ref name="element.odd"/>
+            <ref name="element.otherFindAid"/>
+            <ref name="element.physTech"/>
+            <ref name="element.preferCite"/>
+            <ref name="element.processInfo"/>
+            <ref name="element.publicationNote"/>
+            <ref name="element.relatedMaterial"/>
+            <ref name="element.scopeContent"/>
+            <ref name="element.separatedMaterial"/>
+            <ref name="element.useConditions"/>
+         </choice>
+      </oneOrMore>
+   </define>
    <define name="element.agent">
       <element name="agent">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -117,17 +144,6 @@
          <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
-   <!-- formats / format ?? or something more direct / plural-ending (rather than plural-starting) -->
-   <define name="element.formsAvailable">
-      <element name="formsAvailable">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <oneOrMore>
-            <ref name="element.formAvailable"/>
-         </oneOrMore>
-         <ref name="element.descriptiveNote.optional"/>
-      </element>
-   </define>
    <define name="element.functions">
       <element name="functions">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -138,30 +154,11 @@
          <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
-   <define name="element.formAvailable">
-      <element name="formAvailable">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.linked-data.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <optional>
-            <ref name="element.abstract"/>
-         </optional>
-         <ref name="model.narrative-group.optional"/>
-         <zeroOrMore>
-            <ref name="element.relation"/>
-         </zeroOrMore>
-      </element>
-   </define>
    <!-- regroup what's above later on -->
+   <!-- can this be combined now??? I did.  Fix, if needed, after checking with EAC-->
    <define name="element.biogHist">
       <element name="biogHist">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="element.head.optional"/>
-         <optional>
-            <ref name="element.abstract"/>
-         </optional>
-         <ref name="model.narrative-group.optional"/>
+         <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
    <define name="element.citedRange">
@@ -337,15 +334,6 @@
          <data type="normalizedString"/>
       </element>
    </define>
-   <define name="element.head.optional">
-      <optional>
-         <element name="head">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.mixed-content-no-references.optional"/>
-         </element>
-      </optional>
-   </define>
    <define name="element.language">
       <element name="language">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -354,12 +342,6 @@
             <ref name="attribute.languageCode"/>
          </optional>
          <text/>
-      </element>
-   </define>
-   <define name="element.lineBreak">
-      <element name="lineBreak">
-         <ref name="attribute-group.global.optional"/>
-         <empty/>
       </element>
    </define>
    <define name="element.objectXMLWrap.optional">
@@ -515,22 +497,23 @@
    <define name="model.ead-narrative-elements">
       <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
       <ref name="attribute-group.assertion-reference.optional"/>
-      <ref name="element.head.optional"/>
       <optional>
          <ref name="element.abstract"/>
       </optional>
       <ref name="model.narrative-group.optional"/>
    </define>
    <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
-   <define name="model.ead-narrative-elements-PLUS">
+   <define name="model.ead-narrative-elements-plus-relations">
       <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
       <ref name="attribute-group.assertion-reference.optional"/>
       <ref name="attribute-group.linked-data.optional"/>
-      <ref name="element.head.optional"/>
       <optional>
          <ref name="element.abstract"/>
       </optional>
       <ref name="model.narrative-group.optional"/>
+      <optional>
+         <ref name="element.relations"/>
+      </optional>
    </define>
    <define name="model.mixed-content.optional">
       <zeroOrMore>
