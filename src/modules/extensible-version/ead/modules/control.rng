@@ -27,9 +27,6 @@
          <ref name="element.recordId"/>
          <ref name="element.maintenanceAgency"/>
          <ref name="element.maintenanceHistory"/>
-         <optional a:exclude-from="eac">
-            <ref name="element.findAidDesc"/>
-         </optional>
          <optional>
             <ref name="element.sources"/>
          </optional>

@@ -324,6 +324,42 @@
         </element>
     </define>
     
+    <define name="element.function">
+        <element name="function">
+            
+            <ref name="model.single-element-group" a:exclude-from="ead"/>
+            
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional" a:exclude-from="eac"/>
+            <ref name="attribute-group.linked-data.optional" a:exclude-from="eac"/>
+            <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac"/>
+            <oneOrMore a:exclude-from="eac">
+                <ref name="element.term"/>
+            </oneOrMore>
+            <optional a:exclude-from="eac">
+                <ref name="model.all-dates.choice"/>
+            </optional>
+            <zeroOrMore a:exclude-from="eac">
+                <ref name="element.placeName"/>
+            </zeroOrMore>
+            <!-- 
+            In a future revision of EAC-CPF, <targetType>, <targetRole>, and <relationType> 
+            would need to be added as optional and repeatable sub-elements of <function> 
+            (we should add these to the single-element-group, if kept as is)
+            
+            -->
+            <zeroOrMore a:exclude-from="eac">
+                <ref name="element.targetType"/>
+            </zeroOrMore>
+            <zeroOrMore a:exclude-from="eac">
+                <ref name="element.targetRole"/>
+            </zeroOrMore>
+            <zeroOrMore a:exclude-from="eac">
+                <ref name="element.relationType"/>
+            </zeroOrMore>
+            <ref name="element.descriptiveNote.optional" a:exclude-from="eac"/>  
+        </element>
+    </define>
+    
     <define name="element.geographicCoordinates">
         <element name="geographicCoordinates">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>

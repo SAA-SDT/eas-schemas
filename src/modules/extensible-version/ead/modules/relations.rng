@@ -39,6 +39,13 @@
          </oneOrMore>
       </element>
    </define>
+   <define name="element.targetType">
+      <element name="targetType">
+         <ref name="attribute-group.relation-children.optional"/>
+         <ref name="attribute-group.localType.optional"/>
+         <text/>
+      </element>
+   </define>
    <define name="element.relationType">
       <element name="relationType">
          <ref name="attribute-group.relation-children.optional"/>

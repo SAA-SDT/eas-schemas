@@ -248,11 +248,6 @@
    </define>
    <!-- placeholder for element.formsAvailable , which will also get
         <ref name="attribute-group.linked-data.optional"/> -->
-   <define name="element.function">
-      <element name="function">
-         <ref name="model.controlAccess-element-group"/>
-      </element>
-   </define>
    <define name="element.genreForm">
       <element name="genreForm">
          <ref name="model.controlAccess-element-group"/>
@@ -638,6 +633,7 @@
    <define name="element.unitId">
       <element name="unitId">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.label.optional"/>
          <ref name="attribute.countryCode.optional"/>
