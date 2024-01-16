@@ -33,7 +33,7 @@
     <define name="attribute.calendar.optional">
         <optional>
             <attribute name="calendar">
-                <data type="NMTOKEN"/>
+                <data type="token"/>
             </attribute>
         </optional>
     </define>
@@ -41,7 +41,7 @@
     <define name="attribute.certainty.optional">
         <optional>
             <attribute name="certainty">
-                <data type="NMTOKEN"/>
+                <data type="token"/>
             </attribute>
         </optional>
     </define>
@@ -79,7 +79,7 @@
     <define name="attribute.countryCode.optional">
         <optional>
             <attribute name="countryCode">
-                <data type="NMTOKEN"/>    
+                <data type="token"/>    
             </attribute>
         </optional>
     </define>
@@ -93,7 +93,7 @@
     <define name="attribute.dateChar.optional">
         <optional>
             <attribute name="dateChar">
-                <data type="NMTOKEN"/>
+                <data type="token"/>
             </attribute>
         </optional>
     </define>
@@ -117,7 +117,7 @@
     <define name="attribute.era.optional">
         <optional>
             <attribute name="era">
-                <data type="NMTOKEN"/>
+                <data type="token"/>
             </attribute>
         </optional>
     </define>
@@ -381,7 +381,7 @@
     
     <define name="attribute.languageCode">
         <attribute name="languageCode">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
         </attribute>
     </define>
     
@@ -453,7 +453,7 @@
     
     <define name="attribute.scriptCode">
         <attribute name="scriptCode">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
         </attribute>
     </define>
     
@@ -622,14 +622,14 @@
     <define name="attribute-group.lang-and-script.optional" combine="interleave">
         <optional>
             <attribute name="languageOfElement">
-                <data type="NMTOKEN"/>
+                <data type="token"/>
             </attribute>
         </optional>
     </define>
     <define name="attribute-group.lang-and-script.optional" combine="interleave">
         <optional>
             <attribute name="scriptOfElement">
-                <data type="NMTOKEN"/>
+                <data type="token"/>
             </attribute>
         </optional>
     </define>

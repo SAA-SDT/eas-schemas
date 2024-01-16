@@ -24,8 +24,8 @@
          <xs:attribute name="audience" type="xs:token"/>
          <xs:attribute name="base" type="xs:anyURI"/>
          <xs:attribute name="id" type="xs:ID"/>
-         <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-         <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+         <xs:attribute name="languageOfElement" type="xs:token"/>
+         <xs:attribute name="scriptOfElement" type="xs:token"/>
          <xs:anyAttribute namespace="##other" processContents="lax"/>
       </xs:complexType>
    </xs:element>
@@ -47,8 +47,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="addressLineTypeEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">
@@ -216,8 +216,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -257,8 +257,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -278,8 +278,8 @@
             <xs:attribute name="audience" type="xs:token"/>
             <xs:attribute name="id" type="xs:ID"/>
             <xs:attribute name="target" type="xs:IDREFS"/>
-            <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-            <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+            <xs:attribute name="languageOfElement" type="xs:token"/>
+            <xs:attribute name="scriptOfElement" type="xs:token"/>
             <xs:anyAttribute namespace="##other" processContents="lax"/>
          </xs:restriction>
       </xs:simpleContent>
@@ -311,9 +311,9 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="countryCode" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="countryCode" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -328,8 +328,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="sources">
@@ -341,8 +341,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="conventionDeclaration">
@@ -354,8 +354,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -368,10 +368,10 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="languageCode" use="required" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptCode" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="languageCode" use="required" type="xs:token"/>
+      <xs:attribute name="scriptCode" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="localTypeDeclaration">
@@ -383,8 +383,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -394,8 +394,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
@@ -412,8 +412,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -438,8 +438,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -452,8 +452,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -464,16 +464,16 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="calendar" type="xs:NMTOKEN"/>
-      <xs:attribute name="certainty" type="xs:NMTOKEN"/>
-      <xs:attribute name="era" type="xs:NMTOKEN"/>
+      <xs:attribute name="calendar" type="xs:token"/>
+      <xs:attribute name="certainty" type="xs:token"/>
+      <xs:attribute name="era" type="xs:token"/>
       <xs:attribute name="notAfter" type="xs:token"/>
       <xs:attribute name="notBefore" type="xs:token"/>
       <xs:attribute name="standardDate" type="xs:token"/>
@@ -512,8 +512,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
@@ -535,8 +535,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -561,8 +561,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -576,8 +576,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -593,8 +593,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -610,8 +610,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -630,8 +630,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -653,8 +653,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -673,8 +673,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -693,8 +693,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -713,8 +713,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -733,8 +733,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -753,8 +753,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -773,8 +773,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -793,8 +793,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -813,8 +813,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -834,8 +834,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -857,8 +857,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -877,8 +877,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -897,8 +897,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -918,8 +918,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -942,8 +942,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -965,8 +965,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -986,8 +986,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1013,8 +1013,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1033,8 +1033,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1054,16 +1054,16 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="agencyCode" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="status">
          <xs:simpleType>
             <xs:restriction base="xs:token">
@@ -1081,8 +1081,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -1092,8 +1092,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="status">
@@ -1116,8 +1116,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1135,8 +1135,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventType" use="required" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
@@ -1153,8 +1153,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="href" type="xs:anyURI"/>
       <xs:attribute name="linkRole" type="xs:anyURI"/>
       <xs:attribute name="linkTitle" type="xs:token"/>
@@ -1171,8 +1171,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1185,16 +1185,16 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="agentName" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
@@ -1216,8 +1216,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1239,8 +1239,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1252,8 +1252,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
@@ -1268,8 +1268,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
@@ -1284,8 +1284,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -1300,8 +1300,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
@@ -1310,7 +1310,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="countryCode" type="xs:NMTOKEN"/>
+      <xs:attribute name="countryCode" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:group name="_1">
@@ -1322,8 +1322,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -1338,8 +1338,8 @@
             <xs:attribute name="audience" type="xs:token"/>
             <xs:attribute name="id" type="xs:ID"/>
             <xs:attribute name="target" type="xs:IDREFS"/>
-            <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-            <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+            <xs:attribute name="languageOfElement" type="xs:token"/>
+            <xs:attribute name="scriptOfElement" type="xs:token"/>
             <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
             <xs:attribute name="sourceReference" type="xs:IDREFS"/>
             <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1355,8 +1355,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1371,8 +1371,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1391,8 +1391,8 @@
             <xs:attribute name="audience" type="xs:token"/>
             <xs:attribute name="id" type="xs:ID"/>
             <xs:attribute name="target" type="xs:IDREFS"/>
-            <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-            <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+            <xs:attribute name="languageOfElement" type="xs:token"/>
+            <xs:attribute name="scriptOfElement" type="xs:token"/>
             <xs:attribute name="localType" type="xs:token"/>
             <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
             <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1406,8 +1406,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -1428,8 +1428,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1449,8 +1449,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1468,8 +1468,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1486,8 +1486,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1507,8 +1507,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1524,8 +1524,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1545,8 +1545,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1562,8 +1562,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1579,17 +1579,17 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="unitDateType" type="xs:token"/>
-      <xs:attribute name="dateChar" type="xs:NMTOKEN"/>
-      <xs:attribute name="calendar" type="xs:NMTOKEN"/>
-      <xs:attribute name="certainty" type="xs:NMTOKEN"/>
-      <xs:attribute name="era" type="xs:NMTOKEN"/>
+      <xs:attribute name="dateChar" type="xs:token"/>
+      <xs:attribute name="calendar" type="xs:token"/>
+      <xs:attribute name="certainty" type="xs:token"/>
+      <xs:attribute name="era" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitDateStructured">
@@ -1602,17 +1602,17 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="unitDateType" type="xs:token"/>
-      <xs:attribute name="dateChar" type="xs:NMTOKEN"/>
-      <xs:attribute name="calendar" type="xs:NMTOKEN"/>
-      <xs:attribute name="certainty" type="xs:NMTOKEN"/>
-      <xs:attribute name="era" type="xs:NMTOKEN"/>
+      <xs:attribute name="dateChar" type="xs:token"/>
+      <xs:attribute name="calendar" type="xs:token"/>
+      <xs:attribute name="certainty" type="xs:token"/>
+      <xs:attribute name="era" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitId" mixed="true">
@@ -1624,8 +1624,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
@@ -1635,7 +1635,7 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="label" type="xs:token"/>
-      <xs:attribute name="countryCode" type="xs:NMTOKEN"/>
+      <xs:attribute name="countryCode" type="xs:token"/>
       <xs:attribute name="repositoryCode" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
@@ -1649,8 +1649,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1674,8 +1674,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1715,8 +1715,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
@@ -1736,8 +1736,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1754,8 +1754,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1770,8 +1770,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1806,8 +1806,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
@@ -1852,8 +1852,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1896,8 +1896,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1910,8 +1910,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="standardDateTime">
          <xs:simpleType>
             <xs:union memberTypes="xs:gYear xs:gYearMonth xs:date xs:dateTime"/>
@@ -1928,8 +1928,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="objectXMLWrap">
@@ -1946,8 +1946,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1962,8 +1962,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
@@ -1976,16 +1976,16 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="calendar" type="xs:NMTOKEN"/>
-      <xs:attribute name="certainty" type="xs:NMTOKEN"/>
-      <xs:attribute name="era" type="xs:NMTOKEN"/>
+      <xs:attribute name="calendar" type="xs:token"/>
+      <xs:attribute name="certainty" type="xs:token"/>
+      <xs:attribute name="era" type="xs:token"/>
       <xs:attribute name="notAfter" type="xs:token"/>
       <xs:attribute name="notBefore" type="xs:token"/>
       <xs:attribute name="standardDate" type="xs:token"/>
@@ -2002,16 +2002,16 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="localType" type="xs:token"/>
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="calendar" type="xs:NMTOKEN"/>
-      <xs:attribute name="certainty" type="xs:NMTOKEN"/>
-      <xs:attribute name="era" type="xs:NMTOKEN"/>
+      <xs:attribute name="calendar" type="xs:token"/>
+      <xs:attribute name="certainty" type="xs:token"/>
+      <xs:attribute name="era" type="xs:token"/>
       <xs:attribute name="notAfter" type="xs:token"/>
       <xs:attribute name="notBefore" type="xs:token"/>
       <xs:attribute name="standardDate" type="xs:token"/>
@@ -2029,8 +2029,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2041,8 +2041,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2056,12 +2056,12 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="languageCode" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageCode" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="languageSet">
@@ -2074,8 +2074,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2096,8 +2096,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2117,8 +2117,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2137,8 +2137,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2154,8 +2154,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2165,8 +2165,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2176,8 +2176,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -2208,8 +2208,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2249,8 +2249,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2269,12 +2269,12 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="scriptCode" type="xs:NMTOKEN"/>
+      <xs:attribute name="scriptCode" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="targetEntity">
@@ -2284,8 +2284,8 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -2328,8 +2328,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2372,8 +2372,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2416,8 +2416,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2460,8 +2460,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2504,8 +2504,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2548,8 +2548,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2592,8 +2592,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2636,8 +2636,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2680,8 +2680,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2723,8 +2723,8 @@
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="base" type="xs:anyURI"/>
-      <xs:attribute name="languageOfElement" type="xs:NMTOKEN"/>
-      <xs:attribute name="scriptOfElement" type="xs:NMTOKEN"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
