@@ -156,12 +156,14 @@
                   </choice>
                </attribute>
             </optional>
-            <attribute name="coverageEncoding" ns="">
-               <choice>
-                  <value type="token" datatypeLibrary="" ns="">EASList</value>
-                  <value type="token" datatypeLibrary="" ns="">otherCoverageEncoding</value>
-               </choice>
-            </attribute>
+            <optional>
+               <attribute name="coverageEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherCoverageEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
             <optional>
                <attribute name="detailLevelEncoding" ns="">
                   <choice>
@@ -197,30 +199,38 @@
                   </choice>
                </attribute>
             </optional>
-            <attribute name="levelEncoding" ns="">
-               <choice>
-                  <value type="token" datatypeLibrary="" ns="">EASList</value>
-                  <value type="token" datatypeLibrary="" ns="">otherLevelEncoding</value>
-               </choice>
-            </attribute>
-            <attribute name="maintenanceEventTypeEncoding" ns="">
-               <choice>
-                  <value type="token" datatypeLibrary="" ns="">EASList</value>
-                  <value type="token" datatypeLibrary="" ns="">otherMaintenanceEventTypeEncoding</value>
-               </choice>
-            </attribute>
-            <attribute name="maintenanceStatusEncoding" ns="">
-               <choice>
-                  <value type="token" datatypeLibrary="" ns="">EASList</value>
-                  <value type="token" datatypeLibrary="" ns="">otherMaintenanceStatusEncoding</value>
-               </choice>
-            </attribute>
-            <attribute name="physDescStructuredTypeEncoding" ns="">
-               <choice>
-                  <value type="token" datatypeLibrary="" ns="">EASList</value>
-                  <value type="token" datatypeLibrary="" ns="">otherPhysDescStructuredTypeEncoding</value>
-               </choice>
-            </attribute>
+            <optional>
+               <attribute name="levelEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherLevelEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="maintenanceEventTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherMaintenanceEventTypeEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="maintenanceStatusEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherMaintenanceStatusEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="physDescStructuredTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherPhysDescStructuredTypeEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
             <optional>
                <attribute name="publicationStatusEncoding" ns="">
                   <choice>
@@ -267,10 +277,12 @@
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
-            <attribute name="maintenanceStatus" ns="">
-               <data type="token"
-                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-            </attribute>
+            <optional>
+               <attribute name="maintenanceStatus" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <optional>
                <attribute name="publicationStatus" ns="">
                   <data type="token"
@@ -492,6 +504,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -4552,10 +4570,12 @@
                   </attribute>
                </optional>
             </interleave>
-            <attribute name="maintenanceEventType" ns="">
-               <data type="token"
-                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-            </attribute>
+            <optional>
+               <attribute name="maintenanceEventType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="agent"/>
             <ref name="eventDateTime"/>
             <zeroOrMore>
@@ -6989,6 +7009,18 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="physDescStructuredType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="coverage" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="quantity"/>
             <ref name="unitType"/>
             <zeroOrMore>
@@ -8314,6 +8346,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -8448,6 +8486,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -10280,6 +10324,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -10611,6 +10661,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -10745,6 +10801,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -10879,6 +10941,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -11013,6 +11081,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -11147,6 +11221,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -11281,6 +11361,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -11415,6 +11501,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -11549,6 +11641,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -11683,6 +11781,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
@@ -11817,6 +11921,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="level" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>

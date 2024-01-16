@@ -84,10 +84,12 @@
         </optional>
     </define>
     
-    <define name="attribute.coverage">
-        <attribute name="coverage">
-            <data type="token"/>    
-        </attribute>
+    <define name="attribute.coverage.optional">
+        <optional>
+            <attribute name="coverage">
+                <data type="token"/>    
+            </attribute>
+        </optional>
     </define>
     
     <define name="attribute.dateChar.optional">
@@ -146,10 +148,12 @@
         </optional>
     </define>
     
-    <define name="attribute.level">
-        <attribute name="level">
-            <data type="token"/>    
-        </attribute>
+    <define name="attribute.level.optional">
+        <optional>
+            <attribute name="level">
+                <data type="token"/>    
+            </attribute>
+        </optional>
     </define>
     
     <define name="attribute.localType">
@@ -185,10 +189,12 @@
         </optional>
     </define>
     
-    <define name="attribute.physDescStructuredType">
-        <attribute name="physDescStructuredType">
-            <data type="token"/>    
-        </attribute>
+    <define name="attribute.physDescStructuredType.optional">
+        <optional>
+            <attribute name="physDescStructuredType">
+                <data type="token"/>    
+            </attribute>
+        </optional>
     </define>
     
     <define name="attribute.publicationStatus.optional">
@@ -511,7 +517,9 @@
         <optional>
             <ref name="attribute.countryEncoding"/>
         </optional>
-        <ref name="attribute.coverageEncoding" a:exclude-from="eac"/>
+        <optional>
+            <ref name="attribute.coverageEncoding" a:exclude-from="eac"/>
+        </optional>
         <optional>
             <ref name="attribute.detailLevelEncoding"/>
         </optional>
@@ -527,10 +535,18 @@
         <optional>
             <ref name="attribute.languageEncoding"/>
         </optional>
-        <ref name="attribute.levelEncoding" a:exclude-from="eac"/>
-        <ref name="attribute.maintenanceEventTypeEncoding"/>
-        <ref name="attribute.maintenanceStatusEncoding"/>
-        <ref name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac"/>
+        <optional>
+            <ref name="attribute.levelEncoding" a:exclude-from="eac"/>
+        </optional>
+        <optional>
+            <ref name="attribute.maintenanceEventTypeEncoding"/>
+        </optional>
+        <optional>
+            <ref name="attribute.maintenanceStatusEncoding"/>
+        </optional>
+        <optional>
+            <ref name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac"/>
+        </optional>
         <optional>
             <ref name="attribute.publicationStatusEncoding"/>
         </optional>
