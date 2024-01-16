@@ -571,25 +571,16 @@
     </define>
     
     
-    <!-- are we just keeping this for title?  what gives? -->
     <define name="element.title">
         <element name="title">
-            <ref name="model.controlAccess-element-group"/>
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <oneOrMore>
+                <ref name="element.part"/>
+            </oneOrMore>
         </element>
     </define>
-    
-    <define name="model.controlAccess-element-group">
-        <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-        <ref name="attribute-group.linked-data.optional"/>
-        <oneOrMore>
-            <ref name="element.part"/>
-        </oneOrMore>
-        <!-- now, available outside of the "relation" element. -->
-        <zeroOrMore>
-            <ref name="element.targetRole"/>
-        </zeroOrMore>
-    </define>
-
   
 
 </grammar>
