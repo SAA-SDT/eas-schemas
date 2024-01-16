@@ -319,7 +319,7 @@
       <attribute name="descriptionOfComponentsTypeEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
-            <value>otherdescriptionOfComponentsTypeEncoding</value>
+            <value>otherDescriptionOfComponentsTypeEncoding</value>
          </choice>
       </attribute>
    </define>

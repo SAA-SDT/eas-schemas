@@ -176,7 +176,7 @@
                <attribute name="descriptionOfComponentsTypeEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherdescriptionOfComponentsTypeEncoding</value>
+                     <value type="token" datatypeLibrary="" ns="">otherDescriptionOfComponentsTypeEncoding</value>
                   </choice>
                </attribute>
             </optional>
@@ -1526,7 +1526,8 @@
             </interleave>
             <optional>
                <attribute name="status" ns="">
-                  <value type="token" datatypeLibrary="" ns="">unknown</value>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <text/>
@@ -1764,6 +1765,26 @@
             </optional>
             <interleave>
                <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <interleave>
+               <optional>
                   <attribute name="vocabularySource" ns="">
                      <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
@@ -1785,9 +1806,6 @@
             <oneOrMore>
                <ref name="part"/>
             </oneOrMore>
-            <zeroOrMore>
-               <ref name="targetRole"/>
-            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -4250,10 +4268,8 @@
             </interleave>
             <optional>
                <attribute name="status" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">authorized</value>
-                     <value type="token" datatypeLibrary="" ns="">alternative</value>
-                  </choice>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <interleave>
@@ -4416,10 +4432,8 @@
             </optional>
             <optional>
                <attribute name="status" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">authorized</value>
-                     <value type="token" datatypeLibrary="" ns="">alternative</value>
-                  </choice>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <interleave>
@@ -6107,111 +6121,6 @@
                   datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
                <param name="pattern">(.|\n|\r)*\S(.|\n|\r)*</param>
             </data>
-         </group>
-      </element>
-   </define>
-   <define name="targetRole">
-      <element name="targetRole" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="vocabularySource" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="vocabularySourceURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="valueURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <text/>
          </group>
       </element>
    </define>
@@ -9014,7 +8923,8 @@
             </interleave>
             <optional>
                <attribute name="status" ns="">
-                  <value type="token" datatypeLibrary="" ns="">unknown</value>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <text/>
@@ -9142,10 +9052,8 @@
             </interleave>
             <optional>
                <attribute name="status" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">ongoing</value>
-                     <value type="token" datatypeLibrary="" ns="">unknown</value>
-                  </choice>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <text/>
@@ -10032,6 +9940,111 @@
    </define>
    <define name="targetType">
       <element name="targetType" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="vocabularySource" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="vocabularySourceURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="valueURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <text/>
+         </group>
+      </element>
+   </define>
+   <define name="targetRole">
+      <element name="targetRole" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
