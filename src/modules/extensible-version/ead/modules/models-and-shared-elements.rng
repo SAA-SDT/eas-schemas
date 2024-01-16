@@ -70,7 +70,6 @@
             <ref name="element.biogHist"/>
             <ref name="element.custodHist"/>
             <ref name="element.filePlan"/>
-            <ref name="element.legalStatus"/>
             <ref name="element.otherDescriptiveInfo"/>
             <ref name="element.otherFindAid"/>
             <ref name="element.physicalOrTechnicalRequirements"/>
@@ -314,6 +313,11 @@
             <ref name="attribute.languageCode"/>
          </optional>
          <text/>
+      </element>
+   </define>
+   <define name="element.legalStatus">
+      <element name="legalStatus">
+         <ref name="model.single-element-group"/>
       </element>
    </define>
    <define name="element.objectXMLWrap.optional">

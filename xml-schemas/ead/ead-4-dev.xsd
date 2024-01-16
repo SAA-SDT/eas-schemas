@@ -237,7 +237,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -256,6 +255,8 @@
                      name="descriptionOfComponents"
                      minOccurs="0"/>
       </xs:sequence>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -542,6 +543,8 @@
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
@@ -552,6 +555,7 @@
          <xs:element type="ead:container" name="container"/>
          <xs:element type="ead:identificationDataNote" name="identificationDataNote"/>
          <xs:element type="ead:langMaterial" name="langMaterial"/>
+         <xs:element type="ead:legalStatus" name="legalStatus"/>
          <xs:element type="ead:materialSpec" name="materialSpec"/>
          <xs:element type="ead:physDescSet" name="physDescSet"/>
          <xs:element type="ead:physDesc" name="physDesc"/>
@@ -748,26 +752,6 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="filePlan">
-      <xs:sequence>
-         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:formattingExtension" name="formattingExtension"/>
-            <xs:element type="ead:p" name="p"/>
-         </xs:choice>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="legalStatus">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1446,9 +1430,10 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1467,9 +1452,10 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1495,6 +1481,35 @@
       <xs:attribute name="label" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="legalStatus">
+      <xs:sequence>
+         <xs:element type="ead:term" name="term" maxOccurs="unbounded"/>
+         <xs:choice minOccurs="0">
+            <xs:element type="ead:date" name="date"/>
+            <xs:element type="ead:dateRange" name="dateRange"/>
+            <xs:element type="ead:dateSet" name="dateSet"/>
+         </xs:choice>
+         <xs:element type="ead:placeName"
+                     name="placeName"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="materialSpec" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:reference" name="reference"/>
@@ -1504,9 +1519,10 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1542,9 +1558,10 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1580,9 +1597,10 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -1851,7 +1869,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -1896,7 +1913,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2102,6 +2118,17 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="term" mixed="true">
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="quantity" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2137,9 +2164,10 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2157,9 +2185,10 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2174,20 +2203,10 @@
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="base" type="xs:anyURI"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="term" mixed="true">
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
@@ -2250,7 +2269,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2330,7 +2348,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2375,7 +2392,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2420,7 +2436,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2465,7 +2480,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2510,7 +2524,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2555,7 +2568,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2600,7 +2612,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2645,7 +2656,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2690,7 +2700,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
@@ -2735,7 +2744,6 @@
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
-            <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"

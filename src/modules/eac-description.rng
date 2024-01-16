@@ -102,11 +102,9 @@
         </element>
     </define>
     
-    <define name="element.legalStatus">
-        <element name="legalStatus">
-            <ref name="model.single-element-group"/>
-        </element>
-    </define>
+    <!-- legalStatus (singular only) is now in the models-and-shared-elements.rng file
+        not a fan of separting that from the plural parent, but that's how things are set up now.    
+    -->
     
     <define name="element.legalStatuses">
         <element name="legalStatuses">
