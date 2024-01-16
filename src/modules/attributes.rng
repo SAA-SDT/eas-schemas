@@ -60,16 +60,7 @@
                 <data type="token"/>
             </attribute> 
         </optional>  
-    </define>
-    
-    <!-- Moved the definition of conventionDeclarationReference to the definition of the assertion attributes' group as it is done for the other two attributes there 
-    <define name="attribute.conventionDeclarationReference.optional">
-        <optional>
-            <attribute name="conventionDeclarationReference">
-                <data type="IDREFS"/>
-            </attribute>
-        </optional>
-    </define> -->
+    </define>    
     
     <define name="attribute.coordinateSystem">
         <attribute name="coordinateSystem">
@@ -654,12 +645,6 @@
             </attribute>
         </optional>
     </define>
- 
-    <!-- This group should not be necessary as there shouldn't be a case where we use conventionDeclarationReference without the other two assertion attributes.
-    <define name="attribute-group.lang-and-script-and-conventionDeclarationReference.optional" combine="interleave">
-        <ref name="attribute-group.lang-and-script.optional"/>
-        <ref name="attribute.conventionDeclarationReference.optional"/>
-    </define> -->
     
     <define name="attribute-group.localType.optional">
         <optional>
