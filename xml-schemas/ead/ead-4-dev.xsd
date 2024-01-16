@@ -498,6 +498,7 @@
          <xs:choice maxOccurs="unbounded">
             <xs:element type="ead:placeName" name="placeName"/>
             <xs:element type="ead:placeRole" name="placeRole"/>
+            <xs:element type="ead:placeType" name="placeType"/>
             <xs:element type="ead:geographicCoordinates" name="geographicCoordinates"/>
             <xs:element type="ead:address" name="address"/>
             <xs:element type="ead:contact" name="contact"/>
@@ -507,6 +508,7 @@
             <xs:element type="ead:dateRange" name="dateRange"/>
             <xs:element type="ead:dateSet" name="dateSet"/>
          </xs:choice>
+         <xs:element type="ead:relationType" name="relationType" minOccurs="0"/>
          <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
@@ -1319,6 +1321,20 @@
       </xs:sequence>
    </xs:group>
    <xs:complexType name="placeRole" mixed="true">
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="placeType" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>

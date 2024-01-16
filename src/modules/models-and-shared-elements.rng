@@ -381,6 +381,7 @@
                 <choice>
                     <ref name="element.placeName"/>
                     <ref name="element.placeRole"/>
+                    <ref name="element.placeType"/>
                     <ref name="element.geographicCoordinates"/>
                     <ref name="element.address"/>
                     <ref name="element.contact"/>
@@ -388,6 +389,9 @@
             </oneOrMore>
             <optional>
                 <ref name="model.all-dates.choice"/>
+            </optional>
+            <optional>
+                <ref name="element.relationType"/>
             </optional>
             <ref name="element.descriptiveNote.optional"/> 
         </element>
@@ -405,6 +409,15 @@
     
     <define name="element.placeRole">
         <element name="placeRole">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="element.placeType">
+        <element name="placeType">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
