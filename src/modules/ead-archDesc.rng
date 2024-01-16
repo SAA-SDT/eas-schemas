@@ -254,6 +254,7 @@
     <define name="element.descriptionOfComponents">
         <element name="descriptionOfComponents">
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <oneOrMore>
                 <choice>
                     <ref name="element.c"/>
