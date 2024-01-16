@@ -69,10 +69,8 @@
             <ref name="element.appraisal"/>
             <ref name="element.arrangement"/>
             <ref name="element.biogHist"/>
-            <ref name="element.controlAccess"/>
             <ref name="element.custodHist"/>
             <ref name="element.filePlan"/>
-            <ref name="element.index"/>
             <ref name="element.legalStatus"/>
             <ref name="element.odd"/>
             <ref name="element.otherFindAid"/>
@@ -83,6 +81,7 @@
             <ref name="element.relatedMaterial"/>
             <ref name="element.scopeContent"/>
             <ref name="element.separatedMaterial"/>
+            <ref name="element.subjectHeadings"/>
             <ref name="element.useConditions"/>
          </choice>
       </oneOrMore>
@@ -234,33 +233,6 @@
             </oneOrMore>
          </element>
       </optional>
-   </define>
-   <define name="element.event">
-      <element name="event">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.linked-data.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.mixed-content.optional"/>
-      </element>
-   </define>
-   <define name="element.expansion">
-      <element name="expansion">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <optional>
-                <!-- this way, we don't have attributes and elements with the same name... but still, we should discuss -->
-            <attribute name="abbr">
-               <data type="token"/>
-            </attribute>
-         </optional>
-         <text/>
-      </element>
-   </define>
-   <define name="element.foreign">
-      <element name="foreign">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <text/>
-      </element>
    </define>
    <define name="element.formattingExtension.optional">
       <optional>
@@ -518,6 +490,18 @@
    <define name="model.mixed-content.optional">
       <zeroOrMore>
          <choice>
+            <ref name="element.reference"/>
+            <ref name="element.referringString"/>
+            <ref name="element.span"/>
+            <text/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="model.mixed-content-plus-num.optional">
+      <zeroOrMore>
+         <choice>
+                <!-- is num the only other mixed-content element to survive?  quote, and others are part of HTML, so no need? -->
+            <ref name="element.num"/>
             <ref name="element.reference"/>
             <ref name="element.referringString"/>
             <ref name="element.span"/>

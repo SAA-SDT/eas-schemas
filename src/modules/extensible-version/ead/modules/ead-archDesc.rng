@@ -177,22 +177,19 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.container.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
-         <ref name="model.ead.mixed-content"/>
+         <ref name="model.mixed-content.optional"/>
          <!-- agree that mixed content is no longer needed here, right? 
             <text/> 
             -->
       </element>
    </define>
-   <define name="element.controlAccess">
-      <element name="controlAccess">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <oneOrMore>
-            <choice>
-                    <!-- if we keep all this, right?  if not, then we'd just have oneOrMore controlaccess elements? -->
-               <ref name="model.narrative-group.optional"/>
-               <ref name="model.controlAccess-element-name-list"/>
-            </choice>
-         </oneOrMore>
+   <define name="element.subjectHeadings">
+      <element name="subjectHeadings">
+            <!-- is this right? -->
+         <ref name="model.ead-narrative-elements"/>
+         <zeroOrMore>
+            <ref name="element.subject"/>
+         </zeroOrMore>
       </element>
    </define>
    <define name="element.custodHist">
@@ -248,58 +245,12 @@
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <!-- what else follows this model? -->
-         <ref name="model.ead.mixed-content"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.filePlan">
       <element name="filePlan">
          <ref name="model.ead-narrative-elements"/>
-      </element>
-   </define>
-   <define name="element.footnote">
-      <element name="footnote">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <!-- note:  currently missing @show and @actuate, since those weren't part of EAC style links. -->
-         <ref name="model.narrative-group.optional"/>
-      </element>
-   </define>
-   <!-- placeholder for element.formsAvailable , which will also get
-        <ref name="attribute-group.linked-data.optional"/> -->
-   <define name="element.genreForm">
-      <element name="genreForm">
-         <ref name="model.controlAccess-element-group"/>
-      </element>
-   </define>
-   <define name="element.geogName">
-      <element name="geogName">
-         <ref name="model.controlAccess-element-group"/>
-      </element>
-   </define>
-   <define name="element.index">
-      <element name="index">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- EAD:
-            blockquote, chronlist, head, index, indexentry, list, listhead, p, table
-            
-            let's use the same, minux index and listhead.
-            -->
-         <oneOrMore>
-            <choice>
-               <ref name="model.narrative-group.optional"/>
-               <ref name="element.indexEntry"/>
-            </choice>
-         </oneOrMore>
-      </element>
-   </define>
-   <define name="element.indexEntry">
-      <element name="indexEntry">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <!-- EAD3:
-                corpname, famname, function, genreform, geogname, indexentry, 
-                name, namegrp, occupation, persname, ptr, ptrgrp, ref, subject, title
-                -->
-         <ref name="model.ead.grp-elements-plus-controlAccess"/>
       </element>
    </define>
    <define name="element.langMaterial">
@@ -346,28 +297,14 @@
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
-         <ref name="model.ead.mixed-content"/>
-      </element>
-   </define>
-   <define name="element.nameGrp">
-      <element name="nameGrp">
-         <ref name="attribute-group.global.optional"/>
-         <ref name="model.controlAccess-element-name-list"/>
-         <oneOrMore>
-            <ref name="model.controlAccess-element-name-list"/>
-         </oneOrMore>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.num">
       <element name="num">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content"/>
-      </element>
-   </define>
-   <define name="element.occupation">
-      <element name="occupation">
-         <ref name="model.controlAccess-element-group"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.odd">
@@ -384,7 +321,7 @@
       <element name="physDesc">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.physDescSet">
@@ -426,14 +363,14 @@
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
-         <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
+         <ref name="model.mixed-content-plus-num.optional"/>
       </element>
    </define>
    <define name="element.physLoc">
       <element name="physLoc">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.ead.mixed-content"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.physTech">
@@ -460,35 +397,9 @@
          <empty/>
       </element>
    </define>
-   <!-- redefine if we keep -->
-   <define name="element.ptrGrp">
-      <element name="ptrGrp">
-         <ref name="attribute-group.global.optional"/>
-         <choice>
-            <ref name="element.ptr"/>
-            <ref name="element.reference"/>
-         </choice>
-         <oneOrMore>
-            <choice>
-               <ref name="element.ptr"/>
-               <ref name="element.reference"/>
-            </choice>
-         </oneOrMore>
-      </element>
-   </define>
    <define name="element.publicationNote">
       <element name="publicationNote">
          <ref name="model.ead-narrative-elements-plus-relations"/>
-      </element>
-   </define>
-   <define name="element.quote">
-      <element name="quote">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- on span... quote... and what else?  -->
-         <!-- also, uggh... if we just go with html, then quote will be q, and less transformations required -->
-         <ref name="attribute.style.optional"/>
-         <ref name="model.ead.mixed-content"/>
       </element>
    </define>
    <define name="element.referringString">
@@ -515,13 +426,31 @@
       </element>
    </define>
    <define name="element.subject">
+        <!-- just like function now, but those are the only two similar elements that share the same model??? -->
+        <!-- if / when ead:function and eac:function are the same, we could define those with the same model -->
       <element name="subject">
-         <ref name="model.controlAccess-element-group"/>
-      </element>
-   </define>
-   <define name="element.title">
-      <element name="title">
-         <ref name="model.controlAccess-element-group"/>
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <oneOrMore>
+            <ref name="element.term"/>
+         </oneOrMore>
+         <optional>
+            <ref name="model.all-dates.choice"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="element.placeName"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.targetType"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.targetRole"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="element.relationType"/>
+         </zeroOrMore>
+         <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
    <define name="element.unitDate">
@@ -539,7 +468,7 @@
          <ref name="attribute.calendar.optional"/>
          <ref name="attribute.certainty.optional"/>
          <ref name="attribute.era.optional"/>
-         <ref name="model.ead.mixed-content"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.unitDateStructured">
@@ -568,7 +497,7 @@
          <ref name="attribute.label.optional"/>
          <ref name="attribute.countryCode.optional"/>
          <ref name="attribute.repositoryCode.optional"/>
-         <ref name="model.ead.mixed-content"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.unitTitle">
@@ -577,7 +506,7 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
          <ref name="attribute.label.optional"/>
-         <ref name="model.ead.mixed-content-plus-controlAccess-plusDFNQ"/>
+         <ref name="model.mixed-content-plus-num.optional"/>
       </element>
    </define>
    <define name="element.useConditions">
@@ -586,81 +515,21 @@
          <ref name="attribute-group.linked-data.optional"/>
       </element>
    </define>
-   <!-- MODELS -->
-   <!-- add term, and model after EAD3 -->
-   <!-- also add to mixed content -->
-   <!-- and add to whereever EAD allows this...  abstract, p, item, entry, and event -->
-   <!-- still need to add the following to some of models
-            date
-
-       -->
-   <define name="model.controlAccess-element-name-list">
-      <choice>
-         <ref name="element.function"/>
-         <ref name="element.genreForm"/>
-         <ref name="element.geogName"/>
-         <ref name="element.occupation"/>
-         <ref name="element.subject"/>
-         <ref name="element.title"/>
-      </choice>
+   <!-- are we just keeping this for title?  what gives? -->
+   <define name="element.title">
+      <element name="title">
+         <ref name="model.controlAccess-element-group"/>
+      </element>
    </define>
    <define name="model.controlAccess-element-group">
       <ref name="attribute-group.global-plus-lang-and-script.optional"/>
       <ref name="attribute-group.linked-data.optional"/>
-      <ref name="attribute-group.assertion-reference.optional"/>
       <oneOrMore>
          <ref name="element.part"/>
       </oneOrMore>
       <!-- now, available outside of the "relation" element. -->
       <zeroOrMore>
          <ref name="element.targetRole"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.ead.grp-elements-plus-controlAccess">
-      <zeroOrMore>
-         <choice>
-            <ref name="element.nameGrp"/>
-            <ref name="element.ptrGrp"/>
-            <ref name="element.ptr"/>
-            <ref name="element.reference"/>
-            <ref name="model.controlAccess-element-name-list"/>
-         </choice>
-      </zeroOrMore>
-   </define>
-   <define name="model.ead.mixed-content">
-        <!-- assuming that we're replacing emph with span, and expanding the names of the rest of elements -->
-      <zeroOrMore>
-         <choice>
-            <ref name="element.abbreviation"/>
-            <ref name="element.expansion"/>
-            <ref name="element.foreign"/>
-            <ref name="element.lb"/>
-            <ref name="element.ptr"/>
-            <ref name="element.reference"/>
-            <ref name="element.referringString"/>
-            <ref name="element.span"/>
-            <text/>
-         </choice>
-      </zeroOrMore>
-   </define>
-   <define name="model.ead.mixed-content-plus-controlAccess">
-      <zeroOrMore>
-         <choice>
-            <ref name="model.ead.mixed-content"/>
-            <ref name="model.controlAccess-element-name-list"/>
-         </choice>
-      </zeroOrMore>
-   </define>
-   <!-- hopefully we don't keep this long... if so, replace the name with something that makes sense -->
-   <define name="model.ead.mixed-content-plus-controlAccess-plusDFNQ">
-      <zeroOrMore>
-         <choice>
-            <ref name="model.ead.mixed-content-plus-controlAccess"/>
-            <ref name="element.date"/>
-            <ref name="element.footnote"/>
-            <ref name="element.num"/>
-            <ref name="element.quote"/>
-         </choice>
       </zeroOrMore>
    </define>
 </grammar>
