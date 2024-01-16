@@ -92,9 +92,9 @@
          </attribute>
       </optional>
    </define>
-   <define name="attribute.dscType.optional">
+   <define name="attribute.descriptionOfComponentsType.optional">
       <optional>
-         <attribute name="dscType">
+         <attribute name="descriptionOfComponentsType">
             <data type="token"/>
          </attribute>
       </optional>
@@ -308,11 +308,12 @@
          </choice>
       </attribute>
    </define>
-   <define name="attribute.dscTypeEncoding" a:exclude-from="eac">
-      <attribute name="dscTypeEncoding" a:defaultValue="EASList">
+   <define name="attribute.descriptionOfComponentsTypeEncoding"
+           a:exclude-from="eac">
+      <attribute name="descriptionOfComponentsTypeEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
-            <value>otherDscTypeEncoding</value>
+            <value>otherdescriptionOfComponentsTypeEncoding</value>
          </choice>
       </attribute>
    </define>
@@ -456,7 +457,7 @@
          <ref name="attribute.detailLevelEncoding"/>
       </optional>
       <optional a:exclude-from="eac">
-         <ref name="attribute.dscTypeEncoding"/>
+         <ref name="attribute.descriptionOfComponentsTypeEncoding"/>
       </optional>
       <optional>
          <ref name="attribute.dateEncoding"/>

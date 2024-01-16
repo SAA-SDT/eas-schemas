@@ -171,10 +171,10 @@
                </attribute>
             </optional>
             <optional>
-               <attribute name="dscTypeEncoding" ns="">
+               <attribute name="descriptionOfComponentsTypeEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherDscTypeEncoding</value>
+                     <value type="token" datatypeLibrary="" ns="">otherdescriptionOfComponentsTypeEncoding</value>
                   </choice>
                </attribute>
             </optional>
@@ -480,7 +480,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -494,28 +494,28 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
             </zeroOrMore>
             <optional>
-               <ref name="dsc"/>
+               <ref name="descriptionOfComponents"/>
             </optional>
          </group>
       </element>
@@ -1750,8 +1750,8 @@
          </group>
       </element>
    </define>
-   <define name="did">
-      <element name="did" ns="https://archivists.org/ns/ead/v4">
+   <define name="identificationData">
+      <element name="identificationData" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1828,7 +1828,7 @@
             <oneOrMore>
                <choice>
                   <ref name="container"/>
-                  <ref name="didNote"/>
+                  <ref name="identificationDataNote"/>
                   <ref name="langMaterial"/>
                   <ref name="materialSpec"/>
                   <ref name="physDescSet"/>
@@ -2233,103 +2233,6 @@
    </define>
    <define name="accruals">
       <element name="accruals" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <ref name="abstract"/>
-            </optional>
-            <interleave>
-               <oneOrMore>
-                  <optional>
-                     <ref name="formattingExtension"/>
-                  </optional>
-               </oneOrMore>
-               <zeroOrMore>
-                  <ref name="p"/>
-               </zeroOrMore>
-            </interleave>
-         </group>
-      </element>
-   </define>
-   <define name="acqInfo">
-      <element name="acqInfo" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3007,8 +2910,8 @@
          </group>
       </element>
    </define>
-   <define name="odd">
-      <element name="odd" ns="https://archivists.org/ns/ead/v4">
+   <define name="otherDescriptiveInfo">
+      <element name="otherDescriptiveInfo" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3224,8 +3127,9 @@
          </group>
       </element>
    </define>
-   <define name="physTech">
-      <element name="physTech" ns="https://archivists.org/ns/ead/v4">
+   <define name="physicalOrTechnicalRequirements">
+      <element name="physicalOrTechnicalRequirements"
+               ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3972,6 +3876,103 @@
          </group>
       </element>
    </define>
+   <define name="sourceOfAcquisition">
+      <element name="sourceOfAcquisition" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
+            <interleave>
+               <oneOrMore>
+                  <optional>
+                     <ref name="formattingExtension"/>
+                  </optional>
+               </oneOrMore>
+               <zeroOrMore>
+                  <ref name="p"/>
+               </zeroOrMore>
+            </interleave>
+         </group>
+      </element>
+   </define>
    <define name="subjectHeadings">
       <element name="subjectHeadings" ns="https://archivists.org/ns/ead/v4">
          <group>
@@ -4189,8 +4190,8 @@
          </group>
       </element>
    </define>
-   <define name="dsc">
-      <element name="dsc" ns="https://archivists.org/ns/ead/v4">
+   <define name="descriptionOfComponents">
+      <element name="descriptionOfComponents" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -6393,8 +6394,8 @@
          </group>
       </element>
    </define>
-   <define name="didNote">
-      <element name="didNote" ns="https://archivists.org/ns/ead/v4">
+   <define name="identificationDataNote">
+      <element name="identificationDataNote" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8236,7 +8237,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -8250,22 +8251,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -8371,7 +8372,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -8385,22 +8386,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -10186,7 +10187,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -10200,22 +10201,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -10518,7 +10519,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -10532,22 +10533,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -10653,7 +10654,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -10667,22 +10668,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -10788,7 +10789,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -10802,22 +10803,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -10923,7 +10924,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -10937,22 +10938,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -11058,7 +11059,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -11072,22 +11073,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -11193,7 +11194,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -11207,22 +11208,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -11328,7 +11329,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -11342,22 +11343,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -11463,7 +11464,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -11477,22 +11478,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -11598,7 +11599,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -11612,22 +11613,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>
@@ -11733,7 +11734,7 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="did"/>
+            <ref name="identificationData"/>
             <optional>
                <ref name="agents"/>
             </optional>
@@ -11747,22 +11748,22 @@
                <choice>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
-                  <ref name="acqInfo"/>
                   <ref name="appraisal"/>
                   <ref name="arrangement"/>
                   <ref name="biogHist"/>
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="legalStatus"/>
-                  <ref name="odd"/>
+                  <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physTech"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
                   <ref name="relatedMaterial"/>
                   <ref name="scopeContent"/>
                   <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
                   <ref name="subjectHeadings"/>
                   <ref name="useConditions"/>
                </choice>

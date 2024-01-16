@@ -45,8 +45,8 @@
          <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
-   <define name="element.acqInfo">
-      <element name="acqInfo">
+   <define name="element.sourceOfAcquisition">
+      <element name="sourceOfAcquisition">
          <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
@@ -60,7 +60,7 @@
          <ref name="model.archDesc.levels-of-description"/>
          <!-- EAD3 already signaled the move to a single DSC, right? -->
          <optional>
-            <ref name="element.dsc"/>
+            <ref name="element.descriptionOfComponents"/>
          </optional>
       </element>
    </define>
@@ -197,14 +197,14 @@
          <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
-   <define name="element.did">
-      <element name="did">
+   <define name="element.identificationData">
+      <element name="identificationData">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <oneOrMore>
             <choice>
                <ref name="element.container"/>
-               <ref name="element.didNote"/>
+               <ref name="element.identificationDataNote"/>
                <ref name="element.langMaterial"/>
                <ref name="element.materialSpec"/>
                <ref name="element.physDescSet"/>
@@ -220,8 +220,8 @@
       </element>
    </define>
    <!-- removed head, just as i removed thead from the c elements... okay??? -->
-   <define name="element.dsc">
-      <element name="dsc">
+   <define name="element.descriptionOfComponents">
+      <element name="descriptionOfComponents">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <oneOrMore>
             <choice>
@@ -231,8 +231,8 @@
          </oneOrMore>
       </element>
    </define>
-   <define name="element.didNote">
-      <element name="didNote">
+   <define name="element.identificationDataNote">
+      <element name="identificationDataNote">
          <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <oneOrMore>
@@ -307,8 +307,8 @@
          <ref name="model.mixed-content.optional"/>
       </element>
    </define>
-   <define name="element.odd">
-      <element name="odd">
+   <define name="element.otherDescriptiveInfo">
+      <element name="otherDescriptiveInfo">
          <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
@@ -373,8 +373,8 @@
          <ref name="model.mixed-content.optional"/>
       </element>
    </define>
-   <define name="element.physTech">
-      <element name="physTech">
+   <define name="element.physicalOrTechnicalRequirements">
+      <element name="physicalOrTechnicalRequirements">
             <!-- why does this have the same model as biogHist, etc? -->
          <ref name="model.ead-narrative-elements"/>
       </element>

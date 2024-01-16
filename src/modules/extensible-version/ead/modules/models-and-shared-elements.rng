@@ -46,7 +46,7 @@
       <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
       <ref name="attribute-group.assertion-reference.optional"/>
       <ref name="attribute-group.linked-data.optional"/>
-      <ref name="element.did"/>
+      <ref name="element.identificationData"/>
       <optional>
          <ref name="element.agents"/>
       </optional>
@@ -65,22 +65,22 @@
          <choice>
             <ref name="element.accessConditions"/>
             <ref name="element.accruals"/>
-            <ref name="element.acqInfo"/>
             <ref name="element.appraisal"/>
             <ref name="element.arrangement"/>
             <ref name="element.biogHist"/>
             <ref name="element.custodHist"/>
             <ref name="element.filePlan"/>
             <ref name="element.legalStatus"/>
-            <ref name="element.odd"/>
+            <ref name="element.otherDescriptiveInfo"/>
             <ref name="element.otherFindAid"/>
-            <ref name="element.physTech"/>
+            <ref name="element.physicalOrTechnicalRequirements"/>
             <ref name="element.preferCite"/>
             <ref name="element.processInfo"/>
             <ref name="element.publicationNote"/>
             <ref name="element.relatedMaterial"/>
             <ref name="element.scopeContent"/>
             <ref name="element.separatedMaterial"/>
+            <ref name="element.sourceOfAcquisition"/>
             <ref name="element.subjectHeadings"/>
             <ref name="element.useConditions"/>
          </choice>

@@ -97,11 +97,11 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="dscTypeEncoding">
+      <xs:attribute name="descriptionOfComponentsTypeEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherDscTypeEncoding"/>
+               <xs:enumeration value="otherdescriptionOfComponentsTypeEncoding"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
@@ -225,33 +225,36 @@
    </xs:complexType>
    <xs:complexType name="archDesc">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
-         <xs:element type="ead:dsc" name="dsc" minOccurs="0"/>
+         <xs:element type="ead:descriptionOfComponents"
+                     name="descriptionOfComponents"
+                     minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -544,10 +547,10 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="did">
+   <xs:complexType name="identificationData">
       <xs:choice maxOccurs="unbounded">
          <xs:element type="ead:container" name="container"/>
-         <xs:element type="ead:didNote" name="didNote"/>
+         <xs:element type="ead:identificationDataNote" name="identificationDataNote"/>
          <xs:element type="ead:langMaterial" name="langMaterial"/>
          <xs:element type="ead:materialSpec" name="materialSpec"/>
          <xs:element type="ead:physDescSet" name="physDescSet"/>
@@ -645,26 +648,6 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="accruals">
-      <xs:sequence>
-         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:formattingExtension" name="formattingExtension"/>
-            <xs:element type="ead:p" name="p"/>
-         </xs:choice>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="acqInfo">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -804,7 +787,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="odd">
+   <xs:complexType name="otherDescriptiveInfo">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -848,7 +831,7 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="physTech">
+   <xs:complexType name="physicalOrTechnicalRequirements">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1000,6 +983,26 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="sourceOfAcquisition">
+      <xs:sequence>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:formattingExtension" name="formattingExtension"/>
+            <xs:element type="ead:p" name="p"/>
+         </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="subjectHeadings">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
@@ -1047,7 +1050,7 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="dsc">
+   <xs:complexType name="descriptionOfComponents">
       <xs:choice maxOccurs="unbounded">
          <xs:element type="ead:c" name="c"/>
          <xs:element type="ead:c01" name="c01"/>
@@ -1457,7 +1460,7 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="didNote">
+   <xs:complexType name="identificationDataNote">
       <xs:sequence>
          <xs:element type="ead:p" name="p" maxOccurs="unbounded"/>
       </xs:sequence>
@@ -1836,29 +1839,30 @@
    </xs:complexType>
    <xs:complexType name="c">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -1880,29 +1884,30 @@
    </xs:complexType>
    <xs:complexType name="c01">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2233,29 +2238,30 @@
    </xs:complexType>
    <xs:complexType name="c02">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2312,29 +2318,30 @@
    </xs:complexType>
    <xs:complexType name="c03">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2356,29 +2363,30 @@
    </xs:complexType>
    <xs:complexType name="c04">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2400,29 +2408,30 @@
    </xs:complexType>
    <xs:complexType name="c05">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2444,29 +2453,30 @@
    </xs:complexType>
    <xs:complexType name="c06">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2488,29 +2498,30 @@
    </xs:complexType>
    <xs:complexType name="c07">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2532,29 +2543,30 @@
    </xs:complexType>
    <xs:complexType name="c08">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2576,29 +2588,30 @@
    </xs:complexType>
    <xs:complexType name="c09">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2620,29 +2633,30 @@
    </xs:complexType>
    <xs:complexType name="c10">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2664,29 +2678,30 @@
    </xs:complexType>
    <xs:complexType name="c11">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
@@ -2708,29 +2723,30 @@
    </xs:complexType>
    <xs:complexType name="c12">
       <xs:sequence>
-         <xs:element type="ead:did" name="did"/>
+         <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
-            <xs:element type="ead:acqInfo" name="acqInfo"/>
             <xs:element type="ead:appraisal" name="appraisal"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
             <xs:element type="ead:biogHist" name="biogHist"/>
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
-            <xs:element type="ead:odd" name="odd"/>
+            <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherFindAid" name="otherFindAid"/>
-            <xs:element type="ead:physTech" name="physTech"/>
+            <xs:element type="ead:physicalOrTechnicalRequirements"
+                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
+            <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:subjectHeadings" name="subjectHeadings"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
