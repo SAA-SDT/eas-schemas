@@ -2003,6 +2003,7 @@
             <xs:element type="ead:place" name="place"/>
             <xs:element type="ead:relationType" name="relationType"/>
             <xs:element type="ead:targetRole" name="targetRole"/>
+            <xs:element type="ead:targetType" name="targetType"/>
          </xs:choice>
          <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
          <xs:element type="ead:objectXMLWrap" name="objectXMLWrap" minOccurs="0"/>

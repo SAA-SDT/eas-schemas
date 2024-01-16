@@ -25,6 +25,7 @@
                <ref name="element.place"/>
                <ref name="element.relationType"/>
                <ref name="element.targetRole"/>
+               <ref name="element.targetType"/>
             </choice>
          </zeroOrMore>
          <ref name="element.descriptiveNote.optional"/>

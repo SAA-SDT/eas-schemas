@@ -8742,6 +8742,7 @@
                   <ref name="place"/>
                   <ref name="relationType"/>
                   <ref name="targetRole"/>
+                  <ref name="targetType"/>
                </choice>
             </zeroOrMore>
             <optional>
