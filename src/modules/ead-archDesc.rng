@@ -42,6 +42,9 @@
     <define name="element.accessConditions">
         <element name="accessConditions">
             <ref name="model.ead-narrative-elements"/>
+            <optional>
+                <ref name="element.dateRange"/>
+            </optional>
             <ref name="attribute-group.linked-data.optional"/>
         </element>
     </define>
@@ -576,6 +579,9 @@
     <define name="element.useConditions">
         <element name="useConditions">
             <ref name="model.ead-narrative-elements"/>
+            <optional>
+                <ref name="element.dateRange"/>
+            </optional>
             <ref name="attribute-group.linked-data.optional"/>
         </element>
     </define>
