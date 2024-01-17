@@ -241,14 +241,14 @@
      
     <define name="element.identificationData">
         <element name="identificationData">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="element.head.optional"/>
             <oneOrMore>
                 <choice>
                     <ref name="element.container"/>
                     <ref name="element.identificationDataNote"/>
-                    <ref name="element.langMaterial"/>
+                    <ref name="element.languageOfMaterial"/>
                     <ref name="element.legalStatus"/>
                     <ref name="element.materialSpec"/>
                     <ref name="element.physDescSet"/>
@@ -266,7 +266,7 @@
     
     <define name="element.descriptionOfComponents">
         <element name="descriptionOfComponents">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.descriptionOfComponentsType.optional"/>
             <optional>
@@ -307,9 +307,9 @@
     </define>
     
     
-    <define name="element.langMaterial">
-        <element name="langMaterial">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+    <define name="element.languageOfMaterial">
+        <element name="languageOfMaterial">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.label.optional"/>
             <oneOrMore>
@@ -325,7 +325,7 @@
     
     <define name="element.languageSet">
         <element name="languageSet">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <oneOrMore>
                 <ref name="element.language"/>
@@ -368,7 +368,7 @@
     
     <define name="element.physDescSet">
         <element name="physDescSet">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="element.physDescStructured"/>
             <oneOrMore>
@@ -379,17 +379,17 @@
     
     <define name="element.physDescStructured">
         <element name="physDescStructured">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.physDescStructuredType.optional"/>
             <ref name="attribute.coverage.optional"/>
             <element name="quantity">
-                <ref name="attribute-group.global-plus-base.optional"/>
+                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
                 <ref name="attribute-group.assertion-reference.optional"/>
                 <text/>
             </element>
             <element name="unitType">
-                <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
                 <ref name="attribute-group.assertion-reference.optional"/>
                 <ref name="attribute-group.linked-data.optional"/>
                 <text/>
@@ -513,7 +513,7 @@
     
     <define name="element.unitDate">
         <element name="unitDate">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.label.optional"/>
             <ref name="attribute.unitDateType.optional"/>
@@ -533,7 +533,7 @@
     
     <define name="element.unitDateStructured">
         <element name="unitDateStructured">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.label.optional"/>
             <ref name="attribute.unitDateType.optional"/>

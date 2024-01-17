@@ -19,6 +19,6 @@
                 </choice>                     
             </oneOrMore>
         </element>       
-    </define>    
+    </define>     
 
 </grammar>
