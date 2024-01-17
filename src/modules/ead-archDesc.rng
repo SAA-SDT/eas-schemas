@@ -269,6 +269,9 @@
             <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.descriptionOfComponentsType.optional"/>
+            <optional>
+                <ref name="model.narrative-group.optional"/>
+            </optional>
             <oneOrMore>
                 <choice>
                     <ref name="element.c"/>
