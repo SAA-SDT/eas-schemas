@@ -23,9 +23,9 @@
         <element name="ead">
             <ref name="attribute-group.document-node"/>
             <ref name="element.control"/>
-            <optional>
+            <zeroOrMore>
                 <ref name="element.findAidDesc"/>
-            </optional>
+            </zeroOrMore>
             <ref name="element.archDesc"/>
         </element>
     </define>
