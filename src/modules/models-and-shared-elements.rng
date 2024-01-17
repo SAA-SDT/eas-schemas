@@ -259,15 +259,13 @@
         </optional>
     </define>
     
-    <define name="element.formattingExtension.optional">
-        <optional>
-            <element name="formattingExtension">
-                <ref name="attribute-group.global.optional"/>
-                <oneOrMore>
-                    <ref name="element.anyHTML"/>
-                </oneOrMore>
-            </element>
-        </optional>
+    <define name="element.formattingExtension">
+        <element name="formattingExtension">
+            <ref name="attribute-group.global.optional"/>
+            <oneOrMore>
+                <ref name="element.anyHTML"/>
+            </oneOrMore>
+        </element>
     </define>
     
     <define name="element.anyHTML">
@@ -595,9 +593,9 @@
     
     <!-- removing list, with more elements to follow-->
     <define name="model.narrative-group.optional" combine="interleave">
-        <zeroOrMore>
-            <ref name="element.formattingExtension.optional"/>
-        </zeroOrMore>
+        <optional>
+            <ref name="element.formattingExtension"/>
+        </optional>
     </define>
     <define name="model.narrative-group.optional" combine="interleave">
         <zeroOrMore>
