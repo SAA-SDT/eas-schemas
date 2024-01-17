@@ -4,6 +4,7 @@
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
     <!-- ELEMENTS -->
+    <!-- Could be removed
     <define name="element.abbreviation">
         <element name="abbreviation">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -17,6 +18,7 @@
             <text/>
         </element>
     </define>
+    -->
     
     <define name="element.abstract">
         <element name="abstract">
@@ -165,12 +167,9 @@
         </element>
     </define>
     
-
-    
-    
     <!-- regroup what's above later on -->
     
-    <!-- can this be combined now??? I did.  Fix, if needed, after checking with EAC-->
+    <!-- can this be combined now??? I did. Fix, if needed, after checking with EAC -->
     <define name="element.biogHist">
         <element name="biogHist">
             <ref name="model.ead-narrative-elements"/>
@@ -295,9 +294,7 @@
     
     <define name="element.function">
         <element name="function">
-            
             <ref name="model.single-element-group" a:exclude-from="ead"/>
-            
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.linked-data.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac"/>
@@ -314,7 +311,6 @@
             In a future revision of EAC-CPF, <targetType>, <targetRole>, and <relationType> 
             would need to be added as optional and repeatable sub-elements of <function> 
             (we should add these to the single-element-group, if kept as is)
-            
             -->
             <zeroOrMore a:exclude-from="eac">
                 <ref name="element.targetType"/>
@@ -337,7 +333,15 @@
             <data type="normalizedString"/>
         </element>
     </define>
-    
+
+    <define name="element.head.optional">
+        <element name="head">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.mixed-content.optional"/>
+        </element>
+    </define>
+
     <define name="element.language">
         <element name="language">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -570,19 +574,6 @@
         </zeroOrMore>
     </define>
     
-    <define name="model.mixed-content-plus-num.optional">
-        <zeroOrMore>
-            <choice>
-                <!-- is num the only other mixed-content element to survive?  quote, and others are part of HTML, so no need? -->
-                <ref name="element.num"/>
-                <ref name="element.reference"/>
-                <ref name="element.referringString"/>
-                <ref name="element.span"/>
-                <text/>
-            </choice>
-        </zeroOrMore>
-    </define>
-    
     <define name="model.mixed-content-no-references.optional">
         <zeroOrMore>
             <choice>
@@ -605,7 +596,6 @@
         </zeroOrMore>
     </define>
 
-    
     <!-- where to add num, footnote, and ??? -->
 
      <!-- just EAC currently -->
