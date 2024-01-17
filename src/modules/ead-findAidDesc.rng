@@ -5,20 +5,20 @@
 
     <define name="element.findAidDesc">
         <element name="findAidDesc">
-            <!-- TO DO: confirm attribute availability -->
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.links.optional"/>
             <oneOrMore>
                 <choice>
                     <ref name="element.agent"/>
                     <ref name="element.citedRange"/>
                     <ref name="element.date"/>
-                    <ref name="element.formattingExtension.optional"/>
+                    <ref name="element.formattingExtension"/>
                     <ref name="element.place"/>
                     <ref name="element.title"/>
                 </choice>                     
             </oneOrMore>
         </element>       
-    </define>    
+    </define>     
 
 </grammar>
