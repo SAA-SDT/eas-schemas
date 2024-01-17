@@ -586,6 +586,7 @@
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute.style.optional"/>
             <oneOrMore>
                 <ref name="element.part"/>
             </oneOrMore>
