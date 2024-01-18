@@ -34,6 +34,7 @@
     <define name="element.formAvailable">
         <element name="formAvailable">
             <ref name="model.ead-narrative-elements-plus-relations"/>
+            <ref name="attribute.coverage.optional"/>
         </element>
     </define>
     
