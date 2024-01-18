@@ -4,19 +4,6 @@
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
     <!-- ELEMENTS -->
-   <define name="element.abbreviation">
-      <element name="abbreviation">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <optional>
-                <!-- this way, we don't have attributes and elements with the same name... but still, we should discuss -->
-            <attribute name="expan">
-               <data type="token"/>
-            </attribute>
-         </optional>
-         <text/>
-      </element>
-   </define>
    <define name="element.abstract">
       <element name="abstract">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -88,7 +75,7 @@
    </define>
    <define name="element.agent">
       <element name="agent">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
          <oneOrMore>
@@ -154,7 +141,7 @@
       </element>
    </define>
    <!-- regroup what's above later on -->
-   <!-- can this be combined now??? I did.  Fix, if needed, after checking with EAC-->
+   <!-- can this be combined now??? I did. Fix, if needed, after checking with EAC -->
    <define name="element.biogHist">
       <element name="biogHist">
          <ref name="model.ead-narrative-elements"/>
@@ -234,15 +221,13 @@
          </element>
       </optional>
    </define>
-   <define name="element.formattingExtension.optional">
-      <optional>
-         <element name="formattingExtension">
-            <ref name="attribute-group.global.optional"/>
-            <oneOrMore>
-               <ref name="element.anyHTML"/>
-            </oneOrMore>
-         </element>
-      </optional>
+   <define name="element.formattingExtension">
+      <element name="formattingExtension">
+         <ref name="attribute-group.global.optional"/>
+         <oneOrMore>
+            <ref name="element.anyHTML"/>
+         </oneOrMore>
+      </element>
    </define>
    <define name="element.anyHTML">
       <element ns="http://www.w3.org/1999/xhtml">
@@ -284,7 +269,6 @@
             In a future revision of EAC-CPF, <targetType>, <targetRole>, and <relationType> 
             would need to be added as optional and repeatable sub-elements of <function> 
             (we should add these to the single-element-group, if kept as is)
-            
             -->
          <zeroOrMore a:exclude-from="eac">
             <ref name="element.targetType"/>
@@ -304,6 +288,13 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.coordinateSystem"/>
          <data type="normalizedString"/>
+      </element>
+   </define>
+   <define name="element.head.optional">
+      <element name="head">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.language">
@@ -514,18 +505,6 @@
          </choice>
       </zeroOrMore>
    </define>
-   <define name="model.mixed-content-plus-num.optional">
-      <zeroOrMore>
-         <choice>
-                <!-- is num the only other mixed-content element to survive?  quote, and others are part of HTML, so no need? -->
-            <ref name="element.num"/>
-            <ref name="element.reference"/>
-            <ref name="element.referringString"/>
-            <ref name="element.span"/>
-            <text/>
-         </choice>
-      </zeroOrMore>
-   </define>
    <define name="model.mixed-content-no-references.optional">
       <zeroOrMore>
          <choice>
@@ -537,9 +516,9 @@
    </define>
    <!-- removing list, with more elements to follow-->
    <define name="model.narrative-group.optional" combine="interleave">
-      <zeroOrMore>
-         <ref name="element.formattingExtension.optional"/>
-      </zeroOrMore>
+      <optional>
+         <ref name="element.formattingExtension"/>
+      </optional>
    </define>
    <define name="model.narrative-group.optional" combine="interleave">
       <zeroOrMore>

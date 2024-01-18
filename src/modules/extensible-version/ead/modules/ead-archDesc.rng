@@ -32,11 +32,15 @@
    <define name="element.formAvailable">
       <element name="formAvailable">
          <ref name="model.ead-narrative-elements-plus-relations"/>
+         <ref name="attribute.coverage.optional"/>
       </element>
    </define>
    <define name="element.accessConditions">
       <element name="accessConditions">
          <ref name="model.ead-narrative-elements"/>
+         <optional>
+            <ref name="element.dateRange"/>
+         </optional>
          <ref name="attribute-group.linked-data.optional"/>
       </element>
    </define>
@@ -73,6 +77,7 @@
    </define>
    <define name="element.c">
       <element name="c">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c"/>
@@ -81,6 +86,7 @@
    </define>
    <define name="element.c01">
       <element name="c01">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c02"/>
@@ -89,6 +95,7 @@
    </define>
    <define name="element.c02">
       <element name="c02">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c03"/>
@@ -97,6 +104,7 @@
    </define>
    <define name="element.c03">
       <element name="c03">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c04"/>
@@ -105,6 +113,7 @@
    </define>
    <define name="element.c04">
       <element name="c04">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c05"/>
@@ -113,6 +122,7 @@
    </define>
    <define name="element.c05">
       <element name="c05">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c06"/>
@@ -121,6 +131,7 @@
    </define>
    <define name="element.c06">
       <element name="c06">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c07"/>
@@ -129,6 +140,7 @@
    </define>
    <define name="element.c07">
       <element name="c07">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c08"/>
@@ -137,6 +149,7 @@
    </define>
    <define name="element.c08">
       <element name="c08">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c09"/>
@@ -145,6 +158,7 @@
    </define>
    <define name="element.c09">
       <element name="c09">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c10"/>
@@ -153,6 +167,7 @@
    </define>
    <define name="element.c10">
       <element name="c10">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c11"/>
@@ -161,6 +176,7 @@
    </define>
    <define name="element.c11">
       <element name="c11">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
          <zeroOrMore>
             <ref name="element.c12"/>
@@ -169,6 +185,7 @@
    </define>
    <define name="element.c12">
       <element name="c12">
+         <ref name="element.head.optional"/>
          <ref name="model.archDesc.levels-of-description"/>
       </element>
    </define>
@@ -201,13 +218,14 @@
    </define>
    <define name="element.identificationData">
       <element name="identificationData">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="element.head.optional"/>
          <oneOrMore>
             <choice>
                <ref name="element.container"/>
                <ref name="element.identificationDataNote"/>
-               <ref name="element.langMaterial"/>
+               <ref name="element.languageOfMaterial"/>
                <ref name="element.legalStatus"/>
                <ref name="element.materialSpec"/>
                <ref name="element.physDescSet"/>
@@ -222,12 +240,14 @@
          </oneOrMore>
       </element>
    </define>
-   <!-- removed head, just as i removed thead from the c elements... okay??? -->
    <define name="element.descriptionOfComponents">
       <element name="descriptionOfComponents">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.descriptionOfComponentsType.optional"/>
+         <optional>
+            <ref name="model.narrative-group.optional"/>
+         </optional>
          <oneOrMore>
             <choice>
                <ref name="element.c"/>
@@ -238,7 +258,7 @@
    </define>
    <define name="element.identificationDataNote">
       <element name="identificationDataNote">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <oneOrMore>
             <ref name="element.p"/>
@@ -258,9 +278,9 @@
          <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
-   <define name="element.langMaterial">
-      <element name="langMaterial">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+   <define name="element.languageOfMaterial">
+      <element name="languageOfMaterial">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.label.optional"/>
          <oneOrMore>
@@ -275,7 +295,7 @@
    </define>
    <define name="element.languageSet">
       <element name="languageSet">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <oneOrMore>
             <ref name="element.language"/>
@@ -291,13 +311,6 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
-         <ref name="model.mixed-content.optional"/>
-      </element>
-   </define>
-   <define name="element.num">
-      <element name="num">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="model.mixed-content.optional"/>
       </element>
    </define>
@@ -320,7 +333,7 @@
    </define>
    <define name="element.physDescSet">
       <element name="physDescSet">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="element.physDescStructured"/>
          <oneOrMore>
@@ -330,17 +343,17 @@
    </define>
    <define name="element.physDescStructured">
       <element name="physDescStructured">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.physDescStructuredType.optional"/>
          <ref name="attribute.coverage.optional"/>
          <element name="quantity">
-            <ref name="attribute-group.global-plus-base.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <text/>
          </element>
          <element name="unitType">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <text/>
@@ -359,7 +372,7 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
-         <ref name="model.mixed-content-plus-num.optional"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.physLoc">
@@ -451,7 +464,7 @@
    </define>
    <define name="element.unitDate">
       <element name="unitDate">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.label.optional"/>
          <ref name="attribute.unitDateType.optional"/>
@@ -469,7 +482,7 @@
    </define>
    <define name="element.unitDateStructured">
       <element name="unitDateStructured">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.label.optional"/>
          <ref name="attribute.unitDateType.optional"/>
@@ -502,12 +515,15 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
          <ref name="attribute.label.optional"/>
-         <ref name="model.mixed-content-plus-num.optional"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.useConditions">
       <element name="useConditions">
          <ref name="model.ead-narrative-elements"/>
+         <optional>
+            <ref name="element.dateRange"/>
+         </optional>
          <ref name="attribute-group.linked-data.optional"/>
       </element>
    </define>
@@ -516,6 +532,7 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
+         <ref name="attribute.style.optional"/>
          <oneOrMore>
             <ref name="element.part"/>
          </oneOrMore>
