@@ -552,7 +552,7 @@
    </xs:complexType>
    <xs:complexType name="identificationData">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:choice maxOccurs="unbounded">
             <xs:element type="ead:container" name="container"/>
             <xs:element type="ead:identificationDataNote" name="identificationDataNote"/>
@@ -1851,7 +1851,7 @@
    </xs:complexType>
    <xs:complexType name="c">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -1897,7 +1897,7 @@
    </xs:complexType>
    <xs:complexType name="c01">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2238,7 +2238,7 @@
    </xs:complexType>
    <xs:complexType name="c02">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2319,7 +2319,7 @@
    </xs:complexType>
    <xs:complexType name="c03">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2365,7 +2365,7 @@
    </xs:complexType>
    <xs:complexType name="c04">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2411,7 +2411,7 @@
    </xs:complexType>
    <xs:complexType name="c05">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2457,7 +2457,7 @@
    </xs:complexType>
    <xs:complexType name="c06">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2503,7 +2503,7 @@
    </xs:complexType>
    <xs:complexType name="c07">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2549,7 +2549,7 @@
    </xs:complexType>
    <xs:complexType name="c08">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2595,7 +2595,7 @@
    </xs:complexType>
    <xs:complexType name="c09">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2641,7 +2641,7 @@
    </xs:complexType>
    <xs:complexType name="c10">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2687,7 +2687,7 @@
    </xs:complexType>
    <xs:complexType name="c11">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
@@ -2733,7 +2733,7 @@
    </xs:complexType>
    <xs:complexType name="c12">
       <xs:sequence>
-         <xs:element type="ead:head" name="head"/>
+         <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:element type="ead:identificationData" name="identificationData"/>
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>

@@ -291,11 +291,13 @@
       </element>
    </define>
    <define name="element.head.optional">
-      <element name="head">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="model.mixed-content.optional"/>
-      </element>
+      <optional>
+         <element name="head">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.mixed-content.optional"/>
+         </element>
+      </optional>
    </define>
    <define name="element.language">
       <element name="language">

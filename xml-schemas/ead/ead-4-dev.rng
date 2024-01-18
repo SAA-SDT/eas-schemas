@@ -1908,7 +1908,9 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <oneOrMore>
                <choice>
                   <ref name="container"/>
@@ -8225,7 +8227,9 @@
    <define name="c">
       <element name="c" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -8366,7 +8370,9 @@
    <define name="c01">
       <element name="c01" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -10212,7 +10218,9 @@
    <define name="c02">
       <element name="c02" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -10550,7 +10558,9 @@
    <define name="c03">
       <element name="c03" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -10691,7 +10701,9 @@
    <define name="c04">
       <element name="c04" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -10832,7 +10844,9 @@
    <define name="c05">
       <element name="c05" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -10973,7 +10987,9 @@
    <define name="c06">
       <element name="c06" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -11114,7 +11130,9 @@
    <define name="c07">
       <element name="c07" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -11255,7 +11273,9 @@
    <define name="c08">
       <element name="c08" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -11396,7 +11416,9 @@
    <define name="c09">
       <element name="c09" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -11537,7 +11559,9 @@
    <define name="c10">
       <element name="c10" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -11678,7 +11702,9 @@
    <define name="c11">
       <element name="c11" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -11819,7 +11845,9 @@
    <define name="c12">
       <element name="c12" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <ref name="head"/>
+            <optional>
+               <ref name="head"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
