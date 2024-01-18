@@ -4,22 +4,6 @@
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
     <!-- ELEMENTS -->
-    <!-- Could be removed
-    <define name="element.abbreviation">
-        <element name="abbreviation">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <optional>
-                <!-- this way, we don't have attributes and elements with the same name... but still, we should discuss -->
-                <attribute name="expan">
-                    <data type="token"/>
-                </attribute>
-            </optional>
-            <text/>
-        </element>
-    </define>
-    -->
-    
     <define name="element.abstract">
         <element name="abstract">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
