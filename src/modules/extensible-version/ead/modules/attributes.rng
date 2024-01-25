@@ -115,13 +115,6 @@
          </attribute>
       </optional>
    </define>
-   <define name="attribute.label.optional">
-      <optional>
-         <attribute name="label">
-            <data type="token"/>
-         </attribute>
-      </optional>
-   </define>
    <define name="attribute.level.optional">
       <optional>
          <attribute name="level">
@@ -520,9 +513,6 @@
    </define>
    <define name="attribute-group.container.optional" combine="interleave">
       <ref name="attribute.containerId.optional"/>
-   </define>
-   <define name="attribute-group.container.optional" combine="interleave">
-      <ref name="attribute.label.optional"/>
    </define>
    <define name="attribute-group.container.optional" combine="interleave">
       <ref name="attribute.parent.optional"/>

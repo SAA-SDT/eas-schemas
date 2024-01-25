@@ -4,10 +4,6 @@
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
     <!-- to do:     
-        review label attribute
-                localType
-                etc.
-        
         create some updated matrices and use those to refine the existing models... but perhaps wait until more decisions are made? 
                 etc.
         
@@ -282,7 +278,6 @@
       <element name="languageOfMaterial">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.label.optional"/>
          <oneOrMore>
             <choice>
                <ref name="element.language"/>
@@ -466,7 +461,6 @@
       <element name="unitDate">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.label.optional"/>
          <ref name="attribute.unitDateType.optional"/>
          <ref name="attribute.dateChar.optional"/>
          <!-- also bundled together with more attributes for EAC / unidatestructured.
@@ -484,7 +478,6 @@
       <element name="unitDateStructured">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.label.optional"/>
          <ref name="attribute.unitDateType.optional"/>
          <ref name="attribute.dateChar.optional"/>
          <!-- also bundled together with more attributes for EAC / unidatestructured.
@@ -503,7 +496,6 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.label.optional"/>
          <ref name="attribute.countryCode.optional"/>
          <ref name="attribute.repositoryCode.optional"/>
          <ref name="model.mixed-content.optional"/>
@@ -514,7 +506,6 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
-         <ref name="attribute.label.optional"/>
          <ref name="model.mixed-content.optional"/>
       </element>
    </define>

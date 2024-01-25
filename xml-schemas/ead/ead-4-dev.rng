@@ -6316,12 +6316,6 @@
                   </attribute>
                </optional>
                <optional>
-                  <attribute name="label" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
                   <attribute name="parent" ns="">
                      <data type="IDREFS"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
@@ -6503,12 +6497,6 @@
                   </attribute>
                </optional>
             </interleave>
-            <optional>
-               <attribute name="label" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <oneOrMore>
                <choice>
                   <ref name="language"/>
@@ -7179,12 +7167,6 @@
                </optional>
             </interleave>
             <optional>
-               <attribute name="label" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
                <attribute name="unitDateType" ns="">
                   <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
@@ -7294,12 +7276,6 @@
                   </attribute>
                </optional>
             </interleave>
-            <optional>
-               <attribute name="label" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <optional>
                <attribute name="unitDateType" ns="">
                   <data type="token"
@@ -7440,12 +7416,6 @@
                </optional>
             </interleave>
             <optional>
-               <attribute name="label" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
                <attribute name="countryCode" ns="">
                   <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
@@ -7569,12 +7539,6 @@
                   </attribute>
                </optional>
             </interleave>
-            <optional>
-               <attribute name="label" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <oneOrMore>
                <choice>
                   <ref name="reference"/>

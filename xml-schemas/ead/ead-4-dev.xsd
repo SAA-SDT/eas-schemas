@@ -1437,7 +1437,6 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="containerId" type="xs:token"/>
-      <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="parent" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
@@ -1474,7 +1473,6 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="label" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="legalStatus">
@@ -1616,7 +1614,6 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="unitDateType" type="xs:token"/>
       <xs:attribute name="dateChar" type="xs:token"/>
       <xs:attribute name="calendar" type="xs:token"/>
@@ -1638,7 +1635,6 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="unitDateType" type="xs:token"/>
       <xs:attribute name="dateChar" type="xs:token"/>
       <xs:attribute name="calendar" type="xs:token"/>
@@ -1665,7 +1661,6 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="label" type="xs:token"/>
       <xs:attribute name="countryCode" type="xs:token"/>
       <xs:attribute name="repositoryCode" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
@@ -1689,7 +1684,6 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:attribute name="label" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="formAvailable">
