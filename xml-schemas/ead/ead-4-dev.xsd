@@ -1457,7 +1457,7 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="languageOfMaterial" mixed="true">
+   <xs:complexType name="languageOfMaterial">
       <xs:sequence>
          <xs:choice maxOccurs="unbounded">
             <xs:element type="ead:language" name="language"/>

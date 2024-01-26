@@ -285,7 +285,6 @@
             </choice>
          </oneOrMore>
          <ref name="element.descriptiveNote.optional"/>
-         <text/>
       </element>
    </define>
    <define name="element.languageSet">

@@ -6506,7 +6506,6 @@
             <optional>
                <ref name="descriptiveNote"/>
             </optional>
-            <text/>
          </group>
       </element>
    </define>
