@@ -172,6 +172,14 @@
         </attribute>  
     </define>
     
+    <define name="attribute.parallel.optional">
+        <optional>
+            <attribute name="approximate">
+                <data type="boolean"/>
+            </attribute>  
+        </optional>
+    </define>
+    
     <!-- do really want IDFREFS, as defined in EAD3, or would IDREF suffice? e.g. a container cannot be in multiple containers at once, right? -->
     <define name="attribute.parent.optional">
         <optional>
