@@ -295,6 +295,7 @@
         <element name="dimensions">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.unit.optional"/>
             <!-- what else follows this model? -->
             <ref name="model.mixed-content.optional"/>
         </element>
