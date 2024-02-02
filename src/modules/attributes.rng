@@ -14,6 +14,14 @@
         </optional>
     </define>
     
+    <define name="attribute.approximate.optional">
+        <optional>
+            <attribute name="approximate">
+                <data type="boolean"/>
+            </attribute>  
+        </optional>
+    </define>
+    
     <define name="attribute.audience.optional">
         <optional>
             <attribute name="audience">
