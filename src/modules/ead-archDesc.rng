@@ -369,6 +369,7 @@
         <element name="physDescSet">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.parallel.optional"/>
             <ref name="element.physDescStructured"/>
             <oneOrMore>
                 <ref name="element.physDescStructured"/>
