@@ -168,17 +168,6 @@
         </element>
     </define>
     
-    <define name="element.places">
-        <element name="places">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <oneOrMore>
-                <ref name="element.place"/>
-            </oneOrMore>
-            <ref name="element.descriptiveNote.optional"/>
-        </element>
-    </define>
-    
     <define name="element.structureOrGenealogy">
         <element name="structureOrGenealogy">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
