@@ -1540,6 +1540,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="approximate" type="xs:boolean"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="physDesc" mixed="true">
@@ -1619,6 +1620,10 @@
       <xs:attribute name="calendar" type="xs:token"/>
       <xs:attribute name="certainty" type="xs:token"/>
       <xs:attribute name="era" type="xs:token"/>
+      <xs:attribute name="notAfter" type="xs:token"/>
+      <xs:attribute name="notBefore" type="xs:token"/>
+      <xs:attribute name="standardDate" type="xs:token"/>
+      <xs:attribute name="status" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitDateStructured">
@@ -2116,6 +2121,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="approximate" type="xs:boolean"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitType" mixed="true">
@@ -2169,6 +2175,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="unit" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="targetType" mixed="true">
