@@ -523,9 +523,8 @@
                 can be more or less structured depending on sub-elements / attributes.  for now, we've got a mix
                 hence we cannot re-use some of our pre-defined attribute lists just yet.
             but if we keep the EAD/C separation + UD/UDS separation, then we can combine these 3 attribues with the 4 above for another attribute group model-->
-            <ref name="attribute.calendar.optional"/>
-            <ref name="attribute.certainty.optional"/>
-            <ref name="attribute.era.optional"/>
+            <ref name="attribute-group.standard-date-attributes.optional"/>
+            <ref name="attribute.status.optional" a:exclude-from="eac"/>
 
             <ref name="model.mixed-content.optional"/>
         </element>
