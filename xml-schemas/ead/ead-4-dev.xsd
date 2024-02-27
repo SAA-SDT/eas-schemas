@@ -232,6 +232,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -616,6 +617,23 @@
    <xs:complexType name="functions">
       <xs:sequence>
          <xs:element type="ead:function" name="function" maxOccurs="unbounded"/>
+         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="places">
+      <xs:sequence>
+         <xs:element type="ead:place" name="place" maxOccurs="unbounded"/>
          <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
@@ -1855,6 +1873,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -1901,6 +1920,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2244,6 +2264,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2325,6 +2346,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2371,6 +2393,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2417,6 +2440,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2463,6 +2487,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2509,6 +2534,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2555,6 +2581,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2601,6 +2628,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2647,6 +2675,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2693,6 +2722,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2739,6 +2769,7 @@
          <xs:element type="ead:agents" name="agents" minOccurs="0"/>
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
+         <xs:element type="ead:places" name="places" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
