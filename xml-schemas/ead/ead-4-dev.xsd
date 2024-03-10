@@ -1321,7 +1321,7 @@
    </xs:complexType>
    <xs:group name="_1">
       <xs:sequence>
-         <xs:any processContents="lax"/>
+         <xs:any namespace="##other" processContents="lax"/>
       </xs:sequence>
    </xs:group>
    <xs:complexType name="placeRole" mixed="true">

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" startMode="ead">
+    <!-- 1) update to LoC or main GH branches
+        and include file locations in variables for the build process.
+        2) determine why JING complians about our admittedly ugly but valid Schematron file...
+        for now, we'll just add to our example files separately..... and/or, see if JING will complain if we add those Schematron rules to the XSD output.
+        -->
+    <mode name="ead">
+        <namespace ns="https://archivists.org/ns/ead/v4">
+            <validate schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/development/xml-schemas/ead/ead-4-dev.xsd" schemaType="application/xml">
+                <context path="formattingExtension" useMode="xhtml"/>
+            </validate>
+            <!--
+            <validate schema="https://raw.githubusercontent.com/SAA-SDT/eas-schematrons/ead4/schematron/ead.sch" schemaType="application/xml"/>
+            -->
+        </namespace>
+    </mode>
+    <mode name="xhtml">
+        <namespace ns="http://www.w3.org/1999/xhtml">
+            <validate schema="https://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd" schemaType="application/xml"/>
+            <attach/>
+        </namespace>
+    </mode>
+</rules>
