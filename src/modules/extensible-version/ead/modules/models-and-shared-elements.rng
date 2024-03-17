@@ -535,12 +535,12 @@
       </zeroOrMore>
    </define>
    <!-- removing list, with more elements to follow-->
-   <define name="model.narrative-group.optional" combine="interleave">
+   <define name="model.narrative-group.optional" combine="choice">
       <optional>
          <ref name="element.formattingExtension"/>
       </optional>
    </define>
-   <define name="model.narrative-group.optional" combine="interleave">
+   <define name="model.narrative-group.optional" combine="choice">
       <zeroOrMore>
          <ref name="element.p"/>
       </zeroOrMore>
