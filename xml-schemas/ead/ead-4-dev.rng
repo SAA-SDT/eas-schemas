@@ -2378,14 +2378,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
             <optional>
                <ref name="dateRange"/>
             </optional>
@@ -2496,14 +2496,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -2591,14 +2591,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -2686,14 +2686,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -2781,14 +2781,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -2876,14 +2876,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -2971,14 +2971,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -3066,14 +3066,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -3181,14 +3181,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
             <optional>
                <ref name="relations"/>
             </optional>
@@ -3280,14 +3280,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -3375,14 +3375,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -3470,14 +3470,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -3585,14 +3585,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
             <optional>
                <ref name="relations"/>
             </optional>
@@ -3703,14 +3703,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
             <optional>
                <ref name="relations"/>
             </optional>
@@ -3801,14 +3801,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -3916,14 +3916,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
             <optional>
                <ref name="relations"/>
             </optional>
@@ -4014,14 +4014,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
          </group>
       </element>
    </define>
@@ -4109,14 +4109,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
             <zeroOrMore>
                <ref name="subject"/>
             </zeroOrMore>
@@ -4207,14 +4207,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
             <optional>
                <ref name="dateRange"/>
             </optional>
@@ -4316,14 +4316,14 @@
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
             <oneOrMore>
                <choice>
                   <ref name="c"/>
@@ -7785,14 +7785,14 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <interleave>
+            <choice>
                <optional>
                   <ref name="formattingExtension"/>
                </optional>
                <zeroOrMore>
                   <ref name="p"/>
                </zeroOrMore>
-            </interleave>
+            </choice>
             <optional>
                <ref name="relations"/>
             </optional>
