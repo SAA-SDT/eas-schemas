@@ -174,7 +174,7 @@
     
     <define name="attribute.parallel.optional">
         <optional>
-            <attribute name="approximate">
+            <attribute name="parallel">
                 <data type="boolean"/>
             </attribute>  
         </optional>
