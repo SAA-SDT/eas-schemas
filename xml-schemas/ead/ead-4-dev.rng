@@ -6911,7 +6911,7 @@
                </optional>
             </interleave>
             <optional>
-               <attribute name="approximate" ns="">
+               <attribute name="parallel" ns="">
                   <data type="boolean"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>

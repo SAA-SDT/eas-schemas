@@ -1598,7 +1598,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="approximate" type="xs:boolean"/>
+      <xs:attribute name="parallel" type="xs:boolean"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="physDesc" mixed="true">
