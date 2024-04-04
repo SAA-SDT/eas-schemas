@@ -3,5 +3,5 @@
 vendor/** export-ignore
 build/** export-ignore
 src/** export-ignore
-# remove this next line for official releasess
-xml-schemas/** export-ignore
+# remove this next line for official releases
+xml-schemas/eac-cpf/** export-ignore
