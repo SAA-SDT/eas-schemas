@@ -4,7 +4,7 @@ about: Template to be used in the development and/or update requested by TS-EAS 
   All issues is created by TS-EAS members having a GitHub account.
 title: ''
 labels: ''
-assignees: karinbredenberg
+assignees: ''
 
 ---
 
