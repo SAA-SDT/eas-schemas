@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+    <define name="element.findAidDesc">
+        <element name="findAidDesc">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.links.optional"/>
+            <oneOrMore>
+                <choice>
+                    <ref name="element.agent"/>
+                    <ref name="element.citedRange"/>
+                    <ref name="element.date"/>
+                    <ref name="element.formattingExtension"/>
+                    <ref name="element.place"/>
+                    <ref name="element.title"/>
+                </choice>                     
+            </oneOrMore>
+        </element>       
+    </define>     
+
+</grammar>

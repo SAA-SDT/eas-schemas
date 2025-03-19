@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" startMode="ead">
+    <mode name="ead">
+        <namespace ns="https://archivists.org/ns/ead/v4">
+            <validate schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/release_2024_03/xml-schemas/ead/ead-4-dev.xsd" schemaType="application/xml">
+                <context path="formattingExtension" useMode="xhtml"/>
+            </validate>
+        </namespace>
+    </mode>
+    <mode name="xhtml">
+        <namespace ns="http://www.w3.org/1999/xhtml">
+            <validate schema="https://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd" schemaType="application/xml"/>
+            <attach/>
+        </namespace>
+    </mode>
+</rules>
