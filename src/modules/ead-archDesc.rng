@@ -384,54 +384,6 @@
         </element>
     </define>
     
-    <define name="element.physDesc">
-        <element name="physDesc">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.mixed-content.optional"/>
-        </element>
-    </define>
-    
-    <define name="element.physDescSet">
-        <element name="physDescSet">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute.parallel.optional"/>
-            <ref name="element.physDescStructured"/>
-            <oneOrMore>
-                <ref name="element.physDescStructured"/>
-            </oneOrMore>
-        </element>
-    </define>
-    
-    <define name="element.physDescStructured">
-        <element name="physDescStructured">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute.physDescStructuredType.optional"/>
-            <ref name="attribute.coverage.optional"/>
-            <element name="quantity">
-                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-                <ref name="attribute-group.assertion-reference.optional"/>
-                <ref name="attribute.approximate.optional"/>
-                <text/>
-            </element>
-            <element name="unitType">
-                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-                <ref name="attribute-group.assertion-reference.optional"/>
-                <ref name="attribute-group.linked-data.optional"/>
-                <text/>
-            </element>
-            <zeroOrMore>
-                <choice>
-                    <ref name="element.physFacet"/>
-                    <ref name="element.dimensions"/>
-                </choice>
-            </zeroOrMore>
-            <ref name="element.descriptiveNote.optional"/>
-        </element>
-    </define>
-    
     <define name="element.physFacet">
         <element name="physFacet">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>

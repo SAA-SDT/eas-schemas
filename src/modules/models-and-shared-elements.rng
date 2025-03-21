@@ -565,7 +565,7 @@
         </optional>
     </define>
     
-    <define name="mode.ead-dimensions-extent">
+    <define name="model.ead-dimensions-extent">
         <choice>
             <group>
                 <element name="quantity">
