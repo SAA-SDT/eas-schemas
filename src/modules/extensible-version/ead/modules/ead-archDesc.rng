@@ -227,7 +227,6 @@
                <ref name="element.physDescSet"/>
                <ref name="element.physDesc"/>
                <ref name="element.physDescStructured"/>
-               <ref name="element.physLoc"/>
                <ref name="element.unitDate"/>
                <ref name="element.unitDateStructured"/>
                <ref name="element.unitId"/>
@@ -369,13 +368,6 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
-         <ref name="model.mixed-content.optional"/>
-      </element>
-   </define>
-   <define name="element.physLoc">
-      <element name="physLoc">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="model.mixed-content.optional"/>
       </element>
    </define>
