@@ -556,7 +556,6 @@
          <xs:element type="ead:head" name="head" minOccurs="0"/>
          <xs:choice maxOccurs="unbounded">
             <xs:element type="ead:container" name="container"/>
-            <xs:element type="ead:identificationDataNote" name="identificationDataNote"/>
             <xs:element type="ead:languageOfMaterial" name="languageOfMaterial"/>
             <xs:element type="ead:legalStatus" name="legalStatus"/>
             <xs:element type="ead:materialSpec" name="materialSpec"/>
@@ -568,6 +567,7 @@
             <xs:element type="ead:unitId" name="unitId"/>
             <xs:element type="ead:unitTitle" name="unitTitle"/>
          </xs:choice>
+         <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1497,20 +1497,6 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="identificationDataNote">
-      <xs:sequence>
-         <xs:element type="ead:p" name="p" maxOccurs="unbounded"/>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="languageOfMaterial">

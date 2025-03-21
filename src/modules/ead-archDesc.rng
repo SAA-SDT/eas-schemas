@@ -247,7 +247,6 @@
             <oneOrMore>
                 <choice>
                     <ref name="element.container"/>
-                    <ref name="element.identificationDataNote"/>
                     <ref name="element.languageOfMaterial"/>
                     <ref name="element.legalStatus"/>
                     <ref name="element.materialSpec"/>
@@ -260,6 +259,7 @@
                     <ref name="element.unitTitle"/>
                 </choice> 
             </oneOrMore>
+            <ref name="element.descriptiveNote.optional"/>
         </element>
     </define>
     
@@ -276,16 +276,6 @@
                     <ref name="element.c"/>
                     <ref name="element.c01"/>
                 </choice>
-            </oneOrMore>
-        </element>
-    </define>
-
-    <define name="element.identificationDataNote">
-        <element name="identificationDataNote">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <oneOrMore>
-                <ref name="element.p"/>
             </oneOrMore>
         </element>
     </define>
