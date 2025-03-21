@@ -33,7 +33,7 @@
     
     <!-- check the ordering, due to the XSD 1.0 limitations -->
     <define name="model.archDesc.levels-of-description">
-        <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+        <ref name="attribute-group.global-plus-lang-and-script.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
         <ref name="attribute-group.linked-data.optional"/>
         <ref name="attribute.level.optional"/>

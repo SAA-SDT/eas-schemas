@@ -30,14 +30,6 @@
         </optional>
     </define>
     
-    <define name="attribute.base.optional">
-        <optional>
-            <attribute name="base">
-                <data type="anyURI"/>
-            </attribute>
-        </optional>
-    </define>
-    
     <define name="attribute.calendar.optional">
         <optional>
             <attribute name="calendar">
@@ -596,7 +588,6 @@
     
     <define name="attribute-group.document-node">
         <ref name="attribute.audience.optional"/>
-        <ref name="attribute.base.optional"/>
         <ref name="attribute.id.optional"/>
         <ref name="attribute-group.lang-and-script.optional"/>
         <ref name="attribute-group.any.zeroOrMore"/>
@@ -614,16 +605,6 @@
     <define name="attribute-group.global.optional" combine="interleave">
         <ref name="attribute-group.any.zeroOrMore"/>
     </define>  
-    
-    <define name="attribute-group.global-plus-base.optional">
-        <ref name="attribute-group.global.optional"/>
-        <ref name="attribute.base.optional"/>
-    </define>
-    
-    <define name="attribute-group.global-plus-base-lang-and-script.optional">
-        <ref name="attribute-group.global-plus-base.optional"/>
-        <ref name="attribute-group.lang-and-script.optional"/>
-    </define>
     
     <define name="attribute-group.global-plus-lang-and-script.optional">
         <ref name="attribute-group.global.optional"/>
