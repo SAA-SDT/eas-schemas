@@ -242,7 +242,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -828,7 +828,7 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="otherFindAid">
+   <xs:complexType name="otherDescription">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
          <xs:choice>
@@ -1925,7 +1925,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -1972,7 +1972,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2316,7 +2316,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2398,7 +2398,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2445,7 +2445,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2492,7 +2492,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2539,7 +2539,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2586,7 +2586,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2633,7 +2633,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2680,7 +2680,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2727,7 +2727,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2774,7 +2774,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
@@ -2821,7 +2821,7 @@
             <xs:element type="ead:custodHist" name="custodHist"/>
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
-            <xs:element type="ead:otherFindAid" name="otherFindAid"/>
+            <xs:element type="ead:otherDescription" name="otherDescription"/>
             <xs:element type="ead:physicalOrTechnicalRequirements"
                         name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>

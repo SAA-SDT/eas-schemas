@@ -314,8 +314,8 @@
          <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
-   <define name="element.otherFindAid">
-      <element name="otherFindAid">
+   <define name="element.otherDescription">
+      <element name="otherDescription">
          <ref name="model.ead-narrative-elements-plus-relations"/>
       </element>
    </define>

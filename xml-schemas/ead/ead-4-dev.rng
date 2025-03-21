@@ -545,7 +545,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -3077,8 +3077,8 @@
          </group>
       </element>
    </define>
-   <define name="otherFindAid">
-      <element name="otherFindAid" ns="https://archivists.org/ns/ead/v4">
+   <define name="otherDescription">
+      <element name="otherDescription" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8446,7 +8446,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -8592,7 +8592,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -10455,7 +10455,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -10798,7 +10798,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -10944,7 +10944,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -11090,7 +11090,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -11236,7 +11236,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -11382,7 +11382,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -11528,7 +11528,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -11674,7 +11674,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -11820,7 +11820,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -11966,7 +11966,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
@@ -12112,7 +12112,7 @@
                   <ref name="custodHist"/>
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
-                  <ref name="otherFindAid"/>
+                  <ref name="otherDescription"/>
                   <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
