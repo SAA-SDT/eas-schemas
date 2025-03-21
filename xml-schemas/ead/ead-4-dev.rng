@@ -189,10 +189,18 @@
                </attribute>
             </optional>
             <optional>
+               <attribute name="extentTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherExtentTypeEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
                <attribute name="formAvailableTypeEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherIdentityTypeEncoding</value>
+                     <value type="token" datatypeLibrary="" ns="">otherFormAvailableTypeEncoding</value>
                   </choice>
                </attribute>
             </optional>

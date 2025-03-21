@@ -383,12 +383,21 @@
             </choice>
         </attribute>
     </define>
+
+    <define name="attribute.extentTypeEncoding">
+        <attribute name="extentTypeEncoding" a:defaultValue="EASList">
+            <choice>
+                <value>EASList</value>
+                <value>otherExtentTypeEncoding</value>
+            </choice>
+        </attribute>
+    </define>
     
     <define name="attribute.formAvailableTypeEncoding">
         <attribute name="formAvailableTypeEncoding" a:defaultValue="EASList">
             <choice>
                 <value>EASList</value>
-                <value>otherIdentityTypeEncoding</value>
+                <value>otherFormAvailableTypeEncoding</value>
             </choice>
         </attribute>
     </define>
@@ -536,6 +545,9 @@
         </optional>
         <optional>
             <ref name="attribute.dateEncoding"/>
+        </optional>
+        <optional a:exclude-from="eac">
+            <ref name="attribute.extentTypeEncoding"/>
         </optional>
         <optional a:exclude-from="eac">
             <ref name="attribute.formAvailableTypeEncoding"/>

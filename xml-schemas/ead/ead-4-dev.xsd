@@ -116,11 +116,19 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
+      <xs:attribute name="extentTypeEncoding">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="EASList"/>
+               <xs:enumeration value="otherExtentTypeEncoding"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
       <xs:attribute name="formAvailableTypeEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherIdentityTypeEncoding"/>
+               <xs:enumeration value="otherFormAvailableTypeEncoding"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
