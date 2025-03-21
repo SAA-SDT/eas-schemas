@@ -62,7 +62,7 @@
             <ref name="element.custodHist"/>
             <ref name="element.filePlan"/>
             <ref name="element.otherDescriptiveInfo"/>
-            <ref name="element.otherFindAid"/>
+            <ref name="element.otherDescription"/>
             <ref name="element.physicalOrTechnicalRequirements"/>
             <ref name="element.preferCite"/>
             <ref name="element.processInfo"/>
@@ -502,7 +502,7 @@
       </optional>
       <ref name="model.narrative-group.optional"/>
    </define>
-   <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
+   <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherDescription, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
    <define name="model.ead-narrative-elements-plus-relations">
       <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
       <ref name="attribute-group.assertion-reference.optional"/>
