@@ -563,7 +563,6 @@
             <xs:element type="ead:physDescSet" name="physDescSet"/>
             <xs:element type="ead:physDesc" name="physDesc"/>
             <xs:element type="ead:physDescStructured" name="physDescStructured"/>
-            <xs:element type="ead:physLoc" name="physLoc"/>
             <xs:element type="ead:unitDate" name="unitDate"/>
             <xs:element type="ead:unitDateStructured" name="unitDateStructured"/>
             <xs:element type="ead:unitId" name="unitId"/>
@@ -1639,24 +1638,6 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="physDescStructuredType" type="xs:token"/>
       <xs:attribute name="coverage" type="xs:token"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="physLoc" mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-         <xs:element type="ead:reference" name="reference"/>
-         <xs:element type="ead:referringString" name="referringString"/>
-         <xs:element type="ead:span" name="span"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitDate" mixed="true">
