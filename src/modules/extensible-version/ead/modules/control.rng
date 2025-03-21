@@ -19,7 +19,7 @@
    </define>
    <define name="element.control">
       <element name="control">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.control-encodings"/>
          <ref name="attribute.detailLevel.optional"/>
          <optional>
@@ -170,7 +170,7 @@
    </define>
    <define name="element.sources">
       <element name="sources">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <oneOrMore>
             <ref name="element.source"/>
          </oneOrMore>

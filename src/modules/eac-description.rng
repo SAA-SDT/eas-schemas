@@ -5,7 +5,7 @@
 
     <define name="element.description">
         <element name="description">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <optional>
                 <ref name="element.demographicDescriptions"/>
