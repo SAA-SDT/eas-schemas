@@ -231,6 +231,29 @@
         </element>
     </define>
     
+    <!-- more changes coming with issue 158 -->
+    <define name="element.extent">
+        <element name="extent">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.physDescStructuredType.optional"/>
+            <ref name="attribute.coverage.optional"/>
+            <element name="quantity">
+                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                <ref name="attribute-group.assertion-reference.optional"/>
+                <ref name="attribute.approximate.optional"/>
+                <text/>
+            </element>
+            <element name="unitType">
+                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                <ref name="attribute-group.assertion-reference.optional"/>
+                <ref name="attribute-group.linked-data.optional"/>
+                <text/>
+            </element>
+            <ref name="element.descriptiveNote.optional"/>
+        </element>
+    </define>
+    
     <define name="element.subjectHeadings">
         <element name="subjectHeadings">
             <!-- is this right? -->
