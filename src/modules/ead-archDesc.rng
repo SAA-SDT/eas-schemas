@@ -29,8 +29,16 @@
     
     <define name="element.formAvailable">
         <element name="formAvailable">
-            <ref name="model.ead-narrative-elements-plus-relations"/>
-            <ref name="attribute.coverage.optional"/>
+            <ref name="model.ead-formAvailable"/>
+        </element>
+    </define>
+    
+    <define name="element.formAvailableId">
+        <element name="formAvailableId">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.mixed-content.optional"/>       
         </element>
     </define>
     
