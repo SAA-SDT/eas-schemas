@@ -247,13 +247,12 @@
             <oneOrMore>
                 <choice>
                     <ref name="element.container"/>
+                    <ref name="element.extent"/>
+                    <ref name="element.genreForm"/>
                     <ref name="element.identificationDataNote"/>
                     <ref name="element.languageOfMaterial"/>
                     <ref name="element.legalStatus"/>
                     <ref name="element.materialSpec"/>
-                    <ref name="element.physDescSet"/>
-                    <ref name="element.physDesc"/>
-                    <ref name="element.physDescStructured"/>
                     <ref name="element.physLoc"/>
                     <ref name="element.unitDate"/>
                     <ref name="element.unitDateStructured"/>
