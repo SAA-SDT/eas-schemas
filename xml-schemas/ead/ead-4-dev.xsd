@@ -77,7 +77,11 @@
       <xs:attribute name="countryEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">
-               <xs:enumeration value="iso3166-1"/>
+               <xs:enumeration value="iso3166-1-alpha-2"/>
+               <xs:enumeration value="iso3166-1-alpha-3"/>
+               <xs:enumeration value="iso3166-1-numeric"/>
+               <xs:enumeration value="iso3166-2"/>
+               <xs:enumeration value="iso3166-3"/>
                <xs:enumeration value="otherCountryEncoding"/>
             </xs:restriction>
          </xs:simpleType>
@@ -127,7 +131,10 @@
             <xs:restriction base="xs:token">
                <xs:enumeration value="iso639-1"/>
                <xs:enumeration value="iso639-2"/>
+               <xs:enumeration value="iso639-2b"/>
+               <xs:enumeration value="iso639-2t"/>
                <xs:enumeration value="iso639-3"/>
+               <xs:enumeration value="iso639-5"/>
                <xs:enumeration value="ietf-bcp-47"/>
                <xs:enumeration value="otherLanguageEncoding"/>
             </xs:restriction>

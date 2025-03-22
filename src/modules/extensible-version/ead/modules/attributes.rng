@@ -297,9 +297,13 @@
       </attribute>
    </define>
    <define name="attribute.countryEncoding">
-      <attribute name="countryEncoding" a:defaultValue="iso3166-1">
+      <attribute name="countryEncoding">
          <choice>
-            <value>iso3166-1</value>
+            <value>iso3166-1-alpha-2</value>
+            <value>iso3166-1-alpha-3</value>
+            <value>iso3166-1-numeric</value>
+            <value>iso3166-2</value>
+            <value>iso3166-3</value>
             <value>otherCountryEncoding</value>
          </choice>
       </attribute>
@@ -359,11 +363,14 @@
       </attribute>
    </define>
    <define name="attribute.languageEncoding">
-      <attribute name="languageEncoding" a:defaultValue="iso639-2">
+      <attribute name="languageEncoding">
          <choice>
             <value>iso639-1</value>
             <value>iso639-2</value>
+            <value>iso639-2b</value>
+            <value>iso639-2t</value>
             <value>iso639-3</value>
+            <value>iso639-5</value>
             <value>ietf-bcp-47</value>
             <value>otherLanguageEncoding</value>
          </choice>
