@@ -7126,13 +7126,31 @@
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
-            <optional>
-               <ref name="textualDate"/>
-            </optional>
             <choice>
-               <ref name="date"/>
-               <ref name="dateRange"/>
-               <ref name="dateSet"/>
+               <group>
+                  <optional>
+                     <ref name="textualDate"/>
+                  </optional>
+                  <optional>
+                     <choice>
+                        <ref name="date"/>
+                        <ref name="dateRange"/>
+                        <ref name="dateSet"/>
+                     </choice>
+                  </optional>
+               </group>
+               <group>
+                  <optional>
+                     <choice>
+                        <ref name="date"/>
+                        <ref name="dateRange"/>
+                        <ref name="dateSet"/>
+                     </choice>
+                  </optional>
+                  <optional>
+                     <ref name="textualDate"/>
+                  </optional>
+               </group>
             </choice>
          </group>
       </element>
