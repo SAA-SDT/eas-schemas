@@ -47,6 +47,9 @@
       <optional>
          <ref name="element.places"/>
       </optional>
+      <optional>
+         <ref name="element.recordTypeSpecificStatement"/>
+      </optional>
       <zeroOrMore>
          <ref name="model.narrative-element-name-list"/>
       </zeroOrMore>
@@ -401,6 +404,15 @@
          <ref name="attribute-group.linked-data.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <text/>
+      </element>
+   </define>
+   <define name="element.recordTypeSpecificStatement">
+      <element name="recordTypeSpecificStatement">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="model.mixed-content.optional"/>
+         <!-- this is the only instance of objectXMLWrap being part of mixed-content, right? -->
+         <ref name="element.objectXMLWrap.optional"/>
       </element>
    </define>
    <define name="element.reference">
