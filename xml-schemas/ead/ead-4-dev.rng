@@ -1333,11 +1333,16 @@
                <ref name="agentName"/>
             </oneOrMore>
             <optional>
-               <choice>
-                  <ref name="date"/>
-                  <ref name="dateRange"/>
-                  <ref name="dateSet"/>
-               </choice>
+               <group>
+                  <choice>
+                     <ref name="date"/>
+                     <ref name="dateRange"/>
+                     <ref name="dateSet"/>
+                  </choice>
+                  <optional>
+                     <ref name="textualDate"/>
+                  </optional>
+               </group>
             </optional>
             <zeroOrMore>
                <choice>
@@ -1714,11 +1719,16 @@
                </choice>
             </oneOrMore>
             <optional>
-               <choice>
-                  <ref name="date"/>
-                  <ref name="dateRange"/>
-                  <ref name="dateSet"/>
-               </choice>
+               <group>
+                  <choice>
+                     <ref name="date"/>
+                     <ref name="dateRange"/>
+                     <ref name="dateSet"/>
+                  </choice>
+                  <optional>
+                     <ref name="textualDate"/>
+                  </optional>
+               </group>
             </optional>
             <optional>
                <ref name="relationType"/>
@@ -1926,7 +1936,6 @@
                   <ref name="physDescStructured"/>
                   <ref name="physLoc"/>
                   <ref name="unitDate"/>
-                  <ref name="unitDateStructured"/>
                   <ref name="unitId"/>
                   <ref name="unitTitle"/>
                </choice>
@@ -5262,6 +5271,92 @@
          </group>
       </element>
    </define>
+   <define name="textualDate">
+      <element name="textualDate" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="status" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <oneOrMore>
+               <choice>
+                  <ref name="reference"/>
+                  <ref name="referringString"/>
+                  <ref name="span"/>
+                  <text/>
+               </choice>
+            </oneOrMore>
+         </group>
+      </element>
+   </define>
    <define name="agentType">
       <element name="agentType" ns="https://archivists.org/ns/ead/v4">
          <group>
@@ -6714,11 +6809,16 @@
                <ref name="term"/>
             </oneOrMore>
             <optional>
-               <choice>
-                  <ref name="date"/>
-                  <ref name="dateRange"/>
-                  <ref name="dateSet"/>
-               </choice>
+               <group>
+                  <choice>
+                     <ref name="date"/>
+                     <ref name="dateRange"/>
+                     <ref name="dateSet"/>
+                  </choice>
+                  <optional>
+                     <ref name="textualDate"/>
+                  </optional>
+               </group>
             </optional>
             <zeroOrMore>
                <ref name="placeName"/>
@@ -7283,142 +7383,6 @@
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
-            <interleave>
-               <optional>
-                  <attribute name="calendar" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="certainty" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="era" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="notAfter" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="notBefore" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="standardDate" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="status" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <oneOrMore>
-               <choice>
-                  <ref name="reference"/>
-                  <ref name="referringString"/>
-                  <ref name="span"/>
-                  <text/>
-               </choice>
-            </oneOrMore>
-         </group>
-      </element>
-   </define>
-   <define name="unitDateStructured">
-      <element name="unitDateStructured" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="unitDateType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="dateChar" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <optional>
                <attribute name="calendar" ns="">
                   <data type="token"
@@ -7442,6 +7406,9 @@
                <ref name="dateRange"/>
                <ref name="dateSet"/>
             </choice>
+            <optional>
+               <ref name="textualDate"/>
+            </optional>
          </group>
       </element>
    </define>
@@ -7910,11 +7877,16 @@
                <ref name="term"/>
             </oneOrMore>
             <optional>
-               <choice>
-                  <ref name="date"/>
-                  <ref name="dateRange"/>
-                  <ref name="dateSet"/>
-               </choice>
+               <group>
+                  <choice>
+                     <ref name="date"/>
+                     <ref name="dateRange"/>
+                     <ref name="dateSet"/>
+                  </choice>
+                  <optional>
+                     <ref name="textualDate"/>
+                  </optional>
+               </group>
             </optional>
             <zeroOrMore>
                <ref name="placeName"/>
@@ -8295,11 +8267,16 @@
                <ref name="term"/>
             </oneOrMore>
             <optional>
-               <choice>
-                  <ref name="date"/>
-                  <ref name="dateRange"/>
-                  <ref name="dateSet"/>
-               </choice>
+               <group>
+                  <choice>
+                     <ref name="date"/>
+                     <ref name="dateRange"/>
+                     <ref name="dateSet"/>
+                  </choice>
+                  <optional>
+                     <ref name="textualDate"/>
+                  </optional>
+               </group>
             </optional>
             <zeroOrMore>
                <ref name="placeName"/>
@@ -10305,11 +10282,16 @@
             </interleave>
             <ref name="targetEntity"/>
             <optional>
-               <choice>
-                  <ref name="date"/>
-                  <ref name="dateRange"/>
-                  <ref name="dateSet"/>
-               </choice>
+               <group>
+                  <choice>
+                     <ref name="date"/>
+                     <ref name="dateRange"/>
+                     <ref name="dateSet"/>
+                  </choice>
+                  <optional>
+                     <ref name="textualDate"/>
+                  </optional>
+               </group>
             </optional>
             <zeroOrMore>
                <choice>

@@ -229,7 +229,6 @@
                <ref name="element.physDescStructured"/>
                <ref name="element.physLoc"/>
                <ref name="element.unitDate"/>
-               <ref name="element.unitDateStructured"/>
                <ref name="element.unitId"/>
                <ref name="element.unitTitle"/>
             </choice>
@@ -459,33 +458,20 @@
          <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
+   <define name="element.textualDate">
+      <element name="textualDate">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute.status.optional"/>
+         <ref name="model.mixed-content.optional"/>
+      </element>
+   </define>
    <define name="element.unitDate">
       <element name="unitDate">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.unitDateType.optional"/>
          <ref name="attribute.dateChar.optional"/>
-         <!-- also bundled together with more attributes for EAC / unidatestructured.
-                for ead4, we should get rid of the structured elements altogether and have a single element that 
-                can be more or less structured depending on sub-elements / attributes.  for now, we've got a mix
-                hence we cannot re-use some of our pre-defined attribute lists just yet.
-            but if we keep the EAD/C separation + UD/UDS separation, then we can combine these 3 attribues with the 4 above for another attribute group model-->
-         <ref name="attribute-group.standard-date-attributes.optional"/>
-         <ref name="attribute.status.optional" a:exclude-from="eac"/>
-         <ref name="model.mixed-content.optional"/>
-      </element>
-   </define>
-   <define name="element.unitDateStructured">
-      <element name="unitDateStructured">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.unitDateType.optional"/>
-         <ref name="attribute.dateChar.optional"/>
-         <!-- also bundled together with more attributes for EAC / unidatestructured.
-                for ead4, we should get rid of the structured elements altogether and have a single element that 
-                can be more or less structured depending on sub-elements / attributes.  for now, we've got a mix
-                hence we cannot re-use some of our pre-defined attribute lists just yet.
-            but if we keep the EAD/C separation + UD/UDS separation, then we can combine these 3 attribues with the 4 above for another attribute group model-->
          <ref name="attribute.calendar.optional"/>
          <ref name="attribute.certainty.optional"/>
          <ref name="attribute.era.optional"/>
