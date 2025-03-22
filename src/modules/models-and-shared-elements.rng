@@ -502,6 +502,9 @@
             <ref name="element.dateRange"/>
             <ref name="element.dateSet"/>
         </choice>
+        <optional>
+            <ref name="element.textualDate"/>
+        </optional>
     </define>
     
     <define name="model.any-element">
