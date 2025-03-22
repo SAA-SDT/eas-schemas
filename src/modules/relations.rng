@@ -19,7 +19,7 @@
         <element name="relation">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="element.targetEntity"/>
+            <ref name="element.label"/>
             <optional>
                 <ref name="model.all-dates.choice"/>
             </optional>
