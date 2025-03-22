@@ -123,6 +123,14 @@
             </attribute>
         </optional>
     </define>
+    
+    <define name="attribute.formAvailableType.optional">
+        <optional>
+            <attribute name="formAvailableType">
+                <data type="token"/>
+            </attribute>
+        </optional>
+    </define>
   
     <define name="attribute.id.optional">
         <optional>
@@ -367,6 +375,15 @@
         </attribute>
     </define>
     
+    <define name="attribute.formAvailableTypeEncoding">
+        <attribute name="formAvailableTypeEncoding" a:defaultValue="EASList">
+            <choice>
+                <value>EASList</value>
+                <value>otherIdentityTypeEncoding</value>
+            </choice>
+        </attribute>
+    </define>
+    
     <define name="attribute.identityTypeEncoding">
         <attribute name="identityTypeEncoding" a:defaultValue="EASList">
             <choice>
@@ -519,6 +536,9 @@
         </optional>
         <optional>
             <ref name="attribute.dateEncoding"/>
+        </optional>
+        <optional a:exclude-from="eac">
+            <ref name="attribute.formAvailableTypeEncoding"/>
         </optional>
         <optional a:exclude-from="ead">
             <ref name="attribute.identityTypeEncoding"/>
