@@ -460,22 +460,12 @@
          <ref name="attribute.era.optional"/>
          <!-- keep this separate from everywhere else that date choice group can appear outside of unitDate -->
          <choice>
-            <group>
-               <optional>
-                  <ref name="element.textualDate"/>
-               </optional>
-               <optional>
-                  <ref name="model.all-dates.choice"/>
-               </optional>
-            </group>
-            <group>
-               <optional>
-                  <ref name="model.all-dates.choice"/>
-               </optional>
-               <optional>
-                  <ref name="element.textualDate"/>
-               </optional>
-            </group>
+            <optional>
+               <ref name="model.all-dates.choice"/>
+            </optional>
+            <optional>
+               <ref name="element.textualDate"/>
+            </optional>
          </choice>
       </element>
    </define>
