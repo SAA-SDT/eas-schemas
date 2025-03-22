@@ -6,7 +6,7 @@
 
     <define name="element.relations">
         <element name="relations">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <oneOrMore>
                 <ref name="element.relation"/>
