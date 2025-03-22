@@ -108,6 +108,13 @@
          </attribute>
       </optional>
    </define>
+   <define name="attribute.formAvailableType.optional">
+      <optional>
+         <attribute name="formAvailableType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="attribute.id.optional">
       <optional>
          <attribute name="id">
@@ -156,9 +163,9 @@
          </attribute>
       </optional>
    </define>
-   <define name="attribute.physDescStructuredType.optional">
+   <define name="attribute.extentType.optional">
       <optional>
-         <attribute name="physDescStructuredType">
+         <attribute name="extentType">
             <data type="token"/>
          </attribute>
       </optional>
@@ -323,6 +330,22 @@
          </choice>
       </attribute>
    </define>
+   <define name="attribute.extentTypeEncoding">
+      <attribute name="extentTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherExtentTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.formAvailableTypeEncoding">
+      <attribute name="formAvailableTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherFormAvailableTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
    <define name="attribute.identityTypeEncoding">
       <attribute name="identityTypeEncoding" a:defaultValue="EASList">
          <choice>
@@ -368,14 +391,6 @@
          <choice>
             <value>EASList</value>
             <value>otherMaintenanceStatusEncoding</value>
-         </choice>
-      </attribute>
-   </define>
-   <define name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac">
-      <attribute name="physDescStructuredTypeEncoding" a:defaultValue="EASList">
-         <choice>
-            <value>EASList</value>
-            <value>otherPhysDescStructuredTypeEncoding</value>
          </choice>
       </attribute>
    </define>
@@ -462,6 +477,12 @@
       <optional>
          <ref name="attribute.dateEncoding"/>
       </optional>
+      <optional a:exclude-from="eac">
+         <ref name="attribute.extentTypeEncoding"/>
+      </optional>
+      <optional a:exclude-from="eac">
+         <ref name="attribute.formAvailableTypeEncoding"/>
+      </optional>
       <optional>
          <ref name="attribute.languageEncoding"/>
       </optional>
@@ -473,9 +494,6 @@
       </optional>
       <optional>
          <ref name="attribute.maintenanceStatusEncoding"/>
-      </optional>
-      <optional>
-         <ref name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac"/>
       </optional>
       <optional>
          <ref name="attribute.publicationStatusEncoding"/>
