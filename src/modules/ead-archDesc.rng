@@ -511,14 +511,12 @@
             <ref name="attribute.certainty.optional"/>
             <ref name="attribute.era.optional"/>
             <!-- keep this separate from everywhere else that date choice group can appear outside of unitDate -->
-            <choice>
-                <optional>
-                    <ref name="model.all-dates.choice"/>
-                </optional>
-                <optional>
-                    <ref name="element.textualDate"/>
-                </optional>
-            </choice>
+            <optional>
+                <ref name="model.all-dates.choice"/>
+            </optional>
+            <optional>
+                <ref name="element.textualDate"/>
+            </optional>
         </element>
     </define>
      

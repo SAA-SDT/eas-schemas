@@ -1625,14 +1625,14 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitDate">
-      <xs:choice>
+      <xs:sequence>
          <xs:choice minOccurs="0">
             <xs:element type="ead:date" name="date"/>
             <xs:element type="ead:dateRange" name="dateRange"/>
             <xs:element type="ead:dateSet" name="dateSet"/>
          </xs:choice>
          <xs:element type="ead:textualDate" name="textualDate" minOccurs="0"/>
-      </xs:choice>
+      </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
