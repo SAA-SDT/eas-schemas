@@ -1158,6 +1158,7 @@
    <xs:complexType name="descriptiveNote">
       <xs:sequence>
          <xs:element type="ead:p" name="p" maxOccurs="unbounded"/>
+         <xs:element type="ead:objectXMLWrap" name="objectXMLWrap" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2002,6 +2003,16 @@
       <xs:attribute name="level" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="objectXMLWrap">
+      <xs:complexContent>
+         <xs:extension base="ead:_2">
+            <xs:attribute name="audience" type="xs:token"/>
+            <xs:attribute name="id" type="xs:ID"/>
+            <xs:attribute name="target" type="xs:IDREFS"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:complexType name="eventDateTime" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -2027,16 +2038,6 @@
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="objectXMLWrap">
-      <xs:complexContent>
-         <xs:extension base="ead:_2">
-            <xs:attribute name="audience" type="xs:token"/>
-            <xs:attribute name="id" type="xs:ID"/>
-            <xs:attribute name="target" type="xs:IDREFS"/>
-            <xs:anyAttribute namespace="##other" processContents="lax"/>
-         </xs:extension>
-      </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="referringString" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
