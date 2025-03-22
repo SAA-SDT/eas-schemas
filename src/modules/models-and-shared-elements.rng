@@ -290,14 +290,6 @@
             <zeroOrMore a:exclude-from="eac">
                 <ref name="element.placeName"/>
             </zeroOrMore>
-            <!-- 
-            In a future revision of EAC-CPF, <targetType>, <targetRole>, and <relationType> 
-            would need to be added as optional and repeatable sub-elements of <function> 
-            (we should add these to the single-element-group, if kept as is)
-            -->
-            <zeroOrMore a:exclude-from="eac">
-                <ref name="element.targetType"/>
-            </zeroOrMore>
             <zeroOrMore a:exclude-from="eac">
                 <ref name="element.role"/>
             </zeroOrMore>

@@ -560,6 +560,13 @@
         </attribute>
     </define>
     
+    <define name="attribute.relationType.optional">
+        <optional>
+            <attribute name="relationType">
+                <data type="token"/>
+            </attribute>
+        </optional>
+    </define>
     <define name="attribute.repositoryEncoding">
         <attribute name="repositoryEncoding" a:defaultValue="iso15511">
             <choice>

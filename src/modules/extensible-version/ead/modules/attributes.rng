@@ -12,6 +12,13 @@
          </attribute>
       </optional>
    </define>
+   <define name="attribute.agentType.optional">
+      <optional>
+         <attribute name="agentType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="attribute.approximate.optional">
       <optional>
          <attribute name="approximate">
@@ -111,6 +118,13 @@
    <define name="attribute.formAvailableType.optional">
       <optional>
          <attribute name="formAvailableType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.functionType.optional">
+      <optional>
+         <attribute name="functionType">
             <data type="token"/>
          </attribute>
       </optional>
@@ -250,10 +264,24 @@
          </attribute>
       </optional>
    </define>
+   <define name="attribute.subjectType.optional">
+      <optional>
+         <attribute name="subjectType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="attribute.target.optional">
       <optional>
          <attribute name="target">
             <data type="IDREFS"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.targetType.optional">
+      <optional>
+         <attribute name="targetType">
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -273,6 +301,14 @@
    </define>
    <!-- TO DO -->
    <!-- re-alphabeticize once we get everything settled.  for now, the @:*Encoding attributes, each defined separately, in case folks want to override any of these definitions -->
+   <define name="attribute.agentTypeEncoding">
+      <attribute name="agentTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherAgentTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
    <define name="attribute.addressLineTypeEncoding">
       <attribute name="addressLineTypeEncoding" a:defaultValue="EASList">
          <choice>
@@ -338,7 +374,7 @@
          </choice>
       </attribute>
    </define>
-   <define name="attribute.formAvailableTypeEncoding">
+   <define name="attribute.formAvailableTypeEncoding" a:exclude-from="eac">
       <attribute name="formAvailableTypeEncoding" a:defaultValue="EASList">
          <choice>
             <value>EASList</value>
@@ -354,6 +390,47 @@
          </choice>
       </attribute>
    </define>
+   <define name="attribute.placeTypeEncoding">
+      <attribute name="placeTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherPlaceTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.functionTypeEncoding">
+      <attribute name="functionTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherFunctionTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.relationTypeEncoding">
+      <attribute name="relationTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherRelationTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.subjectTypeEncoding" a:exclude-from="eac">
+      <attribute name="subjectTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherSubjectTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.targetTypeEncoding">
+      <attribute name="targetTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherTargetTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <!-- end of TypeEncoding definitions -->
    <define name="attribute.languageCode">
       <attribute name="languageCode">
          <data type="token"/>
@@ -394,6 +471,13 @@
          </choice>
       </attribute>
    </define>
+   <define name="attribute.placeType.optional">
+      <optional>
+         <attribute name="placeType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac">
       <attribute name="physDescStructuredTypeEncoding" a:defaultValue="EASList">
          <choice>
@@ -409,6 +493,13 @@
             <value>otherPublicationStatusEncoding</value>
          </choice>
       </attribute>
+   </define>
+   <define name="attribute.relationType.optional">
+      <optional>
+         <attribute name="relationType">
+            <data type="token"/>
+         </attribute>
+      </optional>
    </define>
    <define name="attribute.repositoryEncoding">
       <attribute name="repositoryEncoding" a:defaultValue="iso15511">
@@ -465,6 +556,9 @@
          <ref name="attribute.addressLineTypeEncoding"/>
       </optional>
       <optional>
+         <ref name="attribute.agentTypeEncoding"/>
+      </optional>
+      <optional>
          <ref name="attribute.audienceEncoding"/>
       </optional>
       <optional>
@@ -473,8 +567,8 @@
       <optional>
          <ref name="attribute.countryEncoding"/>
       </optional>
-      <optional>
-         <ref name="attribute.coverageEncoding" a:exclude-from="eac"/>
+      <optional a:exclude-from="eac">
+         <ref name="attribute.coverageEncoding"/>
       </optional>
       <optional>
          <ref name="attribute.detailLevelEncoding"/>
@@ -489,10 +583,13 @@
          <ref name="attribute.formAvailableTypeEncoding"/>
       </optional>
       <optional>
-         <ref name="attribute.languageEncoding"/>
+         <ref name="attribute.functionTypeEncoding"/>
       </optional>
       <optional>
-         <ref name="attribute.levelEncoding" a:exclude-from="eac"/>
+         <ref name="attribute.languageEncoding"/>
+      </optional>
+      <optional a:exclude-from="eac">
+         <ref name="attribute.levelEncoding"/>
       </optional>
       <optional>
          <ref name="attribute.maintenanceEventTypeEncoding"/>
@@ -500,11 +597,17 @@
       <optional>
          <ref name="attribute.maintenanceStatusEncoding"/>
       </optional>
+      <optional a:exclude-from="eac">
+         <ref name="attribute.physDescStructuredTypeEncoding"/>
+      </optional>
       <optional>
-         <ref name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac"/>
+         <ref name="attribute.placeTypeEncoding"/>
       </optional>
       <optional>
          <ref name="attribute.publicationStatusEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.relationTypeEncoding"/>
       </optional>
       <optional>
          <ref name="attribute.repositoryEncoding"/>
@@ -514,6 +617,12 @@
       </optional>
       <optional>
          <ref name="attribute.statusEncoding"/>
+      </optional>
+      <optional a:exclude-from="eac">
+         <ref name="attribute.subjectTypeEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.targetTypeEncoding"/>
       </optional>
       <optional a:exclude-from="eac">
          <ref name="attribute.unitDateTypeEncoding"/>

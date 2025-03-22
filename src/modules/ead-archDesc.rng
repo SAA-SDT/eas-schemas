@@ -532,9 +532,6 @@
                 <ref name="element.placeName"/>
             </zeroOrMore>
             <zeroOrMore>
-                <ref name="element.targetType"/>
-            </zeroOrMore>
-            <zeroOrMore>
                 <ref name="element.role"/>
             </zeroOrMore>
             <zeroOrMore>
