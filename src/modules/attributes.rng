@@ -638,7 +638,7 @@
         <optional>
             <ref name="attribute.detailLevelEncoding"/>
         </optional>
-        <optional a:exclude-from="eac"/>
+        <optional a:exclude-from="eac">
             <ref name="attribute.descriptionOfComponentsTypeEncoding"/>
         </optional>
         <optional>
