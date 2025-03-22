@@ -521,6 +521,7 @@
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.subjectType.optional"/>
             <oneOrMore>
                 <ref name="element.term"/>
             </oneOrMore>
@@ -534,10 +535,10 @@
                 <ref name="element.targetType"/>
             </zeroOrMore>
             <zeroOrMore>
-                <ref name="element.targetRole"/>
+                <ref name="element.role"/>
             </zeroOrMore>
             <zeroOrMore>
-                <ref name="element.relationType"/>
+                <ref name="element.relationship"/>
             </zeroOrMore>
             <ref name="element.descriptiveNote.optional"/>  
         </element>

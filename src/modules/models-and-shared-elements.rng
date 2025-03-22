@@ -85,6 +85,7 @@
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute.agentType.optional"/>
             <oneOrMore>
                 <ref name="element.label"/>
             </oneOrMore>
@@ -93,22 +94,12 @@
             </optional>
             <zeroOrMore>
                 <choice>
-                    <ref name="element.agentType"/>
-                    <ref name="element.agentRole"/>
-                    <ref name="element.relationType"/>
+                    <ref name="element.role"/>
+                    <ref name="element.relationship"/>
                     <ref name="element.placeName"/>
                 </choice>
             </zeroOrMore>
             <ref name="element.descriptiveNote.optional"/>
-        </element>
-    </define>
-    
-    <define name="element.agentType">
-        <element name="agentType">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <text/>
         </element>
     </define>
     
@@ -289,6 +280,7 @@
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.linked-data.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac"/>
+            <ref name="attribute.functionType.optional"/>
             <oneOrMore a:exclude-from="eac">
                 <ref name="element.label"/>
             </oneOrMore>
@@ -307,10 +299,10 @@
                 <ref name="element.targetType"/>
             </zeroOrMore>
             <zeroOrMore a:exclude-from="eac">
-                <ref name="element.targetRole"/>
+                <ref name="element.role"/>
             </zeroOrMore>
             <zeroOrMore a:exclude-from="eac">
-                <ref name="element.relationType"/>
+                <ref name="element.relationship"/>
             </zeroOrMore>
             <ref name="element.descriptiveNote.optional" a:exclude-from="eac"/>  
         </element>
@@ -391,11 +383,11 @@
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.placeType.optional"/>
             <oneOrMore>
                 <choice>
                     <ref name="element.label"/>
-                    <ref name="element.placeRole"/>
-                    <ref name="element.placeType"/>
+                    <ref name="element.role"/>
                     <ref name="element.geographicCoordinates"/>
                     <ref name="element.address"/>
                     <ref name="element.contact"/>
@@ -405,7 +397,7 @@
                 <ref name="model.all-dates.choice"/>
             </optional>
             <optional>
-                <ref name="element.relationType"/>
+                <ref name="element.relationship"/>
             </optional>
             <ref name="element.descriptiveNote.optional"/> 
         </element>
@@ -417,15 +409,6 @@
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.countryCode.optional"/>
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.placeType">
-        <element name="placeType">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
             <text/>
         </element>
     </define>
@@ -574,25 +557,30 @@
         <ref name="attribute.formAvailableType.optional"/>
         <!-- refine, depending on XSD output -->
         <zeroOrMore>
-            <ref name="element.container"/>
-            <ref name="element.dimensions"/>
-            <ref name="element.extent"/>
-            <ref name="element.formAvailableId"/>
-            <ref name="element.physFacet"/>
-
-            
-            <ref name="element.placeName"/>
-            
-            <!-- also narrative notes, but just these...-->
-            <ref name="element.accessConditions"/>
-            <ref name="element.accruals"/>
-            <ref name="element.arrangement"/>
-            <ref name="element.custodHist"/>
-            <ref name="element.physicalOrTechnicalRequirements"/>
-            <ref name="element.processInfo"/>
-            <ref name="element.separatedMaterial"/>
-            <ref name="element.sourceOfAcquisition"/>
-            <ref name="element.useConditions"/>
+            <choice>
+                <ref name="element.container"/>
+                <ref name="element.dimensions"/>
+                <ref name="element.extent"/>
+                <ref name="element.formAvailableId"/>
+                <ref name="element.physFacet"/>
+                
+                <!-- just adding these as is for now.  will adjust based on repeatability requirements before creating a pull request -->
+                <ref name="element.label"/>
+                <ref name="element.role"/>
+                
+                <ref name="element.placeName"/>
+                
+                <!-- also narrative notes, but just these...-->
+                <ref name="element.accessConditions"/>
+                <ref name="element.accruals"/>
+                <ref name="element.arrangement"/>
+                <ref name="element.custodHist"/>
+                <ref name="element.physicalOrTechnicalRequirements"/>
+                <ref name="element.processInfo"/>
+                <ref name="element.separatedMaterial"/>
+                <ref name="element.sourceOfAcquisition"/>
+                <ref name="element.useConditions"/>
+            </choice>
         </zeroOrMore>
         <optional>
             <ref name="model.all-dates.choice"/>
