@@ -29,8 +29,16 @@
     
     <define name="element.formAvailable">
         <element name="formAvailable">
-            <ref name="model.ead-narrative-elements-plus-relations"/>
-            <ref name="attribute.coverage.optional"/>
+            <ref name="model.ead-formAvailable"/>
+        </element>
+    </define>
+    
+    <define name="element.formAvailableId">
+        <element name="formAvailableId">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.mixed-content.optional"/>       
         </element>
     </define>
     
@@ -220,6 +228,29 @@
             <!-- agree that mixed content is no longer needed here, right? 
             <text/> 
             -->
+        </element>
+    </define>
+    
+    <!-- more changes coming with issue 158 -->
+    <define name="element.extent">
+        <element name="extent">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.physDescStructuredType.optional"/>
+            <ref name="attribute.coverage.optional"/>
+            <element name="quantity">
+                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                <ref name="attribute-group.assertion-reference.optional"/>
+                <ref name="attribute.approximate.optional"/>
+                <text/>
+            </element>
+            <element name="unitType">
+                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                <ref name="attribute-group.assertion-reference.optional"/>
+                <ref name="attribute-group.linked-data.optional"/>
+                <text/>
+            </element>
+            <ref name="element.descriptiveNote.optional"/>
         </element>
     </define>
     
@@ -471,25 +502,8 @@
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <oneOrMore>
-                <ref name="element.term"/>
-            </oneOrMore>
-            <optional>
-                <ref name="model.all-dates.choice"/>
-            </optional>
-            <zeroOrMore>
-                <ref name="element.placeName"/>
-            </zeroOrMore>
-            <zeroOrMore>
-                <ref name="element.targetType"/>
-            </zeroOrMore>
-            <zeroOrMore>
-                <ref name="element.targetRole"/>
-            </zeroOrMore>
-            <zeroOrMore>
-                <ref name="element.relationType"/>
-            </zeroOrMore>
-            <ref name="element.descriptiveNote.optional"/>  
+            <ref name="attribute.subjectType.optional"/>
+            <ref name="model.ead-entity-elements"/>
         </element>
     </define>
     

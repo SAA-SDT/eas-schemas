@@ -133,6 +133,14 @@
                </attribute>
             </optional>
             <optional>
+               <attribute name="agentTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherAgentTypeEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
                <attribute name="audienceEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
@@ -189,6 +197,22 @@
                </attribute>
             </optional>
             <optional>
+               <attribute name="formAvailableTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherIdentityTypeEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="functionTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherFunctionTypeEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
                <attribute name="languageEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">iso639-1</value>
@@ -232,10 +256,26 @@
                </attribute>
             </optional>
             <optional>
+               <attribute name="placeTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherPlaceTypeEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
                <attribute name="publicationStatusEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
                      <value type="token" datatypeLibrary="" ns="">otherPublicationStatusEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="relationTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherRelationTypeEncoding</value>
                   </choice>
                </attribute>
             </optional>
@@ -260,6 +300,22 @@
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
                      <value type="token" datatypeLibrary="" ns="">otherStatusEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="subjectTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherSubjectTypeEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="targetTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherTargetTypeEncoding</value>
                   </choice>
                </attribute>
             </optional>
@@ -546,7 +602,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -1329,8 +1384,14 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="agentType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <oneOrMore>
-               <ref name="agentName"/>
+               <ref name="label"/>
             </oneOrMore>
             <optional>
                <choice>
@@ -1340,12 +1401,13 @@
                </choice>
             </optional>
             <zeroOrMore>
-               <choice>
-                  <ref name="agentType"/>
-                  <ref name="agentRole"/>
-                  <ref name="relationType"/>
-                  <ref name="placeName"/>
-               </choice>
+               <ref name="placeName"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="role"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="relationship"/>
             </zeroOrMore>
             <optional>
                <ref name="descriptiveNote"/>
@@ -1703,15 +1765,21 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="placeType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <oneOrMore>
                <choice>
-                  <ref name="placeName"/>
-                  <ref name="placeRole"/>
-                  <ref name="placeType"/>
                   <ref name="geographicCoordinates"/>
                   <ref name="address"/>
                   <ref name="contact"/>
                </choice>
+            </oneOrMore>
+            <oneOrMore>
+               <ref name="label"/>
             </oneOrMore>
             <optional>
                <choice>
@@ -1720,9 +1788,15 @@
                   <ref name="dateSet"/>
                </choice>
             </optional>
-            <optional>
-               <ref name="relationType"/>
-            </optional>
+            <zeroOrMore>
+               <ref name="placeName"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="role"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="relationship"/>
+            </zeroOrMore>
             <optional>
                <ref name="descriptiveNote"/>
             </optional>
@@ -3193,102 +3267,6 @@
             <optional>
                <ref name="relations"/>
             </optional>
-         </group>
-      </element>
-   </define>
-   <define name="physicalOrTechnicalRequirements">
-      <element name="physicalOrTechnicalRequirements"
-               ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <ref name="abstract"/>
-            </optional>
-            <choice>
-               <optional>
-                  <ref name="formattingExtension"/>
-               </optional>
-               <zeroOrMore>
-                  <ref name="p"/>
-               </zeroOrMore>
-            </choice>
          </group>
       </element>
    </define>
@@ -4971,8 +4949,8 @@
          </group>
       </element>
    </define>
-   <define name="agentName">
-      <element name="agentName" ns="https://archivists.org/ns/ead/v4">
+   <define name="label">
+      <element name="label" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5263,321 +5241,6 @@
          </group>
       </element>
    </define>
-   <define name="agentType">
-      <element name="agentType" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="vocabularySource" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="vocabularySourceURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="valueURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <text/>
-         </group>
-      </element>
-   </define>
-   <define name="agentRole">
-      <element name="agentRole" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="vocabularySource" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="vocabularySourceURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="valueURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <text/>
-         </group>
-      </element>
-   </define>
-   <define name="relationType">
-      <element name="relationType" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="vocabularySource" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="vocabularySourceURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="valueURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <text/>
-         </group>
-      </element>
-   </define>
    <define name="placeName">
       <element name="placeName" ns="https://archivists.org/ns/ead/v4">
          <group>
@@ -5689,6 +5352,204 @@
          </group>
       </element>
    </define>
+   <define name="role">
+      <element name="role" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="vocabularySource" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="vocabularySourceURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="valueURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <text/>
+         </group>
+      </element>
+   </define>
+   <define name="relationship">
+      <element name="relationship" ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <interleave>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="vocabularySource" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="vocabularySourceURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="valueURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <text/>
+         </group>
+      </element>
+   </define>
    <define name="_1">
       <element>
          <anyName>
@@ -5719,192 +5580,6 @@
                   <ref name="_1"/>
                </zeroOrMore>
             </interleave>
-         </group>
-      </element>
-   </define>
-   <define name="placeRole">
-      <element name="placeRole" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="vocabularySource" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="vocabularySourceURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="valueURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <text/>
-         </group>
-      </element>
-   </define>
-   <define name="placeType">
-      <element name="placeType" ns="https://archivists.org/ns/ead/v4">
-         <group>
-            <interleave>
-               <optional>
-                  <attribute name="audience" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="id" ns="">
-                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="target" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <zeroOrMore>
-                  <attribute>
-                     <anyName>
-                        <except>
-                           <choice>
-                              <nsName ns="https://archivists.org/ns/ead/v4"/>
-                              <nsName ns=""/>
-                           </choice>
-                        </except>
-                     </anyName>
-                     <text/>
-                  </attribute>
-               </zeroOrMore>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="languageOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="scriptOfElement" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="vocabularySource" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="vocabularySourceURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="valueURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
-                  <attribute name="conventionDeclarationReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="maintenanceEventReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="sourceReference" ns="">
-                     <data type="IDREFS"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <text/>
          </group>
       </element>
    </define>
@@ -7556,18 +7231,6 @@
                   </attribute>
                </optional>
             </interleave>
-            <optional>
-               <attribute name="localType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <interleave>
                <optional>
                   <attribute name="conventionDeclarationReference" ns="">
@@ -7609,24 +7272,50 @@
                </optional>
             </interleave>
             <optional>
-               <ref name="abstract"/>
-            </optional>
-            <choice>
-               <optional>
-                  <ref name="formattingExtension"/>
-               </optional>
-               <zeroOrMore>
-                  <ref name="p"/>
-               </zeroOrMore>
-            </choice>
-            <optional>
-               <ref name="relations"/>
-            </optional>
-            <optional>
                <attribute name="coverage" ns="">
                   <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
+            </optional>
+            <optional>
+               <attribute name="formAvailableType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <ref name="container"/>
+                  <ref name="dimensions"/>
+                  <ref name="extent"/>
+                  <ref name="formAvailableId"/>
+                  <ref name="physFacet"/>
+                  <ref name="label"/>
+                  <ref name="role"/>
+                  <ref name="placeName"/>
+                  <ref name="accessConditions"/>
+                  <ref name="accruals"/>
+                  <ref name="arrangement"/>
+                  <ref name="custodHist"/>
+                  <ref name="physicalOrTechnicalRequirements"/>
+                  <ref name="processInfo"/>
+                  <ref name="separatedMaterial"/>
+                  <ref name="sourceOfAcquisition"/>
+                  <ref name="useConditions"/>
+               </choice>
+            </zeroOrMore>
+            <optional>
+               <choice>
+                  <ref name="date"/>
+                  <ref name="dateRange"/>
+                  <ref name="dateSet"/>
+               </choice>
+            </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
+            <optional>
+               <ref name="descriptiveNote"/>
             </optional>
          </group>
       </element>
@@ -7732,8 +7421,14 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="functionType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <oneOrMore>
-               <ref name="term"/>
+               <ref name="label"/>
             </oneOrMore>
             <optional>
                <choice>
@@ -7746,13 +7441,10 @@
                <ref name="placeName"/>
             </zeroOrMore>
             <zeroOrMore>
-               <ref name="targetType"/>
+               <ref name="role"/>
             </zeroOrMore>
             <zeroOrMore>
-               <ref name="targetRole"/>
-            </zeroOrMore>
-            <zeroOrMore>
-               <ref name="relationType"/>
+               <ref name="relationship"/>
             </zeroOrMore>
             <optional>
                <ref name="descriptiveNote"/>
@@ -8117,8 +7809,14 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="subjectType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <oneOrMore>
-               <ref name="term"/>
+               <ref name="label"/>
             </oneOrMore>
             <optional>
                <choice>
@@ -8131,13 +7829,10 @@
                <ref name="placeName"/>
             </zeroOrMore>
             <zeroOrMore>
-               <ref name="targetType"/>
+               <ref name="role"/>
             </zeroOrMore>
             <zeroOrMore>
-               <ref name="targetRole"/>
-            </zeroOrMore>
-            <zeroOrMore>
-               <ref name="relationType"/>
+               <ref name="relationship"/>
             </zeroOrMore>
             <optional>
                <ref name="descriptiveNote"/>
@@ -8273,7 +7968,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -8419,7 +8113,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -9850,8 +9543,8 @@
          </group>
       </element>
    </define>
-   <define name="targetType">
-      <element name="targetType" ns="https://archivists.org/ns/ead/v4">
+   <define name="extent">
+      <element name="extent" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -9901,26 +9594,6 @@
             </interleave>
             <interleave>
                <optional>
-                  <attribute name="vocabularySource" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="vocabularySourceURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="valueURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
-            <interleave>
-               <optional>
                   <attribute name="conventionDeclarationReference" ns="">
                      <data type="IDREFS"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
@@ -9940,23 +9613,27 @@
                </optional>
             </interleave>
             <optional>
-               <attribute name="localType" ns="">
+               <attribute name="physDescStructuredType" ns="">
                   <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <optional>
-               <attribute name="localTypeDeclarationReference" ns="">
-                  <data type="IDREFS"
+               <attribute name="coverage" ns="">
+                  <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
-            <text/>
+            <ref name="quantity"/>
+            <ref name="unitType"/>
+            <optional>
+               <ref name="descriptiveNote"/>
+            </optional>
          </group>
       </element>
    </define>
-   <define name="targetRole">
-      <element name="targetRole" ns="https://archivists.org/ns/ead/v4">
+   <define name="formAvailableId">
+      <element name="formAvailableId" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -10004,6 +9681,18 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="vocabularySource" ns="">
@@ -10044,6 +9733,67 @@
                   </attribute>
                </optional>
             </interleave>
+            <oneOrMore>
+               <choice>
+                  <ref name="reference"/>
+                  <ref name="referringString"/>
+                  <ref name="span"/>
+                  <text/>
+               </choice>
+            </oneOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="physicalOrTechnicalRequirements">
+      <element name="physicalOrTechnicalRequirements"
+               ns="https://archivists.org/ns/ead/v4">
+         <group>
+            <interleave>
+               <optional>
+                  <attribute name="audience" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="id" ns="">
+                     <data type="ID" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="target" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <zeroOrMore>
+                  <attribute>
+                     <anyName>
+                        <except>
+                           <choice>
+                              <nsName ns="https://archivists.org/ns/ead/v4"/>
+                              <nsName ns=""/>
+                           </choice>
+                        </except>
+                     </anyName>
+                     <text/>
+                  </attribute>
+               </zeroOrMore>
+            </interleave>
+            <interleave>
+               <optional>
+                  <attribute name="languageOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="scriptOfElement" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
             <optional>
                <attribute name="localType" ns="">
                   <data type="token"
@@ -10056,7 +9806,37 @@
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
-            <text/>
+            <interleave>
+               <optional>
+                  <attribute name="conventionDeclarationReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="maintenanceEventReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="sourceReference" ns="">
+                     <data type="IDREFS"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <optional>
+               <ref name="abstract"/>
+            </optional>
+            <choice>
+               <optional>
+                  <ref name="formattingExtension"/>
+               </optional>
+               <zeroOrMore>
+                  <ref name="p"/>
+               </zeroOrMore>
+            </choice>
          </group>
       </element>
    </define>
@@ -10129,7 +9909,19 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="targetEntity"/>
+            <optional>
+               <attribute name="relationType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="targetType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <ref name="label"/>
             <optional>
                <choice>
                   <ref name="date"/>
@@ -10139,10 +9931,8 @@
             </optional>
             <zeroOrMore>
                <choice>
-                  <ref name="place"/>
-                  <ref name="relationType"/>
+                  <ref name="placeName"/>
                   <ref name="targetRole"/>
-                  <ref name="targetType"/>
                </choice>
             </zeroOrMore>
             <optional>
@@ -10282,7 +10072,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -10402,8 +10191,8 @@
          </group>
       </element>
    </define>
-   <define name="targetEntity">
-      <element name="targetEntity" ns="https://archivists.org/ns/ead/v4">
+   <define name="targetRole">
+      <element name="targetRole" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -10491,9 +10280,19 @@
                   </attribute>
                </optional>
             </interleave>
-            <oneOrMore>
-               <ref name="part"/>
-            </oneOrMore>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <text/>
          </group>
       </element>
    </define>
@@ -10625,7 +10424,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -10771,7 +10569,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -10917,7 +10714,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -11063,7 +10859,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -11209,7 +11004,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -11355,7 +11149,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -11501,7 +11294,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -11647,7 +11439,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -11793,7 +11584,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
@@ -11939,7 +11729,6 @@
                   <ref name="filePlan"/>
                   <ref name="otherDescriptiveInfo"/>
                   <ref name="otherFindAid"/>
-                  <ref name="physicalOrTechnicalRequirements"/>
                   <ref name="preferCite"/>
                   <ref name="processInfo"/>
                   <ref name="publicationNote"/>
