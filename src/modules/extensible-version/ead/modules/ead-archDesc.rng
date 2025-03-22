@@ -247,17 +247,16 @@
                <ref name="element.container"/>
                <ref name="element.extent"/>
                <ref name="element.genreForm"/>
-               <ref name="element.identificationDataNote"/>
                <ref name="element.languageOfMaterial"/>
                <ref name="element.legalStatus"/>
                <ref name="element.materialSpec"/>
-               <ref name="element.physLoc"/>
                <ref name="element.unitDate"/>
                <ref name="element.unitDateStructured"/>
                <ref name="element.unitId"/>
                <ref name="element.unitTitle"/>
             </choice>
          </oneOrMore>
+         <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
    <define name="element.descriptionOfComponents">
@@ -273,15 +272,6 @@
                <ref name="element.c"/>
                <ref name="element.c01"/>
             </choice>
-         </oneOrMore>
-      </element>
-   </define>
-   <define name="element.identificationDataNote">
-      <element name="identificationDataNote">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <oneOrMore>
-            <ref name="element.p"/>
          </oneOrMore>
       </element>
    </define>
@@ -347,13 +337,6 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
-         <ref name="model.mixed-content.optional"/>
-      </element>
-   </define>
-   <define name="element.physLoc">
-      <element name="physLoc">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="model.mixed-content.optional"/>
       </element>
    </define>

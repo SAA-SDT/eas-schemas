@@ -188,15 +188,6 @@
         </optional>
     </define>
     
-    <!-- do really want IDFREFS, as defined in EAD3, or would IDREF suffice? e.g. a container cannot be in multiple containers at once, right? -->
-    <define name="attribute.parent.optional">
-        <optional>
-            <attribute name="parent">
-                <data type="IDREFS"/>
-            </attribute>    
-        </optional>
-    </define>
-    
     <define name="attribute.extentType.optional">
         <optional>
             <attribute name="extentType">
@@ -608,10 +599,6 @@
     
     <define name="attribute-group.container.optional" combine="interleave">
         <ref name="attribute.containerId.optional"/>
-    </define>
-    
-    <define name="attribute-group.container.optional" combine="interleave">
-        <ref name="attribute.parent.optional"/>
     </define>
     
     <define name="attribute-group.document-node">
