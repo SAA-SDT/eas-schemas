@@ -185,6 +185,20 @@
          </attribute>
       </optional>
    </define>
+   <define name="attribute.referredEntityRelationship.optional">
+      <optional>
+         <attribute name="referredEntityRelationship">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.referredEntityType.optional">
+      <optional>
+         <attribute name="referredEntityType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="attribute.repositoryCode.optional">
       <optional>
          <attribute name="repositoryCode">
@@ -395,6 +409,14 @@
          </choice>
       </attribute>
    </define>
+   <define name="attribute.referredEntityTypeEncoding">
+      <attribute name="referredEntityTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherReferredEntityTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
    <define name="attribute.repositoryEncoding">
       <attribute name="repositoryEncoding" a:defaultValue="iso15511">
          <choice>
@@ -487,6 +509,9 @@
       </optional>
       <optional>
          <ref name="attribute.publicationStatusEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.referredEntityTypeEncoding"/>
       </optional>
       <optional>
          <ref name="attribute.repositoryEncoding"/>
