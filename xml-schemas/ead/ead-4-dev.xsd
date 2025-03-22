@@ -568,7 +568,6 @@
             <xs:element type="ead:physDescSet" name="physDescSet"/>
             <xs:element type="ead:physDesc" name="physDesc"/>
             <xs:element type="ead:physDescStructured" name="physDescStructured"/>
-            <xs:element type="ead:physLoc" name="physLoc"/>
             <xs:element type="ead:unitDate" name="unitDate"/>
             <xs:element type="ead:unitId" name="unitId"/>
             <xs:element type="ead:unitTitle" name="unitTitle"/>
