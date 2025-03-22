@@ -522,22 +522,7 @@
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.subjectType.optional"/>
-            <oneOrMore>
-                <ref name="element.term"/>
-            </oneOrMore>
-            <optional>
-                <ref name="model.all-dates.choice"/>
-            </optional>
-            <zeroOrMore>
-                <ref name="element.placeName"/>
-            </zeroOrMore>
-            <zeroOrMore>
-                <ref name="element.role"/>
-            </zeroOrMore>
-            <zeroOrMore>
-                <ref name="element.relationship"/>
-            </zeroOrMore>
-            <ref name="element.descriptiveNote.optional"/>  
+            <ref name="model.ead-entity-elements"/>
         </element>
     </define>
     

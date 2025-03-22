@@ -86,20 +86,7 @@
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute.agentType.optional"/>
-            <oneOrMore>
-                <ref name="element.label"/>
-            </oneOrMore>
-            <optional>
-                <ref name="model.all-dates.choice"/>
-            </optional>
-            <zeroOrMore>
-                <choice>
-                    <ref name="element.role"/>
-                    <ref name="element.relationship"/>
-                    <ref name="element.placeName"/>
-                </choice>
-            </zeroOrMore>
-            <ref name="element.descriptiveNote.optional"/>
+            <ref name="model.ead-entity-elements"/>
         </element>
     </define>
     
@@ -276,27 +263,12 @@
     
     <define name="element.function">
         <element name="function">
-            <ref name="model.single-element-group" a:exclude-from="ead"/>
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.linked-data.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac"/>
             <ref name="attribute.functionType.optional"/>
-            <oneOrMore a:exclude-from="eac">
-                <ref name="element.label"/>
-            </oneOrMore>
-            <optional a:exclude-from="eac">
-                <ref name="model.all-dates.choice"/>
-            </optional>
-            <zeroOrMore a:exclude-from="eac">
-                <ref name="element.placeName"/>
-            </zeroOrMore>
-            <zeroOrMore a:exclude-from="eac">
-                <ref name="element.role"/>
-            </zeroOrMore>
-            <zeroOrMore a:exclude-from="eac">
-                <ref name="element.relationship"/>
-            </zeroOrMore>
-            <ref name="element.descriptiveNote.optional" a:exclude-from="eac"/>  
+            <ref name="model.single-element-group" a:exclude-from="ead"/>
+            <ref name="model.ead-entity-elements" a:exclude-from="eac"/>
         </element>
     </define>
     
@@ -370,28 +342,21 @@
         </element>
     </define>
     
-    <define name="element.place">
+    <define name="element.place" combine="interleave">
         <element name="place">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.placeType.optional"/>
+            <!-- i don't think this will work, but trying to combine place with the rest -->
             <oneOrMore>
                 <choice>
-                    <ref name="element.label"/>
-                    <ref name="element.role"/>
                     <ref name="element.geographicCoordinates"/>
                     <ref name="element.address"/>
                     <ref name="element.contact"/>
                 </choice>
             </oneOrMore>
-            <optional>
-                <ref name="model.all-dates.choice"/>
-            </optional>
-            <optional>
-                <ref name="element.relationship"/>
-            </optional>
-            <ref name="element.descriptiveNote.optional"/> 
+            <ref name="model.single-element-group"/>
         </element>
     </define>
     
@@ -515,6 +480,25 @@
             <ref name="element.shortCode"/>
         </optional>
         <ref name="element.descriptiveNote.optional"/>
+    </define>
+    
+    <define name="model.ead-entity-elements" combine="interleave">
+        <oneOrMore>
+            <ref name="element.label"/>
+        </oneOrMore>
+        <optional>
+            <ref name="model.all-dates.choice"/>
+        </optional>
+        <zeroOrMore>
+            <ref name="element.placeName"/>
+        </zeroOrMore>
+        <zeroOrMore>
+            <ref name="element.role"/>
+        </zeroOrMore>
+        <zeroOrMore>
+            <ref name="element.relationship"/>
+        </zeroOrMore>
+        <ref name="element.descriptiveNote.optional"/>  
     </define>
     
     <define name="model.ead-narrative-elements">
