@@ -2152,16 +2152,10 @@
          <xs:choice>
             <xs:sequence>
                <xs:element type="ead:language" name="language"/>
-               <xs:element type="ead:writingSystem"
-                           name="writingSystem"
-                           minOccurs="0"
-                           maxOccurs="unbounded"/>
+               <xs:element type="ead:writingSystem" name="writingSystem" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:sequence>
-               <xs:element type="ead:language"
-                           name="language"
-                           minOccurs="0"
-                           maxOccurs="unbounded"/>
+               <xs:element type="ead:language" name="language" maxOccurs="unbounded"/>
                <xs:element type="ead:writingSystem" name="writingSystem"/>
             </xs:sequence>
          </xs:choice>

@@ -9560,14 +9560,14 @@
             <choice>
                <group>
                   <ref name="language"/>
-                  <zeroOrMore>
+                  <oneOrMore>
                      <ref name="writingSystem"/>
-                  </zeroOrMore>
+                  </oneOrMore>
                </group>
                <group>
-                  <zeroOrMore>
+                  <oneOrMore>
                      <ref name="language"/>
-                  </zeroOrMore>
+                  </oneOrMore>
                   <ref name="writingSystem"/>
                </group>
             </choice>
