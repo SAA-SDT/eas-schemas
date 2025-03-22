@@ -250,7 +250,7 @@
                     <ref name="element.identificationDataNote"/>
                     <ref name="element.languageOfMaterial"/>
                     <ref name="element.legalStatus"/>
-                    <ref name="element.materialSpec"/>
+                    <ref name="element.otherIdentificationData"/>
                     <ref name="element.physDescSet"/>
                     <ref name="element.physDesc"/>
                     <ref name="element.physDescStructured"/>
@@ -335,19 +335,19 @@
             <ref name="element.descriptiveNote.optional"/>
         </element>
     </define>
-    
-    <define name="element.materialSpec">
-        <element name="materialSpec">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
-            <ref name="model.mixed-content.optional"/>
-        </element>
-    </define>
        
     <define name="element.otherDescriptiveInfo">
         <element name="otherDescriptiveInfo">
             <ref name="model.ead-narrative-elements"/>
+        </element>
+    </define>
+    
+    <define name="element.otherIdentificationData">
+        <element name="otherIdentificationData">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="model.mixed-content.optional"/>
         </element>
     </define>
     
