@@ -87,6 +87,7 @@
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute.agentType.optional"/>
             <ref name="model.ead-entity-elements"/>
+            <ref name="element.descriptiveNote.optional"/>  
         </element>
     </define>
     
@@ -269,6 +270,7 @@
             <ref name="attribute.functionType.optional"/>
             <ref name="model.single-element-group" a:exclude-from="ead"/>
             <ref name="model.ead-entity-elements" a:exclude-from="eac"/>
+            <ref name="element.descriptiveNote.optional"/>  
         </element>
     </define>
     
@@ -349,14 +351,15 @@
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.placeType.optional"/>
             <!-- i don't think this will work, but trying to combine place with the rest -->
-            <oneOrMore>
+            <ref name="model.ead-entity-elements"/>
+            <zeroOrMore>
                 <choice>
-                    <ref name="element.geographicCoordinates"/>
                     <ref name="element.address"/>
                     <ref name="element.contact"/>
+                    <ref name="element.geographicCoordinates"/>
                 </choice>
-            </oneOrMore>
-            <ref name="model.ead-entity-elements"/>
+            </zeroOrMore>
+            <ref name="element.descriptiveNote.optional"/>  
         </element>
     </define>
     
@@ -498,7 +501,6 @@
         <zeroOrMore>
             <ref name="element.relationship"/>
         </zeroOrMore>
-        <ref name="element.descriptiveNote.optional"/>  
     </define>
     
     <define name="model.ead-narrative-elements">

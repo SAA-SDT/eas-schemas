@@ -452,6 +452,7 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.subjectType.optional"/>
          <ref name="model.ead-entity-elements"/>
+         <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
    <define name="element.unitDate">

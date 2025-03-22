@@ -558,11 +558,6 @@
    </xs:complexType>
    <xs:complexType name="place">
       <xs:sequence>
-         <xs:choice maxOccurs="unbounded">
-            <xs:element type="ead:geographicCoordinates" name="geographicCoordinates"/>
-            <xs:element type="ead:address" name="address"/>
-            <xs:element type="ead:contact" name="contact"/>
-         </xs:choice>
          <xs:element type="ead:label" name="label" maxOccurs="unbounded"/>
          <xs:choice minOccurs="0">
             <xs:element type="ead:date" name="date"/>
@@ -578,6 +573,11 @@
                      name="relationship"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:address" name="address"/>
+            <xs:element type="ead:contact" name="contact"/>
+            <xs:element type="ead:geographicCoordinates" name="geographicCoordinates"/>
+         </xs:choice>
          <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
@@ -1388,22 +1388,6 @@
          <xs:any namespace="##other" processContents="lax"/>
       </xs:sequence>
    </xs:group>
-   <xs:complexType name="geographicCoordinates">
-      <xs:simpleContent>
-         <xs:extension base="xs:normalizedString">
-            <xs:attribute name="audience" type="xs:token"/>
-            <xs:attribute name="id" type="xs:ID"/>
-            <xs:attribute name="target" type="xs:IDREFS"/>
-            <xs:attribute name="languageOfElement" type="xs:token"/>
-            <xs:attribute name="scriptOfElement" type="xs:token"/>
-            <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-            <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-            <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-            <xs:attribute name="coordinateSystem" use="required" type="xs:token"/>
-            <xs:anyAttribute namespace="##other" processContents="lax"/>
-         </xs:extension>
-      </xs:simpleContent>
-   </xs:complexType>
    <xs:complexType name="address">
       <xs:sequence>
          <xs:element type="ead:addressLine" name="addressLine" maxOccurs="unbounded"/>
@@ -1435,6 +1419,22 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="geographicCoordinates">
+      <xs:simpleContent>
+         <xs:extension base="xs:normalizedString">
+            <xs:attribute name="audience" type="xs:token"/>
+            <xs:attribute name="id" type="xs:ID"/>
+            <xs:attribute name="target" type="xs:IDREFS"/>
+            <xs:attribute name="languageOfElement" type="xs:token"/>
+            <xs:attribute name="scriptOfElement" type="xs:token"/>
+            <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+            <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+            <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+            <xs:attribute name="coordinateSystem" use="required" type="xs:token"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+         </xs:extension>
+      </xs:simpleContent>
    </xs:complexType>
    <xs:complexType name="part">
       <xs:simpleContent>
