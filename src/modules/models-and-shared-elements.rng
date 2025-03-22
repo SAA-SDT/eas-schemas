@@ -356,7 +356,7 @@
                     <ref name="element.contact"/>
                 </choice>
             </oneOrMore>
-            <ref name="model.single-element-group"/>
+            <ref name="model.ead-entity-elements"/>
         </element>
     </define>
     
