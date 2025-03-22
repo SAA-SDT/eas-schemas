@@ -490,6 +490,34 @@
          <ref name="element.relations"/>
       </optional>
    </define>
+   <define name="model.ead-dimensions-extent">
+      <choice>
+         <group>
+            <element name="quantity">
+               <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+               <ref name="attribute-group.assertion-reference.optional"/>
+               <ref name="attribute.approximate.optional"/>
+               <text/>
+            </element>
+            <optional>
+               <element name="unitOfMeasurement">
+                  <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                  <ref name="attribute-group.assertion-reference.optional"/>
+                  <ref name="attribute-group.linked-data.optional"/>
+                  <text/>
+               </element>
+            </optional>
+         </group>
+         <group>
+            <element name="unitOfMeasurement">
+               <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+               <ref name="attribute-group.assertion-reference.optional"/>
+               <ref name="attribute-group.linked-data.optional"/>
+               <text/>
+            </element>
+         </group>
+      </choice>
+   </define>
    <!-- new... reorder / model, once finalized -->
    <define name="model.ead-formAvailable">
       <ref name="attribute-group.global-plus-lang-and-script.optional"/>
