@@ -332,9 +332,13 @@
     </define>
     
     <define name="attribute.countryEncoding">
-        <attribute name="countryEncoding" a:defaultValue="iso3166-1">
+        <attribute name="countryEncoding">
             <choice>
-                <value>iso3166-1</value>
+                <value>iso3166-1-alpha-2</value>
+                <value>iso3166-1-alpha-3</value>
+                <value>iso3166-1-numeric</value>
+                <value>iso3166-2</value>
+                <value>iso3166-3</value>
                 <value>otherCountryEncoding</value>
             </choice>
         </attribute>
