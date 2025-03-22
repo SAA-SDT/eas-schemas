@@ -329,14 +329,14 @@
             <choice>
                 <group>
                     <ref name="element.language"/>
-                    <zeroOrMore>
+                    <oneOrMore>
                         <ref name="element.writingSystem"/>
-                    </zeroOrMore>
+                    </oneOrMore>
                 </group>
                 <group>
-                    <zeroOrMore>
+                    <oneOrMore>
                         <ref name="element.language"/>
-                    </zeroOrMore>
+                    </oneOrMore>
                     <ref name="element.writingSystem"/>
                 </group>
             </choice>
