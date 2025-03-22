@@ -2155,8 +2155,8 @@
                <xs:element type="ead:writingSystem" name="writingSystem" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:sequence>
-               <xs:element type="ead:language" name="language" maxOccurs="unbounded"/>
                <xs:element type="ead:writingSystem" name="writingSystem"/>
+               <xs:element type="ead:language" name="language" maxOccurs="unbounded"/>
             </xs:sequence>
          </xs:choice>
          <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>

@@ -300,10 +300,10 @@
                </oneOrMore>
             </group>
             <group>
+               <ref name="element.writingSystem"/>
                <oneOrMore>
                   <ref name="element.language"/>
                </oneOrMore>
-               <ref name="element.writingSystem"/>
             </group>
          </choice>
          <ref name="element.descriptiveNote.optional"/>
