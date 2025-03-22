@@ -567,7 +567,6 @@
             <xs:element type="ead:physDesc" name="physDesc"/>
             <xs:element type="ead:physDescStructured" name="physDescStructured"/>
             <xs:element type="ead:unitDate" name="unitDate"/>
-            <xs:element type="ead:unitDateStructured" name="unitDateStructured"/>
             <xs:element type="ead:unitId" name="unitId"/>
             <xs:element type="ead:unitTitle" name="unitTitle"/>
          </xs:choice>
@@ -1631,37 +1630,15 @@
       <xs:attribute name="coverage" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="unitDate" mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-         <xs:element type="ead:reference" name="reference"/>
-         <xs:element type="ead:referringString" name="referringString"/>
-         <xs:element type="ead:span" name="span"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="unitDateType" type="xs:token"/>
-      <xs:attribute name="dateChar" type="xs:token"/>
-      <xs:attribute name="calendar" type="xs:token"/>
-      <xs:attribute name="certainty" type="xs:token"/>
-      <xs:attribute name="era" type="xs:token"/>
-      <xs:attribute name="notAfter" type="xs:token"/>
-      <xs:attribute name="notBefore" type="xs:token"/>
-      <xs:attribute name="standardDate" type="xs:token"/>
-      <xs:attribute name="status" type="xs:token"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="unitDateStructured">
-      <xs:choice>
-         <xs:element type="ead:date" name="date"/>
-         <xs:element type="ead:dateRange" name="dateRange"/>
-         <xs:element type="ead:dateSet" name="dateSet"/>
-      </xs:choice>
+   <xs:complexType name="unitDate">
+      <xs:sequence>
+         <xs:choice minOccurs="0">
+            <xs:element type="ead:date" name="date"/>
+            <xs:element type="ead:dateRange" name="dateRange"/>
+            <xs:element type="ead:dateSet" name="dateSet"/>
+         </xs:choice>
+         <xs:element type="ead:textualDate" name="textualDate" minOccurs="0"/>
+      </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -2231,6 +2208,23 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="unit" type="xs:token"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="textualDate" mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+         <xs:element type="ead:reference" name="reference"/>
+         <xs:element type="ead:referringString" name="referringString"/>
+         <xs:element type="ead:span" name="span"/>
+      </xs:choice>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="status" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="extent">
