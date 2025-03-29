@@ -1718,15 +1718,21 @@
    </xs:complexType>
    <xs:complexType name="formAvailable">
       <xs:sequence>
+         <xs:element type="ead:label" name="label" maxOccurs="unbounded"/>
+         <xs:choice minOccurs="0">
+            <xs:element type="ead:date" name="date"/>
+            <xs:element type="ead:dateRange" name="dateRange"/>
+            <xs:element type="ead:dateSet" name="dateSet"/>
+         </xs:choice>
+         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:container" name="container"/>
             <xs:element type="ead:dimensions" name="dimensions"/>
             <xs:element type="ead:extent" name="extent"/>
             <xs:element type="ead:formAvailableId" name="formAvailableId"/>
             <xs:element type="ead:physFacet" name="physFacet"/>
-            <xs:element type="ead:label" name="label"/>
-            <xs:element type="ead:role" name="role"/>
             <xs:element type="ead:placeName" name="placeName"/>
+            <xs:element type="ead:role" name="role"/>
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
@@ -1738,12 +1744,6 @@
             <xs:element type="ead:sourceOfAcquisition" name="sourceOfAcquisition"/>
             <xs:element type="ead:useConditions" name="useConditions"/>
          </xs:choice>
-         <xs:choice minOccurs="0">
-            <xs:element type="ead:date" name="date"/>
-            <xs:element type="ead:dateRange" name="dateRange"/>
-            <xs:element type="ead:dateSet" name="dateSet"/>
-         </xs:choice>
-         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
          <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
