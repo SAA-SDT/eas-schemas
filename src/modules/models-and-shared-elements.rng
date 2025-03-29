@@ -525,15 +525,23 @@
             <ref name="element.relations"/>
         </optional>
     </define>
-
-    <!-- new... reorder / model, once finalized -->
+    
     <define name="model.ead-formAvailable">
         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
         <ref name="attribute-group.linked-data.optional"/>
         <ref name="attribute.coverage.optional"/>
         <ref name="attribute.formAvailableType.optional"/>
-        <!-- refine, depending on XSD output -->
+        <!-- order based on design principle, namely:https://github.com/SAA-SDT/TS-EAS-subteam-notes/blob/master/schemas-subteam/working-documents/20210112_ElementsOrder_Final_EAC-CPF.pdf-->
+        <oneOrMore>
+            <ref name="element.label"/>
+        </oneOrMore>
+        <optional>
+            <ref name="model.all-dates.choice"/>
+        </optional>
+        <optional>
+            <ref name="element.relations"/>
+        </optional>
         <zeroOrMore>
             <choice>
                 <ref name="element.container"/>
@@ -541,13 +549,8 @@
                 <ref name="element.extent"/>
                 <ref name="element.formAvailableId"/>
                 <ref name="element.physFacet"/>
-                
-                <!-- just adding these as is for now.  will adjust based on repeatability requirements before creating a pull request -->
-                <ref name="element.label"/>
-                <ref name="element.role"/>
-                
                 <ref name="element.placeName"/>
-                
+                <ref name="element.role"/>
                 <!-- also narrative notes, but just these...-->
                 <ref name="element.accessConditions"/>
                 <ref name="element.accruals"/>
@@ -560,12 +563,6 @@
                 <ref name="element.useConditions"/>
             </choice>
         </zeroOrMore>
-        <optional>
-            <ref name="model.all-dates.choice"/>
-        </optional>
-        <optional>
-            <ref name="element.relations"/>
-        </optional>
         <ref name="element.descriptiveNote.optional"/>
     </define>
     
