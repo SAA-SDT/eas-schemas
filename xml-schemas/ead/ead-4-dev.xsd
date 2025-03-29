@@ -233,9 +233,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -251,6 +248,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -651,25 +650,6 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="recordTypeSpecificStatement" mixed="true">
-      <xs:sequence>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element type="ead:reference" name="reference"/>
-            <xs:element type="ead:referringString" name="referringString"/>
-            <xs:element type="ead:span" name="span"/>
-         </xs:choice>
-         <xs:element type="ead:objectXMLWrap" name="objectXMLWrap" minOccurs="0"/>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
    <xs:complexType name="accessConditions">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
@@ -966,6 +946,25 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="recordTypeSpecificStatement" mixed="true">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:reference" name="reference"/>
+            <xs:element type="ead:referringString" name="referringString"/>
+            <xs:element type="ead:span" name="span"/>
+         </xs:choice>
+         <xs:element type="ead:objectXMLWrap" name="objectXMLWrap" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="relatedMaterial">
@@ -1839,46 +1838,6 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="referringString" mixed="true">
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="vocabularySource" type="xs:token"/>
-      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
-      <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="span" mixed="true">
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="style" type="xs:normalizedString"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="objectXMLWrap">
-      <xs:complexContent>
-         <xs:extension base="ead:_2">
-            <xs:attribute name="audience" type="xs:token"/>
-            <xs:attribute name="id" type="xs:ID"/>
-            <xs:attribute name="target" type="xs:IDREFS"/>
-            <xs:anyAttribute namespace="##other" processContents="lax"/>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
    <xs:complexType name="abstract" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:reference" name="reference"/>
@@ -1929,6 +1888,46 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="referringString" mixed="true">
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="span" mixed="true">
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="style" type="xs:normalizedString"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="objectXMLWrap">
+      <xs:complexContent>
+         <xs:extension base="ead:_2">
+            <xs:attribute name="audience" type="xs:token"/>
+            <xs:attribute name="id" type="xs:ID"/>
+            <xs:attribute name="target" type="xs:IDREFS"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:complexType name="subject">
       <xs:sequence>
          <xs:element type="ead:term" name="term" maxOccurs="unbounded"/>
@@ -1978,9 +1977,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -1996,6 +1992,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2028,9 +2026,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2046,6 +2041,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2300,12 +2297,6 @@
       <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="_2">
-      <xs:choice>
-         <xs:any namespace="##other" processContents="lax"/>
-         <xs:any namespace="##local" processContents="lax"/>
-      </xs:choice>
-   </xs:complexType>
    <xs:complexType name="relation">
       <xs:sequence>
          <xs:element type="ead:targetEntity" name="targetEntity"/>
@@ -2333,6 +2324,12 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="_2">
+      <xs:choice>
+         <xs:any namespace="##other" processContents="lax"/>
+         <xs:any namespace="##local" processContents="lax"/>
+      </xs:choice>
+   </xs:complexType>
    <xs:complexType name="c02">
       <xs:sequence>
          <xs:element type="ead:head" name="head" minOccurs="0"/>
@@ -2341,9 +2338,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2359,6 +2353,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2420,9 +2416,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2438,6 +2431,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2470,9 +2465,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2488,6 +2480,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2520,9 +2514,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2538,6 +2529,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2570,9 +2563,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2588,6 +2578,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2620,9 +2612,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2638,6 +2627,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2670,9 +2661,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2688,6 +2676,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2720,9 +2710,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2738,6 +2725,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2770,9 +2759,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2788,6 +2774,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2820,9 +2808,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2838,6 +2823,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
@@ -2870,9 +2857,6 @@
          <xs:element type="ead:formsAvailable" name="formsAvailable" minOccurs="0"/>
          <xs:element type="ead:functions" name="functions" minOccurs="0"/>
          <xs:element type="ead:places" name="places" minOccurs="0"/>
-         <xs:element type="ead:recordTypeSpecificStatement"
-                     name="recordTypeSpecificStatement"
-                     minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
@@ -2888,6 +2872,8 @@
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
+            <xs:element type="ead:recordTypeSpecificStatement"
+                        name="recordTypeSpecificStatement"/>
             <xs:element type="ead:relatedMaterial" name="relatedMaterial"/>
             <xs:element type="ead:scopeContent" name="scopeContent"/>
             <xs:element type="ead:separatedMaterial" name="separatedMaterial"/>
