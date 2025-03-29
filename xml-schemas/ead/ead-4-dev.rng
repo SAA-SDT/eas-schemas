@@ -7283,6 +7283,19 @@
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
+            <oneOrMore>
+               <ref name="label"/>
+            </oneOrMore>
+            <optional>
+               <choice>
+                  <ref name="date"/>
+                  <ref name="dateRange"/>
+                  <ref name="dateSet"/>
+               </choice>
+            </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
             <zeroOrMore>
                <choice>
                   <ref name="container"/>
@@ -7290,9 +7303,8 @@
                   <ref name="extent"/>
                   <ref name="formAvailableId"/>
                   <ref name="physFacet"/>
-                  <ref name="label"/>
-                  <ref name="role"/>
                   <ref name="placeName"/>
+                  <ref name="role"/>
                   <ref name="accessConditions"/>
                   <ref name="accruals"/>
                   <ref name="arrangement"/>
@@ -7304,16 +7316,6 @@
                   <ref name="useConditions"/>
                </choice>
             </zeroOrMore>
-            <optional>
-               <choice>
-                  <ref name="date"/>
-                  <ref name="dateRange"/>
-                  <ref name="dateSet"/>
-               </choice>
-            </optional>
-            <optional>
-               <ref name="relations"/>
-            </optional>
             <optional>
                <ref name="descriptiveNote"/>
             </optional>
