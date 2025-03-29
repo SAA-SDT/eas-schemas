@@ -323,8 +323,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -957,28 +955,6 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="physicalOrTechnicalRequirements">
-      <xs:sequence>
-         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:choice>
-            <xs:element type="ead:formattingExtension"
-                        name="formattingExtension"
-                        minOccurs="0"/>
-            <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
-         </xs:choice>
-      </xs:sequence>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="preferCite">
@@ -1967,8 +1943,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2016,8 +1990,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2288,6 +2260,28 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="physicalOrTechnicalRequirements">
+      <xs:sequence>
+         <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:choice>
+            <xs:element type="ead:formattingExtension"
+                        name="formattingExtension"
+                        minOccurs="0"/>
+            <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="_2">
       <xs:choice>
          <xs:any namespace="##other" processContents="lax"/>
@@ -2342,8 +2336,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2419,8 +2411,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2468,8 +2458,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2517,8 +2505,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2566,8 +2552,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2615,8 +2599,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2664,8 +2646,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2713,8 +2693,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2762,8 +2740,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2811,8 +2787,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
@@ -2860,8 +2834,6 @@
             <xs:element type="ead:filePlan" name="filePlan"/>
             <xs:element type="ead:otherDescriptiveInfo" name="otherDescriptiveInfo"/>
             <xs:element type="ead:otherDescription" name="otherDescription"/>
-            <xs:element type="ead:physicalOrTechnicalRequirements"
-                        name="physicalOrTechnicalRequirements"/>
             <xs:element type="ead:preferCite" name="preferCite"/>
             <xs:element type="ead:processInfo" name="processInfo"/>
             <xs:element type="ead:publicationNote" name="publicationNote"/>
