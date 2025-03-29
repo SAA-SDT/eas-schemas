@@ -70,7 +70,6 @@
                 <ref name="element.filePlan"/>
                 <ref name="element.otherDescriptiveInfo"/>
                 <ref name="element.otherDescription"/>
-                <ref name="element.physicalOrTechnicalRequirements"/>
                 <ref name="element.preferCite"/>
                 <ref name="element.processInfo"/>
                 <ref name="element.publicationNote"/>
