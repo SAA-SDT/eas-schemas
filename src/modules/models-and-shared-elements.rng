@@ -50,9 +50,6 @@
         <optional>
             <ref name="element.places"/>
         </optional>
-        <optional>
-            <ref name="element.recordTypeSpecificStatement"/>
-        </optional>
         <zeroOrMore>
             <ref name="model.narrative-element-name-list"/>
         </zeroOrMore>
@@ -74,6 +71,7 @@
                 <ref name="element.preferCite"/>
                 <ref name="element.processInfo"/>
                 <ref name="element.publicationNote"/>
+                <ref name="element.recordTypeSpecificStatement"/>
                 <ref name="element.relatedMaterial"/>
                 <ref name="element.scopeContent"/>
                 <ref name="element.separatedMaterial"/>
