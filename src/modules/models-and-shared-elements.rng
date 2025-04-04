@@ -350,8 +350,18 @@
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.placeType.optional"/>
-            <!-- i don't think this will work, but trying to combine place with the rest -->
-            <ref name="model.ead-entity-elements"/>
+            <oneOrMore>
+                <ref name="element.label"/>
+            </oneOrMore>
+            <optional>
+                <ref name="model.all-dates.choice"/>
+            </optional>
+            <zeroOrMore>
+                <ref name="element.role"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="element.relationship"/>
+            </zeroOrMore>
             <zeroOrMore>
                 <choice>
                     <ref name="element.address"/>
