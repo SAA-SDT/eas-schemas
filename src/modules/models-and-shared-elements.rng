@@ -83,7 +83,7 @@
     
     <define name="element.agent">
         <element name="agent">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <oneOrMore>
@@ -296,7 +296,7 @@
     <define name="element.function">
         <element name="function">
             <ref name="model.single-element-group" a:exclude-from="ead"/>
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional" a:exclude-from="eac"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.linked-data.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac"/>
             <oneOrMore a:exclude-from="eac">
@@ -389,7 +389,7 @@
     
     <define name="element.place">
         <element name="place">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <oneOrMore>
