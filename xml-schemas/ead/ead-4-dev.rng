@@ -1782,9 +1782,6 @@
                </choice>
             </optional>
             <zeroOrMore>
-               <ref name="placeName"/>
-            </zeroOrMore>
-            <zeroOrMore>
                <ref name="role"/>
             </zeroOrMore>
             <zeroOrMore>
