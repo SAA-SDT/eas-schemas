@@ -47,12 +47,12 @@
    </define>
    <define name="element.sourceOfAcquisition">
       <element name="sourceOfAcquisition">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
       </element>
    </define>
    <define name="element.appraisal">
       <element name="appraisal">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
       </element>
    </define>
    <define name="element.archDesc">
@@ -209,7 +209,7 @@
    </define>
    <define name="element.custodHist">
       <element name="custodHist">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
       </element>
    </define>
    <define name="element.identificationData">
@@ -392,7 +392,21 @@
    </define>
    <define name="element.processInfo">
       <element name="processInfo">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+      </element>
+   </define>
+   <define name="element.provenanceEvent">
+      <element name="provenanceEvent">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- like maintenanceEvent, but not really, due to different options -->
+         <ref name="element.eventDateTime"/>
+         <optional>
+            <ref name="element.agent"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="element.eventDescription"/>
+         </zeroOrMore>
       </element>
    </define>
    <!-- not needed for long, right? -->

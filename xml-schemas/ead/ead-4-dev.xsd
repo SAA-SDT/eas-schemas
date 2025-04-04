@@ -699,6 +699,10 @@
    <xs:complexType name="appraisal">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:provenanceEvent"
+                     name="provenanceEvent"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
@@ -743,6 +747,10 @@
    <xs:complexType name="biogHist">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:provenanceEvent"
+                     name="provenanceEvent"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
@@ -765,6 +773,10 @@
    <xs:complexType name="custodHist">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:provenanceEvent"
+                     name="provenanceEvent"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
@@ -901,6 +913,10 @@
    <xs:complexType name="processInfo">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:provenanceEvent"
+                     name="provenanceEvent"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
@@ -1023,6 +1039,10 @@
    <xs:complexType name="sourceOfAcquisition">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:provenanceEvent"
+                     name="provenanceEvent"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
@@ -1846,6 +1866,27 @@
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="provenanceEvent">
+      <xs:sequence>
+         <xs:element type="ead:eventDateTime" name="eventDateTime"/>
+         <xs:element type="ead:agent" name="agent" minOccurs="0"/>
+         <xs:element type="ead:eventDescription"
+                     name="eventDescription"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>

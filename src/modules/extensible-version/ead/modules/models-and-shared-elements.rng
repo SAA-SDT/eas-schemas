@@ -157,7 +157,9 @@
    <!-- can this be combined now??? I did. Fix, if needed, after checking with EAC -->
    <define name="element.biogHist">
       <element name="biogHist">
-         <ref name="model.ead-narrative-elements"/>
+            <!-- note the EAC impact. the goal is no differences, but so we might need to add provenanceEvent to EAC, or 
+            remove biogHist from EAD ? -->
+         <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
       </element>
    </define>
    <define name="element.citedRange">
@@ -500,6 +502,17 @@
       <optional>
          <ref name="element.abstract"/>
       </optional>
+      <ref name="model.narrative-group.optional"/>
+   </define>
+   <define name="model.ead-narrative-elements-plus-provenanceEvent">
+      <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+      <ref name="attribute-group.assertion-reference.optional"/>
+      <optional>
+         <ref name="element.abstract"/>
+      </optional>
+      <zeroOrMore>
+         <ref name="element.provenanceEvent"/>
+      </zeroOrMore>
       <ref name="model.narrative-group.optional"/>
    </define>
    <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
