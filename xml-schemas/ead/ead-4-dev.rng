@@ -2297,9 +2297,6 @@
    <define name="accessConditions">
       <element name="accessConditions" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <optional>
-               <ref name="dateRange"/>
-            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -2380,6 +2377,9 @@
             </interleave>
             <optional>
                <ref name="abstract"/>
+            </optional>
+            <optional>
+               <ref name="dateRange"/>
             </optional>
             <choice>
                <optional>
@@ -4141,9 +4141,6 @@
    <define name="useConditions">
       <element name="useConditions" ns="https://archivists.org/ns/ead/v4">
          <group>
-            <optional>
-               <ref name="dateRange"/>
-            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -4224,6 +4221,9 @@
             </interleave>
             <optional>
                <ref name="abstract"/>
+            </optional>
+            <optional>
+               <ref name="dateRange"/>
             </optional>
             <choice>
                <optional>

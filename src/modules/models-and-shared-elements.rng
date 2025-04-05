@@ -554,6 +554,18 @@
         <ref name="model.narrative-group.optional"/>
     </define>
     
+    <define name="model.ead-narrative-elements-plus-dateRange">
+        <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+        <ref name="attribute-group.assertion-reference.optional"/>
+        <optional>
+            <ref name="element.abstract"/>
+        </optional>
+        <optional>
+            <ref name="element.dateRange"/>
+        </optional>
+        <ref name="model.narrative-group.optional"/>
+    </define>
+    
     <define name="model.ead-narrative-elements-plus-provenanceEvent">
         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>

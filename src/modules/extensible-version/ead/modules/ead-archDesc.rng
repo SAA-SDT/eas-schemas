@@ -33,10 +33,7 @@
    </define>
    <define name="element.accessConditions">
       <element name="accessConditions">
-         <optional>
-            <ref name="element.dateRange"/>
-         </optional>
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-plus-dateRange"/>
          <ref name="attribute-group.linked-data.optional"/>
       </element>
    </define>
@@ -526,10 +523,7 @@
    </define>
    <define name="element.useConditions">
       <element name="useConditions">
-         <optional>
-            <ref name="element.dateRange"/>
-         </optional>
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-plus-dateRange"/>
          <ref name="attribute-group.linked-data.optional"/>
       </element>
    </define>

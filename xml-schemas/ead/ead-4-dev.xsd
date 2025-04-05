@@ -650,8 +650,8 @@
    </xs:complexType>
    <xs:complexType name="accessConditions">
       <xs:sequence>
-         <xs:element type="ead:dateRange" name="dateRange" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:dateRange" name="dateRange" minOccurs="0"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
@@ -1090,8 +1090,8 @@
    </xs:complexType>
    <xs:complexType name="useConditions">
       <xs:sequence>
-         <xs:element type="ead:dateRange" name="dateRange" minOccurs="0"/>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:dateRange" name="dateRange" minOccurs="0"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
