@@ -557,15 +557,6 @@
         </optional>
     </define>
     
-    <define name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac">
-        <attribute name="physDescStructuredTypeEncoding" a:defaultValue="EASList">
-            <choice>
-                <value>EASList</value>
-                <value>otherPhysDescStructuredTypeEncoding</value>
-            </choice>
-        </attribute>
-    </define>
-    
     <define name="attribute.publicationStatusEncoding">
         <attribute name="publicationStatusEncoding" a:defaultValue="EASList">
             <choice>
@@ -699,9 +690,6 @@
         </optional>
         <optional>
             <ref name="attribute.maintenanceStatusEncoding"/>
-        </optional>
-        <optional a:exclude-from="eac">
-            <ref name="attribute.physDescStructuredTypeEncoding"/>
         </optional>
         <optional>
             <ref name="attribute.placeTypeEncoding"/>
