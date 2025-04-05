@@ -510,10 +510,10 @@
       <optional>
          <ref name="element.abstract"/>
       </optional>
+      <ref name="model.narrative-group.optional"/>
       <zeroOrMore>
          <ref name="element.provenanceEvent"/>
       </zeroOrMore>
-      <ref name="model.narrative-group.optional"/>
    </define>
    <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
    <define name="model.ead-narrative-elements-plus-relations">
@@ -523,10 +523,10 @@
       <optional>
          <ref name="element.abstract"/>
       </optional>
-      <ref name="model.narrative-group.optional"/>
       <optional>
          <ref name="element.relations"/>
       </optional>
+      <ref name="model.narrative-group.optional"/>
    </define>
    <define name="model.mixed-content.optional">
       <zeroOrMore>

@@ -2297,6 +2297,9 @@
    <define name="accessConditions">
       <element name="accessConditions" ns="https://archivists.org/ns/ead/v4">
          <group>
+            <optional>
+               <ref name="dateRange"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -2386,9 +2389,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="dateRange"/>
-            </optional>
             <interleave>
                <optional>
                   <attribute name="vocabularySource" ns="">
@@ -2591,9 +2591,6 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <zeroOrMore>
-               <ref name="provenanceEvent"/>
-            </zeroOrMore>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -2602,6 +2599,9 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
+            <zeroOrMore>
+               <ref name="provenanceEvent"/>
+            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -2784,9 +2784,6 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <zeroOrMore>
-               <ref name="provenanceEvent"/>
-            </zeroOrMore>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -2795,6 +2792,9 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
+            <zeroOrMore>
+               <ref name="provenanceEvent"/>
+            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -2882,9 +2882,6 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <zeroOrMore>
-               <ref name="provenanceEvent"/>
-            </zeroOrMore>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -2893,6 +2890,9 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
+            <zeroOrMore>
+               <ref name="provenanceEvent"/>
+            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -3190,6 +3190,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -3198,9 +3201,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="relations"/>
-            </optional>
          </group>
       </element>
    </define>
@@ -3479,9 +3479,6 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <zeroOrMore>
-               <ref name="provenanceEvent"/>
-            </zeroOrMore>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -3490,6 +3487,9 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
+            <zeroOrMore>
+               <ref name="provenanceEvent"/>
+            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -3597,6 +3597,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -3605,9 +3608,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="relations"/>
-            </optional>
          </group>
       </element>
    </define>
@@ -3715,6 +3715,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -3723,9 +3726,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="relations"/>
-            </optional>
          </group>
       </element>
    </define>
@@ -3928,6 +3928,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -3936,9 +3939,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="relations"/>
-            </optional>
          </group>
       </element>
    </define>
@@ -4026,9 +4026,6 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <zeroOrMore>
-               <ref name="provenanceEvent"/>
-            </zeroOrMore>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -4037,6 +4034,9 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
+            <zeroOrMore>
+               <ref name="provenanceEvent"/>
+            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -4141,6 +4141,9 @@
    <define name="useConditions">
       <element name="useConditions" ns="https://archivists.org/ns/ead/v4">
          <group>
+            <optional>
+               <ref name="dateRange"/>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
@@ -4230,9 +4233,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="dateRange"/>
-            </optional>
             <interleave>
                <optional>
                   <attribute name="vocabularySource" ns="">
@@ -7800,6 +7800,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -7808,9 +7811,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="relations"/>
-            </optional>
             <optional>
                <attribute name="coverage" ns="">
                   <data type="token"
