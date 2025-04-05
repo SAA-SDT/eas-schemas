@@ -2337,6 +2337,26 @@
          <group>
             <interleave>
                <optional>
+                  <attribute name="vocabularySource" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="vocabularySourceURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="valueURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <interleave>
+               <optional>
                   <attribute name="audience" ns="">
                      <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
@@ -2416,6 +2436,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="dateRange"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -2424,29 +2447,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="dateRange"/>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="vocabularySource" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="vocabularySourceURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="valueURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
          </group>
       </element>
    </define>
@@ -2629,9 +2629,6 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <zeroOrMore>
-               <ref name="provenanceEvent"/>
-            </zeroOrMore>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -2640,6 +2637,9 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
+            <zeroOrMore>
+               <ref name="provenanceEvent"/>
+            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -2822,9 +2822,6 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <zeroOrMore>
-               <ref name="provenanceEvent"/>
-            </zeroOrMore>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -2833,6 +2830,9 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
+            <zeroOrMore>
+               <ref name="provenanceEvent"/>
+            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -2920,9 +2920,6 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <zeroOrMore>
-               <ref name="provenanceEvent"/>
-            </zeroOrMore>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -2931,6 +2928,9 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
+            <zeroOrMore>
+               <ref name="provenanceEvent"/>
+            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -3228,6 +3228,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -3236,9 +3239,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="relations"/>
-            </optional>
          </group>
       </element>
    </define>
@@ -3421,9 +3421,6 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <zeroOrMore>
-               <ref name="provenanceEvent"/>
-            </zeroOrMore>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -3432,6 +3429,9 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
+            <zeroOrMore>
+               <ref name="provenanceEvent"/>
+            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -3539,6 +3539,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -3547,9 +3550,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="relations"/>
-            </optional>
          </group>
       </element>
    </define>
@@ -3756,6 +3756,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -3764,9 +3767,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="relations"/>
-            </optional>
          </group>
       </element>
    </define>
@@ -3969,6 +3969,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="relations"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -3977,9 +3980,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="relations"/>
-            </optional>
          </group>
       </element>
    </define>
@@ -4067,9 +4067,6 @@
             <optional>
                <ref name="abstract"/>
             </optional>
-            <zeroOrMore>
-               <ref name="provenanceEvent"/>
-            </zeroOrMore>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -4078,6 +4075,9 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
+            <zeroOrMore>
+               <ref name="provenanceEvent"/>
+            </zeroOrMore>
          </group>
       </element>
    </define>
@@ -4184,6 +4184,26 @@
          <group>
             <interleave>
                <optional>
+                  <attribute name="vocabularySource" ns="">
+                     <data type="token"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="vocabularySourceURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+               <optional>
+                  <attribute name="valueURI" ns="">
+                     <data type="anyURI"
+                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                  </attribute>
+               </optional>
+            </interleave>
+            <interleave>
+               <optional>
                   <attribute name="audience" ns="">
                      <data type="token"
                            datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
@@ -4263,6 +4283,9 @@
             <optional>
                <ref name="abstract"/>
             </optional>
+            <optional>
+               <ref name="dateRange"/>
+            </optional>
             <choice>
                <optional>
                   <ref name="formattingExtension"/>
@@ -4271,29 +4294,6 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <optional>
-               <ref name="dateRange"/>
-            </optional>
-            <interleave>
-               <optional>
-                  <attribute name="vocabularySource" ns="">
-                     <data type="token"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="vocabularySourceURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-               <optional>
-                  <attribute name="valueURI" ns="">
-                     <data type="anyURI"
-                           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-                  </attribute>
-               </optional>
-            </interleave>
          </group>
       </element>
    </define>
