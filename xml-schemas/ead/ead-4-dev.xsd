@@ -718,14 +718,17 @@
    <xs:complexType name="accessConditions">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:dateRange" name="dateRange" minOccurs="0"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:dateRange" name="dateRange" minOccurs="0"/>
       </xs:sequence>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -736,9 +739,6 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="vocabularySource" type="xs:token"/>
-      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
-      <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="accruals">
@@ -766,16 +766,16 @@
    <xs:complexType name="appraisal">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:element type="ead:provenanceEvent"
-                     name="provenanceEvent"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
+         <xs:element type="ead:provenanceEvent"
+                     name="provenanceEvent"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -814,16 +814,16 @@
    <xs:complexType name="biogHist">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:element type="ead:provenanceEvent"
-                     name="provenanceEvent"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
+         <xs:element type="ead:provenanceEvent"
+                     name="provenanceEvent"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -840,16 +840,16 @@
    <xs:complexType name="custodHist">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:element type="ead:provenanceEvent"
-                     name="provenanceEvent"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
+         <xs:element type="ead:provenanceEvent"
+                     name="provenanceEvent"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -910,13 +910,13 @@
    <xs:complexType name="otherDescription">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -958,16 +958,16 @@
    <xs:complexType name="processInfo">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:element type="ead:provenanceEvent"
-                     name="provenanceEvent"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
+         <xs:element type="ead:provenanceEvent"
+                     name="provenanceEvent"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -984,13 +984,13 @@
    <xs:complexType name="publicationNote">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1033,13 +1033,13 @@
    <xs:complexType name="relatedMaterial">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1081,13 +1081,13 @@
    <xs:complexType name="separatedMaterial">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:relations" name="relations" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1107,16 +1107,16 @@
    <xs:complexType name="sourceOfAcquisition">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
-         <xs:element type="ead:provenanceEvent"
-                     name="provenanceEvent"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
+         <xs:element type="ead:provenanceEvent"
+                     name="provenanceEvent"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1159,14 +1159,17 @@
    <xs:complexType name="useConditions">
       <xs:sequence>
          <xs:element type="ead:abstract" name="abstract" minOccurs="0"/>
+         <xs:element type="ead:dateRange" name="dateRange" minOccurs="0"/>
          <xs:choice>
             <xs:element type="ead:formattingExtension"
                         name="formattingExtension"
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:dateRange" name="dateRange" minOccurs="0"/>
       </xs:sequence>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -1177,9 +1180,6 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="vocabularySource" type="xs:token"/>
-      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
-      <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="descriptionOfComponents">
