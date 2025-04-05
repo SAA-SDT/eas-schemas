@@ -231,7 +231,7 @@
    </define>
    <define name="element.genreForm">
       <element name="genreForm">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
          <ref name="model.mixed-content.optional"/>
@@ -277,9 +277,8 @@
    </define>
    <define name="element.dimensions">
       <element name="dimensions">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.coverage.optional"/>
          <ref name="model.ead-dimensions-extent"/>
       </element>
    </define>
