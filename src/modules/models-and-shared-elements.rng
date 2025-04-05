@@ -560,10 +560,10 @@
         <optional>
             <ref name="element.abstract"/>
         </optional>
+        <ref name="model.narrative-group.optional"/>
         <zeroOrMore>
             <ref name="element.provenanceEvent"/>
         </zeroOrMore>
-        <ref name="model.narrative-group.optional"/>
     </define>
 
     
@@ -575,10 +575,10 @@
         <optional>
             <ref name="element.abstract"/>
         </optional>
-        <ref name="model.narrative-group.optional"/>
         <optional>
             <ref name="element.relations"/>
         </optional>
+        <ref name="model.narrative-group.optional"/>
     </define>
     
     <define name="model.mixed-content.optional">
