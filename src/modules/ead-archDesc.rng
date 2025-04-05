@@ -272,12 +272,16 @@
             <optional>
                 <ref name="model.narrative-group.optional"/>
             </optional>
-            <oneOrMore>
+            <optional>
                 <choice>
-                    <ref name="element.c"/>
-                    <ref name="element.c01"/>
+                    <oneOrMore>
+                        <ref name="element.c"/>
+                    </oneOrMore>
+                    <oneOrMore>
+                        <ref name="element.c01"/>  
+                    </oneOrMore>  
                 </choice>
-            </oneOrMore>
+            </optional>
         </element>
     </define>
 
