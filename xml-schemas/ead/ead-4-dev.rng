@@ -151,7 +151,11 @@
             <optional>
                <attribute name="countryEncoding" ns="">
                   <choice>
-                     <value type="token" datatypeLibrary="" ns="">iso3166-1</value>
+                     <value type="token" datatypeLibrary="" ns="">iso3166-1-alpha-2</value>
+                     <value type="token" datatypeLibrary="" ns="">iso3166-1-alpha-3</value>
+                     <value type="token" datatypeLibrary="" ns="">iso3166-1-numeric</value>
+                     <value type="token" datatypeLibrary="" ns="">iso3166-2</value>
+                     <value type="token" datatypeLibrary="" ns="">iso3166-3</value>
                      <value type="token" datatypeLibrary="" ns="">otherCountryEncoding</value>
                   </choice>
                </attribute>
@@ -193,7 +197,10 @@
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">iso639-1</value>
                      <value type="token" datatypeLibrary="" ns="">iso639-2</value>
+                     <value type="token" datatypeLibrary="" ns="">iso639-2b</value>
+                     <value type="token" datatypeLibrary="" ns="">iso639-2t</value>
                      <value type="token" datatypeLibrary="" ns="">iso639-3</value>
+                     <value type="token" datatypeLibrary="" ns="">iso639-5</value>
                      <value type="token" datatypeLibrary="" ns="">ietf-bcp-47</value>
                      <value type="token" datatypeLibrary="" ns="">otherLanguageEncoding</value>
                   </choice>
