@@ -18,7 +18,9 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.relationType.optional"/>
          <ref name="attribute.targetType.optional"/>
-         <ref name="element.label"/>
+         <oneOrMore>
+            <ref name="element.label"/>
+         </oneOrMore>
          <optional>
             <ref name="model.all-dates.choice"/>
          </optional>

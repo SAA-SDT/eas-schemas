@@ -9870,7 +9870,9 @@
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
-            <ref name="label"/>
+            <oneOrMore>
+               <ref name="label"/>
+            </oneOrMore>
             <optional>
                <choice>
                   <ref name="date"/>

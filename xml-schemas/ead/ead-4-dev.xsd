@@ -2306,7 +2306,7 @@
    </xs:complexType>
    <xs:complexType name="relation">
       <xs:sequence>
-         <xs:element type="ead:label" name="label"/>
+         <xs:element type="ead:label" name="label" maxOccurs="unbounded"/>
          <xs:choice minOccurs="0">
             <xs:element type="ead:date" name="date"/>
             <xs:element type="ead:dateRange" name="dateRange"/>
