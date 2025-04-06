@@ -232,6 +232,7 @@
             <oneOrMore>
                <ref name="element.p"/>
             </oneOrMore>
+            <ref name="element.objectXMLWrap.optional"/>
          </element>
       </optional>
    </define>
