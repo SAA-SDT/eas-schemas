@@ -1097,9 +1097,9 @@
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:choice maxOccurs="unbounded">
-            <xs:element type="ead:c" name="c"/>
-            <xs:element type="ead:c01" name="c01"/>
+         <xs:choice minOccurs="0">
+            <xs:element type="ead:c" name="c" maxOccurs="unbounded"/>
+            <xs:element type="ead:c01" name="c01" maxOccurs="unbounded"/>
          </xs:choice>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>

@@ -4301,12 +4301,16 @@
                   <ref name="p"/>
                </zeroOrMore>
             </choice>
-            <oneOrMore>
+            <optional>
                <choice>
-                  <ref name="c"/>
-                  <ref name="c01"/>
+                  <oneOrMore>
+                     <ref name="c"/>
+                  </oneOrMore>
+                  <oneOrMore>
+                     <ref name="c01"/>
+                  </oneOrMore>
                </choice>
-            </oneOrMore>
+            </optional>
          </group>
       </element>
    </define>
