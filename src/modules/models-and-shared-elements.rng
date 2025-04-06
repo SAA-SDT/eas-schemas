@@ -621,14 +621,21 @@
         </optional>
         <zeroOrMore>
             <choice>
+                <ref name="element.formAvailableId"/>
+                <ref name="element.placeName"/>
+                <ref name="element.role"/>
+            </choice>
+        </zeroOrMore>
+        <zeroOrMore>
+            <choice>
                 <ref name="element.container"/>
                 <ref name="element.dimensions"/>
                 <ref name="element.extent"/>
-                <ref name="element.formAvailableId"/>
                 <ref name="element.physFacet"/>
-                <ref name="element.placeName"/>
-                <ref name="element.role"/>
-                <!-- also narrative notes, but just these...-->
+            </choice>
+        </zeroOrMore>
+        <zeroOrMore>
+            <choice>
                 <ref name="element.accessConditions"/>
                 <ref name="element.accruals"/>
                 <ref name="element.arrangement"/>
