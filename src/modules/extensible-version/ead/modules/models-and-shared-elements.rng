@@ -63,7 +63,6 @@
             <ref name="element.filePlan"/>
             <ref name="element.otherDescriptiveInfo"/>
             <ref name="element.otherFindAid"/>
-            <ref name="element.physicalOrTechnicalRequirements"/>
             <ref name="element.preferCite"/>
             <ref name="element.processInfo"/>
             <ref name="element.publicationNote"/>
@@ -527,6 +526,68 @@
       <optional>
          <ref name="element.relations"/>
       </optional>
+   </define>
+   <define name="model.ead-dimensions-extent">
+      <choice>
+         <group>
+            <element name="quantity">
+               <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+               <ref name="attribute-group.assertion-reference.optional"/>
+               <ref name="attribute.approximate.optional"/>
+               <text/>
+            </element>
+            <optional>
+               <element name="unitOfMeasurement">
+                  <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                  <ref name="attribute-group.assertion-reference.optional"/>
+                  <ref name="attribute-group.linked-data.optional"/>
+                  <text/>
+               </element>
+            </optional>
+         </group>
+         <group>
+            <element name="unitOfMeasurement">
+               <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+               <ref name="attribute-group.assertion-reference.optional"/>
+               <ref name="attribute-group.linked-data.optional"/>
+               <text/>
+            </element>
+         </group>
+      </choice>
+   </define>
+   <!-- new... reorder / model, once finalized -->
+   <define name="model.ead-formAvailable">
+      <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+      <ref name="attribute-group.assertion-reference.optional"/>
+      <ref name="attribute-group.linked-data.optional"/>
+      <ref name="attribute.coverage.optional"/>
+      <ref name="attribute.formAvailableType.optional"/>
+      <!-- refine, depending on XSD output -->
+      <zeroOrMore>
+         <ref name="element.container"/>
+         <ref name="element.dimensions"/>
+         <ref name="element.extent"/>
+         <ref name="element.formAvailableId"/>
+         <ref name="element.physFacet"/>
+         <ref name="element.placeName"/>
+         <!-- also narrative notes, but just these...-->
+         <ref name="element.accessConditions"/>
+         <ref name="element.accruals"/>
+         <ref name="element.arrangement"/>
+         <ref name="element.custodHist"/>
+         <ref name="element.physicalOrTechnicalRequirements"/>
+         <ref name="element.processInfo"/>
+         <ref name="element.separatedMaterial"/>
+         <ref name="element.sourceOfAcquisition"/>
+         <ref name="element.useConditions"/>
+      </zeroOrMore>
+      <optional>
+         <ref name="model.all-dates.choice"/>
+      </optional>
+      <optional>
+         <ref name="element.relations"/>
+      </optional>
+      <ref name="element.descriptiveNote.optional"/>
    </define>
    <define name="model.mixed-content.optional">
       <zeroOrMore>

@@ -29,8 +29,16 @@
     
     <define name="element.formAvailable">
         <element name="formAvailable">
-            <ref name="model.ead-narrative-elements-plus-relations"/>
-            <ref name="attribute.coverage.optional"/>
+            <ref name="model.ead-formAvailable"/>
+        </element>
+    </define>
+    
+    <define name="element.formAvailableId">
+        <element name="formAvailableId">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.mixed-content.optional"/>       
         </element>
     </define>
     
@@ -223,6 +231,18 @@
         </element>
     </define>
     
+    <define name="element.extent">
+        <element name="extent">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.extentType.optional"/>
+            <ref name="attribute.coverage.optional"/>
+            <ref name="model.ead-dimensions-extent"/>
+            <ref name="element.descriptiveNote.optional"/>
+        </element>
+    </define>
+
+    
     <define name="element.subjectHeadings">
         <element name="subjectHeadings">
             <!-- is this right? -->
@@ -238,6 +258,15 @@
             <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
         </element>
     </define>
+    
+    <define name="element.genreForm">
+        <element name="genreForm">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="model.mixed-content.optional"/>
+        </element>
+    </define>
      
     <define name="element.identificationData">
         <element name="identificationData">
@@ -247,12 +276,11 @@
             <oneOrMore>
                 <choice>
                     <ref name="element.container"/>
+                    <ref name="element.extent"/>
+                    <ref name="element.genreForm"/>
                     <ref name="element.languageOfMaterial"/>
                     <ref name="element.legalStatus"/>
                     <ref name="element.materialSpec"/>
-                    <ref name="element.physDescSet"/>
-                    <ref name="element.physDesc"/>
-                    <ref name="element.physDescStructured"/>
                     <ref name="element.unitDate"/>
                     <ref name="element.unitDateStructured"/>
                     <ref name="element.unitId"/>
@@ -288,9 +316,7 @@
         <element name="dimensions">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute.unit.optional"/>
-            <!-- what else follows this model? -->
-            <ref name="model.mixed-content.optional"/>
+            <ref name="model.ead-dimensions-extent"/>
         </element>
     </define>
     
@@ -347,54 +373,6 @@
     <define name="element.otherFindAid">
         <element name="otherFindAid">
             <ref name="model.ead-narrative-elements-plus-relations"/>
-        </element>
-    </define>
-    
-    <define name="element.physDesc">
-        <element name="physDesc">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.mixed-content.optional"/>
-        </element>
-    </define>
-    
-    <define name="element.physDescSet">
-        <element name="physDescSet">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute.parallel.optional"/>
-            <ref name="element.physDescStructured"/>
-            <oneOrMore>
-                <ref name="element.physDescStructured"/>
-            </oneOrMore>
-        </element>
-    </define>
-    
-    <define name="element.physDescStructured">
-        <element name="physDescStructured">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute.physDescStructuredType.optional"/>
-            <ref name="attribute.coverage.optional"/>
-            <element name="quantity">
-                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-                <ref name="attribute-group.assertion-reference.optional"/>
-                <ref name="attribute.approximate.optional"/>
-                <text/>
-            </element>
-            <element name="unitType">
-                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-                <ref name="attribute-group.assertion-reference.optional"/>
-                <ref name="attribute-group.linked-data.optional"/>
-                <text/>
-            </element>
-            <zeroOrMore>
-                <choice>
-                    <ref name="element.physFacet"/>
-                    <ref name="element.dimensions"/>
-                </choice>
-            </zeroOrMore>
-            <ref name="element.descriptiveNote.optional"/>
         </element>
     </define>
     
