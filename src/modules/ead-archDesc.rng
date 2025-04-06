@@ -345,12 +345,20 @@
         <element name="languageSet">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <oneOrMore>
-                <ref name="element.language"/>
-            </oneOrMore>
-            <oneOrMore>
-                <ref name="element.writingSystem"/>
-            </oneOrMore>
+            <choice>
+                <group>
+                    <ref name="element.language"/>
+                    <oneOrMore>
+                        <ref name="element.writingSystem"/>
+                    </oneOrMore>
+                </group>
+                <group>
+                    <ref name="element.writingSystem"/>
+                    <oneOrMore>
+                        <ref name="element.language"/>
+                    </oneOrMore>
+                </group>
+            </choice>
             <ref name="element.descriptiveNote.optional"/>
         </element>
     </define>

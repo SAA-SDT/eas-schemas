@@ -9506,12 +9506,20 @@
                   </attribute>
                </optional>
             </interleave>
-            <oneOrMore>
-               <ref name="language"/>
-            </oneOrMore>
-            <oneOrMore>
-               <ref name="writingSystem"/>
-            </oneOrMore>
+            <choice>
+               <group>
+                  <ref name="language"/>
+                  <oneOrMore>
+                     <ref name="writingSystem"/>
+                  </oneOrMore>
+               </group>
+               <group>
+                  <ref name="writingSystem"/>
+                  <oneOrMore>
+                     <ref name="language"/>
+                  </oneOrMore>
+               </group>
+            </choice>
             <optional>
                <ref name="descriptiveNote"/>
             </optional>
