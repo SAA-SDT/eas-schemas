@@ -182,6 +182,14 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
+      <xs:attribute name="referredEntityTypeEncoding">
+         <xs:simpleType>
+            <xs:restriction base="xs:token">
+               <xs:enumeration value="EASList"/>
+               <xs:enumeration value="otherReferredEntityTypeEncoding"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
       <xs:attribute name="repositoryEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">
@@ -2039,6 +2047,8 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="referredEntityType" type="xs:token"/>
+      <xs:attribute name="referredEntityRelationship" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="span" mixed="true">

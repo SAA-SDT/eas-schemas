@@ -255,6 +255,14 @@
                </attribute>
             </optional>
             <optional>
+               <attribute name="referredEntityTypeEncoding" ns="">
+                  <choice>
+                     <value type="token" datatypeLibrary="" ns="">EASList</value>
+                     <value type="token" datatypeLibrary="" ns="">otherReferredEntityTypeEncoding</value>
+                  </choice>
+               </attribute>
+            </optional>
+            <optional>
                <attribute name="repositoryEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">iso15511</value>
@@ -8632,6 +8640,18 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="referredEntityType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="referredEntityRelationship" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <text/>
          </group>
       </element>
