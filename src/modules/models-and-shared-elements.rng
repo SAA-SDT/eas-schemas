@@ -33,7 +33,7 @@
     
     <!-- check the ordering, due to the XSD 1.0 limitations -->
     <define name="model.archDesc.levels-of-description">
-        <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+        <ref name="attribute-group.global-plus-lang-and-script.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
         <ref name="attribute-group.linked-data.optional"/>
         <ref name="attribute.level.optional"/>
@@ -82,7 +82,7 @@
     
     <define name="element.agent">
         <element name="agent">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute.agentType.optional"/>
@@ -139,7 +139,9 @@
     <!-- can this be combined now??? I did. Fix, if needed, after checking with EAC -->
     <define name="element.biogHist">
         <element name="biogHist">
-            <ref name="model.ead-narrative-elements"/>
+            <!-- note the EAC impact. the goal is no differences, but so we might need to add provenanceEvent to EAC, or 
+            remove biogHist from EAD ? -->
+            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
         </element>
     </define>
     
@@ -221,6 +223,7 @@
                 <oneOrMore>
                     <ref name="element.p"/>
                 </oneOrMore>
+                <ref name="element.objectXMLWrap.optional"/>
             </element>
         </optional>
     </define>
@@ -264,7 +267,8 @@
     
     <define name="element.function">
         <element name="function">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional" a:exclude-from="eac"/>
+            <ref name="model.single-element-group" a:exclude-from="ead"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.linked-data.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac"/>
             <ref name="attribute.functionType.optional"/>
@@ -346,7 +350,7 @@
     
     <define name="element.place" combine="interleave">
         <element name="place">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.placeType.optional"/>
@@ -385,7 +389,7 @@
 
     <define name="element.reference">
         <element name="reference">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.links.optional"/>
             <zeroOrMore>
@@ -397,7 +401,7 @@
             </zeroOrMore>
         </element>
     </define>
-
+    
     <define name="element.role">
         <element name="role">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -406,7 +410,7 @@
             <text/>
         </element>
     </define>
-
+    
     <define name="element.span">
         <element name="span">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -522,6 +526,19 @@
         <ref name="model.narrative-group.optional"/>
     </define>
     
+    <define name="model.ead-narrative-elements-plus-provenanceEvent">
+        <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+        <ref name="attribute-group.assertion-reference.optional"/>
+        <optional>
+            <ref name="element.abstract"/>
+        </optional>
+        <zeroOrMore>
+            <ref name="element.provenanceEvent"/>
+        </zeroOrMore>
+        <ref name="model.narrative-group.optional"/>
+    </define>
+
+    
     <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
     <define name="model.ead-narrative-elements-plus-relations">
         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -536,6 +553,36 @@
         </optional>
     </define>
     
+    <define name="model.ead-dimensions-extent">
+        <choice>
+            <group>
+                <element name="quantity">
+                    <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                    <ref name="attribute-group.assertion-reference.optional"/>
+                    <ref name="attribute.approximate.optional"/>
+                    <text/>
+                </element>
+                <optional>
+                    <element name="unitOfMeasurement">
+                        <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                        <ref name="attribute-group.assertion-reference.optional"/>
+                        <ref name="attribute-group.linked-data.optional"/>
+                        <text/>
+                    </element>
+                </optional>
+            </group>
+            <group>
+                <element name="unitOfMeasurement">
+                    <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                    <ref name="attribute-group.assertion-reference.optional"/>
+                    <ref name="attribute-group.linked-data.optional"/>
+                    <text/>
+                </element>
+            </group>
+        </choice>
+    </define>
+
+    <!-- new... reorder / model, once finalized -->
     <define name="model.ead-formAvailable">
         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
