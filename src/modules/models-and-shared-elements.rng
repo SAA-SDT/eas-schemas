@@ -409,7 +409,7 @@
             </zeroOrMore>
         </element>
     </define>
-
+    
     <define name="element.role">
         <element name="role">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -418,7 +418,7 @@
             <text/>
         </element>
     </define>
-
+    
     <define name="element.span">
         <element name="span">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>

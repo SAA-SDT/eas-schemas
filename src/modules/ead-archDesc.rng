@@ -364,7 +364,7 @@
             <ref name="model.ead-narrative-elements-plus-relations"/>
         </element>
     </define>
-       
+    
     <define name="element.otherDescriptiveInfo">
         <element name="otherDescriptiveInfo">
             <ref name="model.ead-narrative-elements"/>
