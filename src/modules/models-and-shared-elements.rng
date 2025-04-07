@@ -67,7 +67,6 @@
                 <ref name="element.filePlan"/>
                 <ref name="element.otherDescriptiveInfo"/>
                 <ref name="element.otherDescription"/>
-                <ref name="element.physicalOrTechnicalRequirements"/>
                 <ref name="element.preferCite"/>
                 <ref name="element.processInfo"/>
                 <ref name="element.publicationNote"/>
@@ -535,16 +534,28 @@
         <ref name="model.narrative-group.optional"/>
     </define>
     
+    <define name="model.ead-narrative-elements-plus-dateRange">
+        <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+        <ref name="attribute-group.assertion-reference.optional"/>
+        <optional>
+            <ref name="element.abstract"/>
+        </optional>
+        <optional>
+            <ref name="element.dateRange"/>
+        </optional>
+        <ref name="model.narrative-group.optional"/>
+    </define>
+    
     <define name="model.ead-narrative-elements-plus-provenanceEvent">
         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
         <optional>
             <ref name="element.abstract"/>
         </optional>
+        <ref name="model.narrative-group.optional"/>
         <zeroOrMore>
             <ref name="element.provenanceEvent"/>
         </zeroOrMore>
-        <ref name="model.narrative-group.optional"/>
     </define>
 
     
@@ -556,10 +567,10 @@
         <optional>
             <ref name="element.abstract"/>
         </optional>
-        <ref name="model.narrative-group.optional"/>
         <optional>
             <ref name="element.relations"/>
         </optional>
+        <ref name="model.narrative-group.optional"/>
     </define>
     
     <define name="model.ead-dimensions-extent">

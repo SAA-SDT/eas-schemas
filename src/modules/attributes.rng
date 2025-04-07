@@ -437,7 +437,7 @@
         </attribute>
     </define>
     
-    <define name="attribute.formAvailableTypeEncoding">
+    <define name="attribute.formAvailableTypeEncoding" a:exclude-from="eac">
         <attribute name="formAvailableTypeEncoding" a:defaultValue="EASList">
             <choice>
                 <value>EASList</value>
@@ -582,6 +582,7 @@
             </attribute>
         </optional>
     </define>
+
     <define name="attribute.repositoryEncoding">
         <attribute name="repositoryEncoding" a:defaultValue="iso15511">
             <choice>
@@ -672,6 +673,9 @@
         <optional a:exclude-from="eac">
             <ref name="attribute.formAvailableTypeEncoding"/>
         </optional>
+        <optional>
+            <ref name="attribute.functionTypeEncoding"/>
+        </optional>
         <optional a:exclude-from="ead">
             <ref name="attribute.identityTypeEncoding"/>
         </optional>
@@ -695,6 +699,9 @@
         </optional>
         <optional>
             <ref name="attribute.referredEntityTypeEncoding"/>
+        </optional>
+        <optional>
+            <ref name="attribute.relationTypeEncoding"/>
         </optional>
         <optional>
             <ref name="attribute.repositoryEncoding"/>

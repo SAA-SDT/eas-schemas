@@ -40,11 +40,8 @@
    </define>
    <define name="element.accessConditions">
       <element name="accessConditions">
-         <ref name="model.ead-narrative-elements"/>
-         <optional>
-            <ref name="element.dateRange"/>
-         </optional>
          <ref name="attribute-group.linked-data.optional"/>
+         <ref name="model.ead-narrative-elements-plus-dateRange"/>
       </element>
    </define>
    <define name="element.accruals">
@@ -475,11 +472,8 @@
    </define>
    <define name="element.useConditions">
       <element name="useConditions">
-         <ref name="model.ead-narrative-elements"/>
-         <optional>
-            <ref name="element.dateRange"/>
-         </optional>
          <ref name="attribute-group.linked-data.optional"/>
+         <ref name="model.ead-narrative-elements-plus-dateRange"/>
       </element>
    </define>
    <define name="element.title">
