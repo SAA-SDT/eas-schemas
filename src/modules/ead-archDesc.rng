@@ -476,24 +476,8 @@
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <oneOrMore>
-                <ref name="element.term"/>
-            </oneOrMore>
-            <optional>
-                <ref name="model.all-dates.choice"/>
-            </optional>
-            <zeroOrMore>
-                <ref name="element.placeName"/>
-            </zeroOrMore>
-            <zeroOrMore>
-                <ref name="element.targetType"/>
-            </zeroOrMore>
-            <zeroOrMore>
-                <ref name="element.targetRole"/>
-            </zeroOrMore>
-            <zeroOrMore>
-                <ref name="element.relationType"/>
-            </zeroOrMore>
+            <ref name="attribute.subjectType.optional"/>
+            <ref name="model.ead-entity-elements"/>
             <ref name="element.descriptiveNote.optional"/>  
         </element>
     </define>
