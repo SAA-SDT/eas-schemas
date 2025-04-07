@@ -62,10 +62,12 @@
             <ref name="element.custodHist"/>
             <ref name="element.filePlan"/>
             <ref name="element.otherDescriptiveInfo"/>
-            <ref name="element.otherFindAid"/>
+            <ref name="element.otherDescription"/>
+            <ref name="element.physicalOrTechnicalRequirements"/>
             <ref name="element.preferCite"/>
             <ref name="element.processInfo"/>
             <ref name="element.publicationNote"/>
+            <ref name="element.recordTypeSpecificStatement"/>
             <ref name="element.relatedMaterial"/>
             <ref name="element.scopeContent"/>
             <ref name="element.separatedMaterial"/>
@@ -350,6 +352,12 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.countryCode.optional"/>
          <text/>
+      </element>
+   </define>
+   <define name="element.recordTypeSpecificStatement">
+      <element name="recordTypeSpecificStatement">
+         <ref name="model.ead-narrative-elements"/>
+         <ref name="element.objectXMLWrap.optional"/>
       </element>
    </define>
    <define name="element.reference">
