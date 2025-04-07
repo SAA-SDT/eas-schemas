@@ -30,14 +30,6 @@
         </optional>
     </define>
     
-    <define name="attribute.base.optional">
-        <optional>
-            <attribute name="base">
-                <data type="anyURI"/>
-            </attribute>
-        </optional>
-    </define>
-    
     <define name="attribute.calendar.optional">
         <optional>
             <attribute name="calendar">
@@ -123,6 +115,14 @@
             </attribute>
         </optional>
     </define>
+    
+    <define name="attribute.formAvailableType.optional">
+        <optional>
+            <attribute name="formAvailableType">
+                <data type="token"/>
+            </attribute>
+        </optional>
+    </define>
   
     <define name="attribute.id.optional">
         <optional>
@@ -180,9 +180,9 @@
         </optional>
     </define>
     
-    <define name="attribute.physDescStructuredType.optional">
+    <define name="attribute.extentType.optional">
         <optional>
-            <attribute name="physDescStructuredType">
+            <attribute name="extentType">
                 <data type="token"/>    
             </attribute>
         </optional>
@@ -202,6 +202,22 @@
                 <data type="boolean"/>
             </attribute>
         </optional>  
+    </define>
+    
+    <define name="attribute.referredEntityRelationship.optional">
+        <optional>
+            <attribute name="referredEntityRelationship">
+                <data type="token"/>
+            </attribute>
+        </optional>
+    </define>
+    
+    <define name="attribute.referredEntityType.optional">
+        <optional>
+            <attribute name="referredEntityType">
+                <data type="token"/>
+            </attribute>
+        </optional>
     </define>
     
     <define name="attribute.repositoryCode.optional">
@@ -323,9 +339,13 @@
     </define>
     
     <define name="attribute.countryEncoding">
-        <attribute name="countryEncoding" a:defaultValue="iso3166-1">
+        <attribute name="countryEncoding">
             <choice>
-                <value>iso3166-1</value>
+                <value>iso3166-1-alpha-2</value>
+                <value>iso3166-1-alpha-3</value>
+                <value>iso3166-1-numeric</value>
+                <value>iso3166-2</value>
+                <value>iso3166-3</value>
                 <value>otherCountryEncoding</value>
             </choice>
         </attribute>
@@ -366,6 +386,24 @@
             </choice>
         </attribute>
     </define>
+
+    <define name="attribute.extentTypeEncoding">
+        <attribute name="extentTypeEncoding" a:defaultValue="EASList">
+            <choice>
+                <value>EASList</value>
+                <value>otherExtentTypeEncoding</value>
+            </choice>
+        </attribute>
+    </define>
+    
+    <define name="attribute.formAvailableTypeEncoding">
+        <attribute name="formAvailableTypeEncoding" a:defaultValue="EASList">
+            <choice>
+                <value>EASList</value>
+                <value>otherFormAvailableTypeEncoding</value>
+            </choice>
+        </attribute>
+    </define>
     
     <define name="attribute.identityTypeEncoding">
         <attribute name="identityTypeEncoding" a:defaultValue="EASList">
@@ -383,11 +421,14 @@
     </define>
     
     <define name="attribute.languageEncoding">
-        <attribute name="languageEncoding" a:defaultValue="iso639-2">
+        <attribute name="languageEncoding">
             <choice>
                 <value>iso639-1</value>
                 <value>iso639-2</value>
+                <value>iso639-2b</value>
+                <value>iso639-2t</value>
                 <value>iso639-3</value>
+                <value>iso639-5</value>
                 <value>ietf-bcp-47</value>
                 <value>otherLanguageEncoding</value>
             </choice>
@@ -421,20 +462,20 @@
         </attribute>
     </define>
     
-    <define name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac">
-        <attribute name="physDescStructuredTypeEncoding" a:defaultValue="EASList">
-            <choice>
-                <value>EASList</value>
-                <value>otherPhysDescStructuredTypeEncoding</value>
-            </choice>
-        </attribute>
-    </define>
-    
     <define name="attribute.publicationStatusEncoding">
         <attribute name="publicationStatusEncoding" a:defaultValue="EASList">
             <choice>
                 <value>EASList</value>
                 <value>otherPublicationStatusEncoding</value>
+            </choice>
+        </attribute>
+    </define>
+    
+    <define name="attribute.referredEntityTypeEncoding">
+        <attribute name="referredEntityTypeEncoding" a:defaultValue="EASList">
+            <choice>
+                <value>EASList</value>
+                <value>otherReferredEntityTypeEncoding</value>
             </choice>
         </attribute>
     </define>
@@ -520,6 +561,12 @@
         <optional>
             <ref name="attribute.dateEncoding"/>
         </optional>
+        <optional a:exclude-from="eac">
+            <ref name="attribute.extentTypeEncoding"/>
+        </optional>
+        <optional a:exclude-from="eac">
+            <ref name="attribute.formAvailableTypeEncoding"/>
+        </optional>
         <optional a:exclude-from="ead">
             <ref name="attribute.identityTypeEncoding"/>
         </optional>
@@ -536,10 +583,10 @@
             <ref name="attribute.maintenanceStatusEncoding"/>
         </optional>
         <optional>
-            <ref name="attribute.physDescStructuredTypeEncoding" a:exclude-from="eac"/>
+            <ref name="attribute.publicationStatusEncoding"/>
         </optional>
         <optional>
-            <ref name="attribute.publicationStatusEncoding"/>
+            <ref name="attribute.referredEntityTypeEncoding"/>
         </optional>
         <optional>
             <ref name="attribute.repositoryEncoding"/>
@@ -583,7 +630,6 @@
     
     <define name="attribute-group.document-node">
         <ref name="attribute.audience.optional"/>
-        <ref name="attribute.base.optional"/>
         <ref name="attribute.id.optional"/>
         <ref name="attribute-group.lang-and-script.optional"/>
         <ref name="attribute-group.any.zeroOrMore"/>
@@ -601,16 +647,6 @@
     <define name="attribute-group.global.optional" combine="interleave">
         <ref name="attribute-group.any.zeroOrMore"/>
     </define>  
-    
-    <define name="attribute-group.global-plus-base.optional">
-        <ref name="attribute-group.global.optional"/>
-        <ref name="attribute.base.optional"/>
-    </define>
-    
-    <define name="attribute-group.global-plus-base-lang-and-script.optional">
-        <ref name="attribute-group.global-plus-base.optional"/>
-        <ref name="attribute-group.lang-and-script.optional"/>
-    </define>
     
     <define name="attribute-group.global-plus-lang-and-script.optional">
         <ref name="attribute-group.global.optional"/>

@@ -33,7 +33,7 @@
     
     <!-- check the ordering, due to the XSD 1.0 limitations -->
     <define name="model.archDesc.levels-of-description">
-        <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+        <ref name="attribute-group.global-plus-lang-and-script.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
         <ref name="attribute-group.linked-data.optional"/>
         <ref name="attribute.level.optional"/>
@@ -67,7 +67,6 @@
                 <ref name="element.filePlan"/>
                 <ref name="element.otherDescriptiveInfo"/>
                 <ref name="element.otherFindAid"/>
-                <ref name="element.physicalOrTechnicalRequirements"/>
                 <ref name="element.preferCite"/>
                 <ref name="element.processInfo"/>
                 <ref name="element.publicationNote"/>
@@ -83,7 +82,7 @@
     
     <define name="element.agent">
         <element name="agent">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <oneOrMore>
@@ -170,7 +169,9 @@
     <!-- can this be combined now??? I did. Fix, if needed, after checking with EAC -->
     <define name="element.biogHist">
         <element name="biogHist">
-            <ref name="model.ead-narrative-elements"/>
+            <!-- note the EAC impact. the goal is no differences, but so we might need to add provenanceEvent to EAC, or 
+            remove biogHist from EAD ? -->
+            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
         </element>
     </define>
     
@@ -252,6 +253,7 @@
                 <oneOrMore>
                     <ref name="element.p"/>
                 </oneOrMore>
+                <ref name="element.objectXMLWrap.optional"/>
             </element>
         </optional>
     </define>
@@ -296,7 +298,7 @@
     <define name="element.function">
         <element name="function">
             <ref name="model.single-element-group" a:exclude-from="ead"/>
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional" a:exclude-from="eac"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.linked-data.optional" a:exclude-from="eac"/>
             <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac"/>
             <oneOrMore a:exclude-from="eac">
@@ -389,7 +391,7 @@
     
     <define name="element.place">
         <element name="place">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <oneOrMore>
@@ -442,7 +444,7 @@
 
     <define name="element.reference">
         <element name="reference">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.links.optional"/>
             <zeroOrMore>
@@ -552,6 +554,19 @@
         <ref name="model.narrative-group.optional"/>
     </define>
     
+    <define name="model.ead-narrative-elements-plus-provenanceEvent">
+        <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+        <ref name="attribute-group.assertion-reference.optional"/>
+        <optional>
+            <ref name="element.abstract"/>
+        </optional>
+        <zeroOrMore>
+            <ref name="element.provenanceEvent"/>
+        </zeroOrMore>
+        <ref name="model.narrative-group.optional"/>
+    </define>
+
+    
     <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
     <define name="model.ead-narrative-elements-plus-relations">
         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -564,6 +579,73 @@
         <optional>
             <ref name="element.relations"/>
         </optional>
+    </define>
+    
+    <define name="model.ead-dimensions-extent">
+        <choice>
+            <group>
+                <element name="quantity">
+                    <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                    <ref name="attribute-group.assertion-reference.optional"/>
+                    <ref name="attribute.approximate.optional"/>
+                    <text/>
+                </element>
+                <optional>
+                    <element name="unitOfMeasurement">
+                        <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                        <ref name="attribute-group.assertion-reference.optional"/>
+                        <ref name="attribute-group.linked-data.optional"/>
+                        <text/>
+                    </element>
+                </optional>
+            </group>
+            <group>
+                <element name="unitOfMeasurement">
+                    <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                    <ref name="attribute-group.assertion-reference.optional"/>
+                    <ref name="attribute-group.linked-data.optional"/>
+                    <text/>
+                </element>
+            </group>
+        </choice>
+    </define>
+
+    <!-- new... reorder / model, once finalized -->
+    <define name="model.ead-formAvailable">
+        <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+        <ref name="attribute-group.assertion-reference.optional"/>
+        <ref name="attribute-group.linked-data.optional"/>
+        <ref name="attribute.coverage.optional"/>
+        <ref name="attribute.formAvailableType.optional"/>
+        <!-- refine, depending on XSD output -->
+        <zeroOrMore>
+            <ref name="element.container"/>
+            <ref name="element.dimensions"/>
+            <ref name="element.extent"/>
+            <ref name="element.formAvailableId"/>
+            <ref name="element.physFacet"/>
+
+            
+            <ref name="element.placeName"/>
+            
+            <!-- also narrative notes, but just these...-->
+            <ref name="element.accessConditions"/>
+            <ref name="element.accruals"/>
+            <ref name="element.arrangement"/>
+            <ref name="element.custodHist"/>
+            <ref name="element.physicalOrTechnicalRequirements"/>
+            <ref name="element.processInfo"/>
+            <ref name="element.separatedMaterial"/>
+            <ref name="element.sourceOfAcquisition"/>
+            <ref name="element.useConditions"/>
+        </zeroOrMore>
+        <optional>
+            <ref name="model.all-dates.choice"/>
+        </optional>
+        <optional>
+            <ref name="element.relations"/>
+        </optional>
+        <ref name="element.descriptiveNote.optional"/>
     </define>
     
     <define name="model.mixed-content.optional">
