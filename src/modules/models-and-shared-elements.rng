@@ -70,6 +70,7 @@
                 <ref name="element.preferCite"/>
                 <ref name="element.processInfo"/>
                 <ref name="element.publicationNote"/>
+                <ref name="element.recordTypeSpecificStatement"/>
                 <ref name="element.relatedMaterial"/>
                 <ref name="element.scopeContent"/>
                 <ref name="element.separatedMaterial"/>
@@ -439,6 +440,13 @@
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <text/>
+        </element>
+    </define>
+
+    <define name="element.recordTypeSpecificStatement">
+        <element name="recordTypeSpecificStatement">
+            <ref name="model.ead-narrative-elements"/>
+            <ref name="element.objectXMLWrap.optional"/>
         </element>
     </define>
 
