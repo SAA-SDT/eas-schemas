@@ -1732,13 +1732,17 @@
          </xs:choice>
          <xs:element type="ead:relations" name="relations" minOccurs="0"/>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="ead:formAvailableId" name="formAvailableId"/>
+            <xs:element type="ead:placeName" name="placeName"/>
+            <xs:element type="ead:role" name="role"/>
+         </xs:choice>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:container" name="container"/>
             <xs:element type="ead:dimensions" name="dimensions"/>
             <xs:element type="ead:extent" name="extent"/>
-            <xs:element type="ead:formAvailableId" name="formAvailableId"/>
             <xs:element type="ead:physFacet" name="physFacet"/>
-            <xs:element type="ead:placeName" name="placeName"/>
-            <xs:element type="ead:role" name="role"/>
+         </xs:choice>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:element type="ead:accessConditions" name="accessConditions"/>
             <xs:element type="ead:accruals" name="accruals"/>
             <xs:element type="ead:arrangement" name="arrangement"/>
@@ -2220,26 +2224,6 @@
       <xs:attribute name="status" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="dimensions">
-      <xs:choice>
-         <xs:sequence>
-            <xs:element type="ead:quantity" name="quantity"/>
-            <xs:element type="ead:unitOfMeasurement" name="unitOfMeasurement" minOccurs="0"/>
-         </xs:sequence>
-         <xs:element type="ead:unitOfMeasurement" name="unitOfMeasurement"/>
-      </xs:choice>
-      <xs:attribute name="audience" type="xs:token"/>
-      <xs:attribute name="id" type="xs:ID"/>
-      <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:attribute name="languageOfElement" type="xs:token"/>
-      <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="localType" type="xs:token"/>
-      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
-      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
-      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
    <xs:complexType name="formAvailableId" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
          <xs:element type="ead:reference" name="reference"/>
@@ -2256,6 +2240,26 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="dimensions">
+      <xs:choice>
+         <xs:sequence>
+            <xs:element type="ead:quantity" name="quantity"/>
+            <xs:element type="ead:unitOfMeasurement" name="unitOfMeasurement" minOccurs="0"/>
+         </xs:sequence>
+         <xs:element type="ead:unitOfMeasurement" name="unitOfMeasurement"/>
+      </xs:choice>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
