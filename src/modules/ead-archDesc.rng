@@ -362,6 +362,12 @@
         </element>
     </define>
        
+    <define name="element.otherDescription">
+        <element name="otherDescription">
+            <ref name="model.ead-narrative-elements-plus-relations"/>
+        </element>
+    </define>
+    
     <define name="element.otherDescriptiveInfo">
         <element name="otherDescriptiveInfo">
             <ref name="model.ead-narrative-elements"/>
@@ -373,12 +379,6 @@
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="model.mixed-content.optional"/>
-        </element>
-    </define>
-    
-    <define name="element.otherFindAid">
-        <element name="otherFindAid">
-            <ref name="model.ead-narrative-elements-plus-relations"/>
         </element>
     </define>
     
