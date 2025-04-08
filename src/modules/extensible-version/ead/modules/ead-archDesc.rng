@@ -27,17 +27,21 @@
    </define>
    <define name="element.formAvailable">
       <element name="formAvailable">
-         <ref name="model.ead-narrative-elements-plus-relations"/>
-         <ref name="attribute.coverage.optional"/>
+         <ref name="model.ead-formAvailable"/>
+      </element>
+   </define>
+   <define name="element.formAvailableId">
+      <element name="formAvailableId">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.accessConditions">
       <element name="accessConditions">
-         <ref name="model.ead-narrative-elements"/>
-         <optional>
-            <ref name="element.dateRange"/>
-         </optional>
          <ref name="attribute-group.linked-data.optional"/>
+         <ref name="model.ead-narrative-elements-plus-dateRange"/>
       </element>
    </define>
    <define name="element.accruals">
@@ -47,12 +51,12 @@
    </define>
    <define name="element.sourceOfAcquisition">
       <element name="sourceOfAcquisition">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
       </element>
    </define>
    <define name="element.appraisal">
       <element name="appraisal">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
       </element>
    </define>
    <define name="element.archDesc">
@@ -198,6 +202,16 @@
             -->
       </element>
    </define>
+   <define name="element.extent">
+      <element name="extent">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute.extentType.optional"/>
+         <ref name="attribute.coverage.optional"/>
+         <ref name="model.ead-dimensions-extent"/>
+         <ref name="element.descriptiveNote.optional"/>
+      </element>
+   </define>
    <define name="element.subjectHeadings">
       <element name="subjectHeadings">
             <!-- is this right? -->
@@ -209,7 +223,15 @@
    </define>
    <define name="element.custodHist">
       <element name="custodHist">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+      </element>
+   </define>
+   <define name="element.genreForm">
+      <element name="genreForm">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.identificationData">
@@ -220,20 +242,17 @@
          <oneOrMore>
             <choice>
                <ref name="element.container"/>
-               <ref name="element.identificationDataNote"/>
+               <ref name="element.extent"/>
+               <ref name="element.genreForm"/>
                <ref name="element.languageOfMaterial"/>
                <ref name="element.legalStatus"/>
-               <ref name="element.materialSpec"/>
-               <ref name="element.physDescSet"/>
-               <ref name="element.physDesc"/>
-               <ref name="element.physDescStructured"/>
-               <ref name="element.physLoc"/>
+               <ref name="element.otherIdentificationData"/>
                <ref name="element.unitDate"/>
-               <ref name="element.unitDateStructured"/>
                <ref name="element.unitId"/>
                <ref name="element.unitTitle"/>
             </choice>
          </oneOrMore>
+         <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
    <define name="element.descriptionOfComponents">
@@ -244,30 +263,23 @@
          <optional>
             <ref name="model.narrative-group.optional"/>
          </optional>
-         <oneOrMore>
+         <optional>
             <choice>
-               <ref name="element.c"/>
-               <ref name="element.c01"/>
+               <oneOrMore>
+                  <ref name="element.c"/>
+               </oneOrMore>
+               <oneOrMore>
+                  <ref name="element.c01"/>
+               </oneOrMore>
             </choice>
-         </oneOrMore>
-      </element>
-   </define>
-   <define name="element.identificationDataNote">
-      <element name="identificationDataNote">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <oneOrMore>
-            <ref name="element.p"/>
-         </oneOrMore>
+         </optional>
       </element>
    </define>
    <define name="element.dimensions">
       <element name="dimensions">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.unit.optional"/>
-         <!-- what else follows this model? -->
-         <ref name="model.mixed-content.optional"/>
+         <ref name="model.ead-dimensions-extent"/>
       </element>
    </define>
    <define name="element.filePlan">
@@ -292,21 +304,26 @@
       <element name="languageSet">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <oneOrMore>
-            <ref name="element.language"/>
-         </oneOrMore>
-         <oneOrMore>
-            <ref name="element.writingSystem"/>
-         </oneOrMore>
+         <choice>
+            <group>
+               <ref name="element.language"/>
+               <oneOrMore>
+                  <ref name="element.writingSystem"/>
+               </oneOrMore>
+            </group>
+            <group>
+               <ref name="element.writingSystem"/>
+               <oneOrMore>
+                  <ref name="element.language"/>
+               </oneOrMore>
+            </group>
+         </choice>
          <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
-   <define name="element.materialSpec">
-      <element name="materialSpec">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute-group.linked-data.optional"/>
-         <ref name="model.mixed-content.optional"/>
+   <define name="element.otherDescription">
+      <element name="otherDescription">
+         <ref name="model.ead-narrative-elements-plus-relations"/>
       </element>
    </define>
    <define name="element.otherDescriptiveInfo">
@@ -314,54 +331,11 @@
          <ref name="model.ead-narrative-elements"/>
       </element>
    </define>
-   <define name="element.otherFindAid">
-      <element name="otherFindAid">
-         <ref name="model.ead-narrative-elements-plus-relations"/>
-      </element>
-   </define>
-   <define name="element.physDesc">
-      <element name="physDesc">
+   <define name="element.otherIdentificationData">
+      <element name="otherIdentificationData">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="model.mixed-content.optional"/>
-      </element>
-   </define>
-   <define name="element.physDescSet">
-      <element name="physDescSet">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.parallel.optional"/>
-         <ref name="element.physDescStructured"/>
-         <oneOrMore>
-            <ref name="element.physDescStructured"/>
-         </oneOrMore>
-      </element>
-   </define>
-   <define name="element.physDescStructured">
-      <element name="physDescStructured">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.physDescStructuredType.optional"/>
-         <ref name="attribute.coverage.optional"/>
-         <element name="quantity">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute.approximate.optional"/>
-            <text/>
-         </element>
-         <element name="unitType">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
-            <text/>
-         </element>
-         <zeroOrMore>
-            <choice>
-               <ref name="element.physFacet"/>
-               <ref name="element.dimensions"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
    <define name="element.physFacet">
@@ -369,13 +343,6 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
-         <ref name="model.mixed-content.optional"/>
-      </element>
-   </define>
-   <define name="element.physLoc">
-      <element name="physLoc">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="model.mixed-content.optional"/>
       </element>
    </define>
@@ -392,7 +359,21 @@
    </define>
    <define name="element.processInfo">
       <element name="processInfo">
-         <ref name="model.ead-narrative-elements"/>
+         <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+      </element>
+   </define>
+   <define name="element.provenanceEvent">
+      <element name="provenanceEvent">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- like maintenanceEvent, but not really, due to different options -->
+         <ref name="element.eventDateTime"/>
+         <optional>
+            <ref name="element.agent"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="element.eventDescription"/>
+         </zeroOrMore>
       </element>
    </define>
    <!-- not needed for long, right? -->
@@ -413,6 +394,8 @@
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
+         <ref name="attribute.referredEntityType.optional"/>
+         <ref name="attribute.referredEntityRelationship.optional"/>
          <text/>
       </element>
    </define>
@@ -435,28 +418,20 @@
         <!-- just like function now, but those are the only two similar elements that share the same model??? -->
         <!-- if / when ead:function and eac:function are the same, we could define those with the same model -->
       <element name="subject">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
-         <oneOrMore>
-            <ref name="element.term"/>
-         </oneOrMore>
-         <optional>
-            <ref name="model.all-dates.choice"/>
-         </optional>
-         <zeroOrMore>
-            <ref name="element.placeName"/>
-         </zeroOrMore>
-         <zeroOrMore>
-            <ref name="element.targetType"/>
-         </zeroOrMore>
-         <zeroOrMore>
-            <ref name="element.targetRole"/>
-         </zeroOrMore>
-         <zeroOrMore>
-            <ref name="element.relationType"/>
-         </zeroOrMore>
+         <ref name="attribute.subjectType.optional"/>
+         <ref name="model.ead-entity-elements"/>
          <ref name="element.descriptiveNote.optional"/>
+      </element>
+   </define>
+   <define name="element.textualDate">
+      <element name="textualDate">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute.status.optional"/>
+         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.unitDate">
@@ -465,31 +440,16 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.unitDateType.optional"/>
          <ref name="attribute.dateChar.optional"/>
-         <!-- also bundled together with more attributes for EAC / unidatestructured.
-                for ead4, we should get rid of the structured elements altogether and have a single element that 
-                can be more or less structured depending on sub-elements / attributes.  for now, we've got a mix
-                hence we cannot re-use some of our pre-defined attribute lists just yet.
-            but if we keep the EAD/C separation + UD/UDS separation, then we can combine these 3 attribues with the 4 above for another attribute group model-->
-         <ref name="attribute-group.standard-date-attributes.optional"/>
-         <ref name="attribute.status.optional" a:exclude-from="eac"/>
-         <ref name="model.mixed-content.optional"/>
-      </element>
-   </define>
-   <define name="element.unitDateStructured">
-      <element name="unitDateStructured">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute.unitDateType.optional"/>
-         <ref name="attribute.dateChar.optional"/>
-         <!-- also bundled together with more attributes for EAC / unidatestructured.
-                for ead4, we should get rid of the structured elements altogether and have a single element that 
-                can be more or less structured depending on sub-elements / attributes.  for now, we've got a mix
-                hence we cannot re-use some of our pre-defined attribute lists just yet.
-            but if we keep the EAD/C separation + UD/UDS separation, then we can combine these 3 attribues with the 4 above for another attribute group model-->
          <ref name="attribute.calendar.optional"/>
          <ref name="attribute.certainty.optional"/>
          <ref name="attribute.era.optional"/>
-         <ref name="model.all-dates.choice"/>
+         <!-- keep this separate from everywhere else that date choice group can appear outside of unitDate -->
+         <optional>
+            <ref name="model.all-dates.choice"/>
+         </optional>
+         <optional>
+            <ref name="element.textualDate"/>
+         </optional>
       </element>
    </define>
    <define name="element.unitId">
@@ -512,11 +472,8 @@
    </define>
    <define name="element.useConditions">
       <element name="useConditions">
-         <ref name="model.ead-narrative-elements"/>
-         <optional>
-            <ref name="element.dateRange"/>
-         </optional>
          <ref name="attribute-group.linked-data.optional"/>
+         <ref name="model.ead-narrative-elements-plus-dateRange"/>
       </element>
    </define>
    <define name="element.title">
