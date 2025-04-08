@@ -3,7 +3,7 @@
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" startMode="ead">
     <mode name="ead">
         <namespace ns="https://archivists.org/ns/ead/v4">
-            <validate schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/release_2025_03_testing/xml-schemas/ead/ead-4-dev.xsd" schemaType="application/xml">
+            <validate schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/release_2025_03/xml-schemas/ead/ead-4-dev.xsd" schemaType="application/xml">
                 <context path="formattingExtension" useMode="xhtml"/>
             </validate>
         </namespace>
