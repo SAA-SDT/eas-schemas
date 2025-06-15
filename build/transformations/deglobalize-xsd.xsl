@@ -9,7 +9,7 @@
     <xsl:output method="xml" encoding="UTF-8" indent="true"/>
     <xsl:mode on-no-match="shallow-copy"/>
     
-    <xsl:param name="schema" select="'ead'"/> <!-- for EAC, will need to pass the param of 'schema', until we change the namespace not to end in 'schema'. this is due to how Trang selects the ns prefix -->
+    <xsl:param name="schema" select="'schema'"/> <!-- for EAC, will need to pass the param of 'schema', until we change the namespace not to end in 'schema'. this is due to how Trang selects the ns prefix -->
     
     <!-- for eac, this gets us 'https://archivists.org/ns/eac/v2' -->
     <xsl:variable name="schema-ns-uri" select="document('')/*/namespace::*[local-name() eq $schema]"/>
