@@ -55,7 +55,7 @@
         </zeroOrMore>
     </define>
     
-    <define name="model.narrative-element-name-list">
+    <define name="model.narrative-element-name-list" a:exclude-from="eac eaf">
         <oneOrMore>
             <choice>
                 <ref name="element.accessConditions"/>
