@@ -272,13 +272,13 @@
     
     <define name="element.function">
         <element name="function">
-            <ref name="attribute-group.global-plus-lang-and-script.optional" a:exclude-from="eac"/>
-            <ref name="attribute-group.linked-data.optional" a:exclude-from="eac"/>
-            <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional" a:exclude-from="eac eaf"/>
+            <ref name="attribute-group.linked-data.optional" a:exclude-from="eac eaf"/>
+            <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac eaf"/>
             <ref name="attribute.functionType.optional"/>
             <ref name="model.single-element-group" a:exclude-from="ead"/>
-            <ref name="model.ead-entity-elements" a:exclude-from="eac"/>
-            <ref name="element.descriptiveNote.optional"/>  
+            <ref name="model.ead-entity-elements" a:exclude-from="eac eaf"/>
+            <ref name="element.descriptiveNote.optional" a:exclude-from="eac eaf"/>  
         </element>
     </define>
     
