@@ -8,7 +8,7 @@
     
     <xsl:output method="xml" encoding="UTF-8" indent="true"/>
     <xsl:mode on-no-match="shallow-copy"/>
-    <xsl:param name="schema" select="'ead'"/>
+    <xsl:param name="schema" select="'eac'"/>
 
     <xsl:variable name="module-xml-files" select="collection('../../src/modules?select=*.rng')" as="document-node()*"/>
     
