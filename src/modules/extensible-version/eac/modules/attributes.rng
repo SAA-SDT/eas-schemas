@@ -8,47 +8,56 @@
    <define name="attribute.addressLineType.optional">
       <optional>
          <attribute name="addressLineType">
-            <choice>
-               <value>county</value>
-               <value>country</value>
-               <value>district</value>
-               <value>municipality</value>
-               <value>postBox</value>
-               <value>postalCode</value>
-               <value>region</value>
-               <value>street</value>
-            </choice>
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.agentType.optional">
+      <optional>
+         <attribute name="agentType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.approximate.optional">
+      <optional>
+         <attribute name="approximate">
+            <data type="boolean"/>
          </attribute>
       </optional>
    </define>
    <define name="attribute.audience.optional">
       <optional>
          <attribute name="audience">
-            <choice>
-               <value>external</value>
-               <value>internal</value>
-            </choice>
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
-   <define name="attribute.base.optional">
+   <define name="attribute.calendar.optional">
       <optional>
-         <attribute name="base">
-            <data type="anyURI"/>
+         <attribute name="calendar">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.certainty.optional">
+      <optional>
+         <attribute name="certainty">
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
    <define name="attribute.contactLineType.optional">
       <optional>
          <attribute name="contactLineType">
-            <choice>
-               <value>directions</value>
-               <value>email</value>
-               <value>fax</value>
-               <value>homepage</value>
-               <value>mobileNumber</value>
-               <value>phoneNumber</value>
-            </choice>
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.containerId.optional">
+      <optional>
+         <attribute name="containerId">
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -60,18 +69,56 @@
    <define name="attribute.countryCode.optional">
       <optional>
          <attribute name="countryCode">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.coverage.optional">
+      <optional>
+         <attribute name="coverage">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.dateChar.optional">
+      <optional>
+         <attribute name="dateChar">
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
    <define name="attribute.detailLevel.optional">
       <optional>
          <attribute name="detailLevel">
-            <choice>
-               <value>minimal</value>
-               <value>basic</value>
-               <value>extended</value>
-            </choice>
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.descriptionOfComponentsType.optional">
+      <optional>
+         <attribute name="descriptionOfComponentsType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.era.optional">
+      <optional>
+         <attribute name="era">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.formAvailableType.optional">
+      <optional>
+         <attribute name="formAvailableType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.functionType.optional">
+      <optional>
+         <attribute name="functionType">
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -85,10 +132,14 @@
    <define name="attribute.identityType.optional">
       <optional>
          <attribute name="identityType">
-            <choice>
-               <value>given</value>
-               <value>acquired</value>
-            </choice>
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.level.optional">
+      <optional>
+         <attribute name="level">
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -102,41 +153,34 @@
          <data type="IDREFS"/>
       </attribute>
    </define>
-   <define name="attribute.maintenanceStatus">
-      <attribute name="maintenanceStatus">
-         <choice>
-            <value>revised</value>
-            <value>deleted</value>
-            <value>new</value>
-            <value>deletedSplit</value>
-            <value>deletedMerged</value>
-            <value>deletedReplaced</value>
-            <value>cancelled</value>
-            <value>derived</value>
-         </choice>
-      </attribute>
-   </define>
    <define name="attribute.maintenanceEventType">
       <attribute name="maintenanceEventType">
-         <choice>
-            <value>cancelled</value>
-            <value>created</value>
-            <value>deleted</value>
-            <value>derived</value>
-            <value>revised</value>
-            <value>unknown</value>
-            <value>updated</value>
-         </choice>
+         <data type="token"/>
       </attribute>
+   </define>
+   <define name="attribute.maintenanceStatus">
+      <attribute name="maintenanceStatus">
+         <data type="token"/>
+      </attribute>
+   </define>
+   <define name="attribute.parallel.optional">
+      <optional>
+         <attribute name="parallel">
+            <data type="boolean"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.extentType.optional">
+      <optional>
+         <attribute name="extentType">
+            <data type="token"/>
+         </attribute>
+      </optional>
    </define>
    <define name="attribute.publicationStatus.optional">
       <optional>
          <attribute name="publicationStatus">
-            <choice>
-               <value>approved</value>
-               <value>published</value>
-               <value>inProcess</value>
-            </choice>
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -147,10 +191,39 @@
          </attribute>
       </optional>
    </define>
+   <define name="attribute.referredEntityRelationship.optional">
+      <optional>
+         <attribute name="referredEntityRelationship">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.referredEntityType.optional">
+      <optional>
+         <attribute name="referredEntityType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.repositoryCode.optional">
+      <optional>
+         <attribute name="repositoryCode">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="attribute.standardDateTime.optional">
       <optional>
          <attribute name="standardDateTime">
             <ref name="dt.any-standard-dateTime"/>
+         </attribute>
+      </optional>
+   </define>
+   <!-- new, for EAD4.  See other options in use for EAC 2.0.  If we change the approach, we will need handle the EAC status variations separately, in a new way -->
+   <define name="attribute.status.optional">
+      <optional>
+         <attribute name="status">
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
@@ -190,6 +263,13 @@
          </attribute>
       </optional>
    </define>
+   <define name="attribute.subjectType.optional">
+      <optional>
+         <attribute name="subjectType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="attribute.target.optional">
       <optional>
          <attribute name="target">
@@ -197,17 +277,12 @@
          </attribute>
       </optional>
    </define>
-   <define name="attribute.targetType">
-      <attribute name="targetType">
-         <choice>
-            <value>agent</value>
-            <value>corporateBody</value>
-            <value>person</value>
-            <value>family</value>
-            <value>function</value>
-            <value>resource</value>
-         </choice>
-      </attribute>
+   <define name="attribute.targetType.optional">
+      <optional>
+         <attribute name="targetType">
+            <data type="token"/>
+         </attribute>
+      </optional>
    </define>
    <define name="attribute.unit.optional">
       <optional>
@@ -215,6 +290,218 @@
             <data type="token"/>
          </attribute>
       </optional>
+   </define>
+   <define name="attribute.unitDateType.optional">
+      <optional>
+         <attribute name="unitDateType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <!-- TO DO -->
+   <!-- re-alphabeticize once we get everything settled.  for now, the @:*Encoding attributes, each defined separately, in case folks want to override any of these definitions -->
+   <define name="attribute.agentTypeEncoding">
+      <attribute name="agentTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherAgentTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.addressLineTypeEncoding">
+      <attribute name="addressLineTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherAddressLineTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.audienceEncoding">
+      <attribute name="audienceEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherAudienceEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.contactLineTypeEncoding">
+      <attribute name="contactLineTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherContactLineTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.countryEncoding">
+      <attribute name="countryEncoding">
+         <choice>
+            <value>iso3166-1-alpha-2</value>
+            <value>iso3166-1-alpha-3</value>
+            <value>iso3166-1-numeric</value>
+            <value>iso3166-2</value>
+            <value>iso3166-3</value>
+            <value>otherCountryEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.detailLevelEncoding">
+      <attribute name="detailLevelEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherDetailLevelEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.dateEncoding">
+      <attribute name="dateEncoding" a:defaultValue="iso8601">
+         <choice>
+            <value>iso8601</value>
+            <value>otherDateEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.extentTypeEncoding">
+      <attribute name="extentTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherExtentTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.identityTypeEncoding">
+      <attribute name="identityTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherIdentityTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.placeTypeEncoding">
+      <attribute name="placeTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherPlaceTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.functionTypeEncoding">
+      <attribute name="functionTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherFunctionTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.relationTypeEncoding">
+      <attribute name="relationTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherRelationTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.targetTypeEncoding">
+      <attribute name="targetTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherTargetTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <!-- end of TypeEncoding definitions -->
+   <define name="attribute.languageCode">
+      <attribute name="languageCode">
+         <data type="token"/>
+      </attribute>
+   </define>
+   <define name="attribute.languageEncoding">
+      <attribute name="languageEncoding">
+         <choice>
+            <value>iso639-1</value>
+            <value>iso639-2</value>
+            <value>iso639-2b</value>
+            <value>iso639-2t</value>
+            <value>iso639-3</value>
+            <value>iso639-5</value>
+            <value>ietf-bcp-47</value>
+            <value>otherLanguageEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.maintenanceEventTypeEncoding">
+      <attribute name="maintenanceEventTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherMaintenanceEventTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.maintenanceStatusEncoding">
+      <attribute name="maintenanceStatusEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherMaintenanceStatusEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.placeType.optional">
+      <optional>
+         <attribute name="placeType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.publicationStatusEncoding">
+      <attribute name="publicationStatusEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherPublicationStatusEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.referredEntityTypeEncoding">
+      <attribute name="referredEntityTypeEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherReferredEntityTypeEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.relationType.optional">
+      <optional>
+         <attribute name="relationType">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.repositoryEncoding">
+      <attribute name="repositoryEncoding" a:defaultValue="iso15511">
+         <choice>
+            <value>iso15511</value>
+            <value>otherRepositoryEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.scriptCode">
+      <attribute name="scriptCode">
+         <data type="token"/>
+      </attribute>
+   </define>
+   <define name="attribute.scriptEncoding">
+      <attribute name="scriptEncoding" a:defaultValue="iso15924">
+         <choice>
+            <value>iso15924</value>
+            <value>otherScriptEncoding</value>
+         </choice>
+      </attribute>
+   </define>
+   <define name="attribute.statusEncoding">
+      <attribute name="statusEncoding" a:defaultValue="EASList">
+         <choice>
+            <value>EASList</value>
+            <value>otherStatusEncoding</value>
+         </choice>
+      </attribute>
    </define>
    <!-- ATTRIBUTE GROUPS -->
    <define name="attribute-group.any.zeroOrMore">
@@ -229,48 +516,73 @@
          </attribute>
       </zeroOrMore>
    </define>
-   <define name="attribute-group.control-encodings.optional">
+   <define name="attribute-group.control-encodings">
       <optional>
-         <attribute name="languageEncoding">
-            <choice>
-               <value>iso639-1</value>
-               <value>iso639-2b</value>
-               <value>iso639-3</value>
-               <value>ietf-bcp-47</value>
-               <value>otherLanguageEncoding</value>
-            </choice>
-         </attribute>
+         <ref name="attribute.addressLineTypeEncoding"/>
       </optional>
       <optional>
-         <attribute name="scriptEncoding">
-            <choice>
-               <value>iso15924</value>
-               <value>otherScriptEncoding</value>
-            </choice>
-         </attribute>
+         <ref name="attribute.agentTypeEncoding"/>
       </optional>
       <optional>
-         <attribute name="dateEncoding">
-            <choice>
-               <value>iso8601</value>
-               <value>otherDateEncoding</value>
-            </choice>
-         </attribute>
+         <ref name="attribute.audienceEncoding"/>
       </optional>
       <optional>
-         <attribute name="countryEncoding">
-            <choice>
-               <value>iso3166-1</value>
-               <value>otherCountryEncoding</value>
-            </choice>
-         </attribute>
+         <ref name="attribute.contactLineTypeEncoding"/>
       </optional>
       <optional>
-         <attribute name="repositoryEncoding">
-            <choice>
-               <value>iso15511</value>
-               <value>otherRepositoryEncoding</value>
-            </choice>
+         <ref name="attribute.countryEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.detailLevelEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.dateEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.functionTypeEncoding"/>
+      </optional>
+      <optional a:exclude-from="ead">
+         <ref name="attribute.identityTypeEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.languageEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.maintenanceEventTypeEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.maintenanceStatusEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.placeTypeEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.publicationStatusEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.referredEntityTypeEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.relationTypeEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.repositoryEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.scriptEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.statusEncoding"/>
+      </optional>
+      <optional>
+         <ref name="attribute.targetTypeEncoding"/>
+      </optional>
+   </define>
+   <define name="attribute-group.assertion-reference.optional"
+           combine="interleave">
+      <optional>
+         <attribute name="conventionDeclarationReference">
+            <data type="IDREFS"/>
          </attribute>
       </optional>
    </define>
@@ -290,13 +602,11 @@
          </attribute>
       </optional>
    </define>
-   <define name="attribute-group.assertion-reference.optional"
-           combine="interleave">
-      <ref name="attribute.conventionDeclarationReference.optional"/>
+   <define name="attribute-group.container.optional" combine="interleave">
+      <ref name="attribute.containerId.optional"/>
    </define>
-   <define name="attribute-group.eac-document-node">
+   <define name="attribute-group.document-node">
       <ref name="attribute.audience.optional"/>
-      <ref name="attribute.base.optional"/>
       <ref name="attribute.id.optional"/>
       <ref name="attribute-group.lang-and-script.optional"/>
       <ref name="attribute-group.any.zeroOrMore"/>
@@ -313,14 +623,6 @@
    <define name="attribute-group.global.optional" combine="interleave">
       <ref name="attribute-group.any.zeroOrMore"/>
    </define>
-   <define name="attribute-group.global-plus-base.optional">
-      <ref name="attribute-group.global.optional"/>
-      <ref name="attribute.base.optional"/>
-   </define>
-   <define name="attribute-group.global-plus-base-lang-and-script.optional">
-      <ref name="attribute-group.global-plus-base.optional"/>
-      <ref name="attribute-group.lang-and-script.optional"/>
-   </define>
    <define name="attribute-group.global-plus-lang-and-script.optional">
       <ref name="attribute-group.global.optional"/>
       <ref name="attribute-group.lang-and-script.optional"/>
@@ -332,21 +634,16 @@
    <define name="attribute-group.lang-and-script.optional" combine="interleave">
       <optional>
          <attribute name="languageOfElement">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
          </attribute>
       </optional>
    </define>
    <define name="attribute-group.lang-and-script.optional" combine="interleave">
       <optional>
          <attribute name="scriptOfElement">
-            <data type="NMTOKEN"/>
+            <data type="token"/>
          </attribute>
       </optional>
-   </define>
-   <define name="attribute-group.lang-and-script-and-conventionDeclarationReference.optional"
-           combine="interleave">
-      <ref name="attribute-group.lang-and-script.optional"/>
-      <ref name="attribute.conventionDeclarationReference.optional"/>
    </define>
    <define name="attribute-group.localType.optional">
       <optional>
@@ -355,23 +652,6 @@
       <optional>
          <ref name="attribute.localTypeDeclarationReference"/>
       </optional>
-   </define>
-   <define name="attribute.conventionDeclarationReference.optional">
-      <optional>
-         <attribute name="conventionDeclarationReference">
-            <data type="IDREFS"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="attribute.languageCode">
-      <attribute name="languageCode">
-         <data type="NMTOKEN"/>
-      </attribute>
-   </define>
-   <define name="attribute.scriptCode">
-      <attribute name="scriptCode">
-         <data type="NMTOKEN"/>
-      </attribute>
    </define>
    <define name="attribute-group.language-and-script-code" combine="interleave">
       <ref name="attribute.languageCode"/>
@@ -437,27 +717,15 @@
    </define>
    <define name="attribute-group.standard-date-attributes.optional"
            combine="interleave">
-      <optional>
-         <attribute name="calendar">
-            <data type="NMTOKEN"/>
-         </attribute>
-      </optional>
+      <ref name="attribute.calendar.optional"/>
    </define>
    <define name="attribute-group.standard-date-attributes.optional"
            combine="interleave">
-      <optional>
-         <attribute name="certainty">
-            <data type="NMTOKEN"/>
-         </attribute>
-      </optional>
+      <ref name="attribute.certainty.optional"/>
    </define>
    <define name="attribute-group.standard-date-attributes.optional"
            combine="interleave">
-      <optional>
-         <attribute name="era">
-            <data type="NMTOKEN"/>
-         </attribute>
-      </optional>
+      <ref name="attribute.era.optional"/>
    </define>
    <define name="attribute-group.standard-date-attributes.optional"
            combine="interleave">
@@ -480,6 +748,18 @@
       <optional>
          <attribute name="standardDate">
             <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="attribute.group.table-separators.optional">
+      <optional>
+         <attribute name="colsep">
+            <data type="boolean"/>
+         </attribute>
+      </optional>
+      <optional>
+         <attribute name="rowsep">
+            <data type="boolean"/>
          </attribute>
       </optional>
    </define>
