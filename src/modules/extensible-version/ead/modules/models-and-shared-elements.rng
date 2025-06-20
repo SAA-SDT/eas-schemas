@@ -670,4 +670,21 @@
       </zeroOrMore>
       <ref name="element.descriptiveNote.optional"/>
    </define>
+   <!-- Just EAC Function currently... oi -->
+   <define name="model.single-element-group.no-local-type">
+      <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+      <ref name="attribute-group.linked-data.optional"/>
+      <ref name="attribute-group.assertion-reference.optional"/>
+      <!-- if this goes, we can remove 'term' entirely -->
+      <oneOrMore>
+         <ref name="element.term"/>
+      </oneOrMore>
+      <optional>
+         <ref name="model.all-dates.choice"/>
+      </optional>
+      <zeroOrMore>
+         <ref name="element.placeName"/>
+      </zeroOrMore>
+      <ref name="element.descriptiveNote.optional"/>
+   </define>
 </grammar>
