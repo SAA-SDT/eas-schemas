@@ -403,7 +403,7 @@
       <element>
          <anyName>
             <except>
-               <nsName ns="https://archivists.org/ns/eac/v2" a:exclude-from="ead"/>
+               <nsName ns="https://archivists.org/ns/eac/v3" a:exclude-from="ead"/>
             </except>
          </anyName>
          <zeroOrMore>

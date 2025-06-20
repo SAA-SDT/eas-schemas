@@ -29,7 +29,7 @@
       </element>
    </define>
    <!-- check the ordering, due to the XSD 1.0 limitations -->
-   <define name="model.archDesc.levels-of-description">
+   <define name="model.archDesc.levels-of-description" a:exclude-from="eac eaf">
       <ref name="attribute-group.global-plus-lang-and-script.optional"/>
       <ref name="attribute-group.assertion-reference.optional"/>
       <ref name="attribute-group.linked-data.optional"/>
@@ -51,7 +51,7 @@
          <ref name="model.narrative-element-name-list"/>
       </zeroOrMore>
    </define>
-   <define name="model.narrative-element-name-list">
+   <define name="model.narrative-element-name-list" a:exclude-from="eac eaf">
       <oneOrMore>
          <choice>
             <ref name="element.accessConditions"/>
@@ -132,6 +132,10 @@
             <!-- note the EAC impact. the goal is no differences, but so we might need to add provenanceEvent to EAC, or 
             remove biogHist from EAD ? -->
          <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+         <!-- Or, yuck, but... 
+            <ref name="model.ead-narrative-elements-plus-provenanceEvent" a:exclude-from="eac eaf"/>
+            <ref name="model.ead-narrative-elements" a:exclude-from="ead"/>
+            -->
       </element>
    </define>
    <define name="element.citedRange">
@@ -245,13 +249,13 @@
    <define name="element.function">
       <element name="function">
          <ref name="attribute-group.global-plus-lang-and-script.optional"
-              a:exclude-from="eac"/>
-         <ref name="attribute-group.linked-data.optional" a:exclude-from="eac"/>
+              a:exclude-from="eac eaf"/>
+         <ref name="attribute-group.linked-data.optional" a:exclude-from="eac eaf"/>
          <ref name="attribute-group.assertion-reference.optional"
-              a:exclude-from="eac"/>
+              a:exclude-from="eac eaf"/>
          <ref name="attribute.functionType.optional"/>
-         <ref name="model.ead-entity-elements" a:exclude-from="eac"/>
-         <ref name="element.descriptiveNote.optional"/>
+         <ref name="model.ead-entity-elements" a:exclude-from="eac eaf"/>
+         <ref name="element.descriptiveNote.optional" a:exclude-from="eac eaf"/>
       </element>
    </define>
    <define name="element.geographicCoordinates">
@@ -353,6 +357,20 @@
          <text/>
       </element>
    </define>
+   <define name="element.provenanceEvent">
+      <element name="provenanceEvent">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- like maintenanceEvent, but not really, due to different options -->
+         <ref name="element.eventDateTime"/>
+         <optional>
+            <ref name="element.agent"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="element.eventDescription"/>
+         </zeroOrMore>
+      </element>
+   </define>
    <define name="element.recordTypeSpecificStatement">
       <element name="recordTypeSpecificStatement">
          <ref name="model.ead-narrative-elements"/>
@@ -371,6 +389,16 @@
                <text/>
             </choice>
          </zeroOrMore>
+      </element>
+   </define>
+   <define name="element.referringString">
+      <element name="referringString">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <ref name="attribute.referredEntityType.optional"/>
+         <ref name="attribute.referredEntityRelationship.optional"/>
+         <text/>
       </element>
    </define>
    <define name="element.role">
@@ -494,7 +522,8 @@
       </optional>
       <ref name="model.narrative-group.optional"/>
    </define>
-   <define name="model.ead-narrative-elements-plus-provenanceEvent">
+   <define name="model.ead-narrative-elements-plus-provenanceEvent"
+           a:exclude-from="eaf">
       <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
       <ref name="attribute-group.assertion-reference.optional"/>
       <optional>
@@ -547,7 +576,7 @@
       </choice>
    </define>
    <!-- new... reorder / model, once finalized -->
-   <define name="model.ead-formAvailable">
+   <define name="model.ead-formAvailable" a:exclude-from="eac eaf">
       <ref name="attribute-group.global-plus-lang-and-script.optional"/>
       <ref name="attribute-group.assertion-reference.optional"/>
       <ref name="attribute-group.linked-data.optional"/>

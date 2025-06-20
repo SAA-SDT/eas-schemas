@@ -8,8 +8,8 @@
   
   *****************************************************************
   *                                                               *                
-  *                            EAC-CPF 2.1 (or 3.0?)              *
-  *                            or time for EAS 1.0?               *       
+  *                            EAC-CPF 3.0.0                      *
+  *                                                               *       
   *****************************************************************
   
   *****************************************************************
@@ -41,10 +41,10 @@
   *****************************************************************
   
 -->
-<xs:schema xmlns:eac="https://archivists.org/ns/eac/v2"
+<xs:schema xmlns:eac="https://archivists.org/ns/eac/v3"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="https://archivists.org/ns/eac/v2">
+           targetNamespace="https://archivists.org/ns/eac/v3">
    <xs:element name="eac">
       <xs:complexType>
          <xs:sequence>
