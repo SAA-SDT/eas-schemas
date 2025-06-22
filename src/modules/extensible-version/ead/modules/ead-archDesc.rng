@@ -362,20 +362,6 @@
          <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
       </element>
    </define>
-   <define name="element.provenanceEvent">
-      <element name="provenanceEvent">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <!-- like maintenanceEvent, but not really, due to different options -->
-         <ref name="element.eventDateTime"/>
-         <optional>
-            <ref name="element.agent"/>
-         </optional>
-         <zeroOrMore>
-            <ref name="element.eventDescription"/>
-         </zeroOrMore>
-      </element>
-   </define>
    <!-- not needed for long, right? -->
    <!-- that said, it would be good to keep the XPointer standard around separately? -->
    <define name="element.ptr">
@@ -387,16 +373,6 @@
    <define name="element.publicationNote">
       <element name="publicationNote">
          <ref name="model.ead-narrative-elements-plus-relations"/>
-      </element>
-   </define>
-   <define name="element.referringString">
-      <element name="referringString">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="attribute-group.linked-data.optional"/>
-         <ref name="attribute.referredEntityType.optional"/>
-         <ref name="attribute.referredEntityRelationship.optional"/>
-         <text/>
       </element>
    </define>
    <define name="element.relatedMaterial">

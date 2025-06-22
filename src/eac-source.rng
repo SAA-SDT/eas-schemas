@@ -2,7 +2,7 @@
 <grammar datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
     xmlns="http://relaxng.org/ns/structure/1.0"
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-    ns="https://archivists.org/ns/eac/v2">
+    ns="https://archivists.org/ns/eac/v3">
 
     <include href="modules/attributes.rng"/>
     <include href="modules/datatypes.rng"/>
@@ -30,7 +30,7 @@
     </define>
     <define name="element.cpfDescription">
         <element name="cpfDescription">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="element.identity"/>
             <optional>
@@ -46,7 +46,7 @@
     </define>
     <define name="element.multipleIdentities">
         <element name="multipleIdentities">
-            <ref name="attribute-group.global-plus-base.optional"/>
+            <ref name="attribute-group.global.optional"/>
             <ref name="element.cpfDescription"/>
             <oneOrMore>
                 <ref name="element.cpfDescription"/>
