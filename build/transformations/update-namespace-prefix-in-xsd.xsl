@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eac="https://archivists.org/ns/eac/v3"
     xmlns:ead3="http://ead3.archivists.org/schema/" xmlns:ead="https://archivists.org/ns/ead/v4"
+    xmlns:eaf="https://archivists.org/ns/eaf/v1"
     exclude-result-prefixes="#all" version="3.0">
 
     <xsl:output method="xml" encoding="UTF-8" indent="true"/>

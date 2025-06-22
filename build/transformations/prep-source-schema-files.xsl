@@ -14,6 +14,7 @@
     
     <xsl:variable name="source-file" select="if ($schema eq 'eac') then document('../../src/eac-source.rng')
         else if ($schema eq 'ead') then document('../../src/ead-source.rng')
+        else if ($schema eq 'eaf') then document('../../src/eaf-source.rng')
         else null"/>
     
     <xsl:template name="xsl:initial-template">
@@ -24,8 +25,9 @@
             <xsl:for-each select="$module-xml-files">
                 <xsl:variable name="filename" select="tokenize(document-uri(.), '/')[last()]"/>
                 <xsl:choose>
-                    <xsl:when test="$schema eq 'eac' and starts-with($filename, 'ead-')"/>
-                    <xsl:when test="$schema eq 'ead' and starts-with($filename, 'eac-')"/>
+                    <xsl:when test="$schema eq 'eac' and matches($filename, '^ea(d|f)-')"/>
+                    <xsl:when test="$schema eq 'ead' and matches($filename, '^ea(c|f)-')"/>
+                    <xsl:when test="$schema eq 'eaf' and matches($filename, '^ea(c|d)-')"/>
                     <xsl:otherwise>
                         <xsl:result-document href="../src/modules/extensible-version/{$schema}/modules/{$filename}">
                             <xsl:copy>

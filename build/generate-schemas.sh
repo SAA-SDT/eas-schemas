@@ -28,5 +28,13 @@ java -jar $trang -o disable-abstract-elements -o any-process-contents=lax -o any
 java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/ead/ead-4-dev.xsd -xsl:transformations/deglobalize-xsd.xsl -o:../xml-schemas/ead/ead-4-dev.xsd schema='ead'
 java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/ead/ead-4-dev.xsd -xsl:transformations/update-namespace-prefix-in-xsd.xsl -o:../xml-schemas/ead/ead-4-dev.xsd schema='ead'
 
+# EAF
+echo "And last (but not least), the EAF transformation:"
+java -cp $saxon net.sf.saxon.Transform -t -xsl:transformations/prep-source-schema-files.xsl -it schema='eaf'
+java -jar $jing -s ../src/modules/extensible-version/eaf/eaf-source.rng > ../xml-schemas/eaf/eaf.rng
+java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/eaf/eaf.rng -xsl:transformations/add-comments-and-metadata.xsl -o:../xml-schemas/eaf/eaf.rng schema='eaf'
+java -jar $trang -o disable-abstract-elements -o any-process-contents=lax -o any-attribute-process-contents=lax ../xml-schemas/eaf/eaf.rng ../xml-schemas/eaf/eaf.xsd
+java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/eaf/eaf.xsd -xsl:transformations/deglobalize-xsd.xsl -o:../xml-schemas/eaf/eaf.xsd schema='eaf'
+java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/eaf/eaf.xsd -xsl:transformations/update-namespace-prefix-in-xsd.xsl -o:../xml-schemas/eaf/eaf.xsd schema='eaf'
 
 echo "All done."
