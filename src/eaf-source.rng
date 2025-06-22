@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    ns="https://archivists.org/ns/eaf/v1">
+
+    <include href="modules/attributes.rng"/>
+    <include href="modules/datatypes.rng"/>
+    <include href="modules/control.rng"/>
+
+    <include href="modules/relations.rng/"/>
+
+    <include href="modules/models-and-shared-elements.rng/"/>
+    
+    <start>    
+        <ref name="element.eaf"/>  
+    </start>
+    <define name="element.eaf">
+        <element name="eaf">
+            <ref name="attribute-group.document-node"/>
+            <ref name="element.control"/>
+            
+        </element>
+    </define>
+</grammar>
