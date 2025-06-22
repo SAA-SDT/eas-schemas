@@ -29,53 +29,6 @@
       </element>
    </define>
    <!-- check the ordering, due to the XSD 1.0 limitations -->
-   <define name="model.archDesc.levels-of-description" a:exclude-from="eac eaf">
-      <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-      <ref name="attribute-group.assertion-reference.optional"/>
-      <ref name="attribute-group.linked-data.optional"/>
-      <ref name="attribute.level.optional"/>
-      <ref name="element.identificationData"/>
-      <optional>
-         <ref name="element.agents"/>
-      </optional>
-      <optional>
-         <ref name="element.formsAvailable"/>
-      </optional>
-      <optional>
-         <ref name="element.functions"/>
-      </optional>
-      <optional>
-         <ref name="element.places"/>
-      </optional>
-      <zeroOrMore>
-         <ref name="model.narrative-element-name-list"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.narrative-element-name-list" a:exclude-from="eac eaf">
-      <oneOrMore>
-         <choice>
-            <ref name="element.accessConditions"/>
-            <ref name="element.accruals"/>
-            <ref name="element.appraisal"/>
-            <ref name="element.arrangement"/>
-            <ref name="element.biogHist"/>
-            <ref name="element.custodHist"/>
-            <ref name="element.filePlan"/>
-            <ref name="element.otherDescriptiveInfo"/>
-            <ref name="element.otherDescription"/>
-            <ref name="element.preferCite"/>
-            <ref name="element.processInfo"/>
-            <ref name="element.publicationNote"/>
-            <ref name="element.recordTypeSpecificStatement"/>
-            <ref name="element.relatedMaterial"/>
-            <ref name="element.scopeContent"/>
-            <ref name="element.separatedMaterial"/>
-            <ref name="element.sourceOfAcquisition"/>
-            <ref name="element.subjectHeadings"/>
-            <ref name="element.useConditions"/>
-         </choice>
-      </oneOrMore>
-   </define>
    <define name="element.agent">
       <element name="agent">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -127,17 +80,6 @@
    </define>
    <!-- regroup what's above later on -->
    <!-- can this be combined now??? I did. Fix, if needed, after checking with EAC -->
-   <define name="element.biogHist" a:exclude-from="eaf">
-      <element name="biogHist">
-            <!-- note the EAC impact. the goal is no differences, but so we might need to add provenanceEvent to EAC, or 
-            remove biogHist from EAD ? -->
-         <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
-         <!-- Or, yuck, but... 
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent" a:exclude-from="eac eaf"/>
-            <ref name="model.ead-narrative-elements" a:exclude-from="ead"/>
-            -->
-      </element>
-   </define>
    <define name="element.citedRange">
       <element name="citedRange">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -248,14 +190,8 @@
    </define>
    <define name="element.function">
       <element name="function">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"
-              a:exclude-from="eac eaf"/>
-         <ref name="attribute-group.linked-data.optional" a:exclude-from="eac eaf"/>
-         <ref name="attribute-group.assertion-reference.optional"
-              a:exclude-from="eac eaf"/>
          <ref name="attribute.functionType.optional"/>
-         <ref name="model.ead-entity-elements" a:exclude-from="eac eaf"/>
-         <ref name="element.descriptiveNote.optional" a:exclude-from="eac eaf"/>
+         <ref name="model.single-element-group.no-local-type" a:exclude-from="ead"/>
       </element>
    </define>
    <define name="element.geographicCoordinates">
@@ -455,7 +391,7 @@
       <element>
          <anyName>
             <except>
-               <nsName ns="https://archivists.org/ns/ead/v4" a:exclude-from="eac eaf"/>
+               <nsName ns="https://archivists.org/ns/eaf/v1" a:exclude-from="eac ead"/>
             </except>
          </anyName>
          <zeroOrMore>
@@ -522,18 +458,6 @@
       </optional>
       <ref name="model.narrative-group.optional"/>
    </define>
-   <define name="model.ead-narrative-elements-plus-provenanceEvent"
-           a:exclude-from="eaf">
-      <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-      <ref name="attribute-group.assertion-reference.optional"/>
-      <optional>
-         <ref name="element.abstract"/>
-      </optional>
-      <ref name="model.narrative-group.optional"/>
-      <zeroOrMore>
-         <ref name="element.provenanceEvent"/>
-      </zeroOrMore>
-   </define>
    <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
    <define name="model.ead-narrative-elements-plus-relations">
       <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -576,52 +500,6 @@
       </choice>
    </define>
    <!-- new... reorder / model, once finalized -->
-   <define name="model.ead-formAvailable" a:exclude-from="eac eaf">
-      <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-      <ref name="attribute-group.assertion-reference.optional"/>
-      <ref name="attribute-group.linked-data.optional"/>
-      <ref name="attribute.coverage.optional"/>
-      <ref name="attribute.formAvailableType.optional"/>
-      <!-- order based on design principle, namely:https://github.com/SAA-SDT/TS-EAS-subteam-notes/blob/master/schemas-subteam/working-documents/20210112_ElementsOrder_Final_EAC-CPF.pdf-->
-      <oneOrMore>
-         <ref name="element.label"/>
-      </oneOrMore>
-      <optional>
-         <ref name="model.all-dates.choice"/>
-      </optional>
-      <optional>
-         <ref name="element.relations"/>
-      </optional>
-      <zeroOrMore>
-         <choice>
-            <ref name="element.formAvailableId"/>
-            <ref name="element.placeName"/>
-            <ref name="element.role"/>
-         </choice>
-      </zeroOrMore>
-      <zeroOrMore>
-         <choice>
-            <ref name="element.container"/>
-            <ref name="element.dimensions"/>
-            <ref name="element.extent"/>
-            <ref name="element.physFacet"/>
-         </choice>
-      </zeroOrMore>
-      <zeroOrMore>
-         <choice>
-            <ref name="element.accessConditions"/>
-            <ref name="element.accruals"/>
-            <ref name="element.arrangement"/>
-            <ref name="element.custodHist"/>
-            <ref name="element.physicalOrTechnicalRequirements"/>
-            <ref name="element.processInfo"/>
-            <ref name="element.separatedMaterial"/>
-            <ref name="element.sourceOfAcquisition"/>
-            <ref name="element.useConditions"/>
-         </choice>
-      </zeroOrMore>
-      <ref name="element.descriptiveNote.optional"/>
-   </define>
    <define name="model.mixed-content.optional">
       <zeroOrMore>
          <choice>

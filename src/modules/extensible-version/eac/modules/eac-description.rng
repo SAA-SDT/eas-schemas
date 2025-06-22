@@ -4,7 +4,7 @@
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
    <define name="element.description">
       <element name="description">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <optional>
             <ref name="element.demographicDescriptions"/>
@@ -63,37 +63,12 @@
          <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
-   <define name="element.function">
-      <element name="function">
-         <ref name="model.single-element-group"/>
-      </element>
-   </define>
-   <define name="element.functions">
-      <element name="functions">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <oneOrMore>
-            <ref name="element.function"/>
-         </oneOrMore>
-         <ref name="element.descriptiveNote.optional"/>
-      </element>
-   </define>
    <define name="element.generalContext">
       <element name="generalContext">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="element.head.optional"/>
          <ref name="model.narrative-group.optional"/>
-      </element>
-   </define>
-   <define name="element.language">
-      <element name="language">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <optional>
-            <ref name="attribute.languageCode"/>
-         </optional>
-         <text/>
       </element>
    </define>
    <define name="element.languageUsed">
@@ -119,11 +94,9 @@
          <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
-   <define name="element.legalStatus">
-      <element name="legalStatus">
-         <ref name="model.single-element-group"/>
-      </element>
-   </define>
+   <!-- legalStatus (singular only) is now in the models-and-shared-elements.rng file
+        not a fan of separting that from the plural parent, but that's how things are set up now.    
+    -->
    <define name="element.legalStatuses">
       <element name="legalStatuses">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -179,32 +152,12 @@
          <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
-   <define name="element.places">
-      <element name="places">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <oneOrMore>
-            <ref name="element.place"/>
-         </oneOrMore>
-         <ref name="element.descriptiveNote.optional"/>
-      </element>
-   </define>
    <define name="element.structureOrGenealogy">
       <element name="structureOrGenealogy">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="element.head.optional"/>
          <ref name="model.narrative-group.optional"/>
-      </element>
-   </define>
-   <define name="element.writingSystem">
-      <element name="writingSystem">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <optional>
-            <ref name="attribute.scriptCode"/>
-         </optional>
-         <text/>
       </element>
    </define>
 </grammar>

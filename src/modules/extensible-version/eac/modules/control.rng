@@ -5,7 +5,8 @@
    <define name="element.agencyCode">
       <element name="agencyCode">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute.status.authorized-or-alternative.optional"/>
+         <ref name="attribute.status.authorized-or-alternative.optional"
+              a:exclude-from="ead eaf"/>
          <ref name="attribute-group.linked-data.optional"/>
          <text/>
       </element>
@@ -17,33 +18,14 @@
          <text/>
       </element>
    </define>
-   <define name="element.agent">
-      <element name="agent">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute-group.linked-data.optional"/>
-         <attribute name="agentType">
-            <choice>
-               <value>human</value>
-               <value>machine</value>
-               <value>unknown</value>
-            </choice>
-         </attribute>
-         <text/>
-      </element>
-   </define>
-   <define name="element.citedRange">
-      <element name="citedRange">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute.unit.optional"/>
-         <text/>
-      </element>
-   </define>
    <define name="element.control">
       <element name="control">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
-         <ref name="attribute-group.control-encodings.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.control-encodings"/>
          <ref name="attribute.detailLevel.optional"/>
-         <ref name="attribute.maintenanceStatus"/>
+         <optional>
+            <ref name="attribute.maintenanceStatus"/>
+         </optional>
          <ref name="attribute.publicationStatus.optional"/>
          <ref name="element.recordId"/>
          <ref name="element.maintenanceAgency"/>
@@ -55,10 +37,8 @@
             <choice>
                <ref name="element.conventionDeclaration"/>
                <ref name="element.languageDeclaration"/>
-               <ref name="element.localControl"/>
                <ref name="element.localTypeDeclaration"/>
                <ref name="element.otherRecordId"/>
-               <ref name="element.representation"/>
                <ref name="element.rightsDeclaration"/>
             </choice>
          </zeroOrMore>
@@ -87,18 +67,6 @@
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.language-and-script-code"/>
          <ref name="element.descriptiveNote.optional"/>
-      </element>
-   </define>
-   <define name="element.localControl">
-      <element name="localControl">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.linked-data.optional"/>
-         <oneOrMore>
-            <ref name="element.term"/>
-         </oneOrMore>
-         <optional>
-            <ref name="model.date-dateRange.choice"/>
-         </optional>
       </element>
    </define>
    <define name="element.localTypeDeclaration">
@@ -136,7 +104,9 @@
    <define name="element.maintenanceEvent">
       <element name="maintenanceEvent">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute.maintenanceEventType"/>
+         <optional>
+            <ref name="attribute.maintenanceEventType"/>
+         </optional>
          <ref name="element.agent"/>
          <ref name="element.eventDateTime"/>
          <zeroOrMore>
@@ -155,7 +125,8 @@
    <define name="element.otherAgencyCode">
       <element name="otherAgencyCode">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute.status.authorized-or-alternative.optional"/>
+         <ref name="attribute.status.authorized-or-alternative.optional"
+              a:exclude-from="ead eaf"/>
          <ref name="attribute-group.linked-data.optional"/>
          <text/>
       </element>
@@ -171,13 +142,6 @@
       <element name="recordId">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="dt.non-empty-element-with-newlines-available"/>
-      </element>
-   </define>
-   <define name="element.representation">
-      <element name="representation">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.links.optional"/>
-         <text/>
       </element>
    </define>
    <define name="element.rightsDeclaration">
@@ -208,7 +172,7 @@
    </define>
    <define name="element.sources">
       <element name="sources">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <oneOrMore>
             <ref name="element.source"/>
          </oneOrMore>

@@ -7,7 +7,7 @@
         <element name="agencyCode">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute.status.optional" a:exclude-from="eac"/>
-            <ref name="attribute.status.authorized-or-alternative.optional" a:exclude-from="ead"/>
+            <ref name="attribute.status.authorized-or-alternative.optional" a:exclude-from="ead eaf"/>
             <ref name="attribute-group.linked-data.optional"/>
             <text/>
         </element>
@@ -23,7 +23,7 @@
     
     <define name="element.control">
         <element name="control">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.control-encodings"/>
             <ref name="attribute.detailLevel.optional"/>
             <optional>
@@ -138,7 +138,7 @@
         <element name="otherAgencyCode">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute.status.optional" a:exclude-from="eac"/>
-            <ref name="attribute.status.authorized-or-alternative.optional" a:exclude-from="ead"/>
+            <ref name="attribute.status.authorized-or-alternative.optional" a:exclude-from="ead eaf"/>
             <ref name="attribute-group.linked-data.optional"/>
             <text/>
         </element>
@@ -190,7 +190,7 @@
     
     <define name="element.sources">
         <element name="sources">
-            <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <oneOrMore>
                 <ref name="element.source"/>     
             </oneOrMore>
