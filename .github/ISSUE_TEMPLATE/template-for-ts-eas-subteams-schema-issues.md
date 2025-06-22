@@ -1,7 +1,7 @@
 ---
 name: Template for TS-EAS subteams schema issues
-about: Template to be used in the development and/or update requested by TS-EAS subteams.
-  All issues is created by TS-EAS members having a GitHub account.
+about: This template is for issues created by TS-EAS subteams during creation and
+  revsion work of an EAS standard
 title: ''
 labels: ''
 assignees: ''
@@ -11,7 +11,7 @@ assignees: ''
 <!--- Provide a general summary of the issue in the Title above -->
 ## TS-EAS issue creator
 <!--- State your name and team. -->
-
+Name, Team
 ## The issue relates to
 <!--- Make an 'x' replacing the ' ' (space) inside the brackets to mark your choice. -->
 - [ ] EAC-CPF schema issue
@@ -24,5 +24,4 @@ assignees: ''
 ## Wanted change/feature
 <!--- Describe the  elements and attributes being created or changed -->
 <!--- If possible point to the TL correct place -->
-<!--- Write your text after the "Text:" -->
-* Text:
+<!--- Write your text after the here -->
