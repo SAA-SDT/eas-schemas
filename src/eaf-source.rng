@@ -19,7 +19,15 @@
         <element name="eaf">
             <ref name="attribute-group.document-node"/>
             <ref name="element.control"/>
-            
+            <ref name="element.functionsDescription"/>
+        </element>
+    </define>
+    <define name="element.functionsDescription">
+        <element name="functionsDescription">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <!-- placeholder, to start -->
+            <text/>
         </element>
     </define>
 </grammar>

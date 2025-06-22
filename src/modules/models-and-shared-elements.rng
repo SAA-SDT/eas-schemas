@@ -138,7 +138,7 @@
     <!-- regroup what's above later on -->
     
     <!-- can this be combined now??? I did. Fix, if needed, after checking with EAC -->
-    <define name="element.biogHist">
+    <define name="element.biogHist" a:exclude-from="eaf">
         <element name="biogHist">
             <!-- note the EAC impact. the goal is no differences, but so we might need to add provenanceEvent to EAC, or 
             remove biogHist from EAD ? -->
@@ -186,7 +186,7 @@
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.standard-date-attributes.optional"/>
             <ref name="attribute.status.optional" a:exclude-from="eac"/>
-            <ref name="attribute.status.unknown.optional" a:exclude-from="ead"/>
+            <ref name="attribute.status.unknown.optional" a:exclude-from="ead eaf"/>
             <text/>
         </element>
     </define>  
@@ -265,7 +265,7 @@
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.standard-date-attributes.optional"/>
             <ref name="attribute.status.optional" a:exclude-from="eac"/>
-            <ref name="attribute.status.unknown.optional" a:exclude-from="ead"/>
+            <ref name="attribute.status.unknown.optional" a:exclude-from="ead eaf"/>
             <text/>
         </element>
     </define>
@@ -471,7 +471,7 @@
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.standard-date-attributes.optional"/>
             <ref name="attribute.status.optional" a:exclude-from="eac"/>
-            <ref name="attribute.status.ongoing-or-unknown.optional" a:exclude-from="ead"/>
+            <ref name="attribute.status.ongoing-or-unknown.optional" a:exclude-from="ead eaf"/>
             <text/>
         </element>
     </define>
@@ -501,8 +501,9 @@
         <element>
             <anyName>
                 <except>
-                    <nsName ns="https://archivists.org/ns/eac/v3" a:exclude-from="ead"/>
-                    <nsName ns="https://archivists.org/ns/ead/v4" a:exclude-from="eac"/>
+                    <nsName ns="https://archivists.org/ns/eac/v3" a:exclude-from="ead eaf"/>
+                    <nsName ns="https://archivists.org/ns/ead/v4" a:exclude-from="eac eaf"/>
+                    <nsName ns="https://archivists.org/ns/eaf/v1" a:exclude-from="eac ead"/>
                 </except>
             </anyName>
             <zeroOrMore>
