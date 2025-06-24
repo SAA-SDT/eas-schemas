@@ -676,6 +676,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:attribute name="normalizedForm" type="xs:token"/>
       <xs:attribute name="referredEntityType" type="xs:token"/>
       <xs:attribute name="referredEntityRelationship" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
