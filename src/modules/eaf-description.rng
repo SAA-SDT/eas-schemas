@@ -58,8 +58,20 @@
         </element>
     </define>
     
+    <define name="element.legislation">
+        <element name="legislation">
+            <text/>
+        </element>
+    </define>
+    
     <define name="element.legislations">
-        <text/>
+        <element name="legislations">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <oneOrMore>
+                <ref name="element.legislation"/>
+            </oneOrMore>
+        </element>
     </define>
 
 </grammar>
