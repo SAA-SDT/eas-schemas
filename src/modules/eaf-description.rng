@@ -51,7 +51,11 @@
     </define>
     
     <define name="element.functionDescription">
-        <text/>
+        <element name="functionDescription">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.narrative-group.optional"/>
+        </element>
     </define>
     
     <define name="element.legislations">

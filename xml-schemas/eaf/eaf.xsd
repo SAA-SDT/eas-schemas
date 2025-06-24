@@ -475,6 +475,9 @@
       <xs:sequence>
          <xs:element type="eaf:functionAgents" name="functionAgents" minOccurs="0"/>
          <xs:element type="eaf:functionDates" name="functionDates" minOccurs="0"/>
+         <xs:element type="eaf:functionDescription"
+                     name="functionDescription"
+                     minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -729,6 +732,25 @@
       <xs:choice>
          <xs:element type="eaf:date" name="date"/>
          <xs:element type="eaf:dateRange" name="dateRange"/>
+      </xs:choice>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="functionDescription">
+      <xs:choice>
+         <xs:element type="eaf:formattingExtension"
+                     name="formattingExtension"
+                     minOccurs="0"/>
+         <xs:element type="eaf:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
       </xs:choice>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1008,6 +1030,13 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:complexType name="formattingExtension">
+      <xs:group maxOccurs="unbounded" ref="eaf:_2"/>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
    <xs:complexType name="label" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1140,4 +1169,9 @@
       <xs:attribute name="status" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
+   <xs:group name="_2">
+      <xs:sequence>
+         <xs:any namespace="##other" processContents="lax"/>
+      </xs:sequence>
+   </xs:group>
 </xs:schema>
