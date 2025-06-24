@@ -16,6 +16,9 @@
             <ref name="element.functionDescription"/>
          </optional>
          <optional>
+            <ref name="element.functionHistory"/>
+         </optional>
+         <optional>
             <ref name="element.legislations"/>
          </optional>
       </element>
@@ -46,6 +49,13 @@
    </define>
    <define name="element.functionDescription">
       <element name="functionDescription">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="model.narrative-group.optional"/>
+      </element>
+   </define>
+   <define name="element.functionHistory">
+      <element name="functionHistory">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="model.narrative-group.optional"/>
