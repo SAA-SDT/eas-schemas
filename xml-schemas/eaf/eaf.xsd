@@ -666,7 +666,13 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="classifications" mixed="true">
+   <xs:complexType name="classifications">
+      <xs:sequence>
+         <xs:element type="eaf:classification"
+                     name="classification"
+                     maxOccurs="unbounded"/>
+         <xs:element type="eaf:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
+      </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -888,6 +894,13 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="classification">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="value" type="xs:string"/>
+         </xs:extension>
+      </xs:simpleContent>
    </xs:complexType>
    <xs:complexType name="label" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
