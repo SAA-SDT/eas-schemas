@@ -5,9 +5,38 @@
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
 
     <define name="element.description">
-        <element name="description">
-            <text/>
+        <element name="description"> 
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <optional>
+                <ref name="element.functionAgents"/>
+            </optional>
+            <optional>
+                <ref name="element.functionDates"/>
+            </optional>
+            <optional>
+                <ref name="element.functionDescription"/>
+            </optional>
+            <optional>
+                <ref name="element.legislations"/>
+            </optional>
         </element>
+    </define>
+    
+    <define name="element.functionAgents">
+        <text/>
+    </define>
+    
+    <define name="element.functionDates">
+        <text/>
+    </define>
+    
+    <define name="element.functionDescription">
+        <text/>
+    </define>
+    
+    <define name="element.legislations">
+        <text/>
     </define>
 
 </grammar>
