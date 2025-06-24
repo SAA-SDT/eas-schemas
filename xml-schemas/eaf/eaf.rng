@@ -446,6 +446,12 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="functionStatus" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <ref name="identity"/>
             <optional>
                <ref name="description"/>

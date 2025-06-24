@@ -24,6 +24,7 @@
       <element name="functionsDescription">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute.functionStatus.optional"/>
          <ref name="element.identity"/>
          <optional>
             <ref name="element.description"/>
