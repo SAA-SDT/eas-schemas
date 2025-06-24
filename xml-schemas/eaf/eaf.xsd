@@ -708,7 +708,10 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="functionAgents" mixed="true">
+   <xs:complexType name="functionAgents">
+      <xs:sequence>
+         <xs:element type="eaf:functionAgent" name="functionAgent" maxOccurs="unbounded"/>
+      </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -916,6 +919,22 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="classification" mixed="true">
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:attribute name="languageOfElement" type="xs:token"/>
+      <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
+      <xs:attribute name="vocabularySource" type="xs:token"/>
+      <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
+      <xs:attribute name="valueURI" type="xs:anyURI"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+   </xs:complexType>
+   <xs:complexType name="functionAgent" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
