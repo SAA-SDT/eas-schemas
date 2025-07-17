@@ -43,7 +43,11 @@
     </define>
     
     <define name="element.functionDates">
-        <text/>
+        <element name="functionDates">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.date-dateRange.choice"/>
+        </element>
     </define>
     
     <define name="element.functionDescription">
