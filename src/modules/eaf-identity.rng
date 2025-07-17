@@ -4,11 +4,23 @@
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     
+    <define name="element.classification">
+        <element name="classification">
+            <text/>
+            <!-- if like mandate, and the other singular elements, then we could use:
+                 <ref name="model.single-element-group"/>
+            -->
+        </element>
+    </define>
+    
     <define name="element.classifications">
         <element name="classifications">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <text/>
+            <oneOrMore>
+                <ref name="element.classification"/>
+            </oneOrMore>
+            <ref name="element.descriptiveNote.optional"/>
         </element>
     </define>
 

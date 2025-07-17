@@ -2250,7 +2250,12 @@
                   </attribute>
                </optional>
             </interleave>
-            <text/>
+            <oneOrMore>
+               <ref name="classification"/>
+            </oneOrMore>
+            <optional>
+               <ref name="descriptiveNote"/>
+            </optional>
          </group>
       </element>
    </define>
@@ -3281,6 +3286,11 @@
                <ref name="dateSet"/>
             </choice>
          </group>
+      </element>
+   </define>
+   <define name="classification">
+      <element name="classification" ns="https://archivists.org/ns/eaf/v1">
+         <text/>
       </element>
    </define>
    <define name="label">
