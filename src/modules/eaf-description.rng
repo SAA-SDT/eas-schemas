@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+    <define name="element.description">
+        <element name="description"> 
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <optional>
+                <ref name="element.functionAgents"/>
+            </optional>
+            <optional>
+                <ref name="element.functionDates"/>
+            </optional>
+            <optional>
+                <ref name="element.functionDescription"/>
+            </optional>
+            <optional>
+                <ref name="element.functionHistory"/>
+            </optional>
+            <optional>
+                <ref name="element.legislations"/>
+            </optional>
+        </element>
+    </define>
+    
+    <define name="element.functionAgent">
+        <element name="functionAgent">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="element.functionAgents">
+        <element name="functionAgents">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <oneOrMore>
+                <ref name="element.functionAgent"/>
+            </oneOrMore>
+        </element>
+    </define>
+    
+    <define name="element.functionDates">
+        <element name="functionDates">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.date-dateRange.choice"/>
+        </element>
+    </define>
+    
+    <define name="element.functionDescription">
+        <element name="functionDescription">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.narrative-group.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.functionHistory">
+        <element name="functionHistory">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.narrative-group.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.legislation">
+        <element name="legislation">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <!-- this is different.  should this element include a label or term (and should term and label be combined, anyway?) -->
+            <ref name="model.narrative-group.optional"/>
+            <optional>
+                <ref name="model.all-dates.choice"/>
+            </optional>
+        </element>
+    </define>
+    
+    <define name="element.legislations">
+        <element name="legislations">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <oneOrMore>
+                <ref name="element.legislation"/>
+            </oneOrMore>
+        </element>
+    </define>
+
+</grammar>
