@@ -8,6 +8,8 @@
     <include href="modules/datatypes.rng"/>
     <include href="modules/control.rng"/>
 
+    <include href="modules/eaf-identity.rng"/>
+    <include href="modules/eaf-description.rng"/>
     <include href="modules/relations.rng/"/>
 
     <include href="modules/models-and-shared-elements.rng/"/>
@@ -24,10 +26,15 @@
     </define>
     <define name="element.functionsDescription">
         <element name="functionsDescription">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <!-- placeholder, to start -->
-            <text/>
+            <ref name="element.identity"/>
+            <optional>
+                <ref name="element.description"/>
+            </optional>
+            <optional>
+                <ref name="element.relations"/>
+            </optional>
         </element>
     </define>
 </grammar>
