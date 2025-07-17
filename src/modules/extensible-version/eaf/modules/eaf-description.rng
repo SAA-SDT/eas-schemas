@@ -53,7 +53,14 @@
    </define>
    <define name="element.legislation">
       <element name="legislation">
-         <text/>
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <ref name="attribute-group.linked-data.optional"/>
+         <!-- this is different.  should this element include a label or term (and should term and label be combined, anyway?) -->
+         <ref name="model.narrative-group.optional"/>
+         <optional>
+            <ref name="model.all-dates.choice"/>
+         </optional>
       </element>
    </define>
    <define name="element.legislations">
