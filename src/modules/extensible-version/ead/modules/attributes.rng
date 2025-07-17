@@ -122,6 +122,13 @@
          </attribute>
       </optional>
    </define>
+   <define name="attribute.functionStatus.optional">
+      <optional>
+         <attribute name="functionStatus">
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="attribute.id.optional">
       <optional>
          <attribute name="id">
