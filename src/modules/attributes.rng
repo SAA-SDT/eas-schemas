@@ -261,38 +261,6 @@
         </optional>
     </define>
     
-    <define name="attribute.status.authorized-or-alternative.optional">
-        <optional>
-            <attribute name="status">
-                <choice>
-                    <value>authorized</value>
-                    <value>alternative</value>
-                </choice>
-            </attribute>
-        </optional>
-    </define>
-    
-    <define name="attribute.status.ongoing-or-unknown.optional">
-        <optional>
-            <attribute name="status">
-                <choice>
-                    <value>ongoing</value>
-                    <value>unknown</value>
-                </choice>
-            </attribute>
-        </optional>
-    </define>
-    
-    <define name="attribute.status.unknown.optional">
-        <optional>
-            <attribute name="status">
-                <choice>
-                    <value>unknown</value>
-                </choice>
-            </attribute>
-        </optional>
-    </define>
-    
     <define name="attribute.style.optional">
         <optional>
             <attribute name="style">
