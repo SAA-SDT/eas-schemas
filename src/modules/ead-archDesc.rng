@@ -59,13 +59,13 @@
 
     <define name="element.sourceOfAcquisition">
         <element name="sourceOfAcquisition">
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
         </element>
     </define>
     
     <define name="element.appraisal">
         <element name="appraisal">
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
         </element>
     </define>
     
@@ -279,7 +279,7 @@
     
     <define name="element.custodHist">
         <element name="custodHist">
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
         </element>
     </define>
     
@@ -430,7 +430,7 @@
     
     <define name="element.processInfo">
         <element name="processInfo">
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
         </element>
     </define>
     
@@ -471,12 +471,16 @@
         <!-- just like function now, but those are the only two similar elements that share the same model??? -->
         <!-- if / when ead:function and eac:function are the same, we could define those with the same model -->
         <element name="subject">
+            <!-- old way, pre issue #239
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute.subjectType.optional"/>
             <ref name="model.ead-entity-elements"/>
             <ref name="element.descriptiveNote.optional"/>  
+            -->
+            <!-- per issue #239, much shorter -->
+            <ref name="model.single-element-group"/>
         </element>
     </define>
     

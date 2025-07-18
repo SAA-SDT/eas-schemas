@@ -277,13 +277,6 @@
          </attribute>
       </optional>
    </define>
-   <define name="attribute.subjectType.optional">
-      <optional>
-         <attribute name="subjectType">
-            <data type="token"/>
-         </attribute>
-      </optional>
-   </define>
    <define name="attribute.target.optional">
       <optional>
          <attribute name="target">

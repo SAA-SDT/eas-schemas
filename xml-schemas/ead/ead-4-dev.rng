@@ -307,14 +307,6 @@
                </attribute>
             </optional>
             <optional>
-               <attribute name="subjectTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherSubjectTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
                <attribute name="targetTypeEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
@@ -2638,7 +2630,7 @@
                </zeroOrMore>
             </choice>
             <zeroOrMore>
-               <ref name="provenanceEvent"/>
+               <ref name="narrativeEvent"/>
             </zeroOrMore>
          </group>
       </element>
@@ -2831,7 +2823,7 @@
                </zeroOrMore>
             </choice>
             <zeroOrMore>
-               <ref name="provenanceEvent"/>
+               <ref name="narrativeEvent"/>
             </zeroOrMore>
          </group>
       </element>
@@ -2929,7 +2921,7 @@
                </zeroOrMore>
             </choice>
             <zeroOrMore>
-               <ref name="provenanceEvent"/>
+               <ref name="narrativeEvent"/>
             </zeroOrMore>
          </group>
       </element>
@@ -3430,7 +3422,7 @@
                </zeroOrMore>
             </choice>
             <zeroOrMore>
-               <ref name="provenanceEvent"/>
+               <ref name="narrativeEvent"/>
             </zeroOrMore>
          </group>
       </element>
@@ -4076,7 +4068,7 @@
                </zeroOrMore>
             </choice>
             <zeroOrMore>
-               <ref name="provenanceEvent"/>
+               <ref name="narrativeEvent"/>
             </zeroOrMore>
          </group>
       </element>
@@ -7504,8 +7496,8 @@
          </group>
       </element>
    </define>
-   <define name="provenanceEvent">
-      <element name="provenanceEvent" ns="https://archivists.org/ns/ead/v4">
+   <define name="narrativeEvent">
+      <element name="narrativeEvent" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7585,9 +7577,12 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="eventDateTime"/>
+            <ref name="date"/>
             <optional>
                <ref name="agent"/>
+            </optional>
+            <optional>
+               <ref name="placeName"/>
             </optional>
             <zeroOrMore>
                <ref name="eventDescription"/>
@@ -7761,6 +7756,18 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="vocabularySource" ns="">
@@ -7801,14 +7808,8 @@
                   </attribute>
                </optional>
             </interleave>
-            <optional>
-               <attribute name="subjectType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <oneOrMore>
-               <ref name="label"/>
+               <ref name="term"/>
             </oneOrMore>
             <optional>
                <choice>
@@ -7819,12 +7820,6 @@
             </optional>
             <zeroOrMore>
                <ref name="placeName"/>
-            </zeroOrMore>
-            <zeroOrMore>
-               <ref name="role"/>
-            </zeroOrMore>
-            <zeroOrMore>
-               <ref name="relationship"/>
             </zeroOrMore>
             <optional>
                <ref name="descriptiveNote"/>
