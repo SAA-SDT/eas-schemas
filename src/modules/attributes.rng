@@ -672,7 +672,7 @@
         <optional a:exclude-from="eac">
             <ref name="attribute.formAvailableTypeEncoding"/>
         </optional>
-        <optional>
+        <optional a:exclude-from="eac">
             <ref name="attribute.functionTypeEncoding"/>
         </optional>
         <optional a:exclude-from="ead">

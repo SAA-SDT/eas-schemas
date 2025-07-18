@@ -204,14 +204,6 @@
                </attribute>
             </optional>
             <optional>
-               <attribute name="functionTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherFunctionTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
                <attribute name="identityTypeEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
@@ -1310,7 +1302,7 @@
                <ref name="demographicDescriptions"/>
             </optional>
             <optional>
-               <ref name="functions"/>
+               <ref name="functionsPerformed"/>
             </optional>
             <optional>
                <ref name="languagesUsed"/>
@@ -2683,8 +2675,8 @@
          </group>
       </element>
    </define>
-   <define name="functions">
-      <element name="functions" ns="https://archivists.org/ns/eac/v3">
+   <define name="functionsPerformed">
+      <element name="functionsPerformed" ns="https://archivists.org/ns/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2765,7 +2757,7 @@
                </optional>
             </interleave>
             <oneOrMore>
-               <ref name="function"/>
+               <ref name="functionPerformed"/>
             </oneOrMore>
             <optional>
                <ref name="descriptiveNote"/>
@@ -4964,15 +4956,9 @@
          </group>
       </element>
    </define>
-   <define name="function">
-      <element name="function" ns="https://archivists.org/ns/eac/v3">
+   <define name="functionPerformed">
+      <element name="functionPerformed" ns="https://archivists.org/ns/eac/v3">
          <group>
-            <optional>
-               <attribute name="functionType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <interleave>
                <optional>
                   <attribute name="audience" ns="">
