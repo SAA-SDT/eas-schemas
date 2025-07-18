@@ -254,14 +254,6 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="subjectTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherSubjectTypeEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
       <xs:attribute name="targetTypeEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">

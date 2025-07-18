@@ -307,14 +307,6 @@
                </attribute>
             </optional>
             <optional>
-               <attribute name="subjectTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherSubjectTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
                <attribute name="targetTypeEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
@@ -7766,6 +7758,18 @@
                   </attribute>
                </optional>
             </interleave>
+            <optional>
+               <attribute name="localType" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
+               <attribute name="localTypeDeclarationReference" ns="">
+                  <data type="IDREFS"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
             <interleave>
                <optional>
                   <attribute name="vocabularySource" ns="">
@@ -7806,14 +7810,8 @@
                   </attribute>
                </optional>
             </interleave>
-            <optional>
-               <attribute name="subjectType" ns="">
-                  <data type="token"
-                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
-               </attribute>
-            </optional>
             <oneOrMore>
-               <ref name="label"/>
+               <ref name="term"/>
             </oneOrMore>
             <optional>
                <choice>
@@ -7824,12 +7822,6 @@
             </optional>
             <zeroOrMore>
                <ref name="placeName"/>
-            </zeroOrMore>
-            <zeroOrMore>
-               <ref name="role"/>
-            </zeroOrMore>
-            <zeroOrMore>
-               <ref name="relationship"/>
             </zeroOrMore>
             <optional>
                <ref name="descriptiveNote"/>

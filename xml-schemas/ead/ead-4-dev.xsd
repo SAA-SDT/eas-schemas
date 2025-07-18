@@ -244,14 +244,6 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="subjectTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherSubjectTypeEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
       <xs:attribute name="targetTypeEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">
@@ -1887,7 +1879,7 @@
    </xs:complexType>
    <xs:complexType name="subject">
       <xs:sequence>
-         <xs:element type="ead:label" name="label" maxOccurs="unbounded"/>
+         <xs:element type="ead:term" name="term" maxOccurs="unbounded"/>
          <xs:choice minOccurs="0">
             <xs:element type="ead:date" name="date"/>
             <xs:element type="ead:dateRange" name="dateRange"/>
@@ -1897,11 +1889,6 @@
                      name="placeName"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
-         <xs:element type="ead:role" name="role" minOccurs="0" maxOccurs="unbounded"/>
-         <xs:element type="ead:relationship"
-                     name="relationship"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
          <xs:element type="ead:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
@@ -1909,13 +1896,14 @@
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="localType" type="xs:token"/>
+      <xs:attribute name="localTypeDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:attribute name="subjectType" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c">

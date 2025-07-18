@@ -277,13 +277,6 @@
          </attribute>
       </optional>
    </define>
-   <define name="attribute.subjectType.optional">
-      <optional>
-         <attribute name="subjectType">
-            <data type="token"/>
-         </attribute>
-      </optional>
-   </define>
    <define name="attribute.target.optional">
       <optional>
          <attribute name="target">
@@ -436,14 +429,6 @@
          <choice>
             <value>EASList</value>
             <value>otherRelationTypeEncoding</value>
-         </choice>
-      </attribute>
-   </define>
-   <define name="attribute.subjectTypeEncoding" a:exclude-from="eac">
-      <attribute name="subjectTypeEncoding" a:defaultValue="EASList">
-         <choice>
-            <value>EASList</value>
-            <value>otherSubjectTypeEncoding</value>
          </choice>
       </attribute>
    </define>
@@ -648,9 +633,6 @@
       </optional>
       <optional>
          <ref name="attribute.statusEncoding"/>
-      </optional>
-      <optional a:exclude-from="eac">
-         <ref name="attribute.subjectTypeEncoding"/>
       </optional>
       <optional>
          <ref name="attribute.targetTypeEncoding"/>
