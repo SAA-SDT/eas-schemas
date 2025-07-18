@@ -654,25 +654,25 @@
         <optional>
             <ref name="attribute.countryEncoding"/>
         </optional>
-        <optional a:exclude-from="eac">
+        <optional a:exclude-from="eac eaf">
             <ref name="attribute.coverageEncoding"/>
         </optional>
         <optional>
             <ref name="attribute.detailLevelEncoding"/>
         </optional>
-        <optional a:exclude-from="eac">
+        <optional a:exclude-from="eac eaf">
             <ref name="attribute.descriptionOfComponentsTypeEncoding"/>
         </optional>
         <optional>
             <ref name="attribute.dateEncoding"/>
         </optional>
-        <optional a:exclude-from="eac">
+        <optional a:exclude-from="eac eaf">
             <ref name="attribute.extentTypeEncoding"/>
         </optional>
-        <optional a:exclude-from="eac">
+        <optional a:exclude-from="eac eaf">
             <ref name="attribute.formAvailableTypeEncoding"/>
         </optional>
-        <optional a:exclude-from="eac">
+        <optional a:exclude-from="eac eaf">
             <ref name="attribute.functionTypeEncoding"/>
         </optional>
         <optional a:exclude-from="ead">
@@ -681,7 +681,7 @@
         <optional>
             <ref name="attribute.languageEncoding"/>
         </optional>
-        <optional a:exclude-from="eac">
+        <optional a:exclude-from="eac eaf">
             <ref name="attribute.levelEncoding"/>
         </optional>
         <optional>
@@ -714,7 +714,7 @@
         <optional>
             <ref name="attribute.targetTypeEncoding"/>
         </optional>
-        <optional a:exclude-from="eac">
+        <optional a:exclude-from="eac eaf">
             <ref name="attribute.unitDateTypeEncoding"/>
         </optional>
     </define>
