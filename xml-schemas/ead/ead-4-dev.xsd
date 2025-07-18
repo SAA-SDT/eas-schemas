@@ -772,8 +772,8 @@
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:provenanceEvent"
-                     name="provenanceEvent"
+         <xs:element type="ead:narrativeEvent"
+                     name="narrativeEvent"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
       </xs:sequence>
@@ -820,8 +820,8 @@
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:provenanceEvent"
-                     name="provenanceEvent"
+         <xs:element type="ead:narrativeEvent"
+                     name="narrativeEvent"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
       </xs:sequence>
@@ -846,8 +846,8 @@
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:provenanceEvent"
-                     name="provenanceEvent"
+         <xs:element type="ead:narrativeEvent"
+                     name="narrativeEvent"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
       </xs:sequence>
@@ -964,8 +964,8 @@
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:provenanceEvent"
-                     name="provenanceEvent"
+         <xs:element type="ead:narrativeEvent"
+                     name="narrativeEvent"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
       </xs:sequence>
@@ -1113,8 +1113,8 @@
                         minOccurs="0"/>
             <xs:element type="ead:p" name="p" minOccurs="0" maxOccurs="unbounded"/>
          </xs:choice>
-         <xs:element type="ead:provenanceEvent"
-                     name="provenanceEvent"
+         <xs:element type="ead:narrativeEvent"
+                     name="narrativeEvent"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
       </xs:sequence>
@@ -1838,10 +1838,11 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="provenanceEvent">
+   <xs:complexType name="narrativeEvent">
       <xs:sequence>
-         <xs:element type="ead:eventDateTime" name="eventDateTime"/>
+         <xs:element type="ead:date" name="date"/>
          <xs:element type="ead:agent" name="agent" minOccurs="0"/>
+         <xs:element type="ead:placeName" name="placeName" minOccurs="0"/>
          <xs:element type="ead:eventDescription"
                      name="eventDescription"
                      minOccurs="0"

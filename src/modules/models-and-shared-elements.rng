@@ -140,11 +140,11 @@
     <!-- can this be combined now??? I did. Fix, if needed, after checking with EAC -->
     <define name="element.biogHist" a:exclude-from="eaf">
         <element name="biogHist">
-            <!-- note the EAC impact. the goal is no differences, but so we might need to add provenanceEvent to EAC, or 
+            <!-- note the EAC impact. the goal is no differences, but so we might need to add narrativeEvent to EAC, or 
             remove biogHist from EAD ? -->
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
             <!-- Or, yuck, but... 
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent" a:exclude-from="eac eaf"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent" a:exclude-from="eac eaf"/>
             <ref name="model.ead-narrative-elements" a:exclude-from="ead"/>
             -->
         </element>
@@ -430,14 +430,16 @@
         </element>
     </define>
     
-    <define name="element.provenanceEvent">
-        <element name="provenanceEvent">
+    <define name="element.narrativeEvent">
+        <element name="narrativeEvent">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
-            <!-- like maintenanceEvent, but not really, due to different options -->
-            <ref name="element.eventDateTime"/>
+            <ref name="element.date"/>
             <optional>
                 <ref name="element.agent"/>
+            </optional>
+            <optional>
+                <ref name="element.placeName"/>
             </optional>
             <zeroOrMore>
                 <ref name="element.eventDescription"/>
@@ -624,7 +626,7 @@
         <ref name="model.narrative-group.optional"/>
     </define>
     
-    <define name="model.ead-narrative-elements-plus-provenanceEvent" a:exclude-from="eaf">
+    <define name="model.ead-narrative-elements-plus-narrativeEvent" a:exclude-from="eaf">
         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
         <optional>
@@ -632,7 +634,7 @@
         </optional>
         <ref name="model.narrative-group.optional"/>
         <zeroOrMore>
-            <ref name="element.provenanceEvent"/>
+            <ref name="element.narrativeEvent"/>
         </zeroOrMore>
     </define>
 

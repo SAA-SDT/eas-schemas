@@ -2638,7 +2638,7 @@
                </zeroOrMore>
             </choice>
             <zeroOrMore>
-               <ref name="provenanceEvent"/>
+               <ref name="narrativeEvent"/>
             </zeroOrMore>
          </group>
       </element>
@@ -2831,7 +2831,7 @@
                </zeroOrMore>
             </choice>
             <zeroOrMore>
-               <ref name="provenanceEvent"/>
+               <ref name="narrativeEvent"/>
             </zeroOrMore>
          </group>
       </element>
@@ -2929,7 +2929,7 @@
                </zeroOrMore>
             </choice>
             <zeroOrMore>
-               <ref name="provenanceEvent"/>
+               <ref name="narrativeEvent"/>
             </zeroOrMore>
          </group>
       </element>
@@ -3430,7 +3430,7 @@
                </zeroOrMore>
             </choice>
             <zeroOrMore>
-               <ref name="provenanceEvent"/>
+               <ref name="narrativeEvent"/>
             </zeroOrMore>
          </group>
       </element>
@@ -4076,7 +4076,7 @@
                </zeroOrMore>
             </choice>
             <zeroOrMore>
-               <ref name="provenanceEvent"/>
+               <ref name="narrativeEvent"/>
             </zeroOrMore>
          </group>
       </element>
@@ -7506,8 +7506,8 @@
          </group>
       </element>
    </define>
-   <define name="provenanceEvent">
-      <element name="provenanceEvent" ns="https://archivists.org/ns/ead/v4">
+   <define name="narrativeEvent">
+      <element name="narrativeEvent" ns="https://archivists.org/ns/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7587,9 +7587,12 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="eventDateTime"/>
+            <ref name="date"/>
             <optional>
                <ref name="agent"/>
+            </optional>
+            <optional>
+               <ref name="placeName"/>
             </optional>
             <zeroOrMore>
                <ref name="eventDescription"/>

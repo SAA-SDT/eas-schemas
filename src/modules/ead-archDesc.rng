@@ -59,13 +59,13 @@
 
     <define name="element.sourceOfAcquisition">
         <element name="sourceOfAcquisition">
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
         </element>
     </define>
     
     <define name="element.appraisal">
         <element name="appraisal">
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
         </element>
     </define>
     
@@ -252,7 +252,7 @@
     
     <define name="element.custodHist">
         <element name="custodHist">
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
         </element>
     </define>
     
@@ -403,7 +403,7 @@
     
     <define name="element.processInfo">
         <element name="processInfo">
-            <ref name="model.ead-narrative-elements-plus-provenanceEvent"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
         </element>
     </define>
     
