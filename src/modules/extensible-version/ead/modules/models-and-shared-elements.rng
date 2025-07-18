@@ -646,9 +646,7 @@
       <zeroOrMore>
          <choice>
             <ref name="element.container"/>
-            <ref name="element.dimensions"/>
-            <ref name="element.extent"/>
-            <ref name="element.physFacet"/>
+            <ref name="element.physicalDescription"/>
          </choice>
       </zeroOrMore>
       <zeroOrMore>

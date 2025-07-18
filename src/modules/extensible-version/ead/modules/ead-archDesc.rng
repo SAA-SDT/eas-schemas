@@ -212,6 +212,32 @@
          <ref name="element.descriptiveNote.optional"/>
       </element>
    </define>
+   <define name="element.physicalDescription">
+      <element name="physicalDescription">
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <!-- at least one of extent, dimensions, or physicalFacet -->
+         <choice>
+            <group>
+               <ref name="element.extent"/>
+               <optional>
+                  <ref name="element.dimensions"/>
+               </optional>
+               <optional>
+                  <ref name="element.physicalFacet"/>
+               </optional>
+            </group>
+            <group>
+               <ref name="element.dimensions"/>
+               <optional>
+                  <ref name="element.physicalFacet"/>
+               </optional>
+            </group>
+            <ref name="element.physicalFacet"/>
+         </choice>
+         <ref name="element.descriptiveNote.optional"/>
+      </element>
+   </define>
    <define name="element.subjectHeadings">
       <element name="subjectHeadings">
             <!-- is this right? -->
@@ -338,8 +364,8 @@
          <ref name="model.mixed-content.optional"/>
       </element>
    </define>
-   <define name="element.physFacet">
-      <element name="physFacet">
+   <define name="element.physicalFacet">
+      <element name="physicalFacet">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
