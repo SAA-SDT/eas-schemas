@@ -196,6 +196,14 @@
         </attribute>  
     </define>
     
+    <define name="attribute.normalizedForm.optional">
+        <optional>
+            <attribute name="normalizedForm">
+                <data type="token"/>
+            </attribute>
+        </optional>
+    </define>
+    
     <define name="attribute.parallel.optional">
         <optional>
             <attribute name="parallel">

@@ -4447,6 +4447,12 @@
                </optional>
             </interleave>
             <optional>
+               <attribute name="normalizedForm" ns="">
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </attribute>
+            </optional>
+            <optional>
                <attribute name="referredEntityType" ns="">
                   <data type="token"
                         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
