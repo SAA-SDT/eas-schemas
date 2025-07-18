@@ -589,14 +589,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="preferredForm" type="xs:boolean"/>
-      <xs:attribute name="status">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="authorized"/>
-               <xs:enumeration value="alternative"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
+      <xs:attribute name="status" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="nameEntrySet">
