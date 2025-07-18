@@ -160,14 +160,6 @@
                </attribute>
             </optional>
             <optional>
-               <attribute name="coverageEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherCoverageEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
                <attribute name="detailLevelEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
@@ -176,42 +168,10 @@
                </attribute>
             </optional>
             <optional>
-               <attribute name="descriptionOfComponentsTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherDescriptionOfComponentsTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
                <attribute name="dateEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">iso8601</value>
                      <value type="token" datatypeLibrary="" ns="">otherDateEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="extentTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherExtentTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="formAvailableTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherFormAvailableTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="functionTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherFunctionTypeEncoding</value>
                   </choice>
                </attribute>
             </optional>
@@ -234,14 +194,6 @@
                      <value type="token" datatypeLibrary="" ns="">iso639-5</value>
                      <value type="token" datatypeLibrary="" ns="">ietf-bcp-47</value>
                      <value type="token" datatypeLibrary="" ns="">otherLanguageEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="levelEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherLevelEncoding</value>
                   </choice>
                </attribute>
             </optional>
@@ -322,14 +274,6 @@
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
                      <value type="token" datatypeLibrary="" ns="">otherTargetTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
-               <attribute name="unitDateTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherUnitDateTypeEncoding</value>
                   </choice>
                </attribute>
             </optional>

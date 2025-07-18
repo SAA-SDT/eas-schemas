@@ -96,14 +96,6 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="coverageEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherCoverageEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
       <xs:attribute name="detailLevelEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">
@@ -112,43 +104,11 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="descriptionOfComponentsTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherDescriptionOfComponentsTypeEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
       <xs:attribute name="dateEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="iso8601"/>
                <xs:enumeration value="otherDateEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="extentTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherExtentTypeEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="formAvailableTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherFormAvailableTypeEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="functionTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherFunctionTypeEncoding"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
@@ -171,14 +131,6 @@
                <xs:enumeration value="iso639-5"/>
                <xs:enumeration value="ietf-bcp-47"/>
                <xs:enumeration value="otherLanguageEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="levelEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherLevelEncoding"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
@@ -259,14 +211,6 @@
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
                <xs:enumeration value="otherTargetTypeEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="unitDateTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherUnitDateTypeEncoding"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
