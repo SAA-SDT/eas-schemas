@@ -538,9 +538,6 @@
       <optional>
          <ref name="attribute.dateEncoding"/>
       </optional>
-      <optional>
-         <ref name="attribute.functionTypeEncoding"/>
-      </optional>
       <optional a:exclude-from="ead">
          <ref name="attribute.identityTypeEncoding"/>
       </optional>

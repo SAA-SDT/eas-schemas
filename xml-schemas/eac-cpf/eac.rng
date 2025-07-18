@@ -204,14 +204,6 @@
                </attribute>
             </optional>
             <optional>
-               <attribute name="functionTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherFunctionTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
                <attribute name="identityTypeEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>

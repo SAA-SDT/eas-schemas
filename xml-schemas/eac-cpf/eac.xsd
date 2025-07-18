@@ -140,14 +140,6 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="functionTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherFunctionTypeEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
       <xs:attribute name="identityTypeEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">
