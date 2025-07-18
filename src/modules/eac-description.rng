@@ -11,7 +11,7 @@
                 <ref name="element.demographicDescriptions"/>
             </optional>
             <optional>
-                <ref name="element.functions"/>
+                <ref name="element.functionsPerformed"/>
             </optional>
             <optional>
                 <ref name="element.languagesUsed"/>
@@ -65,6 +65,23 @@
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="model.all-dates.choice"/>
             <ref name="element.descriptiveNote.optional"/> 
+        </element>
+    </define>
+    
+    <define name="element.functionPerformed">
+        <element name="functionPerformed">
+            <ref name="model.single-element-group"/>
+        </element>
+    </define>
+    
+    <define name="element.functionsPerformed">
+        <element name="functionsPerformed">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <oneOrMore>
+                <ref name="element.functionPerformed"/>
+            </oneOrMore>
+            <ref name="element.descriptiveNote.optional"/>
         </element>
     </define>
     

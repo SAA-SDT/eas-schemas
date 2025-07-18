@@ -467,7 +467,9 @@
          <xs:element type="eac:demographicDescriptions"
                      name="demographicDescriptions"
                      minOccurs="0"/>
-         <xs:element type="eac:functions" name="functions" minOccurs="0"/>
+         <xs:element type="eac:functionsPerformed"
+                     name="functionsPerformed"
+                     minOccurs="0"/>
          <xs:element type="eac:languagesUsed" name="languagesUsed" minOccurs="0"/>
          <xs:element type="eac:legalStatuses" name="legalStatuses" minOccurs="0"/>
          <xs:element type="eac:localDescriptions" name="localDescriptions" minOccurs="0"/>
@@ -774,9 +776,11 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="functions">
+   <xs:complexType name="functionsPerformed">
       <xs:sequence>
-         <xs:element type="eac:function" name="function" maxOccurs="unbounded"/>
+         <xs:element type="eac:functionPerformed"
+                     name="functionPerformed"
+                     maxOccurs="unbounded"/>
          <xs:element type="eac:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
@@ -1260,7 +1264,7 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="function">
+   <xs:complexType name="functionPerformed">
       <xs:sequence>
          <xs:element type="eac:term" name="term" maxOccurs="unbounded"/>
          <xs:choice minOccurs="0">
@@ -1274,7 +1278,6 @@
                      maxOccurs="unbounded"/>
          <xs:element type="eac:descriptiveNote" name="descriptiveNote" minOccurs="0"/>
       </xs:sequence>
-      <xs:attribute name="functionType" type="xs:token"/>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
