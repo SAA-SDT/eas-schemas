@@ -843,6 +843,9 @@
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
+      <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
+      <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
+      <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="citedRange" mixed="true">
