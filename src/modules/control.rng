@@ -61,13 +61,6 @@
         </element>
     </define>
     
-    <define name="element.eventDescription">
-        <element name="eventDescription">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="model.mixed-content.optional"/>
-        </element>
-    </define>
-    
     <define name="element.languageDeclaration">
         <element name="languageDeclaration">
             <ref name="attribute-group.global-plus-lang-and-script.optional"/>
