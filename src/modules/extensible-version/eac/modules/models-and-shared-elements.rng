@@ -220,15 +220,6 @@
          <data type="normalizedString"/>
       </element>
    </define>
-   <define name="element.head.optional">
-      <optional>
-         <element name="head">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <ref name="model.mixed-content.optional"/>
-         </element>
-      </optional>
-   </define>
    <define name="element.identityId">
       <element name="identityId">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
