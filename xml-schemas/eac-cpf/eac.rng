@@ -1537,10 +1537,8 @@
             </interleave>
             <optional>
                <attribute name="status" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">authorized</value>
-                     <value type="token" datatypeLibrary="" ns="">alternative</value>
-                  </choice>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <interleave>
@@ -1703,10 +1701,8 @@
             </optional>
             <optional>
                <attribute name="status" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">authorized</value>
-                     <value type="token" datatypeLibrary="" ns="">alternative</value>
-                  </choice>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <interleave>
@@ -2296,10 +2292,8 @@
             </optional>
             <optional>
                <attribute name="status" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">authorized</value>
-                     <value type="token" datatypeLibrary="" ns="">alternative</value>
-                  </choice>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <oneOrMore>
@@ -6121,7 +6115,8 @@
             </interleave>
             <optional>
                <attribute name="status" ns="">
-                  <value type="token" datatypeLibrary="" ns="">unknown</value>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <text/>
@@ -7574,7 +7569,8 @@
             </interleave>
             <optional>
                <attribute name="status" ns="">
-                  <value type="token" datatypeLibrary="" ns="">unknown</value>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <text/>
@@ -7702,10 +7698,8 @@
             </interleave>
             <optional>
                <attribute name="status" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">ongoing</value>
-                     <value type="token" datatypeLibrary="" ns="">unknown</value>
-                  </choice>
+                  <data type="token"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
                </attribute>
             </optional>
             <text/>

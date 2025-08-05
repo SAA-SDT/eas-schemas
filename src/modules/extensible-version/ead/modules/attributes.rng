@@ -233,40 +233,10 @@
          </attribute>
       </optional>
    </define>
-   <!-- new, for EAD4.  See other options in use for EAC 2.0.  If we change the approach, we will need handle the EAC status variations separately, in a new way -->
    <define name="attribute.status.optional">
       <optional>
          <attribute name="status">
             <data type="token"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="attribute.status.authorized-or-alternative.optional">
-      <optional>
-         <attribute name="status">
-            <choice>
-               <value>authorized</value>
-               <value>alternative</value>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="attribute.status.ongoing-or-unknown.optional">
-      <optional>
-         <attribute name="status">
-            <choice>
-               <value>ongoing</value>
-               <value>unknown</value>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="attribute.status.unknown.optional">
-      <optional>
-         <attribute name="status">
-            <choice>
-               <value>unknown</value>
-            </choice>
          </attribute>
       </optional>
    </define>
