@@ -79,7 +79,6 @@
       </element>
    </define>
    <!-- regroup what's above later on -->
-   <!-- can this be combined now??? I did. Fix, if needed, after checking with EAC -->
    <define name="element.citedRange">
       <element name="citedRange">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -268,6 +267,22 @@
          </zeroOrMore>
       </element>
    </define>
+   <define name="element.narrativeEvent">
+      <element name="narrativeEvent">
+         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+         <ref name="attribute-group.assertion-reference.optional"/>
+         <oneOrMore>
+            <ref name="element.date"/>
+         </oneOrMore>
+         <zeroOrMore>
+            <choice>
+               <ref name="element.agent"/>
+               <ref name="element.placeName"/>
+               <ref name="element.eventDescription"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
    <define name="element.objectXMLWrap.optional">
       <optional>
          <element name="objectXMLWrap">
@@ -325,22 +340,6 @@
          <ref name="attribute-group.assertion-reference.optional"/>
          <ref name="attribute.countryCode.optional"/>
          <text/>
-      </element>
-   </define>
-   <define name="element.narrativeEvent">
-      <element name="narrativeEvent">
-         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute-group.assertion-reference.optional"/>
-         <ref name="element.date"/>
-         <optional>
-            <ref name="element.agent"/>
-         </optional>
-         <optional>
-            <ref name="element.placeName"/>
-         </optional>
-         <zeroOrMore>
-            <ref name="element.eventDescription"/>
-         </zeroOrMore>
       </element>
    </define>
    <define name="element.recordTypeSpecificStatement">

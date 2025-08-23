@@ -7577,15 +7577,15 @@
                   </attribute>
                </optional>
             </interleave>
-            <ref name="date"/>
-            <optional>
-               <ref name="agent"/>
-            </optional>
-            <optional>
-               <ref name="placeName"/>
-            </optional>
+            <oneOrMore>
+               <ref name="date"/>
+            </oneOrMore>
             <zeroOrMore>
-               <ref name="eventDescription"/>
+               <choice>
+                  <ref name="agent"/>
+                  <ref name="placeName"/>
+                  <ref name="eventDescription"/>
+               </choice>
             </zeroOrMore>
          </group>
       </element>

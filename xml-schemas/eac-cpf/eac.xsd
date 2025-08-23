@@ -1457,13 +1457,12 @@
    </xs:complexType>
    <xs:complexType name="narrativeEvent">
       <xs:sequence>
-         <xs:element type="eac:date" name="date"/>
-         <xs:element type="eac:agent" name="agent" minOccurs="0"/>
-         <xs:element type="eac:placeName" name="placeName" minOccurs="0"/>
-         <xs:element type="eac:eventDescription"
-                     name="eventDescription"
-                     minOccurs="0"
-                     maxOccurs="unbounded"/>
+         <xs:element type="eac:date" name="date" maxOccurs="unbounded"/>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element type="eac:agent" name="agent"/>
+            <xs:element type="eac:placeName" name="placeName"/>
+            <xs:element type="eac:eventDescription" name="eventDescription"/>
+         </xs:choice>
       </xs:sequence>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
