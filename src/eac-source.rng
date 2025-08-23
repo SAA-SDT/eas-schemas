@@ -46,7 +46,8 @@
     </define>
     <define name="element.multipleIdentities">
         <element name="multipleIdentities">
-            <ref name="attribute-group.global.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="element.cpfDescription"/>
             <oneOrMore>
                 <ref name="element.cpfDescription"/>
