@@ -116,14 +116,6 @@
                </optional>
             </interleave>
             <optional>
-               <attribute name="addressLineTypeEncoding" ns="">
-                  <choice>
-                     <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherAddressLineTypeEncoding</value>
-                  </choice>
-               </attribute>
-            </optional>
-            <optional>
                <attribute name="agentTypeEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
