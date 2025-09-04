@@ -52,14 +52,6 @@
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:attribute name="addressLineTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherAddressLineTypeEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
       <xs:attribute name="agentTypeEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">

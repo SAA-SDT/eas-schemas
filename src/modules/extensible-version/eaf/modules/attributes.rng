@@ -536,9 +536,6 @@
    </define>
    <define name="attribute-group.control-encodings">
       <optional>
-         <ref name="attribute.addressLineTypeEncoding"/>
-      </optional>
-      <optional>
          <ref name="attribute.agentTypeEncoding"/>
       </optional>
       <optional>

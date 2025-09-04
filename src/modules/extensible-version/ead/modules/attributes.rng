@@ -535,7 +535,7 @@
       </zeroOrMore>
    </define>
    <define name="attribute-group.control-encodings">
-      <optional>
+      <optional a:exclude-from="eaf">
          <ref name="attribute.addressLineTypeEncoding"/>
       </optional>
       <optional>
