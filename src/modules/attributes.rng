@@ -132,7 +132,7 @@
         </optional>
     </define>
      
-    <define name="attribute.functionStatusEncoding">
+    <define name="attribute.functionStatusEncoding" a:exclude-from="eac ead">
         <attribute name="functionStatusEncoding" a:defaultValue="EASList">
             <choice>
                 <value>EASList</value>
