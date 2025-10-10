@@ -542,9 +542,6 @@
          <ref name="attribute.audienceEncoding"/>
       </optional>
       <optional>
-         <ref name="attribute.contactLineTypeEncoding"/>
-      </optional>
-      <optional>
          <ref name="attribute.countryEncoding"/>
       </optional>
       <optional>
@@ -564,9 +561,6 @@
       </optional>
       <optional>
          <ref name="attribute.maintenanceStatusEncoding"/>
-      </optional>
-      <optional>
-         <ref name="attribute.placeTypeEncoding"/>
       </optional>
       <optional>
          <ref name="attribute.publicationStatusEncoding"/>

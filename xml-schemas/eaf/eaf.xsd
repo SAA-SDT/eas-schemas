@@ -68,14 +68,6 @@
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="contactLineTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherContactLineTypeEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
       <xs:attribute name="countryEncoding">
          <xs:simpleType>
             <xs:restriction base="xs:token">
@@ -139,14 +131,6 @@
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
                <xs:enumeration value="otherMaintenanceStatusEncoding"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="placeTypeEncoding">
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherPlaceTypeEncoding"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>

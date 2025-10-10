@@ -544,7 +544,7 @@
       <optional>
          <ref name="attribute.audienceEncoding"/>
       </optional>
-      <optional>
+      <optional a:exclude-from="eaf">
          <ref name="attribute.contactLineTypeEncoding"/>
       </optional>
       <optional>
@@ -583,7 +583,7 @@
       <optional>
          <ref name="attribute.maintenanceStatusEncoding"/>
       </optional>
-      <optional>
+      <optional a:exclude-from="eaf">
          <ref name="attribute.placeTypeEncoding"/>
       </optional>
       <optional>
