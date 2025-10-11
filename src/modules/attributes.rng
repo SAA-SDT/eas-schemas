@@ -136,7 +136,7 @@
         <attribute name="functionStatusEncoding" a:defaultValue="EASList">
             <choice>
                 <value>EASList</value>
-                <value>otherDetailLevelEncoding</value>
+                <value>otherFunctionStatusEncoding</value>
             </choice>
         </attribute>  
     </define>
