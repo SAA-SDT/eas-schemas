@@ -163,7 +163,7 @@
                <attribute name="functionStatusEncoding" ns="">
                   <choice>
                      <value type="token" datatypeLibrary="" ns="">EASList</value>
-                     <value type="token" datatypeLibrary="" ns="">otherDetailLevelEncoding</value>
+                     <value type="token" datatypeLibrary="" ns="">otherFunctionStatusEncoding</value>
                   </choice>
                </attribute>
             </optional>

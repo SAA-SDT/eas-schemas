@@ -100,7 +100,7 @@
          <xs:simpleType>
             <xs:restriction base="xs:token">
                <xs:enumeration value="EASList"/>
-               <xs:enumeration value="otherDetailLevelEncoding"/>
+               <xs:enumeration value="otherFunctionStatusEncoding"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
