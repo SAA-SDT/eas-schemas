@@ -131,13 +131,14 @@
             </attribute>
         </optional>
     </define>
- 
-    <define name="attribute.functionType.optional">
-        <optional>
-            <attribute name="functionType">
-                <data type="token"/>
-            </attribute>
-        </optional>
+     
+    <define name="attribute.functionStatusEncoding" a:exclude-from="eac ead">
+        <attribute name="functionStatusEncoding" a:defaultValue="EASList">
+            <choice>
+                <value>EASList</value>
+                <value>otherFunctionStatusEncoding</value>
+            </choice>
+        </attribute>  
     </define>
     
     <define name="attribute.functionStatus.optional">
@@ -145,6 +146,14 @@
             <attribute name="functionStatus">
                 <data type="token"/>
             </attribute>  
+        </optional>
+    </define>
+    
+    <define name="attribute.functionType.optional">
+        <optional>
+            <attribute name="functionType">
+                <data type="token"/>
+            </attribute>
         </optional>
     </define>
  
@@ -638,6 +647,9 @@
         </optional>
         <optional a:exclude-from="eac eaf">
             <ref name="attribute.formAvailableTypeEncoding"/>
+        </optional>
+        <optional a:exclude-from="eac ead">
+            <ref name="attribute.functionStatusEncoding"/>
         </optional>
         <optional a:exclude-from="eac eaf">
             <ref name="attribute.functionTypeEncoding"/>

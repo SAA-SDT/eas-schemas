@@ -115,16 +115,16 @@
          </attribute>
       </optional>
    </define>
-   <define name="attribute.functionType.optional">
+   <define name="attribute.functionStatus.optional">
       <optional>
-         <attribute name="functionType">
+         <attribute name="functionStatus">
             <data type="token"/>
          </attribute>
       </optional>
    </define>
-   <define name="attribute.functionStatus.optional">
+   <define name="attribute.functionType.optional">
       <optional>
-         <attribute name="functionStatus">
+         <attribute name="functionType">
             <data type="token"/>
          </attribute>
       </optional>
