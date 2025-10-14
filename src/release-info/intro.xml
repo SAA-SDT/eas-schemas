@@ -10,7 +10,7 @@
 
   *****************************************************************
   *                                                               *                
-  *                            EAC-CPF 2.0                        *
+  *                            EAC-CPF 3.0.0                      *
   *                                                               *       
   *****************************************************************
 
@@ -57,4 +57,23 @@
     
  -->
   </ead>
+  <eaf>
+    <!--
+   
+    *****************************************************************
+    *                                                               *                
+    *                            EAF 1.0                            *
+    *                                                               *       
+    *****************************************************************
+    
+    This schema has been generated automatically. 
+   
+    If you would like to contribute to this project, please see:
+    https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/Contributing-to-the-EAS-standards
+  
+    Comments, questions, and suggestions may be addressed to: 
+    ts-eas@archivists.org
+    
+    -->
+  </eaf>
 </preambles>

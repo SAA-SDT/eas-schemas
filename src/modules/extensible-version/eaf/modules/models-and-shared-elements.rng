@@ -79,11 +79,6 @@
       </element>
    </define>
    <!-- regroup what's above later on -->
-   <define name="element.biogHist" a:exclude-from="eaf">
-      <element name="biogHist">
-         <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
-      </element>
-   </define>
    <define name="element.citedRange">
       <element name="citedRange">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
@@ -439,7 +434,7 @@
       <element>
          <anyName>
             <except>
-               <nsName ns="https://archivists.org/ns/eac/v3" a:exclude-from="ead eaf"/>
+               <nsName ns="https://archivists.org/ns/eaf/v1" a:exclude-from="eac ead"/>
             </except>
          </anyName>
          <zeroOrMore>
@@ -505,18 +500,6 @@
          <ref name="element.dateRange"/>
       </optional>
       <ref name="model.narrative-group.optional"/>
-   </define>
-   <define name="model.ead-narrative-elements-plus-narrativeEvent"
-           a:exclude-from="eaf">
-      <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-      <ref name="attribute-group.assertion-reference.optional"/>
-      <optional>
-         <ref name="element.abstract"/>
-      </optional>
-      <ref name="model.narrative-group.optional"/>
-      <zeroOrMore>
-         <ref name="element.narrativeEvent"/>
-      </zeroOrMore>
    </define>
    <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
    <define name="model.ead-narrative-elements-plus-relations">

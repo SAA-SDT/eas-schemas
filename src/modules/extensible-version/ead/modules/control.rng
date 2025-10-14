@@ -5,7 +5,7 @@
    <define name="element.agencyCode">
       <element name="agencyCode">
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="attribute.status.optional" a:exclude-from="eac"/>
+         <ref name="attribute.status.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
          <text/>
       </element>
@@ -19,7 +19,7 @@
    </define>
    <define name="element.control">
       <element name="control">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute-group.control-encodings"/>
          <ref name="attribute.detailLevel.optional"/>
          <optional>
@@ -53,12 +53,6 @@
          <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <ref name="attribute.standardDateTime.optional"/>
          <text/>
-      </element>
-   </define>
-   <define name="element.eventDescription">
-      <element name="eventDescription">
-         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-         <ref name="model.mixed-content.optional"/>
       </element>
    </define>
    <define name="element.languageDeclaration">
@@ -124,7 +118,7 @@
    <define name="element.otherAgencyCode">
       <element name="otherAgencyCode">
          <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-         <ref name="attribute.status.optional" a:exclude-from="eac"/>
+         <ref name="attribute.status.optional"/>
          <ref name="attribute-group.linked-data.optional"/>
          <text/>
       </element>
@@ -170,7 +164,7 @@
    </define>
    <define name="element.sources">
       <element name="sources">
-         <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+         <ref name="attribute-group.global-plus-lang-and-script.optional"/>
          <oneOrMore>
             <ref name="element.source"/>
          </oneOrMore>

@@ -32,8 +32,8 @@
     </define>
     
     <!-- check the ordering, due to the XSD 1.0 limitations -->
-    <define name="model.archDesc.levels-of-description">
-        <ref name="attribute-group.global-plus-base-lang-and-script.optional"/>
+    <define name="model.archDesc.levels-of-description" a:exclude-from="eac eaf">
+        <ref name="attribute-group.global-plus-lang-and-script.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
         <ref name="attribute-group.linked-data.optional"/>
         <ref name="attribute.level.optional"/>
@@ -55,7 +55,7 @@
         </zeroOrMore>
     </define>
     
-    <define name="model.narrative-element-name-list">
+    <define name="model.narrative-element-name-list" a:exclude-from="eac eaf">
         <oneOrMore>
             <choice>
                 <ref name="element.accessConditions"/>
@@ -66,11 +66,11 @@
                 <ref name="element.custodHist"/>
                 <ref name="element.filePlan"/>
                 <ref name="element.otherDescriptiveInfo"/>
-                <ref name="element.otherFindAid"/>
-                <ref name="element.physicalOrTechnicalRequirements"/>
+                <ref name="element.otherDescription"/>
                 <ref name="element.preferCite"/>
                 <ref name="element.processInfo"/>
                 <ref name="element.publicationNote"/>
+                <ref name="element.recordTypeSpecificStatement"/>
                 <ref name="element.relatedMaterial"/>
                 <ref name="element.scopeContent"/>
                 <ref name="element.separatedMaterial"/>
@@ -83,42 +83,12 @@
     
     <define name="element.agent">
         <element name="agent">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
-            <oneOrMore>
-                <ref name="element.agentName"/>
-            </oneOrMore>
-            <optional>
-                <ref name="model.all-dates.choice"/>
-            </optional>
-            <zeroOrMore>
-                <choice>
-                    <ref name="element.agentType"/>
-                    <ref name="element.agentRole"/>
-                    <ref name="element.relationType"/>
-                    <ref name="element.placeName"/>
-                </choice>
-            </zeroOrMore>
-            <ref name="element.descriptiveNote.optional"/>
-        </element>
-    </define>
-    
-    <define name="element.agentName">
-        <element name="agentName">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.agentType">
-        <element name="agentType">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <text/>
+            <ref name="attribute.agentType.optional"/>
+            <ref name="model.ead-entity-elements"/>
+            <ref name="element.descriptiveNote.optional"/>  
         </element>
     </define>
     
@@ -167,10 +137,9 @@
     
     <!-- regroup what's above later on -->
     
-    <!-- can this be combined now??? I did. Fix, if needed, after checking with EAC -->
-    <define name="element.biogHist">
+    <define name="element.biogHist" a:exclude-from="eaf">
         <element name="biogHist">
-            <ref name="model.ead-narrative-elements"/>
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
         </element>
     </define>
     
@@ -209,8 +178,7 @@
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.standard-date-attributes.optional"/>
-            <ref name="attribute.status.optional" a:exclude-from="eac"/>
-            <ref name="attribute.status.unknown.optional" a:exclude-from="ead"/>
+            <ref name="attribute.status.optional"/>
             <text/>
         </element>
     </define>  
@@ -252,8 +220,17 @@
                 <oneOrMore>
                     <ref name="element.p"/>
                 </oneOrMore>
+                <ref name="element.objectXMLWrap.optional"/>
             </element>
         </optional>
+    </define>
+    
+    <define name="element.eventDescription">
+        <element name="eventDescription">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.mixed-content.optional"/>
+        </element>
     </define>
     
     <define name="element.formattingExtension">
@@ -287,42 +264,20 @@
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.standard-date-attributes.optional"/>
-            <ref name="attribute.status.optional" a:exclude-from="eac"/>
-            <ref name="attribute.status.unknown.optional" a:exclude-from="ead"/>
+            <ref name="attribute.status.optional"/>
             <text/>
         </element>
     </define>
     
     <define name="element.function">
         <element name="function">
-            <ref name="model.single-element-group" a:exclude-from="ead"/>
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional" a:exclude-from="eac"/>
-            <ref name="attribute-group.linked-data.optional" a:exclude-from="eac"/>
-            <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac"/>
-            <oneOrMore a:exclude-from="eac">
-                <ref name="element.term"/>
-            </oneOrMore>
-            <optional a:exclude-from="eac">
-                <ref name="model.all-dates.choice"/>
-            </optional>
-            <zeroOrMore a:exclude-from="eac">
-                <ref name="element.placeName"/>
-            </zeroOrMore>
-            <!-- 
-            In a future revision of EAC-CPF, <targetType>, <targetRole>, and <relationType> 
-            would need to be added as optional and repeatable sub-elements of <function> 
-            (we should add these to the single-element-group, if kept as is)
-            -->
-            <zeroOrMore a:exclude-from="eac">
-                <ref name="element.targetType"/>
-            </zeroOrMore>
-            <zeroOrMore a:exclude-from="eac">
-                <ref name="element.targetRole"/>
-            </zeroOrMore>
-            <zeroOrMore a:exclude-from="eac">
-                <ref name="element.relationType"/>
-            </zeroOrMore>
-            <ref name="element.descriptiveNote.optional" a:exclude-from="eac"/>  
+            <ref name="attribute-group.global-plus-lang-and-script.optional" a:exclude-from="eac eaf"/>
+            <ref name="attribute-group.linked-data.optional" a:exclude-from="eac eaf"/>
+            <ref name="attribute-group.assertion-reference.optional" a:exclude-from="eac eaf"/>
+            <ref name="attribute.functionType.optional"/>
+            <ref name="model.single-element-group.no-local-type" a:exclude-from="ead"/>
+            <ref name="model.ead-entity-elements" a:exclude-from="eac eaf"/>
+            <ref name="element.descriptiveNote.optional" a:exclude-from="eac eaf"/>  
         </element>
     </define>
     
@@ -334,15 +289,23 @@
             <data type="normalizedString"/>
         </element>
     </define>
+    
+    <define name="element.identityId">
+        <element name="identityId">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
 
-    <define name="element.head.optional">
-        <optional>
-            <element name="head">
-                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-                <ref name="attribute-group.assertion-reference.optional"/>
-                <ref name="model.mixed-content.optional"/>
-            </element>
-        </optional>
+    <define name="element.label">
+        <element name="label">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
     </define>
 
     <define name="element.language">
@@ -360,6 +323,53 @@
         <element name="legalStatus">
             <ref name="model.single-element-group"/>
         </element>
+    </define>
+    
+    <define name="element.nameEntry">
+        <element name="nameEntry">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.preferredForm.optional"/>
+            <ref name="attribute.status.optional"/>
+            <oneOrMore>
+                <ref name="element.part"/>
+            </oneOrMore>
+            <zeroOrMore>
+                <ref name="element.useDates"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.nameEntrySet">
+        <element name="nameEntrySet">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="element.nameEntry"/>
+            <oneOrMore>
+                <ref name="element.nameEntry"/>
+            </oneOrMore>
+            <zeroOrMore>
+                <ref name="element.useDates"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.narrativeEvent">
+        <element name="narrativeEvent">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <oneOrMore>            
+                <ref name="element.date"/>
+            </oneOrMore>
+            <zeroOrMore>
+                <choice>
+                    <ref name="element.agent"/>
+                    <ref name="element.placeName"/>
+                    <ref name="element.eventDescription"/>
+                </choice>
+            </zeroOrMore>
+        </element>   
     </define>
 
     <define name="element.objectXMLWrap.optional">
@@ -387,28 +397,32 @@
         </element>
     </define>
     
-    <define name="element.place">
+    <define name="element.place" combine="interleave">
         <element name="place">
-            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
             <ref name="attribute-group.linked-data.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.placeType.optional"/>
             <oneOrMore>
-                <choice>
-                    <ref name="element.placeName"/>
-                    <ref name="element.placeRole"/>
-                    <ref name="element.placeType"/>
-                    <ref name="element.geographicCoordinates"/>
-                    <ref name="element.address"/>
-                    <ref name="element.contact"/>
-                </choice>
+                <ref name="element.label"/>
             </oneOrMore>
             <optional>
                 <ref name="model.all-dates.choice"/>
             </optional>
-            <optional>
-                <ref name="element.relationType"/>
-            </optional>
-            <ref name="element.descriptiveNote.optional"/> 
+            <zeroOrMore>
+                <ref name="element.role"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="element.relationship"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <choice>
+                    <ref name="element.address"/>
+                    <ref name="element.contact"/>
+                    <ref name="element.geographicCoordinates"/>
+                </choice>
+            </zeroOrMore>
+            <ref name="element.descriptiveNote.optional"/>  
         </element>
     </define>
     
@@ -421,28 +435,17 @@
             <text/>
         </element>
     </define>
-    
-    <define name="element.placeRole">
-        <element name="placeRole">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <text/>
-        </element>
-    </define>
-    
-    <define name="element.placeType">
-        <element name="placeType">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
-            <ref name="attribute-group.linked-data.optional"/>
-            <ref name="attribute-group.assertion-reference.optional"/>
-            <text/>
+
+    <define name="element.recordTypeSpecificStatement">
+        <element name="recordTypeSpecificStatement">
+            <ref name="model.ead-narrative-elements"/>
+            <ref name="element.objectXMLWrap.optional"/>
         </element>
     </define>
 
     <define name="element.reference">
         <element name="reference">
-            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.links.optional"/>
             <zeroOrMore>
@@ -454,7 +457,28 @@
             </zeroOrMore>
         </element>
     </define>
-
+    
+    <define name="element.referringString">
+        <element name="referringString">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute.normalizedForm.optional"/>
+            <ref name="attribute.referredEntityType.optional"/>
+            <ref name="attribute.referredEntityRelationship.optional"/>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="element.role">
+        <element name="role">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <text/>
+        </element>
+    </define>
+    
     <define name="element.span">
         <element name="span">
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -477,9 +501,16 @@
             <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
             <ref name="attribute-group.assertion-reference.optional"/>
             <ref name="attribute-group.standard-date-attributes.optional"/>
-            <ref name="attribute.status.optional" a:exclude-from="eac"/>
-            <ref name="attribute.status.ongoing-or-unknown.optional" a:exclude-from="ead"/>
+            <ref name="attribute.status.optional"/>
             <text/>
+        </element>
+    </define>
+    
+    <define name="element.useDates">
+        <element name="useDates">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.all-dates.choice"/>
         </element>
     </define>
     
@@ -508,8 +539,9 @@
         <element>
             <anyName>
                 <except>
-                    <nsName ns="https://archivists.org/ns/eac/v2" a:exclude-from="ead"/>
-                    <nsName ns="https://archivists.org/ns/ead/v4" a:exclude-from="eac"/>
+                    <nsName ns="https://archivists.org/ns/eac/v3" a:exclude-from="ead eaf"/>
+                    <nsName ns="https://archivists.org/ns/ead/v4" a:exclude-from="eac eaf"/>
+                    <nsName ns="https://archivists.org/ns/eaf/v1" a:exclude-from="eac ead"/>
                 </except>
             </anyName>
             <zeroOrMore>
@@ -543,6 +575,24 @@
         <ref name="element.descriptiveNote.optional"/>
     </define>
     
+    <define name="model.ead-entity-elements" combine="interleave">
+        <oneOrMore>
+            <ref name="element.label"/>
+        </oneOrMore>
+        <optional>
+            <ref name="model.all-dates.choice"/>
+        </optional>
+        <zeroOrMore>
+            <ref name="element.placeName"/>
+        </zeroOrMore>
+        <zeroOrMore>
+            <ref name="element.role"/>
+        </zeroOrMore>
+        <zeroOrMore>
+            <ref name="element.relationship"/>
+        </zeroOrMore>
+    </define>
+    
     <define name="model.ead-narrative-elements">
         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
@@ -552,6 +602,31 @@
         <ref name="model.narrative-group.optional"/>
     </define>
     
+    <define name="model.ead-narrative-elements-plus-dateRange">
+        <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+        <ref name="attribute-group.assertion-reference.optional"/>
+        <optional>
+            <ref name="element.abstract"/>
+        </optional>
+        <optional>
+            <ref name="element.dateRange"/>
+        </optional>
+        <ref name="model.narrative-group.optional"/>
+    </define>
+    
+    <define name="model.ead-narrative-elements-plus-narrativeEvent" a:exclude-from="eaf">
+        <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+        <ref name="attribute-group.assertion-reference.optional"/>
+        <optional>
+            <ref name="element.abstract"/>
+        </optional>
+        <ref name="model.narrative-group.optional"/>
+        <zeroOrMore>
+            <ref name="element.narrativeEvent"/>
+        </zeroOrMore>
+    </define>
+
+    
     <!-- note: this will continue to simplify, once table is removed, etc... for bibliography (now 'publicationNote'), otherFindAid, separatedMaterial, and relatedMaterial.... rename it to something that makes sense, and remodel it -->
     <define name="model.ead-narrative-elements-plus-relations">
         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
@@ -560,10 +635,85 @@
         <optional>
             <ref name="element.abstract"/>
         </optional>
-        <ref name="model.narrative-group.optional"/>
         <optional>
             <ref name="element.relations"/>
         </optional>
+        <ref name="model.narrative-group.optional"/>
+    </define>
+    
+    <define name="model.ead-dimensions-extent">
+        <choice>
+            <group>
+                <element name="quantity">
+                    <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                    <ref name="attribute-group.assertion-reference.optional"/>
+                    <ref name="attribute.approximate.optional"/>
+                    <text/>
+                </element>
+                <optional>
+                    <element name="unitOfMeasurement">
+                        <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                        <ref name="attribute-group.assertion-reference.optional"/>
+                        <ref name="attribute-group.linked-data.optional"/>
+                        <text/>
+                    </element>
+                </optional>
+            </group>
+            <group>
+                <element name="unitOfMeasurement">
+                    <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                    <ref name="attribute-group.assertion-reference.optional"/>
+                    <ref name="attribute-group.linked-data.optional"/>
+                    <text/>
+                </element>
+            </group>
+        </choice>
+    </define>
+
+    <!-- new... reorder / model, once finalized -->
+    <define name="model.ead-formAvailable" a:exclude-from="eac eaf">
+        <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+        <ref name="attribute-group.assertion-reference.optional"/>
+        <ref name="attribute-group.linked-data.optional"/>
+        <ref name="attribute.coverage.optional"/>
+        <ref name="attribute.formAvailableType.optional"/>
+        <!-- order based on design principle, namely:https://github.com/SAA-SDT/TS-EAS-subteam-notes/blob/master/schemas-subteam/working-documents/20210112_ElementsOrder_Final_EAC-CPF.pdf-->
+        <oneOrMore>
+            <ref name="element.label"/>
+        </oneOrMore>
+        <optional>
+            <ref name="model.all-dates.choice"/>
+        </optional>
+        <optional>
+            <ref name="element.relations"/>
+        </optional>
+        <zeroOrMore>
+            <choice>
+                <ref name="element.formAvailableId"/>
+                <ref name="element.placeName"/>
+                <ref name="element.role"/>
+            </choice>
+        </zeroOrMore>
+        <zeroOrMore>
+            <choice>
+                <ref name="element.container"/>
+                <ref name="element.physicalDescription"/>
+            </choice>
+        </zeroOrMore>
+        <zeroOrMore>
+            <choice>
+                <ref name="element.accessConditions"/>
+                <ref name="element.accruals"/>
+                <ref name="element.arrangement"/>
+                <ref name="element.custodHist"/>
+                <ref name="element.physicalOrTechnicalRequirements"/>
+                <ref name="element.processInfo"/>
+                <ref name="element.separatedMaterial"/>
+                <ref name="element.sourceOfAcquisition"/>
+                <ref name="element.useConditions"/>
+            </choice>
+        </zeroOrMore>
+        <ref name="element.descriptiveNote.optional"/>
     </define>
     
     <define name="model.mixed-content.optional">
@@ -606,6 +756,24 @@
         <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
         <ref name="attribute-group.linked-data.optional"/>
         <ref name="attribute-group.assertion-reference.optional"/>
+        <!-- if this goes, we can remove 'term' entirely -->
+        <oneOrMore>
+            <ref name="element.term"/>
+        </oneOrMore>
+        <optional>
+            <ref name="model.all-dates.choice"/>
+        </optional>
+        <zeroOrMore>
+            <ref name="element.placeName"/>
+        </zeroOrMore>
+        <ref name="element.descriptiveNote.optional"/>  
+    </define>
+    <!-- Just EAC Function currently... oi -->
+    <define name="model.single-element-group.no-local-type">
+        <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+        <ref name="attribute-group.linked-data.optional"/>
+        <ref name="attribute-group.assertion-reference.optional"/>
+        <!-- if this goes, we can remove 'term' entirely -->
         <oneOrMore>
             <ref name="element.term"/>
         </oneOrMore>
