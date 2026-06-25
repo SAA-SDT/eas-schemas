@@ -23,11 +23,11 @@ java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/eac-cpf/eac.xsd -xsl:tr
 # EAD
 echo "Next, the EAD transformation:"
 java -cp $saxon net.sf.saxon.Transform -t -xsl:transformations/prep-source-schema-files.xsl -it schema='ead'
-java -jar $jing -s ../src/modules/extensible-version/ead/ead-source.rng > ../xml-schemas/ead/ead-4-0.rng
-java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/ead/ead-4-0.rng -xsl:transformations/add-comments-and-metadata.xsl -o:../xml-schemas/ead/ead-4-0.rng schema='ead'
-java -jar $trang -o disable-abstract-elements -o any-process-contents=lax -o any-attribute-process-contents=lax ../xml-schemas/ead/ead-4-0.rng ../xml-schemas/ead/ead-4-0.xsd
-java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/ead/ead-4-0.xsd -xsl:transformations/deglobalize-xsd.xsl -o:../xml-schemas/ead/ead-4-0.xsd schema='ead'
-java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/ead/ead-4-0.xsd -xsl:transformations/update-namespace-prefix-in-xsd.xsl -o:../xml-schemas/ead/ead-4-0.xsd schema='ead'
+java -jar $jing -s ../src/modules/extensible-version/ead/ead-source.rng > ../xml-schemas/ead/ead.rng
+java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/ead/ead.rng -xsl:transformations/add-comments-and-metadata.xsl -o:../xml-schemas/ead/ead.rng schema='ead'
+java -jar $trang -o disable-abstract-elements -o any-process-contents=lax -o any-attribute-process-contents=lax ../xml-schemas/ead/ead.rng ../xml-schemas/ead/ead.xsd
+java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/ead/ead.xsd -xsl:transformations/deglobalize-xsd.xsl -o:../xml-schemas/ead/ead.xsd schema='ead'
+java -cp $saxon net.sf.saxon.Transform -s:../xml-schemas/ead/ead.xsd -xsl:transformations/update-namespace-prefix-in-xsd.xsl -o:../xml-schemas/ead/ead.xsd schema='ead'
 
 # EAF
 echo "And last (but not least), the EAF transformation:"

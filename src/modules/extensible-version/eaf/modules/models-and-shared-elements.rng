@@ -434,7 +434,8 @@
       <element>
          <anyName>
             <except>
-               <nsName ns="https://archivists.org/ns/eaf/v1" a:exclude-from="eac ead"/>
+               <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"
+                       a:exclude-from="eac ead"/>
             </except>
          </anyName>
          <zeroOrMore>

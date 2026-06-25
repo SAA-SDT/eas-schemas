@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   
-  *****************************************************************
-  *                                                               *                
-  *                            EAF 1.0                            *
-  *                                                               *       
-  *****************************************************************
+  *******************************************************************
+  *                                                                 *
+  *                            EAF 4.0.0                            *
+  *                                                                 *
+  *******************************************************************
   
   This schema has been generated automatically. 
   
@@ -15,11 +15,14 @@
   Comments, questions, and suggestions may be addressed to: 
   ts-eas@archivists.org
   
+  For more information about the EAF team, see: 
+  https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAC-F-Sub-Team
+  
 -->
-<xs:schema xmlns:eaf="https://archivists.org/ns/eaf/v1"
+<xs:schema xmlns:eaf="https://standards.openpreservation.org/eaf/v1.0.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="https://archivists.org/ns/eaf/v1">
+           targetNamespace="https://standards.openpreservation.org/eaf/v1.0.0">
    <xs:element name="eaf">
       <xs:complexType>
          <xs:sequence>

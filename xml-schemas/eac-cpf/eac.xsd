@@ -6,13 +6,11 @@
   
   See: https://eac.staatsbibliothek-berlin.de/schemata-and-tag-library/
   
-  *****************************************************************
-  *                                                               *                
-  *                            EAC-CPF 3.0.0                      *
-  *                                                               *       
-  *****************************************************************
-  
-  *****************************************************************
+  ***********************************************************************
+  *                                                                     *                
+  *                            EAC-CPF 3.0.0                            *
+  *                                                                     *       
+  ***********************************************************************
   
   EDITORS: Society of American Archivists Technical Subcommittee on Encoded Archival Standards (TS-EAS)
   
@@ -37,14 +35,11 @@
   For more information about the EAC-CPF team, see: 
   https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAC-CPF-Sub-Team 
   
-  *****************************************************************
-  *****************************************************************
-  
 -->
-<xs:schema xmlns:eac="https://archivists.org/ns/eac/v3"
+<xs:schema xmlns:eac="https://standards.openpreservation.org/eac/v3.0.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="https://archivists.org/ns/eac/v3">
+           targetNamespace="https://standards.openpreservation.org/eac/v3.0.0">
    <xs:element name="eac">
       <xs:complexType>
          <xs:sequence>
