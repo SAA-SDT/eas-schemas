@@ -19,7 +19,7 @@
   https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAC-F-Sub-Team
   
 -->
-<xs:schema xmlns:v1.0.0="https://standards.openpreservation.org/eaf/v1.0.0"
+<xs:schema xmlns:eaf="https://standards.openpreservation.org/eaf/v1.0.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
            targetNamespace="https://standards.openpreservation.org/eaf/v1.0.0">
