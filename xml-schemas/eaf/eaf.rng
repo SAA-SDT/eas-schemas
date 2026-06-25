@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
    
-    *****************************************************************
-    *                                                               *                
-    *                            EAF 1.0                            *
-    *                                                               *       
-    *****************************************************************
+    *******************************************************************
+    *                                                                 *
+    *                            EAF 4.0.0                            *
+    *                                                                 *
+    *******************************************************************
     
     This schema has been generated automatically. 
    
@@ -15,13 +15,16 @@
     Comments, questions, and suggestions may be addressed to: 
     ts-eas@archivists.org
     
+    For more information about the EAF team, see: 
+    https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAC-F-Sub-Team
+    
     -->
 <grammar xmlns="http://relaxng.org/ns/structure/1.0">
    <start>
       <ref name="eaf"/>
    </start>
    <define name="eaf">
-      <element name="eaf" ns="https://archivists.org/ns/eaf/v1">
+      <element name="eaf" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <optional>
                <attribute name="audience" ns="">
@@ -53,7 +56,7 @@
                   <anyName>
                      <except>
                         <choice>
-                           <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                           <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                            <nsName ns=""/>
                         </choice>
                      </except>
@@ -67,7 +70,7 @@
       </element>
    </define>
    <define name="control">
-      <element name="control" ns="https://archivists.org/ns/eaf/v1">
+      <element name="control" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -92,7 +95,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -298,7 +301,8 @@
       </element>
    </define>
    <define name="functionsDescription">
-      <element name="functionsDescription" ns="https://archivists.org/ns/eaf/v1">
+      <element name="functionsDescription"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -323,7 +327,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -383,7 +387,7 @@
       </element>
    </define>
    <define name="recordId">
-      <element name="recordId" ns="https://archivists.org/ns/eaf/v1">
+      <element name="recordId" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -408,7 +412,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -439,7 +443,8 @@
       </element>
    </define>
    <define name="maintenanceAgency">
-      <element name="maintenanceAgency" ns="https://archivists.org/ns/eaf/v1">
+      <element name="maintenanceAgency"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -464,7 +469,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -539,7 +544,8 @@
       </element>
    </define>
    <define name="maintenanceHistory">
-      <element name="maintenanceHistory" ns="https://archivists.org/ns/eaf/v1">
+      <element name="maintenanceHistory"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -564,7 +570,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -594,7 +600,7 @@
       </element>
    </define>
    <define name="sources">
-      <element name="sources" ns="https://archivists.org/ns/eaf/v1">
+      <element name="sources" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -619,7 +625,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -652,7 +658,8 @@
       </element>
    </define>
    <define name="conventionDeclaration">
-      <element name="conventionDeclaration" ns="https://archivists.org/ns/eaf/v1">
+      <element name="conventionDeclaration"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -677,7 +684,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -731,7 +738,8 @@
       </element>
    </define>
    <define name="languageDeclaration">
-      <element name="languageDeclaration" ns="https://archivists.org/ns/eaf/v1">
+      <element name="languageDeclaration"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -756,7 +764,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -798,7 +806,8 @@
       </element>
    </define>
    <define name="localTypeDeclaration">
-      <element name="localTypeDeclaration" ns="https://archivists.org/ns/eaf/v1">
+      <element name="localTypeDeclaration"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -823,7 +832,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -877,7 +886,8 @@
       </element>
    </define>
    <define name="otherRecordId">
-      <element name="otherRecordId" ns="https://archivists.org/ns/eaf/v1">
+      <element name="otherRecordId"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -902,7 +912,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -962,7 +972,8 @@
       </element>
    </define>
    <define name="rightsDeclaration">
-      <element name="rightsDeclaration" ns="https://archivists.org/ns/eaf/v1">
+      <element name="rightsDeclaration"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -987,7 +998,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1041,7 +1052,7 @@
       </element>
    </define>
    <define name="identity">
-      <element name="identity" ns="https://archivists.org/ns/eaf/v1">
+      <element name="identity" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1066,7 +1077,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1134,7 +1145,8 @@
       </element>
    </define>
    <define name="description">
-      <element name="description" ns="https://archivists.org/ns/eaf/v1">
+      <element name="description"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1159,7 +1171,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1221,7 +1233,7 @@
       </element>
    </define>
    <define name="relations">
-      <element name="relations" ns="https://archivists.org/ns/eaf/v1">
+      <element name="relations" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1246,7 +1258,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1299,7 +1311,8 @@
       </element>
    </define>
    <define name="agencyCode">
-      <element name="agencyCode" ns="https://archivists.org/ns/eaf/v1">
+      <element name="agencyCode"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1324,7 +1337,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1378,7 +1391,8 @@
       </element>
    </define>
    <define name="agencyName">
-      <element name="agencyName" ns="https://archivists.org/ns/eaf/v1">
+      <element name="agencyName"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1403,7 +1417,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1451,7 +1465,8 @@
       </element>
    </define>
    <define name="otherAgencyCode">
-      <element name="otherAgencyCode" ns="https://archivists.org/ns/eaf/v1">
+      <element name="otherAgencyCode"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1476,7 +1491,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1542,7 +1557,8 @@
       </element>
    </define>
    <define name="descriptiveNote">
-      <element name="descriptiveNote" ns="https://archivists.org/ns/eaf/v1">
+      <element name="descriptiveNote"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1567,7 +1583,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1620,7 +1636,8 @@
       </element>
    </define>
    <define name="maintenanceEvent">
-      <element name="maintenanceEvent" ns="https://archivists.org/ns/eaf/v1">
+      <element name="maintenanceEvent"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1645,7 +1662,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1683,7 +1700,7 @@
       </element>
    </define>
    <define name="source">
-      <element name="source" ns="https://archivists.org/ns/eaf/v1">
+      <element name="source" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1708,7 +1725,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1787,7 +1804,7 @@
       </element>
    </define>
    <define name="reference">
-      <element name="reference" ns="https://archivists.org/ns/eaf/v1">
+      <element name="reference" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1812,7 +1829,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1898,7 +1915,7 @@
       </element>
    </define>
    <define name="shortCode">
-      <element name="shortCode" ns="https://archivists.org/ns/eaf/v1">
+      <element name="shortCode" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1923,7 +1940,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1951,7 +1968,7 @@
       </element>
    </define>
    <define name="nameEntry">
-      <element name="nameEntry" ns="https://archivists.org/ns/eaf/v1">
+      <element name="nameEntry" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -1976,7 +1993,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2073,7 +2090,8 @@
       </element>
    </define>
    <define name="nameEntrySet">
-      <element name="nameEntrySet" ns="https://archivists.org/ns/eaf/v1">
+      <element name="nameEntrySet"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -2098,7 +2116,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2164,7 +2182,8 @@
       </element>
    </define>
    <define name="classifications">
-      <element name="classifications" ns="https://archivists.org/ns/eaf/v1">
+      <element name="classifications"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -2189,7 +2208,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2254,7 +2273,8 @@
       </element>
    </define>
    <define name="identityId">
-      <element name="identityId" ns="https://archivists.org/ns/eaf/v1">
+      <element name="identityId"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -2279,7 +2299,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2359,7 +2379,8 @@
       </element>
    </define>
    <define name="functionAgents">
-      <element name="functionAgents" ns="https://archivists.org/ns/eaf/v1">
+      <element name="functionAgents"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -2384,7 +2405,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2446,7 +2467,8 @@
       </element>
    </define>
    <define name="functionDates">
-      <element name="functionDates" ns="https://archivists.org/ns/eaf/v1">
+      <element name="functionDates"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -2471,7 +2493,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2534,7 +2556,8 @@
       </element>
    </define>
    <define name="functionDescription">
-      <element name="functionDescription" ns="https://archivists.org/ns/eaf/v1">
+      <element name="functionDescription"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -2559,7 +2582,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2626,7 +2649,8 @@
       </element>
    </define>
    <define name="functionHistory">
-      <element name="functionHistory" ns="https://archivists.org/ns/eaf/v1">
+      <element name="functionHistory"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -2651,7 +2675,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2718,7 +2742,8 @@
       </element>
    </define>
    <define name="legislations">
-      <element name="legislations" ns="https://archivists.org/ns/eaf/v1">
+      <element name="legislations"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -2743,7 +2768,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2805,7 +2830,7 @@
       </element>
    </define>
    <define name="relation">
-      <element name="relation" ns="https://archivists.org/ns/eaf/v1">
+      <element name="relation" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -2830,7 +2855,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2911,7 +2936,7 @@
       </element>
    </define>
    <define name="p">
-      <element name="p" ns="https://archivists.org/ns/eaf/v1">
+      <element name="p" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -2936,7 +2961,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2991,7 +3016,8 @@
       </element>
    </define>
    <define name="objectXMLWrap">
-      <element name="objectXMLWrap" ns="https://archivists.org/ns/eaf/v1">
+      <element name="objectXMLWrap"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3016,7 +3042,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3030,7 +3056,7 @@
       </element>
    </define>
    <define name="agent">
-      <element name="agent" ns="https://archivists.org/ns/eaf/v1">
+      <element name="agent" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3055,7 +3081,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3150,7 +3176,8 @@
       </element>
    </define>
    <define name="eventDateTime">
-      <element name="eventDateTime" ns="https://archivists.org/ns/eaf/v1">
+      <element name="eventDateTime"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3175,7 +3202,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3217,7 +3244,8 @@
       </element>
    </define>
    <define name="eventDescription">
-      <element name="eventDescription" ns="https://archivists.org/ns/eaf/v1">
+      <element name="eventDescription"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3242,7 +3270,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3297,7 +3325,8 @@
       </element>
    </define>
    <define name="citedRange">
-      <element name="citedRange" ns="https://archivists.org/ns/eaf/v1">
+      <element name="citedRange"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3322,7 +3351,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3376,7 +3405,8 @@
       </element>
    </define>
    <define name="referringString">
-      <element name="referringString" ns="https://archivists.org/ns/eaf/v1">
+      <element name="referringString"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3401,7 +3431,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3499,7 +3529,7 @@
       </element>
    </define>
    <define name="span">
-      <element name="span" ns="https://archivists.org/ns/eaf/v1">
+      <element name="span" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3524,7 +3554,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3590,7 +3620,7 @@
       </element>
    </define>
    <define name="part">
-      <element name="part" ns="https://archivists.org/ns/eaf/v1">
+      <element name="part" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3615,7 +3645,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3678,7 +3708,7 @@
       </element>
    </define>
    <define name="useDates">
-      <element name="useDates" ns="https://archivists.org/ns/eaf/v1">
+      <element name="useDates" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3703,7 +3733,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3755,7 +3785,8 @@
       </element>
    </define>
    <define name="classification">
-      <element name="classification" ns="https://archivists.org/ns/eaf/v1">
+      <element name="classification"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3780,7 +3811,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3860,7 +3891,8 @@
       </element>
    </define>
    <define name="functionAgent">
-      <element name="functionAgent" ns="https://archivists.org/ns/eaf/v1">
+      <element name="functionAgent"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3885,7 +3917,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3965,7 +3997,7 @@
       </element>
    </define>
    <define name="date">
-      <element name="date" ns="https://archivists.org/ns/eaf/v1">
+      <element name="date" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -3990,7 +4022,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4094,7 +4126,7 @@
       </element>
    </define>
    <define name="dateRange">
-      <element name="dateRange" ns="https://archivists.org/ns/eaf/v1">
+      <element name="dateRange" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -4119,7 +4151,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4187,7 +4219,8 @@
       </element>
    </define>
    <define name="formattingExtension">
-      <element name="formattingExtension" ns="https://archivists.org/ns/eaf/v1">
+      <element name="formattingExtension"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -4212,7 +4245,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4228,7 +4261,8 @@
       </element>
    </define>
    <define name="legislation">
-      <element name="legislation" ns="https://archivists.org/ns/eaf/v1">
+      <element name="legislation"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -4253,7 +4287,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4347,7 +4381,7 @@
       </element>
    </define>
    <define name="label">
-      <element name="label" ns="https://archivists.org/ns/eaf/v1">
+      <element name="label" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -4372,7 +4406,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4452,7 +4486,7 @@
       </element>
    </define>
    <define name="dateSet">
-      <element name="dateSet" ns="https://archivists.org/ns/eaf/v1">
+      <element name="dateSet" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -4477,7 +4511,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4546,7 +4580,7 @@
       </element>
    </define>
    <define name="placeName">
-      <element name="placeName" ns="https://archivists.org/ns/eaf/v1">
+      <element name="placeName" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -4571,7 +4605,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4657,7 +4691,7 @@
       </element>
    </define>
    <define name="role">
-      <element name="role" ns="https://archivists.org/ns/eaf/v1">
+      <element name="role" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -4682,7 +4716,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4753,7 +4787,7 @@
       <element>
          <anyName>
             <except>
-               <nsName ns="https://archivists.org/ns/eaf/v1"/>
+               <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
             </except>
          </anyName>
          <group>
@@ -4773,7 +4807,8 @@
       </element>
    </define>
    <define name="relationship">
-      <element name="relationship" ns="https://archivists.org/ns/eaf/v1">
+      <element name="relationship"
+               ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -4798,7 +4833,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4878,7 +4913,7 @@
       </element>
    </define>
    <define name="fromDate">
-      <element name="fromDate" ns="https://archivists.org/ns/eaf/v1">
+      <element name="fromDate" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -4903,7 +4938,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5007,7 +5042,7 @@
       </element>
    </define>
    <define name="toDate">
-      <element name="toDate" ns="https://archivists.org/ns/eaf/v1">
+      <element name="toDate" ns="https://standards.openpreservation.org/eaf/v1.0.0">
          <group>
             <interleave>
                <optional>
@@ -5032,7 +5067,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                              <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5140,7 +5175,7 @@
          <anyName>
             <except>
                <choice>
-                  <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                  <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                   <nsName ns=""/>
                </choice>
             </except>
@@ -5151,7 +5186,7 @@
                   <anyName>
                      <except>
                         <choice>
-                           <nsName ns="https://archivists.org/ns/eaf/v1"/>
+                           <nsName ns="https://standards.openpreservation.org/eaf/v1.0.0"/>
                            <nsName ns=""/>
                         </choice>
                      </except>
