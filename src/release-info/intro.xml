@@ -8,14 +8,12 @@
 
   See: https://eac.staatsbibliothek-berlin.de/schemata-and-tag-library/
 
-  *****************************************************************
-  *                                                               *                
-  *                            EAC-CPF 3.0.0                      *
-  *                                                               *       
-  *****************************************************************
+  ***********************************************************************
+  *                                                                     *                
+  *                            EAC-CPF 3.0.0                            *
+  *                                                                     *       
+  ***********************************************************************
 
-  *****************************************************************
-  
   EDITORS: Society of American Archivists Technical Subcommittee on Encoded Archival Standards (TS-EAS)
   
   PUBLISHER: Society of American Archivists in collaboration with the Staatsbibliothek zu Berlin
@@ -38,33 +36,19 @@
   
   For more information about the EAC-CPF team, see: 
   https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAC-CPF-Sub-Team 
-
-  *****************************************************************
-  *****************************************************************
   
   -->
   </eac>
   <ead>
  <!--
    
-    *****************************************************************
-    *                                                               *                
-    *                            EAD 4.0                            *
-    *                                                               *       
-    *****************************************************************
+    *******************************************************************
+    *                                                                 *
+    *                            EAD 4.0.0                            *
+    *                                                                 *
+    *******************************************************************
     
     Hosted by the Library of Congress at http://www.loc.gov/ead/
-    
- -->
-  </ead>
-  <eaf>
-    <!--
-   
-    *****************************************************************
-    *                                                               *                
-    *                            EAF 1.0                            *
-    *                                                               *       
-    *****************************************************************
     
     This schema has been generated automatically. 
    
@@ -73,6 +57,31 @@
   
     Comments, questions, and suggestions may be addressed to: 
     ts-eas@archivists.org
+    
+    For more information about the EAD team, see: 
+    https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAD-Sub-Team
+    
+ -->
+  </ead>
+  <eaf>
+    <!--
+   
+    *******************************************************************
+    *                                                                 *
+    *                            EAF 4.0.0                            *
+    *                                                                 *
+    *******************************************************************
+    
+    This schema has been generated automatically. 
+   
+    If you would like to contribute to this project, please see:
+    https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/Contributing-to-the-EAS-standards
+  
+    Comments, questions, and suggestions may be addressed to: 
+    ts-eas@archivists.org
+    
+    For more information about the EAF team, see: 
+    https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAC-F-Sub-Team
     
     -->
   </eaf>
