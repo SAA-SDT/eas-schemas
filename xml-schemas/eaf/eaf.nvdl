@@ -4,7 +4,7 @@
     <mode name="eaf">
         <namespace ns="https://standards.openpreservation.org/eaf/v1.0.0">
             <validate
-                schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/development/xml-schemas/eaf/eaf.xsd"
+                schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/release_2026_07/xml-schemas/eaf/eaf.xsd"
                 schemaType="application/xml">
                 <context path="formattingExtension" useMode="xhtml"/>
             </validate>
