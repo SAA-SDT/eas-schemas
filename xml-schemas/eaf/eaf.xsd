@@ -21,6 +21,7 @@
 -->
 <xs:schema xmlns:eaf="https://standards.openpreservation.org/eaf/v1"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           version="1.0.0"
            elementFormDefault="qualified"
            targetNamespace="https://standards.openpreservation.org/eaf/v1">
    <xs:element name="eaf">

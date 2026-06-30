@@ -36,7 +36,9 @@
   https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAC-CPF-Sub-Team 
   
   -->
-<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         a:version="3.0.0">
    <start>
       <ref name="eac"/>
    </start>
