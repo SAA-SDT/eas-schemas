@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-    xmlns:eac="https://standards.openpreservation.org/eac/v3.0.0"
-    xmlns:ead="https://standards.openpreservation.org/ead/v4.0.0"
-    xmlns:eaf="https://standards.openpreservation.org/eaf/v1.0.0"
+    xmlns:eac="https://standards.openpreservation.org/eac/v3"
+    xmlns:ead="https://standards.openpreservation.org/ead/v4"
+    xmlns:eaf="https://standards.openpreservation.org/eaf/v1"
     exclude-result-prefixes="#all" version="3.0">
 
     <xsl:output method="xml" encoding="UTF-8" indent="true"/>
@@ -11,7 +11,7 @@
 
     <xsl:param name="schema" select="'eac'"/>
 
-    <!-- for ead, this gets us 'https://standards.openpreservation.org/ead/v4.0.0' -->
+    <!-- for ead, this gets us 'https://standards.openpreservation.org/ead/v4' -->
     <xsl:variable name="schema-ns-uri" select="document('')/*/namespace::*[local-name() eq $schema]"/>
 
     <!-- and to get the "v4" prefix from the namespace URI, we do this -->
