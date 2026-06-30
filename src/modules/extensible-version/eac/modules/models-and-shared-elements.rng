@@ -439,7 +439,7 @@
       <element>
          <anyName>
             <except>
-               <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"
+               <nsName ns="https://standards.openpreservation.org/eac/v3"
                        a:exclude-from="ead eaf"/>
             </except>
          </anyName>

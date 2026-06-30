@@ -21,10 +21,10 @@
   https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAD-Sub-Team
   
 -->
-<xs:schema xmlns:ead="https://standards.openpreservation.org/ead/v4.0.0"
+<xs:schema xmlns:ead="https://standards.openpreservation.org/ead/v4"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="https://standards.openpreservation.org/ead/v4.0.0">
+           targetNamespace="https://standards.openpreservation.org/ead/v4">
    <xs:element name="ead">
       <xs:complexType>
          <xs:sequence>

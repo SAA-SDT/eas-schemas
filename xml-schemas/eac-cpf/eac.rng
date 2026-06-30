@@ -41,7 +41,7 @@
       <ref name="eac"/>
    </start>
    <define name="eac">
-      <element name="eac" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="eac" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <optional>
                <attribute name="audience" ns="">
@@ -73,7 +73,7 @@
                   <anyName>
                      <except>
                         <choice>
-                           <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                           <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                            <nsName ns=""/>
                         </choice>
                      </except>
@@ -90,7 +90,7 @@
       </element>
    </define>
    <define name="control">
-      <element name="control" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="control" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -115,7 +115,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -338,7 +338,7 @@
    </define>
    <define name="cpfDescription">
       <element name="cpfDescription"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -363,7 +363,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -421,7 +421,7 @@
    </define>
    <define name="multipleIdentities">
       <element name="multipleIdentities"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -446,7 +446,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -497,7 +497,7 @@
       </element>
    </define>
    <define name="recordId">
-      <element name="recordId" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="recordId" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -522,7 +522,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -554,7 +554,7 @@
    </define>
    <define name="maintenanceAgency">
       <element name="maintenanceAgency"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -579,7 +579,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -655,7 +655,7 @@
    </define>
    <define name="maintenanceHistory">
       <element name="maintenanceHistory"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -680,7 +680,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -710,7 +710,7 @@
       </element>
    </define>
    <define name="sources">
-      <element name="sources" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="sources" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -735,7 +735,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -769,7 +769,7 @@
    </define>
    <define name="conventionDeclaration">
       <element name="conventionDeclaration"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -794,7 +794,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -849,7 +849,7 @@
    </define>
    <define name="languageDeclaration">
       <element name="languageDeclaration"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -874,7 +874,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -917,7 +917,7 @@
    </define>
    <define name="localTypeDeclaration">
       <element name="localTypeDeclaration"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -942,7 +942,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -996,8 +996,7 @@
       </element>
    </define>
    <define name="otherRecordId">
-      <element name="otherRecordId"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="otherRecordId" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1022,7 +1021,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1083,7 +1082,7 @@
    </define>
    <define name="rightsDeclaration">
       <element name="rightsDeclaration"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1108,7 +1107,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1162,7 +1161,7 @@
       </element>
    </define>
    <define name="identity">
-      <element name="identity" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="identity" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1187,7 +1186,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1256,8 +1255,7 @@
       </element>
    </define>
    <define name="description">
-      <element name="description"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="description" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1282,7 +1280,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1361,7 +1359,7 @@
       </element>
    </define>
    <define name="relations">
-      <element name="relations" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="relations" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1386,7 +1384,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1440,7 +1438,7 @@
    </define>
    <define name="alternativeSet">
       <element name="alternativeSet"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1465,7 +1463,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1515,8 +1513,7 @@
       </element>
    </define>
    <define name="agencyCode">
-      <element name="agencyCode"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="agencyCode" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1541,7 +1538,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1595,8 +1592,7 @@
       </element>
    </define>
    <define name="agencyName">
-      <element name="agencyName"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="agencyName" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1621,7 +1617,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1670,7 +1666,7 @@
    </define>
    <define name="otherAgencyCode">
       <element name="otherAgencyCode"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1695,7 +1691,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1762,7 +1758,7 @@
    </define>
    <define name="descriptiveNote">
       <element name="descriptiveNote"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1787,7 +1783,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1841,7 +1837,7 @@
    </define>
    <define name="maintenanceEvent">
       <element name="maintenanceEvent"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1866,7 +1862,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1904,7 +1900,7 @@
       </element>
    </define>
    <define name="source">
-      <element name="source" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="source" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -1929,7 +1925,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2008,7 +2004,7 @@
       </element>
    </define>
    <define name="reference">
-      <element name="reference" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="reference" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2033,7 +2029,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2119,7 +2115,7 @@
       </element>
    </define>
    <define name="shortCode">
-      <element name="shortCode" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="shortCode" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2144,7 +2140,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2172,8 +2168,7 @@
       </element>
    </define>
    <define name="entityType">
-      <element name="entityType"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="entityType" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2198,7 +2193,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2218,7 +2213,7 @@
       </element>
    </define>
    <define name="nameEntry">
-      <element name="nameEntry" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="nameEntry" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2243,7 +2238,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2340,8 +2335,7 @@
       </element>
    </define>
    <define name="nameEntrySet">
-      <element name="nameEntrySet"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="nameEntrySet" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2366,7 +2360,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2433,7 +2427,7 @@
    </define>
    <define name="otherEntityTypes">
       <element name="otherEntityTypes"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2458,7 +2452,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2511,8 +2505,7 @@
       </element>
    </define>
    <define name="identityId">
-      <element name="identityId"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="identityId" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2537,7 +2530,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2618,7 +2611,7 @@
    </define>
    <define name="demographicDescriptions">
       <element name="demographicDescriptions"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2643,7 +2636,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2709,7 +2702,7 @@
    </define>
    <define name="functionsPerformed">
       <element name="functionsPerformed"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2734,7 +2727,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2799,8 +2792,7 @@
       </element>
    </define>
    <define name="languagesUsed">
-      <element name="languagesUsed"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="languagesUsed" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2825,7 +2817,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2890,8 +2882,7 @@
       </element>
    </define>
    <define name="legalStatuses">
-      <element name="legalStatuses"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="legalStatuses" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -2916,7 +2907,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2982,7 +2973,7 @@
    </define>
    <define name="localDescriptions">
       <element name="localDescriptions"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3007,7 +2998,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3072,7 +3063,7 @@
       </element>
    </define>
    <define name="mandates">
-      <element name="mandates" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="mandates" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3097,7 +3088,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3162,8 +3153,7 @@
       </element>
    </define>
    <define name="occupations">
-      <element name="occupations"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="occupations" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3188,7 +3178,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3253,7 +3243,7 @@
       </element>
    </define>
    <define name="places">
-      <element name="places" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="places" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3278,7 +3268,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3343,7 +3333,7 @@
       </element>
    </define>
    <define name="biogHist">
-      <element name="biogHist" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="biogHist" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3368,7 +3358,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3441,8 +3431,7 @@
       </element>
    </define>
    <define name="existDates">
-      <element name="existDates"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="existDates" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3467,7 +3456,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3535,7 +3524,7 @@
    </define>
    <define name="generalContext">
       <element name="generalContext"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3560,7 +3549,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3628,7 +3617,7 @@
    </define>
    <define name="structureOrGenealogy">
       <element name="structureOrGenealogy"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3653,7 +3642,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3720,7 +3709,7 @@
       </element>
    </define>
    <define name="relation">
-      <element name="relation" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="relation" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3745,7 +3734,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3826,8 +3815,7 @@
       </element>
    </define>
    <define name="setComponent">
-      <element name="setComponent"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="setComponent" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3852,7 +3840,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3928,7 +3916,7 @@
       </element>
    </define>
    <define name="p">
-      <element name="p" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="p" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -3953,7 +3941,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4008,8 +3996,7 @@
       </element>
    </define>
    <define name="objectXMLWrap">
-      <element name="objectXMLWrap"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="objectXMLWrap" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4034,7 +4021,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4048,7 +4035,7 @@
       </element>
    </define>
    <define name="agent">
-      <element name="agent" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="agent" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4073,7 +4060,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4168,8 +4155,7 @@
       </element>
    </define>
    <define name="eventDateTime">
-      <element name="eventDateTime"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="eventDateTime" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4194,7 +4180,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4237,7 +4223,7 @@
    </define>
    <define name="eventDescription">
       <element name="eventDescription"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4262,7 +4248,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4317,8 +4303,7 @@
       </element>
    </define>
    <define name="citedRange">
-      <element name="citedRange"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="citedRange" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4343,7 +4328,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4398,7 +4383,7 @@
    </define>
    <define name="referringString">
       <element name="referringString"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4423,7 +4408,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4521,7 +4506,7 @@
       </element>
    </define>
    <define name="span">
-      <element name="span" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="span" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4546,7 +4531,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4612,7 +4597,7 @@
       </element>
    </define>
    <define name="part">
-      <element name="part" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="part" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4637,7 +4622,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4700,7 +4685,7 @@
       </element>
    </define>
    <define name="useDates">
-      <element name="useDates" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="useDates" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4725,7 +4710,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4778,7 +4763,7 @@
    </define>
    <define name="otherEntityType">
       <element name="otherEntityType"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4803,7 +4788,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4899,7 +4884,7 @@
    </define>
    <define name="demographicDescription">
       <element name="demographicDescription"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -4924,7 +4909,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5020,7 +5005,7 @@
    </define>
    <define name="functionPerformed">
       <element name="functionPerformed"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -5045,7 +5030,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5140,8 +5125,7 @@
       </element>
    </define>
    <define name="languageUsed">
-      <element name="languageUsed"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="languageUsed" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -5166,7 +5150,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5234,8 +5218,7 @@
       </element>
    </define>
    <define name="legalStatus">
-      <element name="legalStatus"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="legalStatus" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -5260,7 +5243,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5356,7 +5339,7 @@
    </define>
    <define name="localDescription">
       <element name="localDescription"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -5381,7 +5364,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5476,7 +5459,7 @@
       </element>
    </define>
    <define name="mandate">
-      <element name="mandate" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="mandate" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -5501,7 +5484,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5596,8 +5579,7 @@
       </element>
    </define>
    <define name="occupation">
-      <element name="occupation"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="occupation" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -5622,7 +5604,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5717,7 +5699,7 @@
       </element>
    </define>
    <define name="place">
-      <element name="place" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="place" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -5742,7 +5724,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5841,7 +5823,7 @@
       </element>
    </define>
    <define name="abstract">
-      <element name="abstract" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="abstract" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -5866,7 +5848,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5934,7 +5916,7 @@
    </define>
    <define name="formattingExtension">
       <element name="formattingExtension"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -5959,7 +5941,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5976,7 +5958,7 @@
    </define>
    <define name="narrativeEvent">
       <element name="narrativeEvent"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -6001,7 +5983,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6070,7 +6052,7 @@
       </element>
    </define>
    <define name="date">
-      <element name="date" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="date" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -6095,7 +6077,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6199,7 +6181,7 @@
       </element>
    </define>
    <define name="dateRange">
-      <element name="dateRange" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="dateRange" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -6224,7 +6206,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6292,7 +6274,7 @@
       </element>
    </define>
    <define name="dateSet">
-      <element name="dateSet" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="dateSet" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -6317,7 +6299,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6386,7 +6368,7 @@
       </element>
    </define>
    <define name="label">
-      <element name="label" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="label" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -6411,7 +6393,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6491,7 +6473,7 @@
       </element>
    </define>
    <define name="placeName">
-      <element name="placeName" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="placeName" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -6516,7 +6498,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6602,7 +6584,7 @@
       </element>
    </define>
    <define name="role">
-      <element name="role" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="role" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -6627,7 +6609,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6696,7 +6678,7 @@
    </define>
    <define name="componentEntry">
       <element name="componentEntry"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -6721,7 +6703,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6804,7 +6786,7 @@
       <element>
          <anyName>
             <except>
-               <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+               <nsName ns="https://standards.openpreservation.org/eac/v3"/>
             </except>
          </anyName>
          <group>
@@ -6824,8 +6806,7 @@
       </element>
    </define>
    <define name="relationship">
-      <element name="relationship"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="relationship" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -6850,7 +6831,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6930,7 +6911,7 @@
       </element>
    </define>
    <define name="term">
-      <element name="term" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="term" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -6955,7 +6936,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7003,7 +6984,7 @@
       </element>
    </define>
    <define name="language">
-      <element name="language" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="language" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -7028,7 +7009,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7082,8 +7063,7 @@
       </element>
    </define>
    <define name="writingSystem">
-      <element name="writingSystem"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="writingSystem" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -7108,7 +7088,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7162,7 +7142,7 @@
       </element>
    </define>
    <define name="address">
-      <element name="address" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="address" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -7187,7 +7167,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7249,7 +7229,7 @@
       </element>
    </define>
    <define name="contact">
-      <element name="contact" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="contact" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -7274,7 +7254,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7337,7 +7317,7 @@
    </define>
    <define name="geographicCoordinates">
       <element name="geographicCoordinates"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+               ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -7362,7 +7342,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7419,7 +7399,7 @@
          <anyName>
             <except>
                <choice>
-                  <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                  <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                   <nsName ns=""/>
                </choice>
             </except>
@@ -7430,7 +7410,7 @@
                   <anyName>
                      <except>
                         <choice>
-                           <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                           <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                            <nsName ns=""/>
                         </choice>
                      </except>
@@ -7448,7 +7428,7 @@
       </element>
    </define>
    <define name="fromDate">
-      <element name="fromDate" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="fromDate" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -7473,7 +7453,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7577,7 +7557,7 @@
       </element>
    </define>
    <define name="toDate">
-      <element name="toDate" ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="toDate" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -7602,7 +7582,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7706,8 +7686,7 @@
       </element>
    </define>
    <define name="addressLine">
-      <element name="addressLine"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="addressLine" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -7732,7 +7711,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7786,8 +7765,7 @@
       </element>
    </define>
    <define name="contactLine">
-      <element name="contactLine"
-               ns="https://standards.openpreservation.org/eac/v3.0.0">
+      <element name="contactLine" ns="https://standards.openpreservation.org/eac/v3">
          <group>
             <interleave>
                <optional>
@@ -7812,7 +7790,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/eac/v3.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/eac/v3"/>
                               <nsName ns=""/>
                            </choice>
                         </except>

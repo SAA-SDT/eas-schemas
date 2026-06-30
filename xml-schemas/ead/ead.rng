@@ -26,7 +26,7 @@
       <ref name="ead"/>
    </start>
    <define name="ead">
-      <element name="ead" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="ead" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <attribute name="audience" ns="">
@@ -58,7 +58,7 @@
                   <anyName>
                      <except>
                         <choice>
-                           <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                           <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                            <nsName ns=""/>
                         </choice>
                      </except>
@@ -75,7 +75,7 @@
       </element>
    </define>
    <define name="control">
-      <element name="control" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="control" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -100,7 +100,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -370,8 +370,7 @@
       </element>
    </define>
    <define name="findAidDesc">
-      <element name="findAidDesc"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="findAidDesc" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -396,7 +395,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -473,7 +472,7 @@
       </element>
    </define>
    <define name="archDesc">
-      <element name="archDesc" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="archDesc" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <attribute name="localType" ns="">
@@ -510,7 +509,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -622,7 +621,7 @@
       </element>
    </define>
    <define name="recordId">
-      <element name="recordId" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="recordId" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -647,7 +646,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -679,7 +678,7 @@
    </define>
    <define name="maintenanceAgency">
       <element name="maintenanceAgency"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -704,7 +703,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -780,7 +779,7 @@
    </define>
    <define name="maintenanceHistory">
       <element name="maintenanceHistory"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -805,7 +804,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -835,7 +834,7 @@
       </element>
    </define>
    <define name="sources">
-      <element name="sources" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="sources" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -860,7 +859,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -894,7 +893,7 @@
    </define>
    <define name="conventionDeclaration">
       <element name="conventionDeclaration"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -919,7 +918,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -974,7 +973,7 @@
    </define>
    <define name="languageDeclaration">
       <element name="languageDeclaration"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -999,7 +998,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1042,7 +1041,7 @@
    </define>
    <define name="localTypeDeclaration">
       <element name="localTypeDeclaration"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1067,7 +1066,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1121,8 +1120,7 @@
       </element>
    </define>
    <define name="otherRecordId">
-      <element name="otherRecordId"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="otherRecordId" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1147,7 +1145,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1208,7 +1206,7 @@
    </define>
    <define name="rightsDeclaration">
       <element name="rightsDeclaration"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1233,7 +1231,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1287,7 +1285,7 @@
       </element>
    </define>
    <define name="agent">
-      <element name="agent" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="agent" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1312,7 +1310,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1407,8 +1405,7 @@
       </element>
    </define>
    <define name="citedRange">
-      <element name="citedRange"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="citedRange" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1433,7 +1430,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1487,7 +1484,7 @@
       </element>
    </define>
    <define name="date">
-      <element name="date" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="date" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1512,7 +1509,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1617,7 +1614,7 @@
    </define>
    <define name="formattingExtension">
       <element name="formattingExtension"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1642,7 +1639,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1658,7 +1655,7 @@
       </element>
    </define>
    <define name="place">
-      <element name="place" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="place" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1683,7 +1680,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1782,7 +1779,7 @@
       </element>
    </define>
    <define name="title">
-      <element name="title" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="title" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1807,7 +1804,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1896,7 +1893,7 @@
    </define>
    <define name="identificationData">
       <element name="identificationData"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -1921,7 +1918,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -1987,7 +1984,7 @@
       </element>
    </define>
    <define name="agents">
-      <element name="agents" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="agents" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2012,7 +2009,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2078,7 +2075,7 @@
    </define>
    <define name="formsAvailable">
       <element name="formsAvailable"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2103,7 +2100,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2168,7 +2165,7 @@
       </element>
    </define>
    <define name="functions">
-      <element name="functions" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="functions" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2193,7 +2190,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2258,7 +2255,7 @@
       </element>
    </define>
    <define name="places">
-      <element name="places" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="places" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2283,7 +2280,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2349,7 +2346,7 @@
    </define>
    <define name="accessConditions">
       <element name="accessConditions"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2394,7 +2391,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2467,7 +2464,7 @@
       </element>
    </define>
    <define name="accruals">
-      <element name="accruals" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="accruals" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2492,7 +2489,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2562,7 +2559,7 @@
       </element>
    </define>
    <define name="appraisal">
-      <element name="appraisal" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="appraisal" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2587,7 +2584,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2660,8 +2657,7 @@
       </element>
    </define>
    <define name="arrangement">
-      <element name="arrangement"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="arrangement" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2686,7 +2682,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2756,7 +2752,7 @@
       </element>
    </define>
    <define name="biogHist">
-      <element name="biogHist" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="biogHist" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2781,7 +2777,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2854,8 +2850,7 @@
       </element>
    </define>
    <define name="custodHist">
-      <element name="custodHist"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="custodHist" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2880,7 +2875,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -2953,7 +2948,7 @@
       </element>
    </define>
    <define name="filePlan">
-      <element name="filePlan" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="filePlan" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -2978,7 +2973,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3049,7 +3044,7 @@
    </define>
    <define name="otherDescriptiveInfo">
       <element name="otherDescriptiveInfo"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3074,7 +3069,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3145,7 +3140,7 @@
    </define>
    <define name="otherDescription">
       <element name="otherDescription"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3170,7 +3165,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3263,8 +3258,7 @@
       </element>
    </define>
    <define name="preferCite">
-      <element name="preferCite"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="preferCite" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3289,7 +3283,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3359,8 +3353,7 @@
       </element>
    </define>
    <define name="processInfo">
-      <element name="processInfo"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="processInfo" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3385,7 +3378,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3459,7 +3452,7 @@
    </define>
    <define name="publicationNote">
       <element name="publicationNote"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3484,7 +3477,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3578,7 +3571,7 @@
    </define>
    <define name="recordTypeSpecificStatement">
       <element name="recordTypeSpecificStatement"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3603,7 +3596,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3677,7 +3670,7 @@
    </define>
    <define name="relatedMaterial">
       <element name="relatedMaterial"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3702,7 +3695,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3795,8 +3788,7 @@
       </element>
    </define>
    <define name="scopeContent">
-      <element name="scopeContent"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="scopeContent" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3821,7 +3813,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -3892,7 +3884,7 @@
    </define>
    <define name="separatedMaterial">
       <element name="separatedMaterial"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -3917,7 +3909,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4011,7 +4003,7 @@
    </define>
    <define name="sourceOfAcquisition">
       <element name="sourceOfAcquisition"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4036,7 +4028,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4110,7 +4102,7 @@
    </define>
    <define name="subjectHeadings">
       <element name="subjectHeadings"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4135,7 +4127,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4208,8 +4200,7 @@
       </element>
    </define>
    <define name="useConditions">
-      <element name="useConditions"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="useConditions" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4254,7 +4245,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4328,7 +4319,7 @@
    </define>
    <define name="descriptionOfComponents">
       <element name="descriptionOfComponents"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4353,7 +4344,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4424,8 +4415,7 @@
       </element>
    </define>
    <define name="agencyCode">
-      <element name="agencyCode"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="agencyCode" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4450,7 +4440,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4504,8 +4494,7 @@
       </element>
    </define>
    <define name="agencyName">
-      <element name="agencyName"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="agencyName" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4530,7 +4519,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4579,7 +4568,7 @@
    </define>
    <define name="otherAgencyCode">
       <element name="otherAgencyCode"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4604,7 +4593,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4671,7 +4660,7 @@
    </define>
    <define name="descriptiveNote">
       <element name="descriptiveNote"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4696,7 +4685,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4750,7 +4739,7 @@
    </define>
    <define name="maintenanceEvent">
       <element name="maintenanceEvent"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4775,7 +4764,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4813,7 +4802,7 @@
       </element>
    </define>
    <define name="source">
-      <element name="source" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="source" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4838,7 +4827,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -4917,7 +4906,7 @@
       </element>
    </define>
    <define name="reference">
-      <element name="reference" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="reference" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -4942,7 +4931,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5028,7 +5017,7 @@
       </element>
    </define>
    <define name="shortCode">
-      <element name="shortCode" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="shortCode" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5053,7 +5042,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5081,7 +5070,7 @@
       </element>
    </define>
    <define name="label">
-      <element name="label" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="label" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5106,7 +5095,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5186,7 +5175,7 @@
       </element>
    </define>
    <define name="dateRange">
-      <element name="dateRange" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="dateRange" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5211,7 +5200,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5279,7 +5268,7 @@
       </element>
    </define>
    <define name="dateSet">
-      <element name="dateSet" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="dateSet" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5304,7 +5293,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5373,7 +5362,7 @@
       </element>
    </define>
    <define name="placeName">
-      <element name="placeName" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="placeName" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5398,7 +5387,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5484,7 +5473,7 @@
       </element>
    </define>
    <define name="role">
-      <element name="role" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="role" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5509,7 +5498,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5577,8 +5566,7 @@
       </element>
    </define>
    <define name="relationship">
-      <element name="relationship"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="relationship" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5603,7 +5591,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5687,7 +5675,7 @@
          <anyName>
             <except>
                <choice>
-                  <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                  <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                   <nsName ns=""/>
                </choice>
             </except>
@@ -5698,7 +5686,7 @@
                   <anyName>
                      <except>
                         <choice>
-                           <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                           <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                            <nsName ns=""/>
                         </choice>
                      </except>
@@ -5716,7 +5704,7 @@
       </element>
    </define>
    <define name="address">
-      <element name="address" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="address" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5741,7 +5729,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5803,7 +5791,7 @@
       </element>
    </define>
    <define name="contact">
-      <element name="contact" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="contact" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5828,7 +5816,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5891,7 +5879,7 @@
    </define>
    <define name="geographicCoordinates">
       <element name="geographicCoordinates"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5916,7 +5904,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -5969,7 +5957,7 @@
       </element>
    </define>
    <define name="part">
-      <element name="part" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="part" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -5994,7 +5982,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6057,7 +6045,7 @@
       </element>
    </define>
    <define name="head">
-      <element name="head" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="head" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -6082,7 +6070,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6137,7 +6125,7 @@
       </element>
    </define>
    <define name="container">
-      <element name="container" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="container" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -6162,7 +6150,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6255,7 +6243,7 @@
       </element>
    </define>
    <define name="extent">
-      <element name="extent" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="extent" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -6280,7 +6268,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6351,7 +6339,7 @@
       </element>
    </define>
    <define name="genreForm">
-      <element name="genreForm" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="genreForm" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -6376,7 +6364,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6464,7 +6452,7 @@
    </define>
    <define name="languageOfMaterial">
       <element name="languageOfMaterial"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -6489,7 +6477,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6545,8 +6533,7 @@
       </element>
    </define>
    <define name="legalStatus">
-      <element name="legalStatus"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="legalStatus" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -6571,7 +6558,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6667,7 +6654,7 @@
    </define>
    <define name="otherIdentificationData">
       <element name="otherIdentificationData"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -6692,7 +6679,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6759,7 +6746,7 @@
       </element>
    </define>
    <define name="unitDate">
-      <element name="unitDate" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="unitDate" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -6784,7 +6771,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6871,7 +6858,7 @@
       </element>
    </define>
    <define name="unitId">
-      <element name="unitId" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="unitId" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -6896,7 +6883,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -6995,7 +6982,7 @@
       </element>
    </define>
    <define name="unitTitle">
-      <element name="unitTitle" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="unitTitle" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7020,7 +7007,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7107,8 +7094,7 @@
       </element>
    </define>
    <define name="formAvailable">
-      <element name="formAvailable"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="formAvailable" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7133,7 +7119,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7254,7 +7240,7 @@
       </element>
    </define>
    <define name="function">
-      <element name="function" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="function" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7279,7 +7265,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7374,7 +7360,7 @@
       </element>
    </define>
    <define name="abstract">
-      <element name="abstract" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="abstract" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7399,7 +7385,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7466,7 +7452,7 @@
       </element>
    </define>
    <define name="p">
-      <element name="p" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="p" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7491,7 +7477,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7547,7 +7533,7 @@
    </define>
    <define name="narrativeEvent">
       <element name="narrativeEvent"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7572,7 +7558,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7641,7 +7627,7 @@
       </element>
    </define>
    <define name="relations">
-      <element name="relations" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="relations" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7666,7 +7652,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7719,8 +7705,7 @@
       </element>
    </define>
    <define name="objectXMLWrap">
-      <element name="objectXMLWrap"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="objectXMLWrap" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7745,7 +7730,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7759,7 +7744,7 @@
       </element>
    </define>
    <define name="subject">
-      <element name="subject" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="subject" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -7784,7 +7769,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -7879,7 +7864,7 @@
       </element>
    </define>
    <define name="c">
-      <element name="c" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -7907,7 +7892,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -8019,7 +8004,7 @@
       </element>
    </define>
    <define name="c01">
-      <element name="c01" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c01" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -8047,7 +8032,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -8159,8 +8144,7 @@
       </element>
    </define>
    <define name="eventDateTime">
-      <element name="eventDateTime"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="eventDateTime" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8185,7 +8169,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -8228,7 +8212,7 @@
    </define>
    <define name="eventDescription">
       <element name="eventDescription"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8253,7 +8237,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -8309,7 +8293,7 @@
    </define>
    <define name="referringString">
       <element name="referringString"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8334,7 +8318,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -8432,7 +8416,7 @@
       </element>
    </define>
    <define name="span">
-      <element name="span" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="span" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8457,7 +8441,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -8523,7 +8507,7 @@
       </element>
    </define>
    <define name="fromDate">
-      <element name="fromDate" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="fromDate" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8548,7 +8532,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -8652,7 +8636,7 @@
       </element>
    </define>
    <define name="toDate">
-      <element name="toDate" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="toDate" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8677,7 +8661,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -8781,8 +8765,7 @@
       </element>
    </define>
    <define name="addressLine">
-      <element name="addressLine"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="addressLine" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8807,7 +8790,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -8861,8 +8844,7 @@
       </element>
    </define>
    <define name="contactLine">
-      <element name="contactLine"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="contactLine" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8887,7 +8869,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -8961,7 +8943,7 @@
       </element>
    </define>
    <define name="quantity">
-      <element name="quantity" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="quantity" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -8986,7 +8968,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -9041,7 +9023,7 @@
    </define>
    <define name="unitOfMeasurement">
       <element name="unitOfMeasurement"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -9066,7 +9048,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -9134,7 +9116,7 @@
       </element>
    </define>
    <define name="language">
-      <element name="language" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="language" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -9159,7 +9141,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -9213,8 +9195,7 @@
       </element>
    </define>
    <define name="languageSet">
-      <element name="languageSet"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="languageSet" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -9239,7 +9220,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -9303,7 +9284,7 @@
       </element>
    </define>
    <define name="term">
-      <element name="term" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="term" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -9328,7 +9309,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -9376,8 +9357,7 @@
       </element>
    </define>
    <define name="textualDate">
-      <element name="textualDate"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="textualDate" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -9402,7 +9382,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -9464,7 +9444,7 @@
    </define>
    <define name="formAvailableId">
       <element name="formAvailableId"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -9489,7 +9469,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -9577,7 +9557,7 @@
    </define>
    <define name="physicalDescription">
       <element name="physicalDescription"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -9602,7 +9582,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -9671,7 +9651,7 @@
    </define>
    <define name="physicalOrTechnicalRequirements">
       <element name="physicalOrTechnicalRequirements"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+               ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -9696,7 +9676,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -9766,7 +9746,7 @@
       </element>
    </define>
    <define name="relation">
-      <element name="relation" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="relation" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -9791,7 +9771,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -9875,7 +9855,7 @@
       <element>
          <anyName>
             <except>
-               <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
             </except>
          </anyName>
          <group>
@@ -9895,7 +9875,7 @@
       </element>
    </define>
    <define name="c02">
-      <element name="c02" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c02" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -9923,7 +9903,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -10035,8 +10015,7 @@
       </element>
    </define>
    <define name="writingSystem">
-      <element name="writingSystem"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="writingSystem" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -10061,7 +10040,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -10115,8 +10094,7 @@
       </element>
    </define>
    <define name="dimensions">
-      <element name="dimensions"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="dimensions" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -10141,7 +10119,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -10209,8 +10187,7 @@
       </element>
    </define>
    <define name="physicalFacet">
-      <element name="physicalFacet"
-               ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="physicalFacet" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <interleave>
                <optional>
@@ -10235,7 +10212,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -10322,7 +10299,7 @@
       </element>
    </define>
    <define name="c03">
-      <element name="c03" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c03" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -10350,7 +10327,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -10462,7 +10439,7 @@
       </element>
    </define>
    <define name="c04">
-      <element name="c04" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c04" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -10490,7 +10467,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -10602,7 +10579,7 @@
       </element>
    </define>
    <define name="c05">
-      <element name="c05" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c05" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -10630,7 +10607,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -10742,7 +10719,7 @@
       </element>
    </define>
    <define name="c06">
-      <element name="c06" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c06" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -10770,7 +10747,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -10882,7 +10859,7 @@
       </element>
    </define>
    <define name="c07">
-      <element name="c07" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c07" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -10910,7 +10887,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -11022,7 +10999,7 @@
       </element>
    </define>
    <define name="c08">
-      <element name="c08" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c08" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -11050,7 +11027,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -11162,7 +11139,7 @@
       </element>
    </define>
    <define name="c09">
-      <element name="c09" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c09" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -11190,7 +11167,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -11302,7 +11279,7 @@
       </element>
    </define>
    <define name="c10">
-      <element name="c10" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c10" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -11330,7 +11307,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -11442,7 +11419,7 @@
       </element>
    </define>
    <define name="c11">
-      <element name="c11" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c11" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -11470,7 +11447,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
@@ -11582,7 +11559,7 @@
       </element>
    </define>
    <define name="c12">
-      <element name="c12" ns="https://standards.openpreservation.org/ead/v4.0.0">
+      <element name="c12" ns="https://standards.openpreservation.org/ead/v4">
          <group>
             <optional>
                <ref name="head"/>
@@ -11610,7 +11587,7 @@
                      <anyName>
                         <except>
                            <choice>
-                              <nsName ns="https://standards.openpreservation.org/ead/v4.0.0"/>
+                              <nsName ns="https://standards.openpreservation.org/ead/v4"/>
                               <nsName ns=""/>
                            </choice>
                         </except>
