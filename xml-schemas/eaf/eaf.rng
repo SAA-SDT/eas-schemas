@@ -19,7 +19,9 @@
     https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAC-F-Sub-Team
     
     -->
-<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         a:version="1.0.0">
    <start>
       <ref name="eaf"/>
    </start>

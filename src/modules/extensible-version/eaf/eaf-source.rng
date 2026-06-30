@@ -2,6 +2,7 @@
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
          xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+         a:version="1.0.0"
          ns="https://standards.openpreservation.org/eaf/v1">
    <include href="modules/attributes.rng"/>
    <include href="modules/datatypes.rng"/>
