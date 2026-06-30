@@ -4,7 +4,7 @@
     <mode name="ead">
         <namespace ns="https://standards.openpreservation.org/ead/v4.0.0">
             <validate
-                schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/development/xml-schemas/ead/ead.xsd"
+                schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/release_2026_07/xml-schemas/ead/ead.xsd"
                 schemaType="application/xml">
                 <context path="formattingExtension" useMode="xhtml"/>
             </validate>

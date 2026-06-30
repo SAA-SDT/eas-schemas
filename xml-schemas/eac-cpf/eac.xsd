@@ -36,10 +36,10 @@
   https://github.com/SAA-SDT/TS-EAS-subteam-notes/wiki/EAC-CPF-Sub-Team 
   
 -->
-<xs:schema xmlns:eac="https://standards.openpreservation.org/eac/v3.0.0"
+<xs:schema xmlns:eac="https://standards.openpreservation.org/eac/v3"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="https://standards.openpreservation.org/eac/v3.0.0">
+           targetNamespace="https://standards.openpreservation.org/eac/v3">
    <xs:element name="eac">
       <xs:complexType>
          <xs:sequence>
