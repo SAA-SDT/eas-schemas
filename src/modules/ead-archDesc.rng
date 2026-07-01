@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    
+    <!-- to do:     
+        create some updated matrices and use those to refine the existing models... but perhaps wait until more decisions are made? 
+                etc.
+        
+        create separate files for different modesl (e.g. CALS Table, etc.)
+        
+    -->
+    
+    <!-- ELEMENTS -->    
+    
+    <!-- move the next two, once we're done -->
+    <!-- formats / format ?? or something more direct / plural-ending (rather than plural-starting) -->
+    <define name="element.formsAvailable">
+        <element name="formsAvailable">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <oneOrMore>
+                <ref name="element.formAvailable"/>
+            </oneOrMore>
+            <ref name="element.descriptiveNote.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.formAvailable">
+        <element name="formAvailable">
+            <ref name="model.ead-formAvailable"/>
+        </element>
+    </define>
+    
+    <define name="element.formAvailableId">
+        <element name="formAvailableId">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.mixed-content.optional"/>       
+        </element>
+    </define>
+    
+    
+    
+    <define name="element.accessConditions">
+        <element name="accessConditions">
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="model.ead-narrative-elements-plus-dateRange"/>
+        </element>
+    </define>
+    
+    <define name="element.accruals">
+        <element name="accruals">
+            <ref name="model.ead-narrative-elements"/>
+        </element>
+    </define>
+
+    <define name="element.sourceOfAcquisition">
+        <element name="sourceOfAcquisition">
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
+        </element>
+    </define>
+    
+    <define name="element.appraisal">
+        <element name="appraisal">
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
+        </element>
+    </define>
+    
+    <define name="element.archDesc">
+        <element name="archDesc">
+            <!-- why would this localtype bit be different from c / c01? -->
+            <ref name="attribute-group.localType.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <!-- EAD3 already signaled the move to a single DSC, right? -->
+            <optional>
+                <ref name="element.descriptionOfComponents"/>
+            </optional>
+        </element>
+    </define>
+    
+    <define name="element.arrangement">
+        <element name="arrangement">
+            <ref name="model.ead-narrative-elements"/>
+        </element>
+    </define>
+     
+    <define name="element.c">
+        <element name="c">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c01">
+        <element name="c01">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c02"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c02">
+        <element name="c02">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c03"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c03">
+        <element name="c03">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c04"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c04">
+        <element name="c04">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c05"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c05">
+        <element name="c05">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c06"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c06">
+        <element name="c06">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c07"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c07">
+        <element name="c07">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c08"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c08">
+        <element name="c08">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c09"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c09">
+        <element name="c09">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c10"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c10">
+        <element name="c10">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c11"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c11">
+        <element name="c11">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+            <zeroOrMore>
+                <ref name="element.c12"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.c12">
+        <element name="c12">
+            <ref name="element.head.optional"/>
+            <ref name="model.archDesc.levels-of-description"/>
+        </element>
+    </define>
+    
+    <define name="element.container">
+        <element name="container">
+            <!-- do we need lang and script for containers??? -->
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.container.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="model.mixed-content.optional"/>
+            <!-- agree that mixed content is no longer needed here, right? 
+            <text/> 
+            -->
+        </element>
+    </define>
+    
+    <define name="element.extent">
+        <element name="extent">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.extentType.optional"/>
+            <ref name="attribute.coverage.optional"/>
+            <ref name="model.ead-dimensions-extent"/>
+            <ref name="element.descriptiveNote.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.physicalDescription">
+        <element name="physicalDescription">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <!-- at least one of extent, dimensions, or physicalFacet -->
+            <choice>
+                <group>
+                    <ref name="element.extent"/>
+                    <optional>
+                        <ref name="element.dimensions"/>
+                    </optional>
+                    <optional>
+                        <ref name="element.physicalFacet"/>
+                    </optional>
+                </group>
+                <group>
+                    <ref name="element.dimensions"/>
+                    <optional>
+                        <ref name="element.physicalFacet"/>
+                    </optional>
+                </group>
+                <ref name="element.physicalFacet"/>
+            </choice> 
+            <ref name="element.descriptiveNote.optional"/>
+        </element>
+    </define>
+
+    
+    <define name="element.subjectHeadings">
+        <element name="subjectHeadings">
+            <!-- is this right? -->
+            <ref name="model.ead-narrative-elements"/>
+            <zeroOrMore>
+                <ref name="element.subject"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="element.custodHist">
+        <element name="custodHist">
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
+        </element>
+    </define>
+    
+    <define name="element.genreForm">
+        <element name="genreForm">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="model.mixed-content.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.head.optional">
+        <optional>
+            <element name="head">
+                <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+                <ref name="attribute-group.assertion-reference.optional"/>
+                <ref name="model.mixed-content.optional"/>
+            </element>
+        </optional>
+    </define>
+     
+    <define name="element.identificationData">
+        <element name="identificationData">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="element.head.optional"/>
+            <oneOrMore>
+                <choice>
+                    <ref name="element.container"/>
+                    <ref name="element.extent"/>
+                    <ref name="element.genreForm"/>
+                    <ref name="element.languageOfMaterial"/>
+                    <ref name="element.legalStatus"/>
+                    <ref name="element.otherIdentificationData"/>
+                    <ref name="element.unitDate"/>
+                    <ref name="element.unitId"/>
+                    <ref name="element.unitTitle"/>
+                </choice> 
+            </oneOrMore>
+            <ref name="element.descriptiveNote.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.descriptionOfComponents">
+        <element name="descriptionOfComponents">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.descriptionOfComponentsType.optional"/>
+            <optional>
+                <ref name="model.narrative-group.optional"/>
+            </optional>
+            <optional>
+                <choice>
+                    <oneOrMore>
+                        <ref name="element.c"/>
+                    </oneOrMore>
+                    <oneOrMore>
+                        <ref name="element.c01"/>  
+                    </oneOrMore>  
+                </choice>
+            </optional>
+        </element>
+    </define>
+    
+    <define name="element.dimensions">
+        <element name="dimensions">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.ead-dimensions-extent"/>
+        </element>
+    </define>
+    
+    <define name="element.filePlan">
+        <element name="filePlan">
+            <ref name="model.ead-narrative-elements"/>
+        </element>
+    </define>
+    
+    
+    <define name="element.languageOfMaterial">
+        <element name="languageOfMaterial">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <oneOrMore>
+                <choice>
+                    <ref name="element.language"/>
+                    <ref name="element.languageSet"/>
+                </choice>
+            </oneOrMore>
+            <ref name="element.descriptiveNote.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.languageSet">
+        <element name="languageSet">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <choice>
+                <group>
+                    <ref name="element.language"/>
+                    <oneOrMore>
+                        <ref name="element.writingSystem"/>
+                    </oneOrMore>
+                </group>
+                <group>
+                    <ref name="element.writingSystem"/>
+                    <oneOrMore>
+                        <ref name="element.language"/>
+                    </oneOrMore>
+                </group>
+            </choice>
+            <ref name="element.descriptiveNote.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.otherDescription">
+        <element name="otherDescription">
+            <ref name="model.ead-narrative-elements-plus-relations"/>
+        </element>
+    </define>
+    
+    <define name="element.otherDescriptiveInfo">
+        <element name="otherDescriptiveInfo">
+            <ref name="model.ead-narrative-elements"/>
+        </element>
+    </define>
+    
+    <define name="element.otherIdentificationData">
+        <element name="otherIdentificationData">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="model.mixed-content.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.physicalFacet">
+        <element name="physicalFacet">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="model.mixed-content.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.physicalOrTechnicalRequirements">
+        <element name="physicalOrTechnicalRequirements">
+            <!-- why does this have the same model as biogHist, etc? -->
+            <ref name="model.ead-narrative-elements"/>
+        </element>
+    </define>
+    
+    <define name="element.preferCite">
+        <element name="preferCite">
+            <ref name="model.ead-narrative-elements"/>
+        </element>
+    </define>
+    
+    <define name="element.processInfo">
+        <element name="processInfo">
+            <ref name="model.ead-narrative-elements-plus-narrativeEvent"/>
+        </element>
+    </define>
+    
+    <!-- not needed for long, right? -->
+    <!-- that said, it would be good to keep the XPointer standard around separately? -->
+    <define name="element.ptr">
+        <element name="ptr">
+            <ref name="attribute-group.global.optional"/>
+            <empty/>
+        </element>
+    </define>
+    
+    <define name="element.publicationNote">
+        <element name="publicationNote">
+            <ref name="model.ead-narrative-elements-plus-relations"/>
+        </element>
+    </define>
+    
+    <define name="element.relatedMaterial">
+        <element name="relatedMaterial">
+            <ref name="model.ead-narrative-elements-plus-relations"/>
+        </element>
+    </define>
+    
+    <define name="element.scopeContent">
+        <element name="scopeContent">
+            <ref name="model.ead-narrative-elements"/>
+        </element>
+    </define>
+    
+    <define name="element.separatedMaterial">
+        <element name="separatedMaterial">
+            <ref name="model.ead-narrative-elements-plus-relations"/>
+        </element>
+    </define>
+    
+    <define name="element.subject">
+        <!-- just like function now, but those are the only two similar elements that share the same model??? -->
+        <!-- if / when ead:function and eac:function are the same, we could define those with the same model -->
+        <element name="subject">
+            <!-- old way, pre issue #239
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.subjectType.optional"/>
+            <ref name="model.ead-entity-elements"/>
+            <ref name="element.descriptiveNote.optional"/>  
+            -->
+            <!-- per issue #239, much shorter -->
+            <ref name="model.single-element-group"/>
+        </element>
+    </define>
+    
+    <define name="element.textualDate">
+        <element name="textualDate">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.status.optional"/>
+            <ref name="model.mixed-content.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.unitDate">
+        <element name="unitDate">
+            <ref name="attribute-group.global-plus-lang-and-script.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.unitDateType.optional"/>
+            <ref name="attribute.dateChar.optional"/>
+            <ref name="attribute.calendar.optional"/>
+            <ref name="attribute.certainty.optional"/>
+            <ref name="attribute.era.optional"/>
+            <!-- keep this separate from everywhere else that date choice group can appear outside of unitDate -->
+            <optional>
+                <ref name="model.all-dates.choice"/>
+            </optional>
+            <optional>
+                <ref name="element.textualDate"/>
+            </optional>
+        </element>
+    </define>
+     
+    <define name="element.unitId">
+        <element name="unitId">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute.countryCode.optional"/>
+            <ref name="attribute.repositoryCode.optional"/>
+            <ref name="model.mixed-content.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.unitTitle">
+        <element name="unitTitle">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="model.mixed-content.optional"/>
+        </element>
+    </define>
+    
+    <define name="element.useConditions">
+        <element name="useConditions">
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="model.ead-narrative-elements-plus-dateRange"/>
+        </element>
+    </define>
+    
+    
+    <define name="element.title">
+        <element name="title">
+            <ref name="attribute-group.global-plus-lang-and-script-and-localType-pair.optional"/>
+            <ref name="attribute-group.assertion-reference.optional"/>
+            <ref name="attribute-group.linked-data.optional"/>
+            <ref name="attribute.style.optional"/>
+            <oneOrMore>
+                <ref name="element.part"/>
+            </oneOrMore>
+        </element>
+    </define>
+  
+
+</grammar>
