@@ -61,7 +61,6 @@
                      <except>
                         <choice>
                            <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                           <nsName ns=""/>
                         </choice>
                      </except>
                   </anyName>
@@ -103,7 +102,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -398,7 +396,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -512,7 +509,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -649,7 +645,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -706,7 +701,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -807,7 +801,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -862,7 +855,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -921,7 +913,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1001,7 +992,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1069,7 +1059,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1148,7 +1137,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1234,7 +1222,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1313,7 +1300,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1433,7 +1419,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1512,7 +1497,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1642,7 +1626,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1683,7 +1666,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1807,7 +1789,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1921,7 +1902,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2012,7 +1992,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2103,7 +2082,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2193,7 +2171,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2283,7 +2260,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2394,7 +2370,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2492,7 +2467,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2587,7 +2561,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2685,7 +2658,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2780,7 +2752,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2878,7 +2849,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2976,7 +2946,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3072,7 +3041,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3168,7 +3136,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3286,7 +3253,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3381,7 +3347,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3480,7 +3445,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3599,7 +3563,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3698,7 +3661,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3816,7 +3778,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3912,7 +3873,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4031,7 +3991,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4130,7 +4089,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4248,7 +4206,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4347,7 +4304,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4443,7 +4399,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4522,7 +4477,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4596,7 +4550,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4688,7 +4641,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4767,7 +4719,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4830,7 +4781,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4934,7 +4884,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5045,7 +4994,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5098,7 +5046,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5203,7 +5150,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5296,7 +5242,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5390,7 +5335,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5501,7 +5445,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5594,7 +5537,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5689,7 +5631,6 @@
                      <except>
                         <choice>
                            <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                           <nsName ns=""/>
                         </choice>
                      </except>
                   </anyName>
@@ -5732,7 +5673,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5819,7 +5759,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5907,7 +5846,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5985,7 +5923,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -6073,7 +6010,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -6153,7 +6089,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -6271,7 +6206,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -6367,7 +6301,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -6480,7 +6413,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -6561,7 +6493,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -6682,7 +6613,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -6774,7 +6704,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -6886,7 +6815,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -7010,7 +6938,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -7122,7 +7049,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -7268,7 +7194,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -7388,7 +7313,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -7480,7 +7404,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -7561,7 +7484,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -7655,7 +7577,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -7733,7 +7654,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -7772,7 +7692,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -7895,7 +7814,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -8035,7 +7953,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -8172,7 +8089,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -8240,7 +8156,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -8321,7 +8236,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -8444,7 +8358,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -8535,7 +8448,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -8664,7 +8576,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -8793,7 +8704,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -8872,7 +8782,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -8971,7 +8880,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -9051,7 +8959,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -9144,7 +9051,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -9223,7 +9129,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -9312,7 +9217,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -9385,7 +9289,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -9472,7 +9375,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -9585,7 +9487,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -9679,7 +9580,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -9774,7 +9674,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -9906,7 +9805,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -10043,7 +9941,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -10122,7 +10019,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -10215,7 +10111,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -10330,7 +10225,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -10470,7 +10364,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -10610,7 +10503,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -10750,7 +10642,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -10890,7 +10781,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -11030,7 +10920,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -11170,7 +11059,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -11310,7 +11198,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -11450,7 +11337,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -11590,7 +11476,6 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
