@@ -8,6 +8,7 @@
                 schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/release_2026_07/xml-schemas/eaf/eaf.xsd"
                 schemaType="application/xml">
                 <context path="formattingExtension" useMode="xhtml"/>
+                <context path="objectXMLWrap" useMode="attach"/>
             </validate>
         </namespace>
     </mode>
@@ -15,7 +16,20 @@
         <namespace ns="http://www.w3.org/1999/xhtml">
             <validate schema="https://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd"
                 schemaType="application/xml"/>
-            <attach/>
         </namespace>
+        <namespace ns="http://www.w3.org/1998/Math/MathML">
+            <allow/>
+        </namespace>
+        <namespace ns="http://www.w3.org/2000/svg">
+            <allow/>
+        </namespace>
+        <namespace ns="http://www.w3.org/1999/xlink">
+            <allow/>
+        </namespace>
+    </mode>
+    <mode name="attach">
+        <anyNamespace>
+            <attach/>
+        </anyNamespace>
     </mode>
 </rules>
