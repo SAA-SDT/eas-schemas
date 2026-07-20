@@ -16,6 +16,7 @@
         <namespace ns="http://www.w3.org/1999/xhtml">
             <validate schema="https://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd"
                 schemaType="application/xml"/>
+            <attach/>
         </namespace>
         <namespace ns="http://www.w3.org/1998/Math/MathML">
             <allow/>
