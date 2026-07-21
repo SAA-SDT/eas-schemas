@@ -607,6 +607,7 @@
                 <anyName>
                     <except>
                         <nsName/>
+                        <nsName ns=""/>
                     </except>
                 </anyName>
             </attribute>
