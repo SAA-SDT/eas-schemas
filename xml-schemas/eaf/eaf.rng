@@ -59,6 +59,7 @@
                      <except>
                         <choice>
                            <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                           <nsName ns=""/>
                         </choice>
                      </except>
                   </anyName>
@@ -97,6 +98,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -328,6 +330,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -412,6 +415,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -468,6 +472,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -568,6 +573,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -622,6 +628,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -680,6 +687,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -759,6 +767,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -826,6 +835,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -904,6 +914,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -989,6 +1000,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1067,6 +1079,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1159,6 +1172,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1245,6 +1259,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1322,6 +1337,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1400,6 +1416,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1473,6 +1490,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1564,6 +1582,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1642,6 +1661,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1704,6 +1724,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1807,6 +1828,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1917,6 +1939,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -1969,6 +1992,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2090,6 +2114,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2181,6 +2206,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2270,6 +2296,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2375,6 +2402,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2461,6 +2489,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2549,6 +2578,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2641,6 +2671,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2732,6 +2763,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2818,6 +2850,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -2923,6 +2956,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3002,6 +3036,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3040,6 +3075,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3159,6 +3195,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3226,6 +3263,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3305,6 +3343,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3384,6 +3423,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3506,6 +3546,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3596,6 +3637,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3683,6 +3725,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3760,6 +3803,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3864,6 +3908,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -3968,6 +4013,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4096,6 +4142,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4189,6 +4236,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4229,6 +4277,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4347,6 +4396,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4451,6 +4501,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4544,6 +4595,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4654,6 +4706,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4769,6 +4822,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -4873,6 +4927,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5001,6 +5056,7 @@
                         <except>
                            <choice>
                               <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                              <nsName ns=""/>
                            </choice>
                         </except>
                      </anyName>
@@ -5119,6 +5175,7 @@
                      <except>
                         <choice>
                            <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
+                           <nsName ns=""/>
                         </choice>
                      </except>
                   </anyName>

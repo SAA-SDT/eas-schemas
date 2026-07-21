@@ -40,7 +40,7 @@
          <xs:attribute name="id" type="xs:ID"/>
          <xs:attribute name="languageOfElement" type="xs:token"/>
          <xs:attribute name="scriptOfElement" type="xs:token"/>
-         <xs:anyAttribute processContents="lax"/>
+         <xs:anyAttribute namespace="##other" processContents="lax"/>
       </xs:complexType>
    </xs:element>
    <xs:complexType name="control">
@@ -275,7 +275,7 @@
       <xs:attribute name="detailLevel" type="xs:token"/>
       <xs:attribute name="maintenanceStatus" type="xs:token"/>
       <xs:attribute name="publicationStatus" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="findAidDesc">
       <xs:choice maxOccurs="unbounded">
@@ -297,7 +297,7 @@
       <xs:attribute name="href" type="xs:anyURI"/>
       <xs:attribute name="linkRole" type="xs:anyURI"/>
       <xs:attribute name="linkTitle" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="archDesc">
       <xs:sequence>
@@ -346,7 +346,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="recordId">
       <xs:simpleContent>
@@ -361,7 +361,7 @@
             <xs:attribute name="target" type="xs:IDREFS"/>
             <xs:attribute name="languageOfElement" type="xs:token"/>
             <xs:attribute name="scriptOfElement" type="xs:token"/>
-            <xs:anyAttribute processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
          </xs:restriction>
       </xs:simpleContent>
    </xs:complexType>
@@ -398,7 +398,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="maintenanceHistory">
       <xs:sequence>
@@ -411,7 +411,7 @@
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="sources">
       <xs:sequence>
@@ -423,7 +423,7 @@
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="conventionDeclaration">
       <xs:sequence>
@@ -439,7 +439,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="languageDeclaration">
       <xs:sequence>
@@ -452,7 +452,7 @@
       <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="languageCode" use="required" type="xs:token"/>
       <xs:attribute name="scriptCode" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="localTypeDeclaration">
       <xs:sequence>
@@ -468,7 +468,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="otherRecordId" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -481,7 +481,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="rightsDeclaration">
       <xs:sequence>
@@ -497,7 +497,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="agent">
       <xs:sequence>
@@ -530,7 +530,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="agentType" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="citedRange" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -542,7 +542,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="unit" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="date" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -562,14 +562,14 @@
       <xs:attribute name="notBefore" type="xs:token"/>
       <xs:attribute name="standardDate" type="xs:token"/>
       <xs:attribute name="status" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="formattingExtension">
       <xs:group maxOccurs="unbounded" ref="ead:_1"/>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="place">
       <xs:sequence>
@@ -603,7 +603,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="placeType" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="title">
       <xs:sequence>
@@ -623,7 +623,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="style" type="xs:normalizedString"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="identificationData">
       <xs:sequence>
@@ -649,7 +649,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="agents">
       <xs:sequence>
@@ -666,7 +666,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="formsAvailable">
       <xs:sequence>
@@ -683,7 +683,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="functions">
       <xs:sequence>
@@ -700,7 +700,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="places">
       <xs:sequence>
@@ -717,7 +717,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="accessConditions">
       <xs:sequence>
@@ -743,7 +743,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="accruals">
       <xs:sequence>
@@ -765,7 +765,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="appraisal">
       <xs:sequence>
@@ -791,7 +791,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="arrangement">
       <xs:sequence>
@@ -813,7 +813,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="biogHist">
       <xs:sequence>
@@ -839,7 +839,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="custodHist">
       <xs:sequence>
@@ -865,7 +865,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="filePlan">
       <xs:sequence>
@@ -887,7 +887,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="otherDescriptiveInfo">
       <xs:sequence>
@@ -909,7 +909,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="otherDescription">
       <xs:sequence>
@@ -935,7 +935,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="preferCite">
       <xs:sequence>
@@ -957,7 +957,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="processInfo">
       <xs:sequence>
@@ -983,7 +983,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="publicationNote">
       <xs:sequence>
@@ -1009,7 +1009,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="recordTypeSpecificStatement">
       <xs:sequence>
@@ -1032,7 +1032,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="relatedMaterial">
       <xs:sequence>
@@ -1058,7 +1058,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="scopeContent">
       <xs:sequence>
@@ -1080,7 +1080,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="separatedMaterial">
       <xs:sequence>
@@ -1106,7 +1106,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="sourceOfAcquisition">
       <xs:sequence>
@@ -1132,7 +1132,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="subjectHeadings">
       <xs:sequence>
@@ -1158,7 +1158,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="useConditions">
       <xs:sequence>
@@ -1184,7 +1184,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="descriptionOfComponents">
       <xs:sequence>
@@ -1208,7 +1208,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="descriptionOfComponentsType" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="agencyCode" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -1220,7 +1220,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="agencyName" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -1231,7 +1231,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="otherAgencyCode" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -1245,7 +1245,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="descriptiveNote">
       <xs:sequence>
@@ -1260,7 +1260,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="maintenanceEvent">
       <xs:sequence>
@@ -1277,7 +1277,7 @@
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
       <xs:attribute name="maintenanceEventType" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="source">
       <xs:sequence>
@@ -1300,7 +1300,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="reference" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1320,7 +1320,7 @@
       <xs:attribute name="href" type="xs:anyURI"/>
       <xs:attribute name="linkRole" type="xs:anyURI"/>
       <xs:attribute name="linkTitle" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="shortCode" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -1328,7 +1328,7 @@
       <xs:attribute name="target" type="xs:IDREFS"/>
       <xs:attribute name="languageOfElement" type="xs:token"/>
       <xs:attribute name="scriptOfElement" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="label" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -1344,7 +1344,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="dateRange">
       <xs:choice>
@@ -1364,7 +1364,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="dateSet">
       <xs:sequence>
@@ -1387,7 +1387,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="placeName" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -1404,7 +1404,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="countryCode" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="role" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -1418,7 +1418,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="relationship" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -1434,7 +1434,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:group name="_1">
       <xs:sequence>
@@ -1455,7 +1455,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="contact">
       <xs:sequence>
@@ -1471,7 +1471,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="geographicCoordinates">
       <xs:simpleContent>
@@ -1485,7 +1485,7 @@
             <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
             <xs:attribute name="sourceReference" type="xs:IDREFS"/>
             <xs:attribute name="coordinateSystem" use="required" type="xs:token"/>
-            <xs:anyAttribute processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
          </xs:extension>
       </xs:simpleContent>
    </xs:complexType>
@@ -1507,7 +1507,7 @@
             <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
             <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
             <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-            <xs:anyAttribute processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
          </xs:restriction>
       </xs:simpleContent>
    </xs:complexType>
@@ -1525,7 +1525,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="container" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1547,7 +1547,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="extent">
       <xs:sequence>
@@ -1570,7 +1570,7 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="extentType" type="xs:token"/>
       <xs:attribute name="coverage" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="genreForm" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1591,7 +1591,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="languageOfMaterial">
       <xs:sequence>
@@ -1609,7 +1609,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="legalStatus">
       <xs:sequence>
@@ -1638,7 +1638,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="otherIdentificationData" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1656,7 +1656,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitDate">
       <xs:sequence>
@@ -1680,7 +1680,7 @@
       <xs:attribute name="calendar" type="xs:token"/>
       <xs:attribute name="certainty" type="xs:token"/>
       <xs:attribute name="era" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitId" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1703,7 +1703,7 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="countryCode" type="xs:token"/>
       <xs:attribute name="repositoryCode" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitTitle" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1724,7 +1724,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="formAvailable">
       <xs:sequence>
@@ -1771,7 +1771,7 @@
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="coverage" type="xs:token"/>
       <xs:attribute name="formAvailableType" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="function">
       <xs:sequence>
@@ -1804,7 +1804,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="functionType" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="abstract" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1822,7 +1822,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="p" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1838,7 +1838,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="narrativeEvent">
       <xs:sequence>
@@ -1859,7 +1859,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="relations">
       <xs:sequence>
@@ -1874,7 +1874,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="objectXMLWrap">
       <xs:complexContent>
@@ -1882,7 +1882,7 @@
             <xs:attribute name="audience" type="xs:token"/>
             <xs:attribute name="id" type="xs:ID"/>
             <xs:attribute name="target" type="xs:IDREFS"/>
-            <xs:anyAttribute processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
@@ -1913,7 +1913,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c">
       <xs:sequence>
@@ -1959,7 +1959,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c01">
       <xs:sequence>
@@ -2005,7 +2005,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="eventDateTime" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2018,7 +2018,7 @@
             <xs:union memberTypes="xs:gYear xs:gYearMonth xs:date xs:dateTime"/>
          </xs:simpleType>
       </xs:attribute>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="eventDescription" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -2034,7 +2034,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="referringString" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2053,7 +2053,7 @@
       <xs:attribute name="normalizedForm" type="xs:token"/>
       <xs:attribute name="referredEntityType" type="xs:token"/>
       <xs:attribute name="referredEntityRelationship" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="span" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2067,7 +2067,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="style" type="xs:normalizedString"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="fromDate" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2087,7 +2087,7 @@
       <xs:attribute name="notBefore" type="xs:token"/>
       <xs:attribute name="standardDate" type="xs:token"/>
       <xs:attribute name="status" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="toDate" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2107,7 +2107,7 @@
       <xs:attribute name="notBefore" type="xs:token"/>
       <xs:attribute name="standardDate" type="xs:token"/>
       <xs:attribute name="status" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="addressLine" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2119,7 +2119,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="addressLineType" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="contactLine" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2134,7 +2134,7 @@
       <xs:attribute name="linkRole" type="xs:anyURI"/>
       <xs:attribute name="linkTitle" type="xs:token"/>
       <xs:attribute name="contactLineType" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="quantity" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2146,7 +2146,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="approximate" type="xs:boolean"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="unitOfMeasurement" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2160,7 +2160,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="language" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2172,7 +2172,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="languageCode" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="languageSet">
       <xs:sequence>
@@ -2196,7 +2196,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="term" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2207,7 +2207,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="textualDate" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -2224,7 +2224,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="status" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="formAvailableId" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -2245,7 +2245,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="physicalDescription">
       <xs:sequence>
@@ -2271,7 +2271,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="physicalOrTechnicalRequirements">
       <xs:sequence>
@@ -2293,7 +2293,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="relation">
       <xs:sequence>
@@ -2320,7 +2320,7 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="relationType" type="xs:token"/>
       <xs:attribute name="targetType" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="_2">
       <xs:choice>
@@ -2372,7 +2372,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="writingSystem" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
@@ -2384,7 +2384,7 @@
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:attribute name="scriptCode" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="dimensions">
       <xs:choice>
@@ -2404,7 +2404,7 @@
       <xs:attribute name="conventionDeclarationReference" type="xs:IDREFS"/>
       <xs:attribute name="maintenanceEventReference" type="xs:IDREFS"/>
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="physicalFacet" mixed="true">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -2425,7 +2425,7 @@
       <xs:attribute name="vocabularySource" type="xs:token"/>
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c03">
       <xs:sequence>
@@ -2471,7 +2471,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c04">
       <xs:sequence>
@@ -2517,7 +2517,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c05">
       <xs:sequence>
@@ -2563,7 +2563,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c06">
       <xs:sequence>
@@ -2609,7 +2609,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c07">
       <xs:sequence>
@@ -2655,7 +2655,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c08">
       <xs:sequence>
@@ -2701,7 +2701,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c09">
       <xs:sequence>
@@ -2747,7 +2747,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c10">
       <xs:sequence>
@@ -2793,7 +2793,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c11">
       <xs:sequence>
@@ -2839,7 +2839,7 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="c12">
       <xs:sequence>
@@ -2884,6 +2884,6 @@
       <xs:attribute name="vocabularySourceURI" type="xs:anyURI"/>
       <xs:attribute name="valueURI" type="xs:anyURI"/>
       <xs:attribute name="level" type="xs:token"/>
-      <xs:anyAttribute processContents="lax"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
 </xs:schema>
