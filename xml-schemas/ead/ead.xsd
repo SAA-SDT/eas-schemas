@@ -1437,9 +1437,10 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:group name="_1">
-      <xs:sequence>
+      <xs:choice>
          <xs:any namespace="##other" processContents="lax"/>
-      </xs:sequence>
+         <xs:any namespace="##local" processContents="lax"/>
+      </xs:choice>
    </xs:group>
    <xs:complexType name="address">
       <xs:sequence>
@@ -1877,14 +1878,11 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="objectXMLWrap">
-      <xs:complexContent>
-         <xs:extension base="ead:_2">
-            <xs:attribute name="audience" type="xs:token"/>
-            <xs:attribute name="id" type="xs:ID"/>
-            <xs:attribute name="target" type="xs:IDREFS"/>
-            <xs:anyAttribute namespace="##other" processContents="lax"/>
-         </xs:extension>
-      </xs:complexContent>
+      <xs:group ref="ead:_1"/>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="subject">
       <xs:sequence>
@@ -2321,12 +2319,6 @@
       <xs:attribute name="relationType" type="xs:token"/>
       <xs:attribute name="targetType" type="xs:token"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
-   </xs:complexType>
-   <xs:complexType name="_2">
-      <xs:choice>
-         <xs:any namespace="##other" processContents="lax"/>
-         <xs:any namespace="##local" processContents="lax"/>
-      </xs:choice>
    </xs:complexType>
    <xs:complexType name="c02">
       <xs:sequence>

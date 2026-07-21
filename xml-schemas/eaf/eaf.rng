@@ -4245,7 +4245,7 @@
                </zeroOrMore>
             </interleave>
             <oneOrMore>
-               <ref name="_2"/>
+               <ref name="_1"/>
             </oneOrMore>
          </group>
       </element>
@@ -5155,39 +5155,6 @@
                </attribute>
             </optional>
             <text/>
-         </group>
-      </element>
-   </define>
-   <define name="_2">
-      <element>
-         <anyName>
-            <except>
-               <choice>
-                  <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
-                  <nsName ns=""/>
-               </choice>
-            </except>
-         </anyName>
-         <group>
-            <zeroOrMore>
-               <attribute>
-                  <anyName>
-                     <except>
-                        <choice>
-                           <nsName ns="https://standards.openpreservation.org/eaf/v1"/>
-                           <nsName ns=""/>
-                        </choice>
-                     </except>
-                  </anyName>
-                  <text/>
-               </attribute>
-            </zeroOrMore>
-            <interleave>
-               <text/>
-               <zeroOrMore>
-                  <ref name="_2"/>
-               </zeroOrMore>
-            </interleave>
          </group>
       </element>
    </define>

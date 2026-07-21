@@ -5676,32 +5676,22 @@
       <element>
          <anyName>
             <except>
-               <choice>
-                  <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                  <nsName ns=""/>
-               </choice>
+               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
             </except>
          </anyName>
          <group>
             <zeroOrMore>
                <attribute>
-                  <anyName>
-                     <except>
-                        <choice>
-                           <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-                           <nsName ns=""/>
-                        </choice>
-                     </except>
-                  </anyName>
+                  <anyName/>
                   <text/>
                </attribute>
             </zeroOrMore>
-            <interleave>
-               <text/>
-               <zeroOrMore>
+            <oneOrMore>
+               <choice>
+                  <text/>
                   <ref name="_1"/>
-               </zeroOrMore>
-            </interleave>
+               </choice>
+            </oneOrMore>
          </group>
       </element>
    </define>
@@ -7741,7 +7731,7 @@
                   </attribute>
                </zeroOrMore>
             </interleave>
-            <ref name="_2"/>
+            <ref name="_1"/>
          </group>
       </element>
    </define>
@@ -9850,29 +9840,6 @@
             <optional>
                <ref name="objectXMLWrap"/>
             </optional>
-         </group>
-      </element>
-   </define>
-   <define name="_2">
-      <element>
-         <anyName>
-            <except>
-               <nsName ns="https://standards.openpreservation.org/ead/v4"/>
-            </except>
-         </anyName>
-         <group>
-            <zeroOrMore>
-               <attribute>
-                  <anyName/>
-                  <text/>
-               </attribute>
-            </zeroOrMore>
-            <oneOrMore>
-               <choice>
-                  <text/>
-                  <ref name="_2"/>
-               </choice>
-            </oneOrMore>
          </group>
       </element>
    </define>
