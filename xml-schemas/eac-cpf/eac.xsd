@@ -1020,14 +1020,11 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="objectXMLWrap">
-      <xs:complexContent>
-         <xs:extension base="eac:_1">
-            <xs:attribute name="audience" type="xs:token"/>
-            <xs:attribute name="id" type="xs:ID"/>
-            <xs:attribute name="target" type="xs:IDREFS"/>
-            <xs:anyAttribute namespace="##other" processContents="lax"/>
-         </xs:extension>
-      </xs:complexContent>
+      <xs:group ref="eac:_1"/>
+      <xs:attribute name="audience" type="xs:token"/>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="target" type="xs:IDREFS"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="agent">
       <xs:sequence>
@@ -1450,7 +1447,7 @@
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
    <xs:complexType name="formattingExtension">
-      <xs:group maxOccurs="unbounded" ref="eac:_2"/>
+      <xs:group maxOccurs="unbounded" ref="eac:_1"/>
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
       <xs:attribute name="target" type="xs:IDREFS"/>
@@ -1603,12 +1600,12 @@
       <xs:attribute name="sourceReference" type="xs:IDREFS"/>
       <xs:anyAttribute namespace="##other" processContents="lax"/>
    </xs:complexType>
-   <xs:complexType name="_1">
+   <xs:group name="_1">
       <xs:choice>
          <xs:any namespace="##other" processContents="lax"/>
          <xs:any namespace="##local" processContents="lax"/>
       </xs:choice>
-   </xs:complexType>
+   </xs:group>
    <xs:complexType name="relationship" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
@@ -1708,11 +1705,6 @@
          </xs:extension>
       </xs:simpleContent>
    </xs:complexType>
-   <xs:group name="_2">
-      <xs:sequence>
-         <xs:any namespace="##other" processContents="lax"/>
-      </xs:sequence>
-   </xs:group>
    <xs:complexType name="fromDate" mixed="true">
       <xs:attribute name="audience" type="xs:token"/>
       <xs:attribute name="id" type="xs:ID"/>
