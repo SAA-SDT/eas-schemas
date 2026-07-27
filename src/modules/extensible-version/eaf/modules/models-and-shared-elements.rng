@@ -165,24 +165,8 @@
       <element name="formattingExtension">
          <ref name="attribute-group.global.optional"/>
          <oneOrMore>
-            <ref name="element.any"/>
+            <ref name="model.any-element"/>
          </oneOrMore>
-      </element>
-   </define>
-   <define name="element.any">
-      <element>
-         <anyName>
-            <except>
-               <nsName/>
-               <nsName ns=""/>
-            </except>
-         </anyName>
-         <ref name="attribute-group.any.zeroOrMore"/>
-         <mixed>
-            <zeroOrMore>
-               <ref name="element.any"/>
-            </zeroOrMore>
-         </mixed>
       </element>
    </define>
    <define name="element.fromDate">

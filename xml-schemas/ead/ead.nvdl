@@ -4,10 +4,10 @@
     a:version="4.0.0" startMode="ead">
     <mode name="ead">
         <namespace ns="https://standards.openpreservation.org/ead/v4">
-            <validate
-                schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/release_2026_07/xml-schemas/ead/ead.xsd"
+            <validate schema="https://raw.githubusercontent.com/SAA-SDT/eas-schemas/release_2026_07/xml-schemas/ead/ead.xsd" 
                 schemaType="application/xml">
                 <context path="formattingExtension" useMode="xhtml"/>
+                <context path="objectXMLWrap" useMode="attach"/>
             </validate>
         </namespace>
     </mode>
@@ -17,5 +17,19 @@
                 schemaType="application/xml"/>
             <attach/>
         </namespace>
+        <namespace ns="http://www.w3.org/1998/Math/MathML">
+            <allow/>
+        </namespace>
+        <namespace ns="http://www.w3.org/2000/svg">
+            <allow/>
+        </namespace>
+        <namespace ns="http://www.w3.org/1999/xlink">
+            <allow/>
+        </namespace>
+    </mode>
+    <mode name="attach">
+        <anyNamespace>
+            <attach/>
+        </anyNamespace>
     </mode>
 </rules>
